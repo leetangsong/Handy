@@ -26,7 +26,7 @@ extension UIButton{
 extension HandyExtension where Base: UIButton{
     
     
-    public enum TSButtonMode {
+    public enum HandyButtonMode {
         case top,bottom,left,right
     }
    
@@ -52,7 +52,7 @@ extension HandyExtension where Base: UIButton{
     }
 
     //改变图片与按钮的位置  
-    public func adjustButton(with model: TSButtonMode, spacing: CGFloat){
+    public func adjustButton(with model: HandyButtonMode, spacing: CGFloat){
         let imageWidth = base.currentImage?.size.width ?? 0
         let imageHeight = base.currentImage?.size.height ?? 0
         var size = CGSize.zero
@@ -76,30 +76,30 @@ extension HandyExtension where Base: UIButton{
         let tempHeight = max(labelHeight, imageHeight)
         let changedHeight = labelHeight + imageHeight + spacing - tempHeight
         
-        var imageEdgeInsets = UIEdgeInsehandy.zero
-        var titleEdgeInsets = UIEdgeInsehandy.zero
-        var contentEdgeInsets = UIEdgeInsehandy.zero
+        var imageEdgeInsets = UIEdgeInsets.zero
+        var titleEdgeInsets = UIEdgeInsets.zero
+        var contentEdgeInsets = UIEdgeInsets.zero
         
         switch model {
             case .left:
-                imageEdgeInsets = UIEdgeInsehandy.init(top: 0, left: -spacing/2, bottom: 0, right: spacing/2)
-                titleEdgeInsets = UIEdgeInsehandy.init(top: 0, left: spacing/2, bottom: 0, right: -spacing/2)
-                contentEdgeInsets = UIEdgeInsehandy.init(top: 0, left: spacing/2, bottom: 0, right: spacing/2)
+                imageEdgeInsets = UIEdgeInsets.init(top: 0, left: -spacing/2, bottom: 0, right: spacing/2)
+                titleEdgeInsets = UIEdgeInsets.init(top: 0, left: spacing/2, bottom: 0, right: -spacing/2)
+                contentEdgeInsets = UIEdgeInsets.init(top: 0, left: spacing/2, bottom: 0, right: spacing/2)
                     
             case .right:
-                imageEdgeInsets = UIEdgeInsehandy.init(top: 0, left: labelWidth + spacing/2, bottom: 0, right: -(labelWidth + spacing/2))
-                titleEdgeInsets = UIEdgeInsehandy.init(top: 0, left: -(imageWidth + spacing/2), bottom: 0, right: imageWidth + spacing/2)
-                contentEdgeInsets = UIEdgeInsehandy.init(top: 0, left: spacing/2, bottom: 0, right: spacing/2)
+                imageEdgeInsets = UIEdgeInsets.init(top: 0, left: labelWidth + spacing/2, bottom: 0, right: -(labelWidth + spacing/2))
+                titleEdgeInsets = UIEdgeInsets.init(top: 0, left: -(imageWidth + spacing/2), bottom: 0, right: imageWidth + spacing/2)
+                contentEdgeInsets = UIEdgeInsets.init(top: 0, left: spacing/2, bottom: 0, right: spacing/2)
                 
             case .top:
-                imageEdgeInsets = UIEdgeInsehandy.init(top: -imageOffsetY, left: imageOffsetX, bottom: imageOffsetY, right: -imageOffsetX)
-                titleEdgeInsets = UIEdgeInsehandy.init(top: labelOffsetY, left: -labelOffsetX, bottom: -labelOffsetY, right: labelOffsetX)
-                contentEdgeInsets = UIEdgeInsehandy.init(top: imageOffsetY, left: -changedWidth/2, bottom: changedHeight-imageOffsetY, right: -changedWidth/2)
+                imageEdgeInsets = UIEdgeInsets.init(top: -imageOffsetY, left: imageOffsetX, bottom: imageOffsetY, right: -imageOffsetX)
+                titleEdgeInsets = UIEdgeInsets.init(top: labelOffsetY, left: -labelOffsetX, bottom: -labelOffsetY, right: labelOffsetX)
+                contentEdgeInsets = UIEdgeInsets.init(top: imageOffsetY, left: -changedWidth/2, bottom: changedHeight-imageOffsetY, right: -changedWidth/2)
                 
             case .bottom:
-                imageEdgeInsets = UIEdgeInsehandy.init(top: imageOffsetY, left: imageOffsetX, bottom: -imageOffsetY, right: -imageOffsetX)
-                titleEdgeInsets = UIEdgeInsehandy.init(top: -labelOffsetY, left: -labelOffsetX, bottom: labelOffsetY, right: labelOffsetX)
-                contentEdgeInsets = UIEdgeInsehandy.init(top: changedHeight-imageOffsetY, left: -changedWidth/2, bottom: imageOffsetY, right: -changedWidth/2)
+                imageEdgeInsets = UIEdgeInsets.init(top: imageOffsetY, left: imageOffsetX, bottom: -imageOffsetY, right: -imageOffsetX)
+                titleEdgeInsets = UIEdgeInsets.init(top: -labelOffsetY, left: -labelOffsetX, bottom: labelOffsetY, right: labelOffsetX)
+                contentEdgeInsets = UIEdgeInsets.init(top: changedHeight-imageOffsetY, left: -changedWidth/2, bottom: imageOffsetY, right: -changedWidth/2)
         }
         base.imageEdgeInsets = imageEdgeInsets
         base.titleEdgeInsets = titleEdgeInsets
