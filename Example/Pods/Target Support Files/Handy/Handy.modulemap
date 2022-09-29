@@ -1,0 +1,6 @@
+framework module Handy {
+  umbrella header "Handy-umbrella.h"
+
+  export *
+  module * { export * }
+}
