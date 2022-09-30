@@ -46,6 +46,13 @@
 		A6EFAEE4CCC9ADFE8C96C072BCAB824D /* Timer+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF844515314769D5745F7CD0AC382BE /* Timer+Handy.swift */; };
 		AFA06F38624C4E8C253349ECC7DE8D03 /* Date+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD9FAEA805DDE82CB7EE8007D4F03 /* Date+Handy.swift */; };
 		AFA89DBBE40049A58A4FB3FC37F5FFC4 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */; };
+		B51A4B5028E58A4C00EE5091 /* HandyNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B4F28E58A4C00EE5091 /* HandyNavigationBar.swift */; };
+		B51A4B5228E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5128E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift */; };
+		B51A4B5428E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5328E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift */; };
+		B51A4B5628E58C0800EE5091 /* HandyNavigationContrllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5528E58C0800EE5091 /* HandyNavigationContrllerContext.swift */; };
+		B51A4B5828E58D5400EE5091 /* UIViewController+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */; };
+		B51A4B5A28E592EF00EE5091 /* HandyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5928E592EF00EE5091 /* HandyTransition.swift */; };
+		B51A4B5C28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */; };
 		B812306A1D935A8E6104DB8F48A1D747 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6A462E0F0B040B83C8763773533FE /* LayoutConstraint.swift */; };
 		BB64EFCF1B388B5985BC43A70D949C11 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBE69DD3B611E4180FCBDD8CDE8814 /* Debugging.swift */; };
 		BEBCD7327FFE038778E836758C7F010A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */; };
@@ -74,7 +81,7 @@
 		F9B83E48F3E6005975DC6096FA98DFE3 /* Bundle+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB67812A5F92FDEACDFD67833607836 /* Bundle+Handy.swift */; };
 		FB2AFDE6FAADF02D2D2B6920FD478F19 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D52A60BF41010F680313572B051598 /* ConstraintInsets.swift */; };
 		FB4D21253D9A1AE5C04C64C7DEA3BC87 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D5202E1F291CC13F7AE0CD669B831 /* ConstraintOffsetTarget.swift */; };
-		FCE7CFA337E44C3B604118E92A910580 /* Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDE89FBF330E2EA185FA9A285DFAC63 /* Swizzling.swift */; };
+		FCE7CFA337E44C3B604118E92A910580 /* HandySwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDE89FBF330E2EA185FA9A285DFAC63 /* HandySwizzling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +181,13 @@
 		A2F29FE521006BAD3DD56993C3D3E230 /* Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Handy-Info.plist"; sourceTree = "<group>"; };
 		A9E6F24969C5B378ECA19175229CEAE0 /* Pods-Handy_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AAF844515314769D5745F7CD0AC382BE /* Timer+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Timer+Handy.swift"; sourceTree = "<group>"; };
+		B51A4B4F28E58A4C00EE5091 /* HandyNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyNavigationBar.swift; sourceTree = "<group>"; };
+		B51A4B5128E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UIViewController.swift"; sourceTree = "<group>"; };
+		B51A4B5328E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UINavigationController.swift"; sourceTree = "<group>"; };
+		B51A4B5528E58C0800EE5091 /* HandyNavigationContrllerContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyNavigationContrllerContext.swift; sourceTree = "<group>"; };
+		B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Handy.swift"; sourceTree = "<group>"; };
+		B51A4B5928E592EF00EE5091 /* HandyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyTransition.swift; sourceTree = "<group>"; };
+		B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandyTransition+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
 		B57B4B15AAC3AB24B43306829FAA77A0 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Sources/ConstraintPriority.swift; sourceTree = "<group>"; };
 		B5C5E06C364A47421E4499088644D142 /* Pods-Handy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Handy_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Sources/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
@@ -211,7 +225,7 @@
 		F855F687276255F9004CF5BCB76C93EC /* Pods-Handy_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Tests-Info.plist"; sourceTree = "<group>"; };
 		F86768E408A12501CCF43DCCC21DE242 /* NSObject+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSObject+Handy.swift"; sourceTree = "<group>"; };
 		FC1DEA047E2566DD45A2BDD5045585E8 /* UIImage+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+Handy.swift"; sourceTree = "<group>"; };
-		FDDE89FBF330E2EA185FA9A285DFAC63 /* Swizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swizzling.swift; path = Handy/Classes/Swizzling.swift; sourceTree = "<group>"; };
+		FDDE89FBF330E2EA185FA9A285DFAC63 /* HandySwizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandySwizzling.swift; path = Handy/Classes/HandySwizzling.swift; sourceTree = "<group>"; };
 		FE5693124BFA9269D2085EC1ADFAAD76 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Sources/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,9 +307,11 @@
 		3AF26B0DF1429BC6A2CC188399CC52DA /* Handy */ = {
 			isa = PBXGroup;
 			children = (
+				B51A4B4E28E58A3800EE5091 /* Navigation */,
+				B51A4B4D28E58A3200EE5091 /* Transition */,
 				8325701AC63292B7F9872B0492032E11 /* HandyApp.swift */,
 				CCEE2EE57507EA9BDE614042D0B8511B /* HandyCompatible.swift */,
-				FDDE89FBF330E2EA185FA9A285DFAC63 /* Swizzling.swift */,
+				FDDE89FBF330E2EA185FA9A285DFAC63 /* HandySwizzling.swift */,
 				3B6CCE4F719B1566934CEEBE466B9FF8 /* images */,
 				E179A616158821CAAB13A72F74BBBFAA /* Extensions */,
 				46B394BE65F5F58CF77CC06C1C980E7A /* images */,
@@ -381,6 +397,28 @@
 				CFDF76A4EC79B7CA3967DD6F5B8E9EFB /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		B51A4B4D28E58A3200EE5091 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				B51A4B5928E592EF00EE5091 /* HandyTransition.swift */,
+				B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */,
+			);
+			name = Transition;
+			path = Handy/Classes/Transition;
+			sourceTree = "<group>";
+		};
+		B51A4B4E28E58A3800EE5091 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B51A4B4F28E58A4C00EE5091 /* HandyNavigationBar.swift */,
+				B51A4B5128E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift */,
+				B51A4B5328E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift */,
+				B51A4B5528E58C0800EE5091 /* HandyNavigationContrllerContext.swift */,
+			);
+			name = Navigation;
+			path = Handy/Classes/Navigation;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -475,6 +513,7 @@
 				84A570C8E5EB2791185BBFF173E416C1 /* UIControl+Handy.swift */,
 				FC1DEA047E2566DD45A2BDD5045585E8 /* UIImage+Handy.swift */,
 				DF2A00FBC7B252A79E829F6BE754FD9E /* UIView+Handy.swift */,
+				B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */,
 			);
 			name = Extensions;
 			path = Handy/Classes/Extensions;
@@ -713,22 +752,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51A4B5028E58A4C00EE5091 /* HandyNavigationBar.swift in Sources */,
+				B51A4B5C28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift in Sources */,
+				B51A4B5428E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift in Sources */,
 				E9EB898DA03D37717CE13C261B9E47DF /* Array+Handy.swift in Sources */,
 				F9B83E48F3E6005975DC6096FA98DFE3 /* Bundle+Handy.swift in Sources */,
 				AFA06F38624C4E8C253349ECC7DE8D03 /* Date+Handy.swift in Sources */,
 				966D452CEC428AB0D008B453AD176D63 /* Dictionary+Handy.swift in Sources */,
+				B51A4B5628E58C0800EE5091 /* HandyNavigationContrllerContext.swift in Sources */,
 				306A8D4B27DE0ACB9D5A26C7108B8C54 /* Handy-dummy.m in Sources */,
+				B51A4B5828E58D5400EE5091 /* UIViewController+Handy.swift in Sources */,
 				D8DDF5D5662DDD831CEAB05B7204E49C /* HandyApp.swift in Sources */,
 				7FA7587FF265640DE0760D0779D4E8F4 /* HandyCompatible.swift in Sources */,
+				B51A4B5A28E592EF00EE5091 /* HandyTransition.swift in Sources */,
 				94653904B9965DF61B9590AA4055FA64 /* NSObject+Handy.swift in Sources */,
 				89254272AC1F71A2187F6E50626A5E3B /* String+Handy.swift in Sources */,
-				FCE7CFA337E44C3B604118E92A910580 /* Swizzling.swift in Sources */,
+				FCE7CFA337E44C3B604118E92A910580 /* HandySwizzling.swift in Sources */,
 				A6EFAEE4CCC9ADFE8C96C072BCAB824D /* Timer+Handy.swift in Sources */,
 				0444EBF2E7359E9A621C26F680831AB9 /* UIButton+Handy.swift in Sources */,
 				F1838657B4653DFBA50BA9C81C22ED68 /* UIColor+Handy.swift in Sources */,
 				D71AF7464D9708C89A7404BD3907AD59 /* UIControl+Handy.swift in Sources */,
 				2D917A46FE407398B199344568B2EA30 /* UIImage+Handy.swift in Sources */,
 				38D763D3AAEFFE8F4521AA1D523B91AF /* UIView+Handy.swift in Sources */,
+				B51A4B5228E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

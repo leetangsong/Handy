@@ -36,16 +36,13 @@ extension HandyExtension where Base: UIControl{
         }
     }
 }
-extension UIControl: Swizzling {
-    public static func awake() {
-        swizzleMethod
-        subObjSwizzling()
-    }
-    private static let swizzleMethod: Void = {
+extension UIControl {
+ 
+    public override class func swizzling() {
         let originalMethod = #selector(UIControl.sendAction(_:to:for:))
         let swizzledMethod = #selector(UIControl.ts_sendAction(_:to:for:))
         swizzlingForClass(UIControl.self, originalSelector: originalMethod, swizzledSelector: swizzledMethod)
-    }()
+    }
     
     //防止重复点击
     @objc private func ts_sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {

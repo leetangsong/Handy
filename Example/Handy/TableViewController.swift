@@ -15,13 +15,13 @@ class TableViewController: UITableViewController {
         if #available(iOS 11, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
-      
+       
         tableView.contentInset = UIEdgeInsets.init(top: HandyApp.naviBarHeight, left: 0, bottom: 0, right: 0)
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
-//        ts.title = "首页"
-//        ts.naviTitleColor = .white
-//        ts.naviBackgroundColor = .blue
+        handy.title = "首页"
+        handy.naviTitleColor = .white
+        handy.naviBackgroundColor = .blue
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
