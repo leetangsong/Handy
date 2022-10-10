@@ -26,9 +26,17 @@ extension UINavigationController{
         static var useSystemBackBarButtonItem = "useSystemBackBarButtonItem"
         static var navigationContext = "navigationContext"
         static var animationBlock = "animationBlock"
+        static var interactivePopGestureRecognizer = "interactivePopGestureRecognizer"
     }
     
     open override var preferredStatusBarStyle: UIStatusBarStyle{
+        return getStatusBarStyle()
+    }
+
+    open override var prefersStatusBarHidden: Bool{
+        return topViewController?.handy.statusBarHidden ?? false
+    }
+    public func getStatusBarStyle() -> UIStatusBarStyle{
         guard let statusStyle = topViewController?.handy.statusBarStyle else {
             return .default
         }
@@ -43,10 +51,6 @@ extension UINavigationController{
             }
             return .default
         }
-    }
-
-    open override var prefersStatusBarHidden: Bool{
-        return topViewController?.handy.statusBarHidden ?? false
     }
 }
 
@@ -115,9 +119,18 @@ extension UINavigationController{
         }
     }
     
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        if let target = interactivePopGestureRecognizer?.delegate{
+            handy.interactivePopGestureRecognizer = UIPanGestureRecognizer.init(target: target, action: Selector(("handleNavigationTransition:")))
+            handy.interactivePopGestureRecognizer?.delegate = self
+            view.addGestureRecognizer(handy.interactivePopGestureRecognizer!)
+            interactivePopGestureRecognizer?.isEnabled = false
+        }
+    }
+    
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        delegate = self
         handy.navigationContext.navigationBarUpdateFrame()
     }
     
@@ -184,7 +197,6 @@ extension UINavigationController{
         }else{
             ts_pushViewController(viewController, animated: animated)
         }
-        handy.navigationContext.navigationController(willShow: viewController, animated: animated)
     }
     
     
@@ -207,7 +219,6 @@ extension UINavigationController{
         }else{
             viewController = ts_popViewController(animated: animated)
         }
-        handy.navigationContext.navigationController(willShow: viewController!, animated: animated)
         return viewController
     }
     
@@ -229,7 +240,6 @@ extension UINavigationController{
         }else{
             vcArray = ts_popToRootViewController(animated: animated)
         }
-        handy.navigationContext.navigationController(willShow: viewControllers.first!, animated: animated)
         return vcArray
     }
     
@@ -250,22 +260,39 @@ extension UINavigationController{
         }else{
             vcArray = ts_popToViewController(viewController, animated: animated)
         }
-        handy.navigationContext.navigationController(willShow: viewController, animated: animated)
         return vcArray
     }
-    
 }
-extension UINavigationController: UINavigationControllerDelegate{
-    
-    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        handy.navigationContext.navigationController(willShow: viewController, animated: animated)
+
+
+extension UINavigationController: UIGestureRecognizerDelegate{
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        guard let pan = gestureRecognizer as? UIPanGestureRecognizer, pan == handy.interactivePopGestureRecognizer else { return true }
+        if children.count == 1{
+            return false
+        }
+        
+        let locationX = pan.location(in: nil).x
+        
+        if locationX>=80 && topViewController?.handy.isEnableFullScreenPopGesture == false{
+            return false
+        }
+        
+        if let topViewController = topViewController {
+            return topViewController.handy.isEnablePopGesture
+        }
+        return true
     }
-    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        handy.navigationContext.navigationController(didShow: viewController, animated: animated)
-    }
     
-   
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if touch.view is UISlider{
+            return false
+        }
+        return true
+    }
 }
+
 
 extension HandyExtension where Base: UINavigationController{
     ///若设置 则替代系统默认的返回
@@ -287,9 +314,18 @@ extension HandyExtension where Base: UINavigationController{
         }
     }
     
+    public var interactivePopGestureRecognizer: UIPanGestureRecognizer? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.interactivePopGestureRecognizer) as? UIPanGestureRecognizer
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.interactivePopGestureRecognizer, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
     public var navigationStyle: HandyNavigationStyle {
         get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.navigationStyle) as? HandyNavigationStyle ?? .system
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.navigationStyle) as? HandyNavigationStyle ?? .none
         }
         set {
             
@@ -338,8 +374,9 @@ extension HandyExtension where Base: UINavigationController{
                     navigationContext.naviFrameObserver = nil
                     navigationContext.alphaObserver = nil
                     for subView in base.navigationBar.subviews.first?.subviews ?? [] {
-                        subView.isHidden = true
+                        subView.alpha = 1
                     }
+                    base.view.layoutIfNeeded()
                     updateNavigationBar(for: topVC)
                 }else{
                     navigationContext.clearTempFakeBar()
@@ -359,10 +396,10 @@ extension HandyExtension where Base: UINavigationController{
     
     var animationBlock: ((_ finished: Bool)->Void)? {
         get {
-            return objc_getAssociatedObject(self, &type(of: base).AssociatedKeys.animationBlock) as? (_ finished: Bool)->Void
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.animationBlock) as? (_ finished: Bool)->Void
         }
         set {
-            objc_setAssociatedObject(self, &type(of: base).AssociatedKeys.animationBlock, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.animationBlock, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -405,6 +442,7 @@ extension HandyExtension where Base: UINavigationController{
         if navigationStyle == .none{
             base.navigationBar.barTintColor = viewController.handy.naviBackgroundColor
             base.navigationBar.setBackgroundImage(viewController.handy.naviBackgroundImage, for: .default)
+            base.navigationBar.handy.backgroundAlpha = viewController.handy.naviBarAlpha
         }else if navigationStyle == .custom {
             bar = viewController.handy.customNaviBar
             base.navigationBar.isTranslucent = viewController.handy.naviIsTranslucent
@@ -452,3 +490,5 @@ extension HandyExtension where Base: UINavigationController{
     }
     
 }
+
+

@@ -53,6 +53,7 @@
 		B51A4B5828E58D5400EE5091 /* UIViewController+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */; };
 		B51A4B5A28E592EF00EE5091 /* HandyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5928E592EF00EE5091 /* HandyTransition.swift */; };
 		B51A4B5C28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */; };
+		B530546A28F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530546928F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift */; };
 		B812306A1D935A8E6104DB8F48A1D747 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6A462E0F0B040B83C8763773533FE /* LayoutConstraint.swift */; };
 		BB64EFCF1B388B5985BC43A70D949C11 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBE69DD3B611E4180FCBDD8CDE8814 /* Debugging.swift */; };
 		BEBCD7327FFE038778E836758C7F010A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */; };
@@ -188,6 +189,7 @@
 		B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Handy.swift"; sourceTree = "<group>"; };
 		B51A4B5928E592EF00EE5091 /* HandyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyTransition.swift; sourceTree = "<group>"; };
 		B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandyTransition+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
+		B530546928F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UIScrollView.swift"; sourceTree = "<group>"; };
 		B57B4B15AAC3AB24B43306829FAA77A0 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Sources/ConstraintPriority.swift; sourceTree = "<group>"; };
 		B5C5E06C364A47421E4499088644D142 /* Pods-Handy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Handy_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Sources/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				B51A4B4F28E58A4C00EE5091 /* HandyNavigationBar.swift */,
 				B51A4B5128E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift */,
 				B51A4B5328E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift */,
+				B530546928F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift */,
 				B51A4B5528E58C0800EE5091 /* HandyNavigationContrllerContext.swift */,
 			);
 			name = Navigation;
@@ -772,6 +775,7 @@
 				0444EBF2E7359E9A621C26F680831AB9 /* UIButton+Handy.swift in Sources */,
 				F1838657B4653DFBA50BA9C81C22ED68 /* UIColor+Handy.swift in Sources */,
 				D71AF7464D9708C89A7404BD3907AD59 /* UIControl+Handy.swift in Sources */,
+				B530546A28F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift in Sources */,
 				2D917A46FE407398B199344568B2EA30 /* UIImage+Handy.swift in Sources */,
 				38D763D3AAEFFE8F4521AA1D523B91AF /* UIView+Handy.swift in Sources */,
 				B51A4B5228E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift in Sources */,

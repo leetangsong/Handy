@@ -29,7 +29,13 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-   
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
+    }
     var titles: [String] = ["导航栏控制","转场push","转场present","自定义相册浏览器 带编辑图片","相册控件","日历控件"]
     // MARK: - Table view data source
 

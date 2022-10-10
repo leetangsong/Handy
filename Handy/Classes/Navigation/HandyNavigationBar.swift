@@ -131,7 +131,6 @@ public class HandyNavigationBar: UINavigationBar {
     public override func layoutSubviews() {
         super.layoutSubviews()
         setupFakeView()
-        
     }
     
 }

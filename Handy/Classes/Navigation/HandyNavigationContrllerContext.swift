@@ -34,7 +34,7 @@ class HandyNavigationContrllerContext: NSObject {
         if navi.handy.navigationStyle == .none{
             return
         }
-
+        navi.view.backgroundColor = .white
         for view in navi.navigationBar.subviews {
             if "_UIBarBackground" == NSStringFromClass(type(of: view)) {
                 ///不知道为啥  模拟器偶尔会为负 .....
@@ -48,7 +48,7 @@ class HandyNavigationContrllerContext: NSObject {
                 }
                 for subView in view.subviews {
                     if !(subView is HandyNavigationBar) {
-                        subView.isHidden = true
+                        subView.alpha = 0
                     }
                 }
                 if let top = navi.topViewController, !top.prefersStatusBarHidden, !top.handy.naviBarHidden, view.handy.top<0, navi.navigationBar.handy.top == 0{
@@ -68,22 +68,18 @@ class HandyNavigationContrllerContext: NSObject {
     
     func navigationController(willShow viewController: UIViewController, animated: Bool) {
         
-        guard let navi = navigationController, navi.handy.navigationStyle != .none else { return }
+        guard let navi = navigationController, navi.handy.navigationStyle != .none, !(viewController is UINavigationController) else { return }
         viewController.setNeedsStatusBarAppearanceUpdate()
         fakeBarBeginFrame = fakeBar.frame
-        navi.view.layoutIfNeeded()
         if let _ = navi.transitionCoordinator{
-            showViewController()
+            showViewController(viewController)
         } else { //1. 初始化只有一个controller的时候  2. animated 为false的时候
             navi.handy.updateNavigationBar(for: viewController)
         }
-        let isRootVC = viewController == navi.viewControllers.first
-        if !isRootVC, viewController.isViewLoaded {
-            installsLeftBarButtonItemIfNeeded(for: viewController)
-        }
+        
     }
     func navigationController(didShow viewController: UIViewController, animated: Bool) {
-        guard let navi = navigationController, navi.handy.navigationStyle != .none else { return }
+        guard let navi = navigationController, navi.handy.navigationStyle != .none, !(viewController is UINavigationController) else { return }
         if animated {
             DispatchQueue.main.async {
                 navi.handy.animationBlock?(true)
@@ -105,9 +101,17 @@ class HandyNavigationContrllerContext: NSObject {
         }
         var frame = navi.navigationBar.frame
         frame.origin.x = 0
-        if frame.origin.y>=0 , fakeBar.frame.origin.y >= 0, fakeBar.superview == fakeSuperView {
+        if frame.origin.y>=0, fakeBar.frame.origin.y >= 0, fakeBar.superview == fakeSuperView {
             let fakeFrame = CGRect.init(x: 0, y: frame.origin.y == 0 ? 0: HandyApp.statusBarHeight, width: navi.navigationBar.frame.size.width, height: navi.navigationBar.frame.size.height)
             fakeBar.frame = fakeFrame
+            fakeBar.setNeedsLayout()
+        }
+        
+        guard let coordinator = navi.transitionCoordinator, let toVC = coordinator.viewController(forKey: .to) else {
+                  return
+              }
+        if frame.origin.y>=0, fakeBar.frame.origin.y <= 0, fakeBar.superview == toVC.view {
+            fakeBar.frame = fakerBarFrame(for: toVC, originView: fakeBar)
             fakeBar.setNeedsLayout()
         }
     }
@@ -130,14 +134,14 @@ class HandyNavigationContrllerContext: NSObject {
         }
 
         if naviFrameObserver == nil{
-            naviFrameObserver = fakeSuperView.observe(\UIView.frame, options: [.old, .new]){ obj, change in
-                if let _new = change.newValue, let _old = change.oldValue, _new.equalTo(_old){
+            naviFrameObserver = fakeSuperView.observe(\UIView.frame, options: [.old, .new]){ [weak self, weak navi] obj, change in
+                if let navi = navi ,let _new = change.newValue, let _old = change.oldValue, _new.equalTo(_old){
                     if _new.origin.y == 0, navi.navigationBar.frame.origin.y>0{
                         var frame = _new
                         frame.origin.y = -navi.navigationBar.frame.origin.y
                         frame.size.height = navi.navigationBar.frame.origin.y + navi.navigationBar.frame.size.height
                         if navi.transitionCoordinator == nil{
-                            navi.navigationBar.handy.top = self.getStatusHeight()
+                            navi.navigationBar.handy.top = self?.getStatusHeight() ?? 0
                         }
                         obj.frame = frame
                     }
@@ -169,9 +173,9 @@ class HandyNavigationContrllerContext: NSObject {
         setupFakeSubviews()
     }
     
-    func showViewController(){
-        guard let navi = navigationController, navi.handy.navigationStyle != .none , let viewController = navi.topViewController, let coordinator = viewController.transitionCoordinator, let fromVC = coordinator.viewController(forKey: .from),
-              let toVC = coordinator.viewController(forKey: .to) else {
+    func showViewController(_ viewController:UIViewController){
+        guard let navi = navigationController, navi.handy.navigationStyle != .none , let coordinator = viewController.transitionCoordinator, let fromVC = coordinator.viewController(forKey: .from),
+              let toVC = coordinator.viewController(forKey: .to), !(fromVC is UINavigationController), !(toVC is UINavigationController) else {
                   return
               }
         
@@ -187,7 +191,8 @@ class HandyNavigationContrllerContext: NSObject {
             navi.view.insertSubview(fakeBar, belowSubview: navi.navigationBar)
         }
         fakeBar.setNeedsLayout()
-        
+        self.fakeSuperView?.backgroundColor = .clear
+
         coordinator.notifyWhenInteractionChanges { context in
             if navi.handy.navigationStyle != .custom {
                 if !context.isCancelled{
@@ -211,18 +216,15 @@ class HandyNavigationContrllerContext: NSObject {
                 }
             }
         }
-        self.fakeSuperView?.backgroundColor = .clear
-        if viewController == toVC {
-            self.showTempFakeBar(fromVC: fromVC, toVC: toVC, ignoreTintColor: coordinator.isInteractive)
-        }
+        showTempFakeBar(fromVC: fromVC, toVC: toVC, ignoreTintColor: coordinator.isInteractive)
         coordinator.animate(alongsideTransition: { (context) in
-    
+            let isRootVC = viewController == navi.viewControllers.first
+            if !isRootVC, viewController.isViewLoaded {
+                self.installsLeftBarButtonItemIfNeeded(for: viewController)
+            }
         }) { (context) in
             ///手势取消动画完成执行
             if context.isCancelled {
-                if HandyApp.screenHeight == navi.view.frame.size.height{
-//                    self.navigationBar.handy.top = self.getStatusHeight()
-                }
                 /// 重新设置样式
                 self.clearTempFakeBar()
                 navi.handy.updateNavigationBar(for: fromVC)
@@ -278,10 +280,22 @@ class HandyNavigationContrllerContext: NSObject {
             fromFakeBar.updateBarShadow(for: fromVC)
             toFakeBar.updateBarBackground(for: toVC)
             toFakeBar.updateBarShadow(for: toVC)
-
             fromFakeBar.isHidden = fromVC.handy.naviBarHidden
             toFakeBar.isHidden = toVC.handy.naviBarHidden
 
+            
+            toFakeBar.layer.shadowColor = toVC.view.layer.shadowColor
+            toFakeBar.layer.shadowOffset = toVC.view.layer.shadowOffset
+            toFakeBar.layer.shadowRadius = toVC.view.layer.shadowRadius
+            toFakeBar.layer.shadowOpacity = toVC.view.layer.shadowOpacity
+            
+            
+            fromFakeBar.layer.shadowColor = fromVC.view.layer.shadowColor
+            fromFakeBar.layer.shadowOffset = fromVC.view.layer.shadowOffset
+            fromFakeBar.layer.shadowRadius = fromVC.view.layer.shadowRadius
+            fromFakeBar.layer.shadowOpacity = fromVC.view.layer.shadowOpacity
+            
+            
             if toVC.view.superview == nil || (fromVC.view.superview != nil && NSStringFromClass(type(of: fromVC.view.superview!)) == "_UIParallaxDimmingView" || NSStringFromClass(type(of: toVC.view.superview!)) == "_UIParallaxDimmingView")  {
                 ///适配ios 11  系统默认转场状态
                 toVC.view.addSubview(toFakeBar)
@@ -290,11 +304,12 @@ class HandyNavigationContrllerContext: NSObject {
                 toVC.view.superview?.insertSubview(toFakeBar, aboveSubview: toVC.view)
                 fromVC.view.superview?.insertSubview(fromFakeBar, aboveSubview: fromVC.view)
             }
-
+           
             fromFakeBar.frame = fakerBarFrame(for: fromVC, originView: fromFakeBar)
             toFakeBar.frame = fakerBarFrame(for: toVC, originView: toFakeBar)
             fromFakeBar.setNeedsLayout()
             toFakeBar.setNeedsLayout()
+        
         }
         
         UIView.setAnimationsEnabled(true)
@@ -456,7 +471,7 @@ class HandyNavigationContrllerContext: NSObject {
         if !isRootVC && !hasSetLeftItem {
             if navi.handy.useSystemBackBarButtonItem{
                 if navi.handy.navigationStyle == .custom  {
-                    let path = Bundle.init(for: HandyNavigationBar.self).path(forResource: "TSHandyKit", ofType: "bundle")
+                    let path = Bundle.init(for: HandyNavigationBar.self).path(forResource: "Handy", ofType: "bundle")
                     let item = HandyBarButtonItem.init(image: UIImage.handy.image(with: "icon_back", from: path), style: .done, target: self, action: #selector(onBack(_:)))
                     viewController.handy.navigationItem.leftBarButtonItem = item
                 }else{
@@ -509,10 +524,10 @@ extension HandyExtension where Base: UINavigationBar{
     
     var backgroundAlpha: CGFloat {
         get {
-            return objc_getAssociatedObject(self, &type(of: base).UINavigationBarKeys.backgroundAlpha) as? CGFloat ?? 1
+            return objc_getAssociatedObject(base, &type(of: base).UINavigationBarKeys.backgroundAlpha) as? CGFloat ?? 1
         }
         set {
-            objc_setAssociatedObject(self, &type(of: base).UINavigationBarKeys.backgroundAlpha, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(base, &type(of: base).UINavigationBarKeys.backgroundAlpha, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             let classNames = ["_UIBarBackground","_UINavigationBarBackground"]
             for view in base.subviews {
                 if classNames.contains(NSStringFromClass(type(of: view))) {

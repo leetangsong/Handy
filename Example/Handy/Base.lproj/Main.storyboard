@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="63.418290854572717"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navi View Controller-->
         <scene sceneID="9kD-qO-iJt">
             <objects>
-                <navigationController storyboardIdentifier="navigationConfige" automaticallyAdjustsScrollViewInsets="NO" id="h60-Ko-V3Y" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationConfige" automaticallyAdjustsScrollViewInsets="NO" id="h60-Ko-V3Y" customClass="BaseNaviViewController" customModule="Handy_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Hh-kb-U9H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

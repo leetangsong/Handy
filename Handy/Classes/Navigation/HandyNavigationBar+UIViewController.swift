@@ -62,10 +62,12 @@ extension UIViewController{
         let originalMethods = [
             #selector(UIViewController.viewWillAppear(_:)),
             #selector(UIViewController.viewWillDisappear(_:)),
+            #selector(UIViewController.viewDidAppear(_:)),
         ]
         let swizzledMethods = [
             #selector(UIViewController.ts_viewWillAppear(_:)),
             #selector(UIViewController.ts_viewWillDisappear(_:)),
+            #selector(UIViewController.ts_viewDidAppear(_:)),
         ]
 
         for (i, originalMethod) in originalMethods.enumerated() {
@@ -78,7 +80,12 @@ extension UIViewController{
     @objc private func ts_viewWillAppear(_ animated: Bool) {
         ts_viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(handy._naviBarHidden, animated: animated)
+        navigationController?.handy.navigationContext.navigationController(willShow: self, animated: animated)
         navigationController?.navigationBar.isTranslucent = handy.naviIsTranslucent
+    }
+    @objc private func ts_viewDidAppear(_ animated: Bool) {
+        ts_viewDidAppear(animated)
+        navigationController?.handy.updateNavigationBar(for: self)
     }
     @objc private func ts_viewWillDisappear(_ animated: Bool) {
         ts_viewWillDisappear(animated)
@@ -283,7 +290,7 @@ extension HandyExtension where Base: UIViewController {
     }
     
     /// 是否开启手势返回，默认开启
-    public var enablePopGesture: Bool {
+    public var isEnablePopGesture: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.enablePopGesture) as? Bool ?? true
         }
@@ -291,8 +298,8 @@ extension HandyExtension where Base: UIViewController {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.enablePopGesture, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    ///是否全屏幕侧滑  优先级 ts_enablePopGesture > ts_enableFullScreenPopGesture
-    public var enableFullScreenPopGesture: Bool {
+    ///是否全屏幕侧滑  优先级 enablePopGesture > enableFullScreenPopGesture
+    public var isEnableFullScreenPopGesture: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.enableFullScreenPopGesture) as? Bool ?? true
         }

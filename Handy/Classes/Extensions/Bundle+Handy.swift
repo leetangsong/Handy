@@ -11,11 +11,7 @@ extension Bundle: HandyCompatible{}
 extension Bundle: HandyClassCompatible{ }
 
 
-extension HandyExtension where Base == Bundle{
-    
-}
-
-
+extension HandyExtension where Base == Bundle{}
 extension HandyClassExtension where Base == Bundle{
     public static func bundle(with cls: AnyClass, name: String) -> Bundle?{
         var bundle:Bundle? = Bundle.init(for: cls)

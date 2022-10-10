@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AF7C326E8B82F3A6C7DB6FC5 /* Pods_Handy_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D398F1A5A8C1864F5B4DE48 /* Pods_Handy_Example.framework */; };
+		B5454F9F28F2B5700021B9F1 /* BaseNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5454F9E28F2B5700021B9F1 /* BaseNaviViewController.swift */; };
 		B5F4805F28E57B4800A843FC /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805928E57B4700A843FC /* AViewController.swift */; };
 		B5F4806028E57B4800A843FC /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805A28E57B4700A843FC /* NaviViewController.swift */; };
 		B5F4806128E57B4800A843FC /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805B28E57B4800A843FC /* BViewController.swift */; };
@@ -52,6 +53,7 @@
 		8BF330ADA2C48EDB079A4755 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8FA505E39D5F94E946744B1B /* Pods_Handy_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D398F1A5A8C1864F5B4DE48 /* Pods_Handy_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5454F9E28F2B5700021B9F1 /* BaseNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNaviViewController.swift; sourceTree = "<group>"; };
 		B5F4805928E57B4700A843FC /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		B5F4805A28E57B4700A843FC /* NaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
 		B5F4805B28E57B4800A843FC /* BViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				B5454F9E28F2B5700021B9F1 /* BaseNaviViewController.swift */,
 			);
 			name = "Example for Handy";
 			path = Handy;
@@ -230,10 +233,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = K43YX87UA7;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = V9LDX2KG2T;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -351,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5454F9F28F2B5700021B9F1 /* BaseNaviViewController.swift in Sources */,
 				B5F4806028E57B4800A843FC /* NaviViewController.swift in Sources */,
 				B5F4806328E57B4800A843FC /* TableViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
@@ -504,6 +510,7 @@
 			baseConfigurationReference = 7BDB1E6E96CEA6F3D77A9987 /* Pods-Handy_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K43YX87UA7;
 				INFOPLIST_FILE = Handy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -520,6 +527,7 @@
 			baseConfigurationReference = 36BDCC04D104A43B574863CA /* Pods-Handy_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K43YX87UA7;
 				INFOPLIST_FILE = Handy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -535,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0408874E75D0EF972831B079 /* Pods-Handy_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = V9LDX2KG2T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -558,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2ED84B085CD19BAFCE81589 /* Pods-Handy_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = V9LDX2KG2T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

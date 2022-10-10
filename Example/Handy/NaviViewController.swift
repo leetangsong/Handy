@@ -20,16 +20,18 @@ class NaviViewController: UIViewController {
         super.viewDidLoad()
         if #available(iOS 11, *) {
             scrollView.contentInsetAdjustmentBehavior = .never
+        }else{
+            automaticallyAdjustsScrollViewInsets = false
         }
-        automaticallyAdjustsScrollViewInsets = false
         handy.naviBackgroundColor = UIColor.handy.color(with: "#FF7E79")
         handy.naviTintColor = .red
         handy.naviTitleColor = .red
         scrollView.contentInset = UIEdgeInsets.init(top: HandyApp.naviBarHeight, left: 0, bottom: HandyApp.safeAreaBottom, right: 0)
         handy.title = "\((navigationController?.viewControllers.count ?? 0))"
-        
     }
    
+   
+    
     @objc func pop(){
         navigationController?.popViewController(animated: true)
     }
@@ -69,7 +71,6 @@ class NaviViewController: UIViewController {
 //
     @IBAction func blackBarStyleSwitchChanged(_ sender: UISwitch) {
         handy.statusBarStyle  = sender.isOn ? .dark : .lightContent
-      
     }
     
     @IBAction func shadowHiddenSwitchChanged(_ sender: UISwitch) {
@@ -118,14 +119,3 @@ class NaviViewController: UIViewController {
     }
     
 }
-
-
-//
-//extension ViewController: TSViewControllerTransitionable{
-//
-//    func transitioningStyle(operation: UINavigationController.Operation) -> TSTransitioningStyle {
-//        return .transformScale
-//    }
-//
-//
-//}
