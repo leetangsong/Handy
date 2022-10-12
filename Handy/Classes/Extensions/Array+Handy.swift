@@ -22,12 +22,14 @@ extension HandyGenericityExtension where Base == Array<T>{
     }
 }
 
-extension HandyGenericityExtension where Base == Array<T>, T: Equatable{
-    public func remove(_ object: T) -> Base{
-        if let index = base.firstIndex(of: object){
-            base.remove(at: index)
+extension HandyGenericityValueExtension where Base == Array<T>, T: Equatable{
+    public func remove(_ object: T, isAll: Bool = false){
+        if let index = base.pointee.firstIndex(of: object){
+            base.pointee.remove(at: index)
+            if isAll {
+                remove(object, isAll: isAll)
+            }
         }
-        return base
     }
 }
 

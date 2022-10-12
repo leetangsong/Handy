@@ -11,7 +11,7 @@ import UIKit
 class HandyTransitionContainerView: UIView{}
 
 @objc public protocol HandyNavigationItemCustomizable{
-    @objc optional func ts_customBackItem(_ target: Any?, action: Selector) -> UIBarButtonItem
+    @objc optional func handy_customBackItem(_ target: Any?, action: Selector) -> UIBarButtonItem
 }
 
 class HandyNavigationContrllerContext: NSObject {
@@ -478,7 +478,7 @@ class HandyNavigationContrllerContext: NSObject {
                     viewController.navigationItem.leftBarButtonItem = navi.handy.barBackItem
                 }
             }else{
-                if let item = (viewController as? HandyNavigationItemCustomizable)?.ts_customBackItem?(self, action: #selector(onBack(_:))){
+                if let item = (viewController as? HandyNavigationItemCustomizable)?.handy_customBackItem?(self, action: #selector(onBack(_:))){
                     viewController.handy.navigationItem.leftBarButtonItem = item
                 }else{
                     viewController.handy.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: NSLocalizedString("Back", comment: ""), style: .plain, target: self, action: #selector(onBack(_:)))

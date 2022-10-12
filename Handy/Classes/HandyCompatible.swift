@@ -61,6 +61,15 @@ public class HandyGenericityExtension<Base, T> {
         self.base = base
     }
 }
+
+
+public class HandyGenericityValueExtension<Base, T> {
+    public var base: UnsafeMutablePointer<Base>
+    public init(_ base: UnsafeMutablePointer<Base>) {
+        self.base = base
+    }
+}
+
 public protocol HandyGenericityCompatible: AnyObject {
     associatedtype ItemType
 }
@@ -77,8 +86,12 @@ extension HandyGenericityCompatible {
 }
 
 extension HandyGenericityCompatibleValue {
-    public var handy: HandyGenericityExtension<Self, ItemType> {
-        get{ return HandyGenericityExtension(self) }
+    public var handy: HandyGenericityValueExtension<Self, ItemType> {
+        mutating get{
+            withUnsafeMutablePointer(to: &self) { pointer in
+                return HandyGenericityValueExtension(pointer)
+            }
+        }
         set{ }
     }
 }

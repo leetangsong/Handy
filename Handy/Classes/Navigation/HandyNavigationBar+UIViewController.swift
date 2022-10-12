@@ -42,7 +42,7 @@ extension UIViewController{
             var leftItems = handy.customNaviBar?.item?.leftBarButtonItems ?? []
             for item in leftItems {
                 if item is HandyBarButtonItem{
-                    leftItems = leftItems.handy.remove(item)
+                    leftItems.handy.remove(item)
                 }
             }
             navigationItem.titleView = handy.customNaviBar?.item?.titleView
@@ -65,9 +65,9 @@ extension UIViewController{
             #selector(UIViewController.viewDidAppear(_:)),
         ]
         let swizzledMethods = [
-            #selector(UIViewController.ts_viewWillAppear(_:)),
-            #selector(UIViewController.ts_viewWillDisappear(_:)),
-            #selector(UIViewController.ts_viewDidAppear(_:)),
+            #selector(UIViewController.handy_viewWillAppear(_:)),
+            #selector(UIViewController.handy_viewWillDisappear(_:)),
+            #selector(UIViewController.handy_viewDidAppear(_:)),
         ]
 
         for (i, originalMethod) in originalMethods.enumerated() {
@@ -77,18 +77,18 @@ extension UIViewController{
    
 
     
-    @objc private func ts_viewWillAppear(_ animated: Bool) {
-        ts_viewWillAppear(animated)
+    @objc private func handy_viewWillAppear(_ animated: Bool) {
+        handy_viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(handy._naviBarHidden, animated: animated)
         navigationController?.handy.navigationContext.navigationController(willShow: self, animated: animated)
         navigationController?.navigationBar.isTranslucent = handy.naviIsTranslucent
     }
-    @objc private func ts_viewDidAppear(_ animated: Bool) {
-        ts_viewDidAppear(animated)
+    @objc private func handy_viewDidAppear(_ animated: Bool) {
+        handy_viewDidAppear(animated)
         navigationController?.handy.updateNavigationBar(for: self)
     }
-    @objc private func ts_viewWillDisappear(_ animated: Bool) {
-        ts_viewWillDisappear(animated)
+    @objc private func handy_viewWillDisappear(_ animated: Bool) {
+        handy_viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(handy._naviBarHidden, animated: animated)
     }
 }

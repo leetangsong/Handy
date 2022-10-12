@@ -10,12 +10,13 @@ import UIKit
 import Handy
 class TableViewController: UITableViewController {
 
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 11, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
-       
+        
+        
         tableView.contentInset = UIEdgeInsets.init(top: HandyApp.naviBarHeight, left: 0, bottom: 0, right: 0)
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
@@ -37,6 +38,7 @@ class TableViewController: UITableViewController {
         }
     }
     var titles: [String] = ["导航栏控制","转场push","转场present","自定义相册浏览器 带编辑图片","相册控件","日历控件"]
+   
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

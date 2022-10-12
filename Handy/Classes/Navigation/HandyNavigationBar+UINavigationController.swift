@@ -106,12 +106,12 @@ extension UINavigationController{
             #selector(UINavigationController.setNavigationBarHidden(_:animated:)),
         ]
         let swizzledMethods = [
-            #selector(UINavigationController.ts_pushViewController(_:animated:)),
-            #selector(UINavigationController.ts_popViewController(animated:)),
-            #selector(UINavigationController.ts_popToRootViewController(animated:)),
-            #selector(UINavigationController.ts_popToViewController(_:animated:)),
-            #selector(UINavigationController.ts_updateInteractiveTransition(_:)),
-            #selector(UINavigationController.ts_setNavigationBarHidden(_:animated:))
+            #selector(UINavigationController.handy_pushViewController(_:animated:)),
+            #selector(UINavigationController.handy_popViewController(animated:)),
+            #selector(UINavigationController.handy_popToRootViewController(animated:)),
+            #selector(UINavigationController.handy_popToViewController(_:animated:)),
+            #selector(UINavigationController.handy_updateInteractiveTransition(_:)),
+            #selector(UINavigationController.handy_setNavigationBarHidden(_:animated:))
         ]
 
         for (i, originalMethod) in originalMethods.enumerated() {
@@ -156,7 +156,7 @@ extension UINavigationController{
         handy.navigationContext.updateNavigationBar(fromVC: fromVC, toVC: toVC, progress: 1)
         CATransaction.commit()
     }
-    @objc private func ts_updateInteractiveTransition(_ percentComplete: CGFloat){
+    @objc private func handy_updateInteractiveTransition(_ percentComplete: CGFloat){
         
         if handy.navigationStyle == .custom {
             return
@@ -167,12 +167,12 @@ extension UINavigationController{
                   return
               }
         handy.navigationContext.updateNavigationBar(fromVC: fromVC, toVC: toVC, progress: percentComplete)
-        ts_updateInteractiveTransition(percentComplete)
+        handy_updateInteractiveTransition(percentComplete)
     }
     
     
-    @objc private  func ts_setNavigationBarHidden(_ hidden: Bool, animated: Bool){
-        ts_setNavigationBarHidden(hidden, animated: animated)
+    @objc private  func handy_setNavigationBarHidden(_ hidden: Bool, animated: Bool){
+        handy_setNavigationBarHidden(hidden, animated: animated)
         guard let _ = transitionCoordinator else {
             topViewController?.handy._naviBarHidden = hidden
             return
@@ -180,7 +180,7 @@ extension UINavigationController{
         
     }
     
-    @objc private func ts_pushViewController(_ viewController: UIViewController, animated: Bool){
+    @objc private func handy_pushViewController(_ viewController: UIViewController, animated: Bool){
         
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
             var displayLink: CADisplayLink? = CADisplayLink.init(target: self, selector: #selector(pushNeedDisplay))
@@ -192,16 +192,16 @@ extension UINavigationController{
             }
             CATransaction.setAnimationDuration(tsPushDuration)
             CATransaction.begin()
-            ts_pushViewController(viewController, animated: animated)
+            handy_pushViewController(viewController, animated: animated)
             CATransaction.commit()
         }else{
-            ts_pushViewController(viewController, animated: animated)
+            handy_pushViewController(viewController, animated: animated)
         }
     }
     
     
     
-    @objc private func ts_popViewController(animated: Bool) -> UIViewController? {
+    @objc private func handy_popViewController(animated: Bool) -> UIViewController? {
         var viewController: UIViewController?
         
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
@@ -214,15 +214,15 @@ extension UINavigationController{
             }
             CATransaction.setAnimationDuration(tsPushDuration)
             CATransaction.begin()
-            viewController = ts_popViewController(animated: animated)
+            viewController = handy_popViewController(animated: animated)
             CATransaction.commit()
         }else{
-            viewController = ts_popViewController(animated: animated)
+            viewController = handy_popViewController(animated: animated)
         }
         return viewController
     }
     
-    @objc private func ts_popToRootViewController(animated: Bool) -> [UIViewController]? {
+    @objc private func handy_popToRootViewController(animated: Bool) -> [UIViewController]? {
         var vcArray: [UIViewController]?
 
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
@@ -235,15 +235,15 @@ extension UINavigationController{
             }
             CATransaction.setAnimationDuration(tsPushDuration)
             CATransaction.begin()
-            vcArray = ts_popToRootViewController(animated: animated)
+            vcArray = handy_popToRootViewController(animated: animated)
             CATransaction.commit()
         }else{
-            vcArray = ts_popToRootViewController(animated: animated)
+            vcArray = handy_popToRootViewController(animated: animated)
         }
         return vcArray
     }
     
-    @objc private func ts_popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+    @objc private func handy_popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         var vcArray: [UIViewController]?
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
             var displayLink: CADisplayLink? = CADisplayLink.init(target: self, selector: #selector(popNeedDisplay))
@@ -255,10 +255,10 @@ extension UINavigationController{
             }
             CATransaction.setAnimationDuration(tsPushDuration)
             CATransaction.begin()
-            vcArray = ts_popToViewController(viewController, animated: animated)
+            vcArray = handy_popToViewController(viewController, animated: animated)
             CATransaction.commit()
         }else{
-            vcArray = ts_popToViewController(viewController, animated: animated)
+            vcArray = handy_popToViewController(viewController, animated: animated)
         }
         return vcArray
     }
@@ -484,7 +484,7 @@ extension HandyExtension where Base: UINavigationController{
             }
         }
         if let controllerToRemove = controllerToRemove {
-            controllers = controllers.handy.remove(controllerToRemove)
+            controllers.handy.remove(controllerToRemove)
             base.setViewControllers(controllers, animated: animated)
         }
     }

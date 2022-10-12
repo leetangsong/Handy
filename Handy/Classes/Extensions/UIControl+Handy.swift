@@ -40,12 +40,12 @@ extension UIControl {
  
     public override class func swizzling() {
         let originalMethod = #selector(UIControl.sendAction(_:to:for:))
-        let swizzledMethod = #selector(UIControl.ts_sendAction(_:to:for:))
+        let swizzledMethod = #selector(UIControl.handy_sendAction(_:to:for:))
         swizzlingForClass(UIControl.self, originalSelector: originalMethod, swizzledSelector: swizzledMethod)
     }
     
     //防止重复点击
-    @objc private func ts_sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {
+    @objc private func handy_sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {
         
         if let acceptEventInterval = handy.acceptEventInterval {
             if Date().timeIntervalSince1970 - handy.acceptEventTime < acceptEventInterval {
@@ -53,7 +53,7 @@ extension UIControl {
             }
             handy.acceptEventTime = Date().timeIntervalSince1970
         }
-        self.ts_sendAction(action, to: target, for: event)
+        self.handy_sendAction(action, to: target, for: event)
     }
     
 }
