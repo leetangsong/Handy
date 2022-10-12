@@ -54,7 +54,7 @@ extension HandyClassCompatibleValue {
 
 
 
-
+///带有泛型对象
 public class HandyGenericityExtension<Base, T> {
     public var base: Base
     public init(_ base: Base) {
@@ -62,7 +62,7 @@ public class HandyGenericityExtension<Base, T> {
     }
 }
 
-
+///带有泛型值类型用   比如数组
 public class HandyGenericityValueExtension<Base, T> {
     public var base: UnsafeMutablePointer<Base>
     public init(_ base: UnsafeMutablePointer<Base>) {
