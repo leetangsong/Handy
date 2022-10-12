@@ -120,6 +120,4 @@ extension HandyClassExtension where Base == UIImage {
         }
         return image
     }
-    
-    
 }

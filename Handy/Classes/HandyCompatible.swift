@@ -55,7 +55,7 @@ extension HandyClassCompatibleValue {
 
 
 ///带有泛型对象
-public class HandyGenericityExtension<Base, T> {
+public class HandyTypealiasExtension<Base, T> {
     public var base: Base
     public init(_ base: Base) {
         self.base = base
@@ -63,33 +63,33 @@ public class HandyGenericityExtension<Base, T> {
 }
 
 ///带有泛型值类型用   比如数组
-public class HandyGenericityValueExtension<Base, T> {
+public class HandyTypealiasValueExtension<Base, T> {
     public var base: UnsafeMutablePointer<Base>
     public init(_ base: UnsafeMutablePointer<Base>) {
         self.base = base
     }
 }
 
-public protocol HandyGenericityCompatible: AnyObject {
+public protocol HandyTypealiasCompatible: AnyObject {
     associatedtype ItemType
 }
 
-public protocol HandyGenericityCompatibleValue {
+public protocol HandyTypealiasCompatibleValue {
     associatedtype ItemType
 }
 
-extension HandyGenericityCompatible {
-    public var handy: HandyGenericityExtension<Self, ItemType> {
-        get{ return HandyGenericityExtension(self) }
+extension HandyTypealiasCompatible {
+    public var handy: HandyTypealiasExtension<Self, ItemType> {
+        get{ return HandyTypealiasExtension(self) }
         set{ }
     }
 }
 
-extension HandyGenericityCompatibleValue {
-    public var handy: HandyGenericityValueExtension<Self, ItemType> {
+extension HandyTypealiasCompatibleValue {
+    public var handy: HandyTypealiasValueExtension<Self, ItemType> {
         mutating get{
             withUnsafeMutablePointer(to: &self) { pointer in
-                return HandyGenericityValueExtension(pointer)
+                return HandyTypealiasValueExtension(pointer)
             }
         }
         set{ }
@@ -98,27 +98,27 @@ extension HandyGenericityCompatibleValue {
 
 
 
-public class HandyClassGenericityExtension<Base, T> {
+public class HandyClassTypealiasExtension<Base, T> {
     public static var base: Base.Type{
         return Base.self
     }
 }
-public protocol HandyClassGenericityCompatible: AnyObject {
+public protocol HandyClassTypealiasCompatible: AnyObject {
     associatedtype ItemType
 }
-public protocol HandyClassGenericityCompatibleValue {
+public protocol HandyClassTypealiasCompatibleValue {
     associatedtype ItemType
 }
 
-extension HandyClassGenericityCompatible {
-    public static var handy: HandyClassGenericityExtension<Self, ItemType>.Type{
-        get{ return  HandyClassGenericityExtension<Self, ItemType>.self }
+extension HandyClassTypealiasCompatible {
+    public static var handy: HandyClassTypealiasExtension<Self, ItemType>.Type{
+        get{ return  HandyClassTypealiasExtension<Self, ItemType>.self }
         set{ }
     }
 }
-extension HandyClassGenericityCompatibleValue {
-    public static var handy: HandyClassGenericityExtension<Self, ItemType>.Type{
-        get{ return  HandyClassGenericityExtension<Self, ItemType>.self }
+extension HandyClassTypealiasCompatibleValue {
+    public static var handy: HandyClassTypealiasExtension<Self, ItemType>.Type{
+        get{ return  HandyClassTypealiasExtension<Self, ItemType>.self }
         set{ }
     }
 }

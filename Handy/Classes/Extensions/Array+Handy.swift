@@ -8,12 +8,12 @@
 import UIKit
 
 
-extension Array: HandyGenericityCompatibleValue{
+extension Array: HandyTypealiasCompatibleValue{
     public typealias ItemType = Element
 }
-extension Array: HandyClassGenericityCompatibleValue{}
+extension Array: HandyClassTypealiasCompatibleValue{}
 
-extension HandyGenericityExtension where Base == Array<T>{
+extension HandyTypealiasExtension where Base == Array<T>{
     public subscript(index:Int) -> T?{
         if index<base.count {
             return base[index]
@@ -22,7 +22,7 @@ extension HandyGenericityExtension where Base == Array<T>{
     }
 }
 
-extension HandyGenericityValueExtension where Base == Array<T>, T: Equatable{
+extension HandyTypealiasValueExtension where Base == Array<T>, T: Equatable{
     public func remove(_ object: T, isAll: Bool = false){
         if let index = base.pointee.firstIndex(of: object){
             base.pointee.remove(at: index)
