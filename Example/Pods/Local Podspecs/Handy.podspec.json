@@ -1,11 +1,11 @@
 {
   "name": "Handy",
-  "version": "0.1.0",
-  "summary": "A short description of Handy.",
+  "version": "0.2.0",
+  "summary": "一些自定义的UI以及常用拓展.自定义导航栏",
   "swift_versions": [
     "5.0"
   ],
-  "description": "TODO: Add long description of the pod here.",
+  "description": "一些自定义的UI以及常用拓展.自定义导航栏",
   "homepage": "https://github.com/leetangsong/Handy",
   "license": {
     "type": "MIT",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/leetangsong/Handy.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "11.0"
@@ -24,7 +24,7 @@
   "source_files": "Handy/Classes/**/*",
   "resource_bundles": {
     "Handy": [
-      "Handy/Assets/**/*"
+      "Handy/Assets/*"
     ]
   },
   "pod_target_xcconfig": {

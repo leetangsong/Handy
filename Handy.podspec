@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Handy'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = '一些自定义的UI以及常用拓展.自定义导航栏'
   s.swift_version    = ['5.0']
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Handy/Classes/**/*'
   
   s.resource_bundles = {
-    'Handy' => ['Handy/Assets/**/*']
+    'Handy' => ['Handy/Assets/*']
   }
   s.pod_target_xcconfig = {
     'CODE_SIGN_IDENTITY' => ''

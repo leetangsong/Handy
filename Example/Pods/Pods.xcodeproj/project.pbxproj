@@ -7,114 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00C8D338666872E0F4D5E537A3B5EE70 /* UIControl+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D23DD04D7B3461C933C09696C0A23 /* UIControl+Handy.swift */; };
 		02E07C3453D504C1FC23451BD4213928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		0444EBF2E7359E9A621C26F680831AB9 /* UIButton+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124B074B10E86BA49D7C486E14BA41B0 /* UIButton+Handy.swift */; };
-		0975F962170F14A4B1D63D96502F081C /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00529F62152FE0E9A82AF6D8EAAAE2E1 /* ConstraintMultiplierTarget.swift */; };
-		134051FD2E7DF0658C475957B052893F /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0072CC268C7456CC1DA6E8180975AB43 /* ConstraintViewDSL.swift */; };
-		18DBB1BC1839E16FFC2838246C2ACEB7 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DFD8FEE78807F86F0544749C80450 /* ConstraintDirectionalInsets.swift */; };
+		049194B1810207943C9420044F9D065B /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D51A2BEEF78C262C4B3F3798D1702 /* ConstraintMakerFinalizable.swift */; };
+		087B0C0C6A4DCE07ED188ADCC8652918 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DCDFF2011C08759407B4E2038CA11 /* ConstraintAttributes.swift */; };
+		0CD26C0F4BF1FC9D8770551A1F087BF4 /* NSObject+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB8A3112637F04F23FAC801F32E2D9 /* NSObject+Handy.swift */; };
+		11A654046766F70BE348BAC0B958D90A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		17818CF83FBF047513BCCBC1B8565CBE /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83141A7BA266489296BCBEF99AC5412 /* ConstraintView+Extensions.swift */; };
+		182CBD509057BCA0F29DFB69BBE687BE /* UIViewController+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA6D569CFC3730F6A86E3B2A65B0B6 /* UIViewController+Handy.swift */; };
+		1A5E11D4B01FA767CCA6FA514636B3E5 /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC84DB0CD86A51B4B66E0450CBF40DE /* ConstraintDirectionalInsetTarget.swift */; };
+		1B3B448E30A5225D735FEC5157245EC0 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E5BB7E9F99F41E937A7E2CCEF178BE /* ConstraintItem.swift */; };
+		1D02CB4965C91E1B088E4AAC44FA217C /* UIView+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A28FD8D1DDFC683ABD24B3AE47C6B0 /* UIView+Handy.swift */; };
 		1D4383835E9D65693C5A1A81161834AF /* Pods-Handy_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7049A97B3B237D4B5ADA0170C09D433A /* Pods-Handy_Example-dummy.m */; };
-		27EF092BEF4B8C8934B226B8AECCBDB2 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B4B15AAC3AB24B43306829FAA77A0 /* ConstraintPriority.swift */; };
-		2D917A46FE407398B199344568B2EA30 /* UIImage+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1DEA047E2566DD45A2BDD5045585E8 /* UIImage+Handy.swift */; };
-		306A8D4B27DE0ACB9D5A26C7108B8C54 /* Handy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D57572A0010759048BEBAC907C00B5D /* Handy-dummy.m */; };
-		38D763D3AAEFFE8F4521AA1D523B91AF /* UIView+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2A00FBC7B252A79E829F6BE754FD9E /* UIView+Handy.swift */; };
-		4291B7897E352BF476A30E025BEAE5A4 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143498449916D71708A8AF2F96E7320A /* SnapKit-dummy.m */; };
-		4C7BA9304D5BF41FC7E38931E3C1D0BE /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B678C00268C9CF7E410145D6F78AA /* ConstraintLayoutGuide+Extensions.swift */; };
-		4FA483FA421BF4F24D799F35A30A4A8A /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83141A7BA266489296BCBEF99AC5412 /* ConstraintView+Extensions.swift */; };
-		51482AA5AD1CC87B36AE8C116D360D3F /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282AEDFB53BD2F6B277738727FF116D /* ConstraintConstantTarget.swift */; };
-		515EDA690BF2D3419C3CEC0405C00E48 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F91B010D4991E838DAC578595BA7A /* ConstraintLayoutGuideDSL.swift */; };
-		58F890134B768FF154B929511C7D1455 /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC84DB0CD86A51B4B66E0450CBF40DE /* ConstraintDirectionalInsetTarget.swift */; };
-		59E3E8872B7CDA571128B4E241B13C71 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15C12D4B2736CB1D1B07F4838FCA7 /* LayoutConstraintItem.swift */; };
-		5AC919E8F9E7777A2CD5A689AEB90BF0 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E74C9EDB065D2E76B3EDCCB6E2153 /* ConstraintRelation.swift */; };
-		6337DCA217472AC7D145E051F171F06D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E2E91424D9428F311B73888D8E927 /* Typealiases.swift */; };
-		64D36AB1644906DB296F4CFBE309A1DE /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD101E65ADCCC341BCD3BFF777CA947C /* ConstraintConfig.swift */; };
+		1F194E375BE45FFA7F9AF89FD1A6E6EB /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6A462E0F0B040B83C8763773533FE /* LayoutConstraint.swift */; };
+		22CD0013595AE1A8BAD1829A2ED058C0 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BC61944B3E89515CACB83BB1B976 /* ConstraintDescription.swift */; };
+		254447185F4CD793D00CEBC222E2A0BB /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */; };
+		276D62BD71B7C0E047FA40EC4A0E6E6A /* Handy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 904C6278FA2DC94F51F1BA67E24238CD /* Handy-dummy.m */; };
+		2BADA92413A8A1B26A95F3CA7A2A9391 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34962F54DAA8DEB0A1D7D4F3FC09A /* ConstraintRelatableTarget.swift */; };
+		2D1BC95605AE0A034B8FCB73E975DEEA /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E2E91424D9428F311B73888D8E927 /* Typealiases.swift */; };
+		35CF0BB47A234033F02705DCDC14F2FF /* Handy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 832DD91AC876EC80225CE81F89468643 /* Handy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35F1CF42F29BBE32DACCB57A644F7090 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B4B15AAC3AB24B43306829FAA77A0 /* ConstraintPriority.swift */; };
+		374CA6FE72E499EDAB14DDF4B797F9E2 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD101E65ADCCC341BCD3BFF777CA947C /* ConstraintConfig.swift */; };
+		3ACF6CBC4FFACDD61C46A7D917D9CACB /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F91B010D4991E838DAC578595BA7A /* ConstraintLayoutGuideDSL.swift */; };
+		49411FCB60FA4EA3978DC9606CD492C2 /* UIColor+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EE32DA685CE96EAC9F3ADE3E2546D /* UIColor+Handy.swift */; };
+		557644CC73DC0FF33684E2F854DEE624 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D52A60BF41010F680313572B051598 /* ConstraintInsets.swift */; };
+		5865F5AD0D97C897D895176C9C42C1A2 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282AEDFB53BD2F6B277738727FF116D /* ConstraintConstantTarget.swift */; };
+		5B43C3E1971DDA9DC470AA4345D5A073 /* UIButton+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025EE0A97B9F98E182A6CA306BEC50D9 /* UIButton+Handy.swift */; };
+		5CFDDDC4FBD060C96FDE4C7C32A49BA9 /* Handy-Handy in Resources */ = {isa = PBXBuildFile; fileRef = F3606AFF34CE7DFB2F1AED9A0CDD8326 /* Handy-Handy */; };
+		68988A325B4FF19530FE5C45197FE445 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C38722D9F65992CF2200038C8651E /* ConstraintMakerEditable.swift */; };
 		6A2F1BB630686511FD5D8D0FC9829C38 /* Pods-Handy_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD4B6B6B9168A3EBF6026A04455EA34 /* Pods-Handy_Tests-dummy.m */; };
-		714EF6AF3A5166A6D683DFDA1C3412D1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 3B6CCE4F719B1566934CEEBE466B9FF8 /* images */; };
-		7439026685A9755FA8D1766818BD937D /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D2A11C17BBCE3C9F7F0BA9555B5AE /* ConstraintLayoutGuide.swift */; };
-		74D47182D12EEBC86DC3DD64CC47F102 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6CFEFFD42B8E2366BA0B34B6DC0D69A /* icon_back@2x.png */; };
-		7529436880DB56D8375646BDA40E7F2B /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34962F54DAA8DEB0A1D7D4F3FC09A /* ConstraintRelatableTarget.swift */; };
-		79516F6B95ABEA9F1D21FC6ABA007118 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032FD34D5BB9A1F925C649B43CC02DC /* ConstraintLayoutSupportDSL.swift */; };
-		7D78E320055B4E04A9BBFE47157DD865 /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583BBF75085D255E27A5F9EF9EC203A5 /* ConstraintMakerRelatable+Extensions.swift */; };
-		7FA7587FF265640DE0760D0779D4E8F4 /* HandyCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE2EE57507EA9BDE614042D0B8511B /* HandyCompatible.swift */; };
-		817305D1943676DA6678E640CA3110CC /* ConstraintMakerPrioritizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A527ED8F0A719FF610D743A87DAD3 /* ConstraintMakerPrioritizable.swift */; };
-		89254272AC1F71A2187F6E50626A5E3B /* String+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA9C3572B8D8DC65500109B5024A5 /* String+Handy.swift */; };
-		8D8CE84C792E131CC58DAA6D2F1CEB5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		94653904B9965DF61B9590AA4055FA64 /* NSObject+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86768E408A12501CCF43DCCC21DE242 /* NSObject+Handy.swift */; };
-		966D452CEC428AB0D008B453AD176D63 /* Dictionary+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7ACC61AD371FC1851E2A8EC51BF7 /* Dictionary+Handy.swift */; };
-		9BEFF10A2EC26056E7D583A6EB050340 /* icon_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC63F4B28528409F80E6198CC170FC7 /* icon_back@3x.png */; };
-		9F94D5FD2A7FB139ABCA07E77EDCD9F0 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DCDFF2011C08759407B4E2038CA11 /* ConstraintAttributes.swift */; };
-		A6C5489FDDA184DD0624D32CF45B09CD /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C38722D9F65992CF2200038C8651E /* ConstraintMakerEditable.swift */; };
-		A6EFAEE4CCC9ADFE8C96C072BCAB824D /* Timer+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF844515314769D5745F7CD0AC382BE /* Timer+Handy.swift */; };
-		AFA06F38624C4E8C253349ECC7DE8D03 /* Date+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD9FAEA805DDE82CB7EE8007D4F03 /* Date+Handy.swift */; };
-		AFA89DBBE40049A58A4FB3FC37F5FFC4 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */; };
-		B51A4B5028E58A4C00EE5091 /* HandyNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B4F28E58A4C00EE5091 /* HandyNavigationBar.swift */; };
-		B51A4B5228E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5128E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift */; };
-		B51A4B5428E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5328E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift */; };
-		B51A4B5628E58C0800EE5091 /* HandyNavigationContrllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5528E58C0800EE5091 /* HandyNavigationContrllerContext.swift */; };
-		B51A4B5828E58D5400EE5091 /* UIViewController+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */; };
-		B51A4B5A28E592EF00EE5091 /* HandyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5928E592EF00EE5091 /* HandyTransition.swift */; };
-		B51A4B5C28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */; };
-		B530546A28F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530546928F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift */; };
-		B812306A1D935A8E6104DB8F48A1D747 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6A462E0F0B040B83C8763773533FE /* LayoutConstraint.swift */; };
-		BB64EFCF1B388B5985BC43A70D949C11 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBE69DD3B611E4180FCBDD8CDE8814 /* Debugging.swift */; };
-		BEBCD7327FFE038778E836758C7F010A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */; };
-		BFFE29ADFFC62751E7E165C8ABC57EFF /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D51A2BEEF78C262C4B3F3798D1702 /* ConstraintMakerFinalizable.swift */; };
-		C0F0B2F3DA260BBF033970197BE37DFF /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5693124BFA9269D2085EC1ADFAAD76 /* ConstraintInsetTarget.swift */; };
-		C594BC0685B10CDD6B82DA0C5F08D627 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B3092297166519217A25AD70D5341 /* ConstraintMaker.swift */; };
-		C7772C677FD29AB22B07C43B5D4F42D7 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02732995CB94C03CB83E1935B434AD74 /* ConstraintDSL.swift */; };
-		CD06EAF98420A4C0418D9409F876AB12 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 932076048BB79360F50A76C2C738DFC8 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE503F2E4544A248601E91D99AF3B843 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096225ED146E16EC168C99FEDD215B5 /* ConstraintPriorityTarget.swift */; };
-		D71AF7464D9708C89A7404BD3907AD59 /* UIControl+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A570C8E5EB2791185BBFF173E416C1 /* UIControl+Handy.swift */; };
-		D8DDF5D5662DDD831CEAB05B7204E49C /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8325701AC63292B7F9872B0492032E11 /* HandyApp.swift */; };
-		D8E5AF401474EB257194331F54BBD18B /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDF096C3836F945945C9FFDB5090F5 /* Constraint.swift */; };
-		DA230B9FA98D6FA8549FCDA2C8105799 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6C6DC7DC182E26718D4BC193BC7590BD /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02732995CB94C03CB83E1935B434AD74 /* ConstraintDSL.swift */; };
+		712A6764322FBC8C9FCC0AA176D01813 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458867733779570F7398C76B46AEAF5E /* ConstraintView.swift */; };
+		7548DF6107EC7076781E954892B132AA /* HandyCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F427206A11284F35B05B26EA3AB3919 /* HandyCompatible.swift */; };
+		77A1B74DEEE20AAC210CE6351E206EDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7C968EBCC6F1530B0E1BB4C1D8896A3B /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5693124BFA9269D2085EC1ADFAAD76 /* ConstraintInsetTarget.swift */; };
+		8410EA558463454E2A73E46F9C823B49 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0072CC268C7456CC1DA6E8180975AB43 /* ConstraintViewDSL.swift */; };
+		87FD0408C547FE1407A53625896DEB2F /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143498449916D71708A8AF2F96E7320A /* SnapKit-dummy.m */; };
+		889301BE2A49AB5AAE7795096C345270 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096225ED146E16EC168C99FEDD215B5 /* ConstraintPriorityTarget.swift */; };
+		8AF084BFAD3FE3F53E98E5978C370DC2 /* Array+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA472BCCF03577D967CD64A71E7F4D /* Array+Handy.swift */; };
+		8B1B40163ADDC50D4F8E200230DD761D /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B3092297166519217A25AD70D5341 /* ConstraintMaker.swift */; };
+		959C914B602C201E3DC2F0223BEF9AAA /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B678C00268C9CF7E410145D6F78AA /* ConstraintLayoutGuide+Extensions.swift */; };
+		9950B2794A23C3B86F11EEDBB148201C /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15C12D4B2736CB1D1B07F4838FCA7 /* LayoutConstraintItem.swift */; };
+		9B497826EF7C72981285D6A58C271024 /* HandyNavigationBar+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C725E08C7B98EF291A61CF1E0C6971 /* HandyNavigationBar+UIScrollView.swift */; };
+		9E4FFFE8669B71A61F8FFE4F1F707DA3 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBE69DD3B611E4180FCBDD8CDE8814 /* Debugging.swift */; };
+		A59CB497272F4AF8FFA9E092EBFF46BF /* Timer+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BA90B25A18E4BAB922C9CF9E1A67DC /* Timer+Handy.swift */; };
+		A8FEA9FB7BE78DD7E3278EB2B23627A5 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00529F62152FE0E9A82AF6D8EAAAE2E1 /* ConstraintMultiplierTarget.swift */; };
+		AB8F085F187ECB626C4423B312403F0B /* HandyTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560CE73FF1536F7ADBCF184C6A9AC66B /* HandyTransition+UINavigationControllerDelegate.swift */; };
+		AD64C9801DBF3CFBA97B83BC4781BEAA /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DFD8FEE78807F86F0544749C80450 /* ConstraintDirectionalInsets.swift */; };
+		B49BBADF1DAD2712F3AD7280C6092954 /* HandySwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B6181E677DBC7D8224EBE132D9107 /* HandySwizzling.swift */; };
+		B49FD1B7C508B6F7CB4CD96D96EF4024 /* HandyNavigationBar+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084EB13D4C24B6273A5F354C8493D778 /* HandyNavigationBar+UINavigationController.swift */; };
+		B61EF3FEBE368D5C582DC59A786B896B /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */; };
+		B65022D33CCC81B525A851315240322F /* Bundle+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AADFC7C42591A65CB8B344788FF0 /* Bundle+Handy.swift */; };
+		BF1C8569812FD14C4E15B0B3DA00A836 /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD4EE536B48D39A052FA75C07A70297 /* HandyApp.swift */; };
+		BFA92802BE1F966A2EA7925CF36CB716 /* icon_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFA84E77168D4CBCFB27117C4998830 /* icon_back@3x.png */; };
+		C1B2F4DB0BCBA40F664F1CF89E1FAF32 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D2A11C17BBCE3C9F7F0BA9555B5AE /* ConstraintLayoutGuide.swift */; };
+		C2C830FD62F48F3F866462316C4E3D9F /* UIImage+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E939476C2FEA6AF07F4210A12171FBB /* UIImage+Handy.swift */; };
+		C3A59CAA1B6D5D7ABE23E4225416D62B /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D5202E1F291CC13F7AE0CD669B831 /* ConstraintOffsetTarget.swift */; };
+		C551155038CB77D232055DD6DE19F4B3 /* ConstraintMakerPrioritizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A527ED8F0A719FF610D743A87DAD3 /* ConstraintMakerPrioritizable.swift */; };
+		CD837E9F09AF04500F05C72A2CED6269 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 932076048BB79360F50A76C2C738DFC8 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDD75BFE055785C6FDD463F98772AE68 /* Dictionary+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644B9A3DE7571168FADBC22E2F0E0025 /* Dictionary+Handy.swift */; };
+		D713996B9957BB4810C3A8F8CF178CD2 /* Date+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BA35362AB189ACD29813665B1C9A8 /* Date+Handy.swift */; };
+		D7E220D8FFFE9AE104FABF6394FB4557 /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583BBF75085D255E27A5F9EF9EC203A5 /* ConstraintMakerRelatable+Extensions.swift */; };
+		DAD548C040FFDFF3CC23B6B9CC4049F7 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E74C9EDB065D2E76B3EDCCB6E2153 /* ConstraintRelation.swift */; };
+		DBEF14418812D8996B1D71C4FA41A805 /* HandyNavigationContrllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6B85857094111EBCA955DB903320C /* HandyNavigationContrllerContext.swift */; };
 		DC27ED389E83D6E17ED333961440A217 /* Pods-Handy_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C5E06C364A47421E4499088644D142 /* Pods-Handy_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDB1B2F52594EA338FB1F6A3EC6D8E98 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E5BB7E9F99F41E937A7E2CCEF178BE /* ConstraintItem.swift */; };
-		DDBF4D280148FD891E87FB92FEB52B72 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8251A08ED8E6CF34420BBF858126F7 /* ConstraintMakerRelatable.swift */; };
 		E4BD92158C6F0790C6003D00B388A0D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E6C643C2127C3A141E2F55A42BDD468D /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BC61944B3E89515CACB83BB1B976 /* ConstraintDescription.swift */; };
-		E8E4B1F0C0E4AE321C0B2961D64C3D81 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458867733779570F7398C76B46AEAF5E /* ConstraintView.swift */; };
-		E9EB898DA03D37717CE13C261B9E47DF /* Array+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D5BF4F21BA073FBABC8C69F368348 /* Array+Handy.swift */; };
-		EAB5B2BF46F0C9C24F9D62578391A4BB /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFBBDB0D11D15EA3C0D640EF407F700 /* ConstraintMakerExtendable.swift */; };
-		EF526D753D123A703F1BBB5D1601433E /* Handy-Handy in Resources */ = {isa = PBXBuildFile; fileRef = F3606AFF34CE7DFB2F1AED9A0CDD8326 /* Handy-Handy */; };
+		E9ECB31D26E022123A43777AAAC5193F /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8251A08ED8E6CF34420BBF858126F7 /* ConstraintMakerRelatable.swift */; };
+		ECD6D89C017F9FE4E276882792899C01 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFCE9DFA920CC8B9F8E7A8B2337BD682 /* icon_back@2x.png */; };
 		EFA13F4A749F1AF7776D230ECB41AA77 /* Pods-Handy_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E9177FE5AE3A0E7D9667C0C8D30D30 /* Pods-Handy_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1838657B4653DFBA50BA9C81C22ED68 /* UIColor+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF029ECC9A4126563C1E01BB37A66E1 /* UIColor+Handy.swift */; };
-		F41DEF9587B63F949AFECF3EC5BA6CD1 /* Handy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AAC143C327645D82E11B49F6CD4673 /* Handy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9B83E48F3E6005975DC6096FA98DFE3 /* Bundle+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB67812A5F92FDEACDFD67833607836 /* Bundle+Handy.swift */; };
-		FB2AFDE6FAADF02D2D2B6920FD478F19 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D52A60BF41010F680313572B051598 /* ConstraintInsets.swift */; };
-		FB4D21253D9A1AE5C04C64C7DEA3BC87 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D5202E1F291CC13F7AE0CD669B831 /* ConstraintOffsetTarget.swift */; };
-		FCE7CFA337E44C3B604118E92A910580 /* HandySwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDE89FBF330E2EA185FA9A285DFAC63 /* HandySwizzling.swift */; };
+		EFA88DBAFAF13F31700E13F82484C688 /* HandyNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E331AF1A304B4BD3EEB9E09A15DF5C9C /* HandyNavigationBar.swift */; };
+		F03CBE334AF5379644D57516742B7CBC /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDF096C3836F945945C9FFDB5090F5 /* Constraint.swift */; };
+		F09904C644092E190A1AC4D106627205 /* HandyNavigationBar+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971F63228212F4E55EFD40A5075F8BA3 /* HandyNavigationBar+UIViewController.swift */; };
+		F2CB50CF0655C630E93172E69BBB9262 /* HandyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA444AC257C1E8148F0F6B7A718949D /* HandyTransition.swift */; };
+		F44288AE5F0A684675D951EB5BB45A8F /* String+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B8823627EE7E6DFAE311618493B921 /* String+Handy.swift */; };
+		F4C0CEFFEF8BD6E3D8B344EBB7A76968 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFBBDB0D11D15EA3C0D640EF407F700 /* ConstraintMakerExtendable.swift */; };
+		F9169D7605CDCEC0738032AD505E5C35 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032FD34D5BB9A1F925C649B43CC02DC /* ConstraintLayoutSupportDSL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A7065A5C4A78D1F0F9EF81A5E9C3202 /* PBXContainerItemProxy */ = {
+		445678AF4753B7F11216FDE39A0AAD23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
+			remoteInfo = SnapKit;
+		};
+		4C9DE96C247AB93BF214076C27653506 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F591A36DFE90A9D32F9E027F1A1EF0B2;
 			remoteInfo = Handy;
 		};
-		28526BFDC824A996282697010B7FCD12 /* PBXContainerItemProxy */ = {
+		5CEE424E8A78634CDB33754035B4DC09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
 			remoteInfo = SnapKit;
 		};
-		945B389DE3DAAEE32FAF8E89B3AF24B3 /* PBXContainerItemProxy */ = {
+		9A28ED39880E7CC29E427EE2F3C77C82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BAAB311461ED9377754EE240EB92609C;
 			remoteInfo = "Handy-Handy";
 		};
-		A1E73B19BD5D0966597E518E0C5BF85E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
-		};
-		E760BC2532568E7E080C62E863340866 /* PBXContainerItemProxy */ = {
+		B9EFE4CC33D899F234997F48BCB386D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -126,117 +125,115 @@
 /* Begin PBXFileReference section */
 		00529F62152FE0E9A82AF6D8EAAAE2E1 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Sources/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		0072CC268C7456CC1DA6E8180975AB43 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Sources/ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		025EE0A97B9F98E182A6CA306BEC50D9 /* UIButton+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Handy.swift"; sourceTree = "<group>"; };
 		02732995CB94C03CB83E1935B434AD74 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Sources/ConstraintDSL.swift; sourceTree = "<group>"; };
+		084EB13D4C24B6273A5F354C8493D778 /* HandyNavigationBar+UINavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UINavigationController.swift"; sourceTree = "<group>"; };
 		0A4B3092297166519217A25AD70D5341 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Sources/ConstraintMaker.swift; sourceTree = "<group>"; };
 		0AFDF096C3836F945945C9FFDB5090F5 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Sources/Constraint.swift; sourceTree = "<group>"; };
-		0EA97BD2DCA092E4174D6FE8BBC09102 /* Handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.release.xcconfig; sourceTree = "<group>"; };
 		0EE5F8CB92905AE76169A71226B44035 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
 		103CF2D7E41C873C02474FFB13239C63 /* Pods-Handy_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Handy_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		124B074B10E86BA49D7C486E14BA41B0 /* UIButton+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Handy.swift"; sourceTree = "<group>"; };
 		143498449916D71708A8AF2F96E7320A /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Sources/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		16B643038C3DB8EA7D909E1F351456C7 /* Handy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-prefix.pch"; sourceTree = "<group>"; };
+		1AD4EE536B48D39A052FA75C07A70297 /* HandyApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyApp.swift; path = Handy/Classes/HandyApp.swift; sourceTree = "<group>"; };
+		1AFA84E77168D4CBCFB27117C4998830 /* icon_back@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_back@3x.png"; path = "Handy/Assets/icon_back@3x.png"; sourceTree = "<group>"; };
 		1FD0C87E1CF59D51058142932BECE82F /* Pods-Handy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		206153D182A0535E39644D38FA549EFC /* Pods-Handy_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Handy_Example-frameworks.sh"; sourceTree = "<group>"; };
 		26E5BB7E9F99F41E937A7E2CCEF178BE /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Sources/ConstraintItem.swift; sourceTree = "<group>"; };
-		32C3610726A3D71BE66DAC6915865CB2 /* ResourceBundle-Handy-Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Handy-Handy-Info.plist"; sourceTree = "<group>"; };
-		35C0BF717F2278D54817448808E4F141 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		27A74A1B5712A48C2EF13837DAA860C4 /* Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Handy-Info.plist"; sourceTree = "<group>"; };
+		2A8D23DD04D7B3461C933C09696C0A23 /* UIControl+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIControl+Handy.swift"; sourceTree = "<group>"; };
+		2F53E6B8BD8FAEAF7D67151549BD185D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		38A6A462E0F0B040B83C8763773533FE /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Sources/LayoutConstraint.swift; sourceTree = "<group>"; };
+		39BA90B25A18E4BAB922C9CF9E1A67DC /* Timer+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Timer+Handy.swift"; sourceTree = "<group>"; };
 		3AF34962F54DAA8DEB0A1D7D4F3FC09A /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Sources/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		3B6CCE4F719B1566934CEEBE466B9FF8 /* images */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = images; path = Handy/Assets/images; sourceTree = "<group>"; };
 		3F7482279D94929AC87A8E5E6109AAF8 /* Pods-Handy_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		412D51A2BEEF78C262C4B3F3798D1702 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Sources/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		458867733779570F7398C76B46AEAF5E /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Sources/ConstraintView.swift; sourceTree = "<group>"; };
 		45989787B6813A51DA8FAE79AEEC0679 /* Pods-Handy_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Handy_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4771939F38ED9D0A484F0C62E1817421 /* Pods-Handy_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Handy_Tests"; path = Pods_Handy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4876DBAC8EE252DC802B9D1988E8440B /* Pods-Handy_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Handy_Example.modulemap"; sourceTree = "<group>"; };
+		49F4478CBC81C3C43C91377BA184CF84 /* Handy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Handy.modulemap; sourceTree = "<group>"; };
+		4AF6B85857094111EBCA955DB903320C /* HandyNavigationContrllerContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandyNavigationContrllerContext.swift; sourceTree = "<group>"; };
 		4C8251A08ED8E6CF34420BBF858126F7 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Sources/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		5032FD34D5BB9A1F925C649B43CC02DC /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Sources/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		54A0BC61944B3E89515CACB83BB1B976 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Sources/ConstraintDescription.swift; sourceTree = "<group>"; };
-		57CDA9C3572B8D8DC65500109B5024A5 /* String+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Handy.swift"; sourceTree = "<group>"; };
+		560CE73FF1536F7ADBCF184C6A9AC66B /* HandyTransition+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "HandyTransition+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
 		583BBF75085D255E27A5F9EF9EC203A5 /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintMakerRelatable+Extensions.swift"; path = "Sources/ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
-		5C223E6487A33BD79C88A05A5E72D441 /* Handy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Handy.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		586BA35362AB189ACD29813665B1C9A8 /* Date+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Handy.swift"; sourceTree = "<group>"; };
+		59B443D160FF5D3795FAD23DFC7F28B0 /* Handy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Handy.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5F2DCDFF2011C08759407B4E2038CA11 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Sources/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		678D5BF4F21BA073FBABC8C69F368348 /* Array+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Handy.swift"; sourceTree = "<group>"; };
-		6A4AD9FAEA805DDE82CB7EE8007D4F03 /* Date+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Handy.swift"; sourceTree = "<group>"; };
+		644B9A3DE7571168FADBC22E2F0E0025 /* Dictionary+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Handy.swift"; sourceTree = "<group>"; };
+		6E939476C2FEA6AF07F4210A12171FBB /* UIImage+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+Handy.swift"; sourceTree = "<group>"; };
 		7049A97B3B237D4B5ADA0170C09D433A /* Pods-Handy_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Handy_Example-dummy.m"; sourceTree = "<group>"; };
 		7096225ED146E16EC168C99FEDD215B5 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Sources/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		722114B242CC38B627E6C27A429F1BC9 /* Pods-Handy_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Handy_Example"; path = Pods_Handy_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		751D5202E1F291CC13F7AE0CD669B831 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Sources/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		754346DA75B5558ECEB8241B3B40DF74 /* ResourceBundle-Handy-Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Handy-Handy-Info.plist"; sourceTree = "<group>"; };
 		782C19B041349DED0C47AC71C798375C /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
+		7BA444AC257C1E8148F0F6B7A718949D /* HandyTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandyTransition.swift; sourceTree = "<group>"; };
 		7BC84DB0CD86A51B4B66E0450CBF40DE /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Sources/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
-		7CC63F4B28528409F80E6198CC170FC7 /* icon_back@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "icon_back@3x.png"; sourceTree = "<group>"; };
-		7D57572A0010759048BEBAC907C00B5D /* Handy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Handy-dummy.m"; sourceTree = "<group>"; };
-		8325701AC63292B7F9872B0492032E11 /* HandyApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyApp.swift; path = Handy/Classes/HandyApp.swift; sourceTree = "<group>"; };
-		84A570C8E5EB2791185BBFF173E416C1 /* UIControl+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIControl+Handy.swift"; sourceTree = "<group>"; };
-		88AAC143C327645D82E11B49F6CD4673 /* Handy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-umbrella.h"; sourceTree = "<group>"; };
+		7CAA6D569CFC3730F6A86E3B2A65B0B6 /* UIViewController+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Handy.swift"; sourceTree = "<group>"; };
+		832DD91AC876EC80225CE81F89468643 /* Handy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-umbrella.h"; sourceTree = "<group>"; };
+		84CA472BCCF03577D967CD64A71E7F4D /* Array+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Handy.swift"; sourceTree = "<group>"; };
+		8EEEAFF331DF95B3910C58487BF18C30 /* Handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.release.xcconfig; sourceTree = "<group>"; };
+		8F427206A11284F35B05B26EA3AB3919 /* HandyCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyCompatible.swift; path = Handy/Classes/HandyCompatible.swift; sourceTree = "<group>"; };
+		904C6278FA2DC94F51F1BA67E24238CD /* Handy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Handy-dummy.m"; sourceTree = "<group>"; };
 		90D50A7DBF66A84FB9C9387D54D38AEE /* Pods-Handy_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Example-Info.plist"; sourceTree = "<group>"; };
 		90E9177FE5AE3A0E7D9667C0C8D30D30 /* Pods-Handy_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Handy_Example-umbrella.h"; sourceTree = "<group>"; };
 		932076048BB79360F50A76C2C738DFC8 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		94E42FA589867A878EC039323DA40B7F /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		960E2E91424D9428F311B73888D8E927 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Sources/Typealiases.swift; sourceTree = "<group>"; };
+		971F63228212F4E55EFD40A5075F8BA3 /* HandyNavigationBar+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UIViewController.swift"; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BEB8A3112637F04F23FAC801F32E2D9 /* NSObject+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSObject+Handy.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F0A527ED8F0A719FF610D743A87DAD3 /* ConstraintMakerPrioritizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPrioritizable.swift; path = Sources/ConstraintMakerPrioritizable.swift; sourceTree = "<group>"; };
-		A2F29FE521006BAD3DD56993C3D3E230 /* Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Handy-Info.plist"; sourceTree = "<group>"; };
+		A2B8823627EE7E6DFAE311618493B921 /* String+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Handy.swift"; sourceTree = "<group>"; };
 		A9E6F24969C5B378ECA19175229CEAE0 /* Pods-Handy_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AAF844515314769D5745F7CD0AC382BE /* Timer+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Timer+Handy.swift"; sourceTree = "<group>"; };
-		B51A4B4F28E58A4C00EE5091 /* HandyNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyNavigationBar.swift; sourceTree = "<group>"; };
-		B51A4B5128E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UIViewController.swift"; sourceTree = "<group>"; };
-		B51A4B5328E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UINavigationController.swift"; sourceTree = "<group>"; };
-		B51A4B5528E58C0800EE5091 /* HandyNavigationContrllerContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandyNavigationContrllerContext.swift; sourceTree = "<group>"; };
-		B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Handy.swift"; sourceTree = "<group>"; };
-		B51A4B5928E592EF00EE5091 /* HandyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyTransition.swift; sourceTree = "<group>"; };
-		B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandyTransition+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
-		B530546928F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UIScrollView.swift"; sourceTree = "<group>"; };
+		AFCE9DFA920CC8B9F8E7A8B2337BD682 /* icon_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_back@2x.png"; path = "Handy/Assets/icon_back@2x.png"; sourceTree = "<group>"; };
+		B0C725E08C7B98EF291A61CF1E0C6971 /* HandyNavigationBar+UIScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "HandyNavigationBar+UIScrollView.swift"; sourceTree = "<group>"; };
 		B57B4B15AAC3AB24B43306829FAA77A0 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Sources/ConstraintPriority.swift; sourceTree = "<group>"; };
 		B5C5E06C364A47421E4499088644D142 /* Pods-Handy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Handy_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Sources/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		BBF029ECC9A4126563C1E01BB37A66E1 /* UIColor+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Handy.swift"; sourceTree = "<group>"; };
+		BB3B6181E677DBC7D8224EBE132D9107 /* HandySwizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandySwizzling.swift; path = Handy/Classes/HandySwizzling.swift; sourceTree = "<group>"; };
 		BC8DFD8FEE78807F86F0544749C80450 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Sources/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		BDF6E18B5372A4BBE8507FE4B9F165C0 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		C282AEDFB53BD2F6B277738727FF116D /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Sources/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		C5D52A60BF41010F680313572B051598 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Sources/ConstraintInsets.swift; sourceTree = "<group>"; };
 		C83141A7BA266489296BCBEF99AC5412 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Sources/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		C8405C8D2D0F36BF890175DE3E21D6CB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C91F91B010D4991E838DAC578595BA7A /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Sources/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		CCEE2EE57507EA9BDE614042D0B8511B /* HandyCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyCompatible.swift; path = Handy/Classes/HandyCompatible.swift; sourceTree = "<group>"; };
-		CFDF76A4EC79B7CA3967DD6F5B8E9EFB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CC866229C9AA258FF8277D59CFC177C0 /* Handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.debug.xcconfig; sourceTree = "<group>"; };
+		D0A28FD8D1DDFC683ABD24B3AE47C6B0 /* UIView+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Handy.swift"; sourceTree = "<group>"; };
 		D2FD9EFCFC3AA452137876B761FFB621 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
-		D6CFEFFD42B8E2366BA0B34B6DC0D69A /* icon_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "icon_back@2x.png"; sourceTree = "<group>"; };
-		D90F0ED4F066F6685A2473C74E044B5D /* Handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.debug.xcconfig; sourceTree = "<group>"; };
 		D9B48873C8B9E93CFED7C1098F76C6B8 /* Pods-Handy_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Handy_Tests.modulemap"; sourceTree = "<group>"; };
-		D9DB7ACC61AD371FC1851E2A8EC51BF7 /* Dictionary+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Handy.swift"; sourceTree = "<group>"; };
 		DD101E65ADCCC341BCD3BFF777CA947C /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Sources/ConstraintConfig.swift; sourceTree = "<group>"; };
 		DDFBBDB0D11D15EA3C0D640EF407F700 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Sources/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		DEB67812A5F92FDEACDFD67833607836 /* Bundle+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+Handy.swift"; sourceTree = "<group>"; };
-		DF2A00FBC7B252A79E829F6BE754FD9E /* UIView+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Handy.swift"; sourceTree = "<group>"; };
 		E04B678C00268C9CF7E410145D6F78AA /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Sources/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		E167BD364B0C144F1996DE70AE53ADE1 /* Pods-Handy_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E30E74C9EDB065D2E76B3EDCCB6E2153 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Sources/ConstraintRelation.swift; sourceTree = "<group>"; };
+		E331AF1A304B4BD3EEB9E09A15DF5C9C /* HandyNavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandyNavigationBar.swift; sourceTree = "<group>"; };
 		E634B1B962A8B3BD16886BDCDCD6123A /* Pods-Handy_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E6D799D7693780D51944B9B0043E74DD /* Handy */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Handy; path = Handy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC257F935296E1845DD6F43E033C5E3A /* Handy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-prefix.pch"; sourceTree = "<group>"; };
 		EDD4B6B6B9168A3EBF6026A04455EA34 /* Pods-Handy_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Handy_Tests-dummy.m"; sourceTree = "<group>"; };
 		EEE15C12D4B2736CB1D1B07F4838FCA7 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Sources/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		F2CEFD4A421516C3863B6BD99FAD7018 /* Handy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Handy.modulemap; sourceTree = "<group>"; };
 		F33073C90F0577A45B9FE0C324BB3CEA /* Pods-Handy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3606AFF34CE7DFB2F1AED9A0CDD8326 /* Handy-Handy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Handy-Handy"; path = Handy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45EE32DA685CE96EAC9F3ADE3E2546D /* UIColor+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Handy.swift"; sourceTree = "<group>"; };
 		F4CBE69DD3B611E4180FCBDD8CDE8814 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Sources/Debugging.swift; sourceTree = "<group>"; };
 		F55D2A11C17BBCE3C9F7F0BA9555B5AE /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Sources/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		F57C38722D9F65992CF2200038C8651E /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Sources/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		F855F687276255F9004CF5BCB76C93EC /* Pods-Handy_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Tests-Info.plist"; sourceTree = "<group>"; };
-		F86768E408A12501CCF43DCCC21DE242 /* NSObject+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSObject+Handy.swift"; sourceTree = "<group>"; };
-		FC1DEA047E2566DD45A2BDD5045585E8 /* UIImage+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+Handy.swift"; sourceTree = "<group>"; };
-		FDDE89FBF330E2EA185FA9A285DFAC63 /* HandySwizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandySwizzling.swift; path = Handy/Classes/HandySwizzling.swift; sourceTree = "<group>"; };
+		FCB9AADFC7C42591A65CB8B344788FF0 /* Bundle+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+Handy.swift"; sourceTree = "<group>"; };
 		FE5693124BFA9269D2085EC1ADFAAD76 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Sources/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1382A5386A3C49A007C22FD22BEFA35A /* Frameworks */ = {
+		2B2AB969CE8168C3D50F5E865D0154DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D8CE84C792E131CC58DAA6D2F1CEB5F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +245,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51FC78202E43C301866A826FDAFC273C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A1B74DEEE20AAC210CE6351E206EDE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F087576528DE2B9F7F639A854F726A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,18 +261,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE848EE36A8B8BB3A5D540525E7DC5A4 /* Frameworks */ = {
+		CC23ED99AAB64F184245D9AC6BBDC145 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F374E664C89053808A90561FBA4B7815 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA230B9FA98D6FA8549FCDA2C8105799 /* Foundation.framework in Frameworks */,
+				11A654046766F70BE348BAC0B958D90A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,38 +288,14 @@
 			path = "Target Support Files/Pods-Handy_Tests";
 			sourceTree = "<group>";
 		};
-		384EB07ECD03E87C86277464270A5559 /* Support Files */ = {
+		3583495A11675D8209B3440C9C2C2CD9 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				F2CEFD4A421516C3863B6BD99FAD7018 /* Handy.modulemap */,
-				7D57572A0010759048BEBAC907C00B5D /* Handy-dummy.m */,
-				A2F29FE521006BAD3DD56993C3D3E230 /* Handy-Info.plist */,
-				16B643038C3DB8EA7D909E1F351456C7 /* Handy-prefix.pch */,
-				88AAC143C327645D82E11B49F6CD4673 /* Handy-umbrella.h */,
-				D90F0ED4F066F6685A2473C74E044B5D /* Handy.debug.xcconfig */,
-				0EA97BD2DCA092E4174D6FE8BBC09102 /* Handy.release.xcconfig */,
-				32C3610726A3D71BE66DAC6915865CB2 /* ResourceBundle-Handy-Handy-Info.plist */,
+				7BA444AC257C1E8148F0F6B7A718949D /* HandyTransition.swift */,
+				560CE73FF1536F7ADBCF184C6A9AC66B /* HandyTransition+UINavigationControllerDelegate.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Handy";
-			sourceTree = "<group>";
-		};
-		3AF26B0DF1429BC6A2CC188399CC52DA /* Handy */ = {
-			isa = PBXGroup;
-			children = (
-				B51A4B4E28E58A3800EE5091 /* Navigation */,
-				B51A4B4D28E58A3200EE5091 /* Transition */,
-				8325701AC63292B7F9872B0492032E11 /* HandyApp.swift */,
-				CCEE2EE57507EA9BDE614042D0B8511B /* HandyCompatible.swift */,
-				FDDE89FBF330E2EA185FA9A285DFAC63 /* HandySwizzling.swift */,
-				3B6CCE4F719B1566934CEEBE466B9FF8 /* images */,
-				E179A616158821CAAB13A72F74BBBFAA /* Extensions */,
-				46B394BE65F5F58CF77CC06C1C980E7A /* images */,
-				B200EF2CF878B2BA0F5D6934340650CF /* Pod */,
-				384EB07ECD03E87C86277464270A5559 /* Support Files */,
-			);
-			name = Handy;
-			path = ../..;
+			name = Transition;
+			path = Handy/Classes/Transition;
 			sourceTree = "<group>";
 		};
 		403EB05A3920652EED411213C52E3AC2 /* Support Files */ = {
@@ -348,22 +322,30 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		46B394BE65F5F58CF77CC06C1C980E7A /* images */ = {
-			isa = PBXGroup;
-			children = (
-				D6CFEFFD42B8E2366BA0B34B6DC0D69A /* icon_back@2x.png */,
-				7CC63F4B28528409F80E6198CC170FC7 /* icon_back@3x.png */,
-			);
-			name = images;
-			path = Handy/Assets/images;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		7A88A6C8FBAA15F282A8E2065701D41F /* Handy */ = {
+			isa = PBXGroup;
+			children = (
+				1AD4EE536B48D39A052FA75C07A70297 /* HandyApp.swift */,
+				8F427206A11284F35B05B26EA3AB3919 /* HandyCompatible.swift */,
+				BB3B6181E677DBC7D8224EBE132D9107 /* HandySwizzling.swift */,
+				AFCE9DFA920CC8B9F8E7A8B2337BD682 /* icon_back@2x.png */,
+				1AFA84E77168D4CBCFB27117C4998830 /* icon_back@3x.png */,
+				936C2954B2C5F77A5A5479B833A144BE /* Extensions */,
+				E502ACFCB75F5964C65295261ACE8246 /* Navigation */,
+				8A8002B7BAB4CA743C16E4104893B7CD /* Pod */,
+				E73D3E1CA798658AC7FE01A6656E039A /* Support Files */,
+				3583495A11675D8209B3440C9C2C2CD9 /* Transition */,
+			);
+			name = Handy;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7FB795DFC93549FD22B4F5C47221C1E8 /* Pods-Handy_Example */ = {
@@ -383,52 +365,50 @@
 			path = "Target Support Files/Pods-Handy_Example";
 			sourceTree = "<group>";
 		};
-		89928740231B2F18BA947B0A7A6F2365 /* Development Pods */ = {
+		8A8002B7BAB4CA743C16E4104893B7CD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				3AF26B0DF1429BC6A2CC188399CC52DA /* Handy */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		B200EF2CF878B2BA0F5D6934340650CF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				5C223E6487A33BD79C88A05A5E72D441 /* Handy.podspec */,
-				35C0BF717F2278D54817448808E4F141 /* LICENSE */,
-				CFDF76A4EC79B7CA3967DD6F5B8E9EFB /* README.md */,
+				59B443D160FF5D3795FAD23DFC7F28B0 /* Handy.podspec */,
+				2F53E6B8BD8FAEAF7D67151549BD185D /* LICENSE */,
+				C8405C8D2D0F36BF890175DE3E21D6CB /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		B51A4B4D28E58A3200EE5091 /* Transition */ = {
+		936C2954B2C5F77A5A5479B833A144BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B51A4B5928E592EF00EE5091 /* HandyTransition.swift */,
-				B51A4B5B28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift */,
+				84CA472BCCF03577D967CD64A71E7F4D /* Array+Handy.swift */,
+				FCB9AADFC7C42591A65CB8B344788FF0 /* Bundle+Handy.swift */,
+				586BA35362AB189ACD29813665B1C9A8 /* Date+Handy.swift */,
+				644B9A3DE7571168FADBC22E2F0E0025 /* Dictionary+Handy.swift */,
+				9BEB8A3112637F04F23FAC801F32E2D9 /* NSObject+Handy.swift */,
+				A2B8823627EE7E6DFAE311618493B921 /* String+Handy.swift */,
+				39BA90B25A18E4BAB922C9CF9E1A67DC /* Timer+Handy.swift */,
+				025EE0A97B9F98E182A6CA306BEC50D9 /* UIButton+Handy.swift */,
+				F45EE32DA685CE96EAC9F3ADE3E2546D /* UIColor+Handy.swift */,
+				2A8D23DD04D7B3461C933C09696C0A23 /* UIControl+Handy.swift */,
+				6E939476C2FEA6AF07F4210A12171FBB /* UIImage+Handy.swift */,
+				D0A28FD8D1DDFC683ABD24B3AE47C6B0 /* UIView+Handy.swift */,
+				7CAA6D569CFC3730F6A86E3B2A65B0B6 /* UIViewController+Handy.swift */,
 			);
-			name = Transition;
-			path = Handy/Classes/Transition;
+			name = Extensions;
+			path = Handy/Classes/Extensions;
 			sourceTree = "<group>";
 		};
-		B51A4B4E28E58A3800EE5091 /* Navigation */ = {
+		94401DB4B7F8CAEF42E6D0851C2F6E46 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B51A4B4F28E58A4C00EE5091 /* HandyNavigationBar.swift */,
-				B51A4B5128E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift */,
-				B51A4B5328E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift */,
-				B530546928F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift */,
-				B51A4B5528E58C0800EE5091 /* HandyNavigationContrllerContext.swift */,
+				7A88A6C8FBAA15F282A8E2065701D41F /* Handy */,
 			);
-			name = Navigation;
-			path = Handy/Classes/Navigation;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				89928740231B2F18BA947B0A7A6F2365 /* Development Pods */,
+				94401DB4B7F8CAEF42E6D0851C2F6E46 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				FBE859397B27E4FC4D81B6F5DD24B6F6 /* Pods */,
 				D7086512C496306FE8AD5784AF1BE50B /* Products */,
@@ -486,6 +466,7 @@
 				152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */,
 				403EB05A3920652EED411213C52E3AC2 /* Support Files */,
 			);
+			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -501,25 +482,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E179A616158821CAAB13A72F74BBBFAA /* Extensions */ = {
+		E502ACFCB75F5964C65295261ACE8246 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				678D5BF4F21BA073FBABC8C69F368348 /* Array+Handy.swift */,
-				DEB67812A5F92FDEACDFD67833607836 /* Bundle+Handy.swift */,
-				6A4AD9FAEA805DDE82CB7EE8007D4F03 /* Date+Handy.swift */,
-				D9DB7ACC61AD371FC1851E2A8EC51BF7 /* Dictionary+Handy.swift */,
-				F86768E408A12501CCF43DCCC21DE242 /* NSObject+Handy.swift */,
-				57CDA9C3572B8D8DC65500109B5024A5 /* String+Handy.swift */,
-				AAF844515314769D5745F7CD0AC382BE /* Timer+Handy.swift */,
-				124B074B10E86BA49D7C486E14BA41B0 /* UIButton+Handy.swift */,
-				BBF029ECC9A4126563C1E01BB37A66E1 /* UIColor+Handy.swift */,
-				84A570C8E5EB2791185BBFF173E416C1 /* UIControl+Handy.swift */,
-				FC1DEA047E2566DD45A2BDD5045585E8 /* UIImage+Handy.swift */,
-				DF2A00FBC7B252A79E829F6BE754FD9E /* UIView+Handy.swift */,
-				B51A4B5728E58D5400EE5091 /* UIViewController+Handy.swift */,
+				E331AF1A304B4BD3EEB9E09A15DF5C9C /* HandyNavigationBar.swift */,
+				084EB13D4C24B6273A5F354C8493D778 /* HandyNavigationBar+UINavigationController.swift */,
+				B0C725E08C7B98EF291A61CF1E0C6971 /* HandyNavigationBar+UIScrollView.swift */,
+				971F63228212F4E55EFD40A5075F8BA3 /* HandyNavigationBar+UIViewController.swift */,
+				4AF6B85857094111EBCA955DB903320C /* HandyNavigationContrllerContext.swift */,
 			);
-			name = Extensions;
-			path = Handy/Classes/Extensions;
+			name = Navigation;
+			path = Handy/Classes/Navigation;
+			sourceTree = "<group>";
+		};
+		E73D3E1CA798658AC7FE01A6656E039A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F4478CBC81C3C43C91377BA184CF84 /* Handy.modulemap */,
+				904C6278FA2DC94F51F1BA67E24238CD /* Handy-dummy.m */,
+				27A74A1B5712A48C2EF13837DAA860C4 /* Handy-Info.plist */,
+				EC257F935296E1845DD6F43E033C5E3A /* Handy-prefix.pch */,
+				832DD91AC876EC80225CE81F89468643 /* Handy-umbrella.h */,
+				CC866229C9AA258FF8277D59CFC177C0 /* Handy.debug.xcconfig */,
+				8EEEAFF331DF95B3910C58487BF18C30 /* Handy.release.xcconfig */,
+				754346DA75B5558ECEB8241B3B40DF74 /* ResourceBundle-Handy-Handy-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Handy";
 			sourceTree = "<group>";
 		};
 		FBE859397B27E4FC4D81B6F5DD24B6F6 /* Pods */ = {
@@ -533,6 +522,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		622969F093FAD5545551619B72270294 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35CF0BB47A234033F02705DCDC14F2FF /* Handy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75D99140E828B8E59AEAB42010EEFE93 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,19 +538,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6B30797A7405410F7C27869AE2677F2 /* Headers */ = {
+		9DCA7CF46EB209E04B057F45597C6586 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD06EAF98420A4C0418D9409F876AB12 /* SnapKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF8BE28E04B5F36F336BD5D5930DB53A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F41DEF9587B63F949AFECF3EC5BA6CD1 /* Handy-umbrella.h in Headers */,
+				CD837E9F09AF04500F05C72A2CED6269 /* SnapKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,12 +559,12 @@
 /* Begin PBXNativeTarget section */
 		19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA0948718D4443D68EECF716F0FCF225 /* Build configuration list for PBXNativeTarget "SnapKit" */;
+			buildConfigurationList = DE74EC29E9133199DF4D7C5BC4A368E6 /* Build configuration list for PBXNativeTarget "SnapKit" */;
 			buildPhases = (
-				A6B30797A7405410F7C27869AE2677F2 /* Headers */,
-				FBD9456CEAA29A278C3C3433631D4EFC /* Sources */,
-				1382A5386A3C49A007C22FD22BEFA35A /* Frameworks */,
-				DFA0CA220809A377D729375FDB72E721 /* Resources */,
+				9DCA7CF46EB209E04B057F45597C6586 /* Headers */,
+				FB9FD912B0615D6C5443F5BAB9C21553 /* Sources */,
+				CC23ED99AAB64F184245D9AC6BBDC145 /* Frameworks */,
+				4D8CC30A41D2587C7AF67A000608897A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -598,8 +587,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				BC4018A75E9B600042B22382C2377835 /* PBXTargetDependency */,
-				801AFB42CB8EEA2FF0B1A27BE2E0A79F /* PBXTargetDependency */,
+				76B66ECA6DE481DCB2C5C83F567750EC /* PBXTargetDependency */,
+				753DDAF12CC02CB80D3D45FF5348861E /* PBXTargetDependency */,
 			);
 			name = "Pods-Handy_Example";
 			productName = Pods_Handy_Example;
@@ -618,7 +607,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				CB385E66F4CE17534952A358F9713E1A /* PBXTargetDependency */,
+				DBBAB2696EDBAE2A4DAAF61C0FE3E2AE /* PBXTargetDependency */,
 			);
 			name = "Pods-Handy_Tests";
 			productName = Pods_Handy_Tests;
@@ -627,11 +616,11 @@
 		};
 		BAAB311461ED9377754EE240EB92609C /* Handy-Handy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 799E29CA8E9236FB5E257298628DDDB7 /* Build configuration list for PBXNativeTarget "Handy-Handy" */;
+			buildConfigurationList = 8CFA3067D355081BAFB7229E2AF68E3E /* Build configuration list for PBXNativeTarget "Handy-Handy" */;
 			buildPhases = (
-				125A5F12289D7EC7EBCD2397AD035C1F /* Sources */,
-				DE848EE36A8B8BB3A5D540525E7DC5A4 /* Frameworks */,
-				CCE51B5921C00CDCCB9822337E00E10E /* Resources */,
+				58602B080203A4C9C2B13F462408D48E /* Sources */,
+				2B2AB969CE8168C3D50F5E865D0154DA /* Frameworks */,
+				E1F45E9344B0223502FCCF61066D0E03 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -644,18 +633,18 @@
 		};
 		F591A36DFE90A9D32F9E027F1A1EF0B2 /* Handy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BD1A9F09DFC112E32E6B2F56D7D27AF /* Build configuration list for PBXNativeTarget "Handy" */;
+			buildConfigurationList = 2E304830A0C02D1DFE1E52BDDDAA8598 /* Build configuration list for PBXNativeTarget "Handy" */;
 			buildPhases = (
-				DF8BE28E04B5F36F336BD5D5930DB53A /* Headers */,
-				459AFEF2715048511F46DB2D454C73C8 /* Sources */,
-				F374E664C89053808A90561FBA4B7815 /* Frameworks */,
-				74FEAB071A831C3FF5AE0FB035DC53A0 /* Resources */,
+				622969F093FAD5545551619B72270294 /* Headers */,
+				E706ED5A569B393E1131E31BE1B65B94 /* Sources */,
+				51FC78202E43C301866A826FDAFC273C /* Frameworks */,
+				3AAA7D8AB6F41DEED261414FBAB01E28 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4590B7A6F354C6C176F88B17EA9968F3 /* PBXTargetDependency */,
-				4C0865E55632D44AFE1665A4B4AAA617 /* PBXTargetDependency */,
+				0E1D2B3B362710476722C27C5D77A4DC /* PBXTargetDependency */,
+				FADD69A74F96CD04683CC154424FB5E3 /* PBXTargetDependency */,
 			);
 			name = Handy;
 			productName = Handy;
@@ -694,18 +683,25 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		687776D7D1170538D30FEAA3746F8527 /* Resources */ = {
+		3AAA7D8AB6F41DEED261414FBAB01E28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CFDDDC4FBD060C96FDE4C7C32A49BA9 /* Handy-Handy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8CC30A41D2587C7AF67A000608897A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74FEAB071A831C3FF5AE0FB035DC53A0 /* Resources */ = {
+		687776D7D1170538D30FEAA3746F8527 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF526D753D123A703F1BBB5D1601433E /* Handy-Handy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,69 +712,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCE51B5921C00CDCCB9822337E00E10E /* Resources */ = {
+		E1F45E9344B0223502FCCF61066D0E03 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D47182D12EEBC86DC3DD64CC47F102 /* icon_back@2x.png in Resources */,
-				9BEFF10A2EC26056E7D583A6EB050340 /* icon_back@3x.png in Resources */,
-				714EF6AF3A5166A6D683DFDA1C3412D1 /* images in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFA0CA220809A377D729375FDB72E721 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				ECD6D89C017F9FE4E276882792899C01 /* icon_back@2x.png in Resources */,
+				BFA92802BE1F966A2EA7925CF36CB716 /* icon_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		125A5F12289D7EC7EBCD2397AD035C1F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D4BD7CBD9FB8C0A39B70AC33F8913D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6A2F1BB630686511FD5D8D0FC9829C38 /* Pods-Handy_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		459AFEF2715048511F46DB2D454C73C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B51A4B5028E58A4C00EE5091 /* HandyNavigationBar.swift in Sources */,
-				B51A4B5C28E5930900EE5091 /* HandyTransition+UINavigationControllerDelegate.swift in Sources */,
-				B51A4B5428E58BC400EE5091 /* HandyNavigationBar+UINavigationController.swift in Sources */,
-				E9EB898DA03D37717CE13C261B9E47DF /* Array+Handy.swift in Sources */,
-				F9B83E48F3E6005975DC6096FA98DFE3 /* Bundle+Handy.swift in Sources */,
-				AFA06F38624C4E8C253349ECC7DE8D03 /* Date+Handy.swift in Sources */,
-				966D452CEC428AB0D008B453AD176D63 /* Dictionary+Handy.swift in Sources */,
-				B51A4B5628E58C0800EE5091 /* HandyNavigationContrllerContext.swift in Sources */,
-				306A8D4B27DE0ACB9D5A26C7108B8C54 /* Handy-dummy.m in Sources */,
-				B51A4B5828E58D5400EE5091 /* UIViewController+Handy.swift in Sources */,
-				D8DDF5D5662DDD831CEAB05B7204E49C /* HandyApp.swift in Sources */,
-				7FA7587FF265640DE0760D0779D4E8F4 /* HandyCompatible.swift in Sources */,
-				B51A4B5A28E592EF00EE5091 /* HandyTransition.swift in Sources */,
-				94653904B9965DF61B9590AA4055FA64 /* NSObject+Handy.swift in Sources */,
-				89254272AC1F71A2187F6E50626A5E3B /* String+Handy.swift in Sources */,
-				FCE7CFA337E44C3B604118E92A910580 /* HandySwizzling.swift in Sources */,
-				A6EFAEE4CCC9ADFE8C96C072BCAB824D /* Timer+Handy.swift in Sources */,
-				0444EBF2E7359E9A621C26F680831AB9 /* UIButton+Handy.swift in Sources */,
-				F1838657B4653DFBA50BA9C81C22ED68 /* UIColor+Handy.swift in Sources */,
-				D71AF7464D9708C89A7404BD3907AD59 /* UIControl+Handy.swift in Sources */,
-				B530546A28F40A7300D752F2 /* HandyNavigationBar+UIScrollView.swift in Sources */,
-				2D917A46FE407398B199344568B2EA30 /* UIImage+Handy.swift in Sources */,
-				38D763D3AAEFFE8F4521AA1D523B91AF /* UIView+Handy.swift in Sources */,
-				B51A4B5228E58AA800EE5091 /* HandyNavigationBar+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,136 +740,125 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBD9456CEAA29A278C3C3433631D4EFC /* Sources */ = {
+		58602B080203A4C9C2B13F462408D48E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8E5AF401474EB257194331F54BBD18B /* Constraint.swift in Sources */,
-				9F94D5FD2A7FB139ABCA07E77EDCD9F0 /* ConstraintAttributes.swift in Sources */,
-				64D36AB1644906DB296F4CFBE309A1DE /* ConstraintConfig.swift in Sources */,
-				51482AA5AD1CC87B36AE8C116D360D3F /* ConstraintConstantTarget.swift in Sources */,
-				E6C643C2127C3A141E2F55A42BDD468D /* ConstraintDescription.swift in Sources */,
-				18DBB1BC1839E16FFC2838246C2ACEB7 /* ConstraintDirectionalInsets.swift in Sources */,
-				58F890134B768FF154B929511C7D1455 /* ConstraintDirectionalInsetTarget.swift in Sources */,
-				C7772C677FD29AB22B07C43B5D4F42D7 /* ConstraintDSL.swift in Sources */,
-				FB2AFDE6FAADF02D2D2B6920FD478F19 /* ConstraintInsets.swift in Sources */,
-				C0F0B2F3DA260BBF033970197BE37DFF /* ConstraintInsetTarget.swift in Sources */,
-				DDB1B2F52594EA338FB1F6A3EC6D8E98 /* ConstraintItem.swift in Sources */,
-				7439026685A9755FA8D1766818BD937D /* ConstraintLayoutGuide.swift in Sources */,
-				4C7BA9304D5BF41FC7E38931E3C1D0BE /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				515EDA690BF2D3419C3CEC0405C00E48 /* ConstraintLayoutGuideDSL.swift in Sources */,
-				AFA89DBBE40049A58A4FB3FC37F5FFC4 /* ConstraintLayoutSupport.swift in Sources */,
-				79516F6B95ABEA9F1D21FC6ABA007118 /* ConstraintLayoutSupportDSL.swift in Sources */,
-				C594BC0685B10CDD6B82DA0C5F08D627 /* ConstraintMaker.swift in Sources */,
-				A6C5489FDDA184DD0624D32CF45B09CD /* ConstraintMakerEditable.swift in Sources */,
-				EAB5B2BF46F0C9C24F9D62578391A4BB /* ConstraintMakerExtendable.swift in Sources */,
-				BFFE29ADFFC62751E7E165C8ABC57EFF /* ConstraintMakerFinalizable.swift in Sources */,
-				817305D1943676DA6678E640CA3110CC /* ConstraintMakerPrioritizable.swift in Sources */,
-				DDBF4D280148FD891E87FB92FEB52B72 /* ConstraintMakerRelatable.swift in Sources */,
-				7D78E320055B4E04A9BBFE47157DD865 /* ConstraintMakerRelatable+Extensions.swift in Sources */,
-				0975F962170F14A4B1D63D96502F081C /* ConstraintMultiplierTarget.swift in Sources */,
-				FB4D21253D9A1AE5C04C64C7DEA3BC87 /* ConstraintOffsetTarget.swift in Sources */,
-				27EF092BEF4B8C8934B226B8AECCBDB2 /* ConstraintPriority.swift in Sources */,
-				CE503F2E4544A248601E91D99AF3B843 /* ConstraintPriorityTarget.swift in Sources */,
-				7529436880DB56D8375646BDA40E7F2B /* ConstraintRelatableTarget.swift in Sources */,
-				5AC919E8F9E7777A2CD5A689AEB90BF0 /* ConstraintRelation.swift in Sources */,
-				E8E4B1F0C0E4AE321C0B2961D64C3D81 /* ConstraintView.swift in Sources */,
-				4FA483FA421BF4F24D799F35A30A4A8A /* ConstraintView+Extensions.swift in Sources */,
-				134051FD2E7DF0658C475957B052893F /* ConstraintViewDSL.swift in Sources */,
-				BB64EFCF1B388B5985BC43A70D949C11 /* Debugging.swift in Sources */,
-				B812306A1D935A8E6104DB8F48A1D747 /* LayoutConstraint.swift in Sources */,
-				59E3E8872B7CDA571128B4E241B13C71 /* LayoutConstraintItem.swift in Sources */,
-				4291B7897E352BF476A30E025BEAE5A4 /* SnapKit-dummy.m in Sources */,
-				6337DCA217472AC7D145E051F171F06D /* Typealiases.swift in Sources */,
-				BEBCD7327FFE038778E836758C7F010A /* UILayoutSupport+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E706ED5A569B393E1131E31BE1B65B94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AF084BFAD3FE3F53E98E5978C370DC2 /* Array+Handy.swift in Sources */,
+				B65022D33CCC81B525A851315240322F /* Bundle+Handy.swift in Sources */,
+				D713996B9957BB4810C3A8F8CF178CD2 /* Date+Handy.swift in Sources */,
+				CDD75BFE055785C6FDD463F98772AE68 /* Dictionary+Handy.swift in Sources */,
+				276D62BD71B7C0E047FA40EC4A0E6E6A /* Handy-dummy.m in Sources */,
+				BF1C8569812FD14C4E15B0B3DA00A836 /* HandyApp.swift in Sources */,
+				7548DF6107EC7076781E954892B132AA /* HandyCompatible.swift in Sources */,
+				EFA88DBAFAF13F31700E13F82484C688 /* HandyNavigationBar.swift in Sources */,
+				B49FD1B7C508B6F7CB4CD96D96EF4024 /* HandyNavigationBar+UINavigationController.swift in Sources */,
+				9B497826EF7C72981285D6A58C271024 /* HandyNavigationBar+UIScrollView.swift in Sources */,
+				F09904C644092E190A1AC4D106627205 /* HandyNavigationBar+UIViewController.swift in Sources */,
+				DBEF14418812D8996B1D71C4FA41A805 /* HandyNavigationContrllerContext.swift in Sources */,
+				B49BBADF1DAD2712F3AD7280C6092954 /* HandySwizzling.swift in Sources */,
+				F2CB50CF0655C630E93172E69BBB9262 /* HandyTransition.swift in Sources */,
+				AB8F085F187ECB626C4423B312403F0B /* HandyTransition+UINavigationControllerDelegate.swift in Sources */,
+				0CD26C0F4BF1FC9D8770551A1F087BF4 /* NSObject+Handy.swift in Sources */,
+				F44288AE5F0A684675D951EB5BB45A8F /* String+Handy.swift in Sources */,
+				A59CB497272F4AF8FFA9E092EBFF46BF /* Timer+Handy.swift in Sources */,
+				5B43C3E1971DDA9DC470AA4345D5A073 /* UIButton+Handy.swift in Sources */,
+				49411FCB60FA4EA3978DC9606CD492C2 /* UIColor+Handy.swift in Sources */,
+				00C8D338666872E0F4D5E537A3B5EE70 /* UIControl+Handy.swift in Sources */,
+				C2C830FD62F48F3F866462316C4E3D9F /* UIImage+Handy.swift in Sources */,
+				1D02CB4965C91E1B088E4AAC44FA217C /* UIView+Handy.swift in Sources */,
+				182CBD509057BCA0F29DFB69BBE687BE /* UIViewController+Handy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9FD912B0615D6C5443F5BAB9C21553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F03CBE334AF5379644D57516742B7CBC /* Constraint.swift in Sources */,
+				087B0C0C6A4DCE07ED188ADCC8652918 /* ConstraintAttributes.swift in Sources */,
+				374CA6FE72E499EDAB14DDF4B797F9E2 /* ConstraintConfig.swift in Sources */,
+				5865F5AD0D97C897D895176C9C42C1A2 /* ConstraintConstantTarget.swift in Sources */,
+				22CD0013595AE1A8BAD1829A2ED058C0 /* ConstraintDescription.swift in Sources */,
+				AD64C9801DBF3CFBA97B83BC4781BEAA /* ConstraintDirectionalInsets.swift in Sources */,
+				1A5E11D4B01FA767CCA6FA514636B3E5 /* ConstraintDirectionalInsetTarget.swift in Sources */,
+				6C6DC7DC182E26718D4BC193BC7590BD /* ConstraintDSL.swift in Sources */,
+				557644CC73DC0FF33684E2F854DEE624 /* ConstraintInsets.swift in Sources */,
+				7C968EBCC6F1530B0E1BB4C1D8896A3B /* ConstraintInsetTarget.swift in Sources */,
+				1B3B448E30A5225D735FEC5157245EC0 /* ConstraintItem.swift in Sources */,
+				C1B2F4DB0BCBA40F664F1CF89E1FAF32 /* ConstraintLayoutGuide.swift in Sources */,
+				959C914B602C201E3DC2F0223BEF9AAA /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				3ACF6CBC4FFACDD61C46A7D917D9CACB /* ConstraintLayoutGuideDSL.swift in Sources */,
+				254447185F4CD793D00CEBC222E2A0BB /* ConstraintLayoutSupport.swift in Sources */,
+				F9169D7605CDCEC0738032AD505E5C35 /* ConstraintLayoutSupportDSL.swift in Sources */,
+				8B1B40163ADDC50D4F8E200230DD761D /* ConstraintMaker.swift in Sources */,
+				68988A325B4FF19530FE5C45197FE445 /* ConstraintMakerEditable.swift in Sources */,
+				F4C0CEFFEF8BD6E3D8B344EBB7A76968 /* ConstraintMakerExtendable.swift in Sources */,
+				049194B1810207943C9420044F9D065B /* ConstraintMakerFinalizable.swift in Sources */,
+				C551155038CB77D232055DD6DE19F4B3 /* ConstraintMakerPrioritizable.swift in Sources */,
+				E9ECB31D26E022123A43777AAAC5193F /* ConstraintMakerRelatable.swift in Sources */,
+				D7E220D8FFFE9AE104FABF6394FB4557 /* ConstraintMakerRelatable+Extensions.swift in Sources */,
+				A8FEA9FB7BE78DD7E3278EB2B23627A5 /* ConstraintMultiplierTarget.swift in Sources */,
+				C3A59CAA1B6D5D7ABE23E4225416D62B /* ConstraintOffsetTarget.swift in Sources */,
+				35F1CF42F29BBE32DACCB57A644F7090 /* ConstraintPriority.swift in Sources */,
+				889301BE2A49AB5AAE7795096C345270 /* ConstraintPriorityTarget.swift in Sources */,
+				2BADA92413A8A1B26A95F3CA7A2A9391 /* ConstraintRelatableTarget.swift in Sources */,
+				DAD548C040FFDFF3CC23B6B9CC4049F7 /* ConstraintRelation.swift in Sources */,
+				712A6764322FBC8C9FCC0AA176D01813 /* ConstraintView.swift in Sources */,
+				17818CF83FBF047513BCCBC1B8565CBE /* ConstraintView+Extensions.swift in Sources */,
+				8410EA558463454E2A73E46F9C823B49 /* ConstraintViewDSL.swift in Sources */,
+				9E4FFFE8669B71A61F8FFE4F1F707DA3 /* Debugging.swift in Sources */,
+				1F194E375BE45FFA7F9AF89FD1A6E6EB /* LayoutConstraint.swift in Sources */,
+				9950B2794A23C3B86F11EEDBB148201C /* LayoutConstraintItem.swift in Sources */,
+				87FD0408C547FE1407A53625896DEB2F /* SnapKit-dummy.m in Sources */,
+				2D1BC95605AE0A034B8FCB73E975DEEA /* Typealiases.swift in Sources */,
+				B61EF3FEBE368D5C582DC59A786B896B /* UILayoutSupport+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4590B7A6F354C6C176F88B17EA9968F3 /* PBXTargetDependency */ = {
+		0E1D2B3B362710476722C27C5D77A4DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Handy-Handy";
 			target = BAAB311461ED9377754EE240EB92609C /* Handy-Handy */;
-			targetProxy = 945B389DE3DAAEE32FAF8E89B3AF24B3 /* PBXContainerItemProxy */;
+			targetProxy = 9A28ED39880E7CC29E427EE2F3C77C82 /* PBXContainerItemProxy */;
 		};
-		4C0865E55632D44AFE1665A4B4AAA617 /* PBXTargetDependency */ = {
+		753DDAF12CC02CB80D3D45FF5348861E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
 			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 28526BFDC824A996282697010B7FCD12 /* PBXContainerItemProxy */;
+			targetProxy = 445678AF4753B7F11216FDE39A0AAD23 /* PBXContainerItemProxy */;
 		};
-		801AFB42CB8EEA2FF0B1A27BE2E0A79F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapKit;
-			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = A1E73B19BD5D0966597E518E0C5BF85E /* PBXContainerItemProxy */;
-		};
-		BC4018A75E9B600042B22382C2377835 /* PBXTargetDependency */ = {
+		76B66ECA6DE481DCB2C5C83F567750EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Handy;
 			target = F591A36DFE90A9D32F9E027F1A1EF0B2 /* Handy */;
-			targetProxy = 1A7065A5C4A78D1F0F9EF81A5E9C3202 /* PBXContainerItemProxy */;
+			targetProxy = 4C9DE96C247AB93BF214076C27653506 /* PBXContainerItemProxy */;
 		};
-		CB385E66F4CE17534952A358F9713E1A /* PBXTargetDependency */ = {
+		DBBAB2696EDBAE2A4DAAF61C0FE3E2AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Handy_Example";
 			target = 6423DB9BFD07878085F8B68D214D7213 /* Pods-Handy_Example */;
-			targetProxy = E760BC2532568E7E080C62E863340866 /* PBXContainerItemProxy */;
+			targetProxy = B9EFE4CC33D899F234997F48BCB386D0 /* PBXContainerItemProxy */;
+		};
+		FADD69A74F96CD04683CC154424FB5E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
+			targetProxy = 5CEE424E8A78634CDB33754035B4DC09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		45F8CFEA5C0C2B30A4A6F28636196FC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EA97BD2DCA092E4174D6FE8BBC09102 /* Handy.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Handy/Handy-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Handy/Handy-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Handy/Handy.modulemap";
-				PRODUCT_MODULE_NAME = Handy;
-				PRODUCT_NAME = Handy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4771B6378905931DAA01DD9C446C1703 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D90F0ED4F066F6685A2473C74E044B5D /* Handy.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Handy";
-				IBSC_MODULE = Handy;
-				INFOPLIST_FILE = "Target Support Files/Handy/ResourceBundle-Handy-Handy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = Handy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		4A769EE3D0D9A46BDF393DDE5FB72197 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FD0C87E1CF59D51058142932BECE82F /* Pods-Handy_Example.debug.xcconfig */;
@@ -954,7 +893,7 @@
 			};
 			name = Debug;
 		};
-		4B3B42A66D519C2FBFB83FB52BE2EC37 /* Debug */ = {
+		4F4B4DAB3A907933655F55D2D8DDDC78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0EE5F8CB92905AE76169A71226B44035 /* SnapKit.debug.xcconfig */;
 			buildSettings = {
@@ -985,54 +924,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		4DADF463F8FE7485997F5AFEA692C59F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D90F0ED4F066F6685A2473C74E044B5D /* Handy.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Handy/Handy-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Handy/Handy-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Handy/Handy.modulemap";
-				PRODUCT_MODULE_NAME = Handy;
-				PRODUCT_NAME = Handy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4F65173F119395FCF3A79280F9E5C7C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EA97BD2DCA092E4174D6FE8BBC09102 /* Handy.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Handy";
-				IBSC_MODULE = Handy;
-				INFOPLIST_FILE = "Target Support Files/Handy/ResourceBundle-Handy-Handy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = Handy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 		5B6B648A452CE38AFBD4E74283B6B63F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1068,6 +959,54 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		84908BC24329C9B019E009F1BAE12783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EEEAFF331DF95B3910C58487BF18C30 /* Handy.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Handy";
+				IBSC_MODULE = Handy;
+				INFOPLIST_FILE = "Target Support Files/Handy/ResourceBundle-Handy-Handy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = Handy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		8733A5814C528AC5D89239567ABBC808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC866229C9AA258FF8277D59CFC177C0 /* Handy.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Handy/Handy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Handy/Handy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Handy/Handy.modulemap";
+				PRODUCT_MODULE_NAME = Handy;
+				PRODUCT_NAME = Handy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1124,7 +1063,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1163,6 +1103,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		AEF3F672ABD7D780B72CC51FFC2A1B73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 782C19B041349DED0C47AC71C798375C /* SnapKit.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
+				PRODUCT_MODULE_NAME = SnapKit;
+				PRODUCT_NAME = SnapKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1265,9 +1238,9 @@
 			};
 			name = Release;
 		};
-		E3F6D344364228ABC8E5DE8585F14860 /* Release */ = {
+		DDC3202FC7F92A4407D9A9C7BD0B67CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 782C19B041349DED0C47AC71C798375C /* SnapKit.release.xcconfig */;
+			baseConfigurationReference = 8EEEAFF331DF95B3910C58487BF18C30 /* Handy.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1279,14 +1252,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Handy/Handy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Handy/Handy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				PRODUCT_MODULE_NAME = SnapKit;
-				PRODUCT_NAME = SnapKit;
+				MODULEMAP_FILE = "Target Support Files/Handy/Handy.modulemap";
+				PRODUCT_MODULE_NAME = Handy;
+				PRODUCT_NAME = Handy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1297,6 +1270,22 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		FD4E9371EEC7B6990481E415B00A0579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC866229C9AA258FF8277D59CFC177C0 /* Handy.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Handy";
+				IBSC_MODULE = Handy;
+				INFOPLIST_FILE = "Target Support Files/Handy/ResourceBundle-Handy-Handy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = Handy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1310,6 +1299,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2E304830A0C02D1DFE1E52BDDDAA8598 /* Build configuration list for PBXNativeTarget "Handy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8733A5814C528AC5D89239567ABBC808 /* Debug */,
+				DDC3202FC7F92A4407D9A9C7BD0B67CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1319,29 +1317,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BD1A9F09DFC112E32E6B2F56D7D27AF /* Build configuration list for PBXNativeTarget "Handy" */ = {
+		8CFA3067D355081BAFB7229E2AF68E3E /* Build configuration list for PBXNativeTarget "Handy-Handy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DADF463F8FE7485997F5AFEA692C59F /* Debug */,
-				45F8CFEA5C0C2B30A4A6F28636196FC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		799E29CA8E9236FB5E257298628DDDB7 /* Build configuration list for PBXNativeTarget "Handy-Handy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4771B6378905931DAA01DD9C446C1703 /* Debug */,
-				4F65173F119395FCF3A79280F9E5C7C5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AA0948718D4443D68EECF716F0FCF225 /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4B3B42A66D519C2FBFB83FB52BE2EC37 /* Debug */,
-				E3F6D344364228ABC8E5DE8585F14860 /* Release */,
+				FD4E9371EEC7B6990481E415B00A0579 /* Debug */,
+				84908BC24329C9B019E009F1BAE12783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1351,6 +1331,15 @@
 			buildConfigurations = (
 				9C9468649F5FA49928667AE3F84A08CC /* Debug */,
 				CD2C7968F87CBC0DDF37C01C898432B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE74EC29E9133199DF4D7C5BC4A368E6 /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4B4DAB3A907933655F55D2D8DDDC78 /* Debug */,
+				AEF3F672ABD7D780B72CC51FFC2A1B73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
