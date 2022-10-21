@@ -7,12 +7,35 @@
 
 
 import UIKit
-extension UIColor: HandyCompatible{}
+public enum UIColorInputError : Error {
+    case missingHashMarkAsPrefix,
+    unableToScanHexValue,
+    mismatchedHexStringLength
+}
+
+
+extension UIColor: HandyCompatible{
+    open override var description: String {
+        return handy.hexString(true)
+    }
+}
 extension UIColor: HandyClassCompatible{ }
 
 
 extension HandyExtension where Base == UIColor{
-    
+    public func hexString(_ includeAlpha: Bool) -> String {
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        base.getRed(&r, green: &g, blue: &b, alpha: &a)
+        
+        if (includeAlpha) {
+            return String(format: "#%02X%02X%02X%02X", Int(round(r * 255)), Int(round(g * 255)), Int(round(b * 255)), Int(round(a * 255)))
+        } else {
+            return String(format: "#%02X%02X%02X", Int(round(r * 255)), Int(round(g * 255)), Int(round(b * 255)))
+        }
+    }
 }
 
 
@@ -24,38 +47,83 @@ extension HandyClassExtension where Base == UIColor{
         case upwardDiagonalLine
         case downDiagonalLine
     }
+    /// #RGB
+    public static func color(hex3: UInt16, alpha: CGFloat = 1) -> UIColor {
+        let divisor = CGFloat(15)
+        let red     = CGFloat((hex3 & 0xF00) >> 8) / divisor
+        let green   = CGFloat((hex3 & 0x0F0) >> 4) / divisor
+        let blue    = CGFloat( hex3 & 0x00F      ) / divisor
+
+        return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
     
-    public static func color(with hex: String,alpha: CGFloat = 1) -> UIColor{
-        var cString = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+    /// #RGBA
+    public static func color(hex4: UInt16) -> UIColor {
+        let divisor = CGFloat(15)
+        let red     = CGFloat((hex4 & 0xF000) >> 12) / divisor
+        let green   = CGFloat((hex4 & 0x0F00) >>  8) / divisor
+        let blue    = CGFloat((hex4 & 0x00F0) >>  4) / divisor
+        let alpha   = CGFloat( hex4 & 0x000F       ) / divisor
 
-        if cString.hasPrefix("0X") {
-            cString = cString.replacingOccurrences(of: "0X", with: "")
-        }
-        if cString.hasPrefix("0x") {
-            cString = cString.replacingOccurrences(of: "0x", with: "")
-        }
-        if cString.hasPrefix("#") {
-            cString = cString.replacingOccurrences(of: "#", with: "")
-        }
-        if  cString.count != 6 {
-            return UIColor.clear
-        }
+        return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    /// #RRGGBB
+    public static func color(hex6: UInt32, alpha: CGFloat = 1) -> UIColor {
+        let divisor = CGFloat(255)
+        let red     = CGFloat((hex6 & 0xFF0000) >> 16) / divisor
+        let green   = CGFloat((hex6 & 0x00FF00) >>  8) / divisor
+        let blue    = CGFloat( hex6 & 0x0000FF       ) / divisor
 
-        let rStr = cString.handy[0...1]
-        let gStr = cString.handy[2...3]
-        let bStr = cString.handy[4...5]
-
-        var  r:CUnsignedInt = 0,g:CUnsignedInt = 0,b:CUnsignedInt = 0
-        Scanner.init(string: rStr).scanHexInt32(&r)
-        Scanner.init(string: gStr).scanHexInt32(&g)
-        Scanner.init(string: bStr).scanHexInt32(&b)
-
-
-        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(alpha))
-
+        return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    ///  #RRGGBBAA
+    public static func color(hex8: UInt32) -> UIColor {
+        let divisor = CGFloat(255)
+        let red     = CGFloat((hex8 & 0xFF0000) >> 16) / divisor
+        let green   = CGFloat((hex8 & 0x00FF00) >>  8) / divisor
+        let blue    = CGFloat( hex8 & 0x0000FF       ) / divisor
+        let alpha   = CGFloat( hex8 & 0x000000FF       ) / divisor
+        
+        return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     
+    
+    public static func color(rgba_throws: String) throws -> UIColor{
+       
+        var hexString = rgba_throws
+        
+        if hexString.hasPrefix("0X") {
+            hexString = hexString.replacingOccurrences(of: "0X", with: "")
+        }else if hexString.hasPrefix("0x") {
+            hexString = hexString.replacingOccurrences(of: "0x", with: "")
+        }else if hexString.hasPrefix("#") {
+            hexString = hexString.replacingOccurrences(of: "#", with: "")
+        }
+        if hexString.count == rgba_throws.count{
+            throw UIColorInputError.missingHashMarkAsPrefix
+        }
+        var hexValue:  UInt32 = 0
+        guard Scanner(string: hexString).scanHexInt32(&hexValue) else {
+            throw UIColorInputError.unableToScanHexValue
+        }
+
+        switch (hexString.count) {
+        case 3:
+            return color(hex3: UInt16(hexValue))
+        case 4:
+            return color(hex4: UInt16(hexValue))
+        case 6:
+            return color(hex6: hexValue)
+        case 8:
+            return color(hex8: hexValue)
+        default:
+            throw UIColorInputError.mismatchedHexStringLength
+        }
+
+    }
+
     //两色渐变
     public static func colorGradient(with size: CGSize, cornerRadius: CGFloat = 0, direction: HandyGradientDirection = .level, startcolor: UIColor, endColor: UIColor , startPoint: CGPoint? = nil, endPoint: CGPoint? = nil)->UIColor?{
         if size == .zero {

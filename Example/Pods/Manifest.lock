@@ -1,5 +1,5 @@
 PODS:
-  - Handy (0.2.0):
+  - Handy (0.3.0):
     - SnapKit
   - SnapKit (5.6.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Handy: e5790d0e0c60902a0651291ad6328fb347cbff6a
+  Handy: 8c5a7d2b04d032f03c5712cd91e97b14231d0f72
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: 9f5d37c1585825b49d75341495b204bcc97b2dbe
