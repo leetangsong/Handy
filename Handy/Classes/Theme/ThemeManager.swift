@@ -66,7 +66,7 @@ public enum ThemePath {
     
     public fileprivate(set) static var currentThemePath: ThemePath?
     
-    class func setTheme(plistName: String, path: ThemePath) {
+    public class func setTheme(plistName: String, path: ThemePath) {
         guard let plistPath = path.plistPath(name: plistName) else {
             print("SwiftTheme WARNING: Can't find plist '\(plistName)' at: \(path)")
             return
@@ -78,7 +78,7 @@ public enum ThemePath {
         self.setTheme(dict: plistDict, path: path)
     }
     
-    class func setTheme(jsonName: String, path: ThemePath) {
+    public class func setTheme(jsonName: String, path: ThemePath) {
         guard let jsonPath = path.jsonPath(name: jsonName) else {
             print("SwiftTheme WARNING: Can't find json '\(jsonName)' at: \(path)")
             return

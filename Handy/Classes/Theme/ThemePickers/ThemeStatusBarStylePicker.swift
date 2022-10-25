@@ -17,7 +17,6 @@ final class ThemeStatusBarStylePicker: ThemePicker {}
 @objc public final class ThemeStatusBarStylePicker: ThemePicker {
     
     var animated = true
-    
     public convenience init(keyPath: String) {
         self.init(v: { ThemeStatusBarStylePicker.getStyle(stringStyle: ThemeManager.string(for: keyPath) ?? "") })
     }
@@ -51,6 +50,15 @@ final class ThemeStatusBarStylePicker: ThemePicker {}
         case "default"      : return .default
         case "lightcontent" : return .lightContent
         case "darkcontent"  : if #available(iOS 13.0, *) { return .darkContent } else { return .default }
+        default: return .default
+        }
+    }
+    
+    class func getHandyStyle(style: UIStatusBarStyle) -> HandyStatusBarStyle {
+        switch style {
+        case .default      : return .default
+        case .lightContent : return .lightContent
+        case .darkContent  : return .dark
         default: return .default
         }
     }

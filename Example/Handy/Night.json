@@ -1,0 +1,19 @@
+{
+  
+  "ChangeTheme": {
+    "buttonTitleColorHighlighted": "#AAA",
+    "buttonTitleColorNormal": "#000",
+    "buttonBackgroundColor": "#ECF0F1"
+  },
+  "ThemeImage": {
+    "iconImage": "icon_theme_light"
+  },
+  "NaviBarStyle": "black",
+  "Global": {
+    "textFont": "PingFangSC-Regular,30",
+    "textColor": "#ECF0F1",
+    "backgroundColor": "#292b38",
+    "barTintColor": "#01040D",
+    "barTextColor": "#FFF"
+  }
+}

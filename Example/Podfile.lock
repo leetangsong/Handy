@@ -1,14 +1,20 @@
 PODS:
   - Handy (0.3.0):
     - SnapKit
+  - MBProgressHUD (1.2.0)
   - SnapKit (5.6.0)
+  - SSZipArchive (2.4.3)
 
 DEPENDENCIES:
   - Handy (from `../`)
+  - MBProgressHUD
+  - SSZipArchive
 
 SPEC REPOS:
   trunk:
+    - MBProgressHUD
     - SnapKit
+    - SSZipArchive
 
 EXTERNAL SOURCES:
   Handy:
@@ -16,8 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Handy: 8c5a7d2b04d032f03c5712cd91e97b14231d0f72
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
 
-PODFILE CHECKSUM: 9f5d37c1585825b49d75341495b204bcc97b2dbe
+PODFILE CHECKSUM: f71435ae7a3f01f645cab7750fc1c1c8f73c3fa6
 
 COCOAPODS: 1.11.3

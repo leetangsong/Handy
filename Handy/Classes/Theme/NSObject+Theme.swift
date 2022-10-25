@@ -23,7 +23,6 @@ extension NSObject{
     fileprivate struct AssociatedKeys {
         static var themePickers = "themePickers"
         static var hasAddPickerNotification = "hasAddPickerNotification"
-        static var deallocHelperExecutor = "deallocHelperExecutor"
     }
 }
 
@@ -43,7 +42,8 @@ extension ThemeExtension where Base: NSObject{
         }
         set {
             objc_setAssociatedObject(base, &NSObject.AssociatedKeys.themePickers, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if newValue.isEmpty == false { _setupThemeNotification() }
+            if newValue.isEmpty == false { base._setupThemeNotification() }
+            
         }
     }
     
@@ -56,14 +56,7 @@ extension ThemeExtension where Base: NSObject{
         }
     }
     
-    var deallocHelperExecutor: ThemeDeallocBlockExecutor? {
-        get {
-            return objc_getAssociatedObject(base, &NSObject.AssociatedKeys.deallocHelperExecutor) as? ThemeDeallocBlockExecutor
-        }
-        set {
-            objc_setAssociatedObject(base, &NSObject.AssociatedKeys.deallocHelperExecutor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
+    
     
     
 }
@@ -76,15 +69,11 @@ extension NSObject {
         if theme.hasAddPickerNotification == false {
             theme.hasAddPickerNotification = true
             NotificationCenter.default.addObserver(self, selector: #selector(_updateTheme), name: NSNotification.Name(rawValue: ThemeUpdateNotification), object: nil)
-            theme.deallocHelperExecutor = ThemeDeallocBlockExecutor(deallocBlock: {
-                NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: ThemeUpdateNotification), object: nil)
-            })
         }
         
     }
     
     @objc private func _updateTheme() {
-        
         theme.themePickers.forEach { selector, picker in
             
             UIView.animate(withDuration: ThemeManager.animationDuration) {
@@ -100,6 +89,42 @@ extension NSObject {
     }
     
     func performThemePicker(selector: String, picker: ThemePicker?) {
+        
+        if let vc = self as? UIViewController, let value = picker?.value() {
+            if let _ = picker as? ThemeStatusBarStylePicker{
+                let style = value as! UIStatusBarStyle
+                vc.handy.statusBarStyle = ThemeStatusBarStylePicker.getHandyStyle(style: style)
+            }
+            
+            if let _ = picker as? ThemeBarStylePicker{
+                let style = value as! UIBarStyle
+                vc.handy.naviBarStyle = style
+            }
+            if let _ = picker as? ThemeColorPicker{
+                let color = value as! UIColor
+                if selector == "naviTintColor"{
+                    vc.handy.naviTintColor = color
+                }else if selector == "naviTitleColor"{
+                    vc.handy.naviTitleColor = color
+                }else if selector == "naviBackgroundColor"{
+                    vc.handy.naviBackgroundColor = color
+                }else if selector == "naviShadowColor"{
+                    vc.handy.naviShadowColor = color
+                }
+            }else if let _ = picker as? ThemeFontPicker{
+                let font = value as! UIFont
+                if selector == "naviTitleFont"{
+                    vc.handy.naviTitleFont = font
+                }
+            }else if let _ = picker as? ThemeImagePicker{
+                let image = value as? UIImage
+                if selector == "naviTitleFont"{
+                    vc.handy.naviBackgroundImage = image
+                }
+            }
+            
+            return
+        }
         let sel = Selector(selector)
 
         guard responds(to: sel)           else { return }

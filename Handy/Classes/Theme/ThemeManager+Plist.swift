@@ -40,7 +40,7 @@ import UIKit
     
     public class func color(for keyPath: String) -> UIColor? {
         guard let rgba = string(for: keyPath) else { return nil }
-        guard let color = try? UIColor(rgba_throws: rgba) else {
+        guard let color = try? UIColor.handy.color(rgba_throws: rgba) else {
             print("SwiftTheme WARNING: Not convert rgba \(rgba) at key path: \(keyPath)")
             return nil
         }

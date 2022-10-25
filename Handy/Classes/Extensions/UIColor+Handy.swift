@@ -57,7 +57,7 @@ extension HandyClassExtension where Base == UIColor{
         return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    /// #RGBA
+    /// 0xRGBA
     public static func color(hex4: UInt16) -> UIColor {
         let divisor = CGFloat(15)
         let red     = CGFloat((hex4 & 0xF000) >> 12) / divisor
@@ -67,7 +67,7 @@ extension HandyClassExtension where Base == UIColor{
 
         return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
     }
-    /// #RRGGBB
+    /// 0xRRGGBB
     public static func color(hex6: UInt32, alpha: CGFloat = 1) -> UIColor {
         let divisor = CGFloat(255)
         let red     = CGFloat((hex6 & 0xFF0000) >> 16) / divisor

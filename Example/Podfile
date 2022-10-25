@@ -4,7 +4,8 @@ platform :ios, '11.0'
 
 target 'Handy_Example' do
   pod 'Handy', :path => '../'
-
+  pod 'SSZipArchive'
+  pod 'MBProgressHUD'
   target 'Handy_Tests' do
     inherit! :search_paths
 

@@ -37,7 +37,7 @@ class TableViewController: UITableViewController {
             return .default
         }
     }
-    var titles: [String] = ["导航栏控制","转场push","转场present","自定义相册浏览器 带编辑图片","相册控件","日历控件"]
+    var titles: [String] = ["导航栏控制","主题","转场push","转场present","自定义相册浏览器 带编辑图片","相册控件","日历控件"]
    
     // MARK: - Table view data source
 
@@ -64,8 +64,11 @@ class TableViewController: UITableViewController {
             demoVC.modalPresentationStyle = .fullScreen
             self.present(demoVC, animated: true)
         }else if indexPath.row == 1{
-            
-            navigationController?.pushViewController(TransitionPushViewController(), animated: true)
+            guard let demoVC = storyboard?.instantiateViewController(withIdentifier: "ThemeNavi") else { return }
+            demoVC.modalPresentationStyle = .fullScreen
+            self.present(demoVC, animated: true)
+        }else{
+            NotificationCenter.default.post(name: Notification.Name(rawValue: ThemeUpdateNotification), object: nil)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }

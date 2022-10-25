@@ -23,7 +23,7 @@ class NaviViewController: UIViewController {
         }else{
             automaticallyAdjustsScrollViewInsets = false
         }
-        handy.naviBackgroundColor = UIColor.handy.color(with: "#FF7E79")
+        handy.naviBackgroundColor = UIColor.handy.color(hex6: 0xFF7E79)
         handy.naviTintColor = .red
         handy.naviTitleColor = .red
         scrollView.contentInset = UIEdgeInsets.init(top: HandyApp.naviBarHeight, left: 0, bottom: HandyApp.safeAreaBottom, right: 0)
