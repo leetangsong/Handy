@@ -250,7 +250,7 @@
 		323E2A24B7676D2CCEAFBC0144EFBB7D /* ThemeTabBarAppearancePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeTabBarAppearancePicker.swift; sourceTree = "<group>"; };
 		336D5FA43D10360D112890420248C17D /* UIButton+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Handy.swift"; sourceTree = "<group>"; };
 		35220647316D6032C70FC945C08C9303 /* ThemeFontPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeFontPicker.swift; sourceTree = "<group>"; };
-		36029B061B4119AEAD2C91CADC14CF2C /* Handy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Handy.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		36029B061B4119AEAD2C91CADC14CF2C /* Handy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Handy.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		38A4553DF30D8F42540730A8447F63DF /* Handy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-prefix.pch"; sourceTree = "<group>"; };
 		390C291398C3B38A26B5EA37C849CD71 /* ThemeDictionaryPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeDictionaryPicker.swift; sourceTree = "<group>"; };
 		3BCCA623DB88D16C8A9F3D413BB16E04 /* mz_crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_crypt.h; path = SSZipArchive/minizip/mz_crypt.h; sourceTree = "<group>"; };
