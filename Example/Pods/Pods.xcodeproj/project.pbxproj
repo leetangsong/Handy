@@ -112,6 +112,7 @@
 		B3897C0860E93EC37C776A7131CF16DC /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B786415A9E64065873337050168E8BD /* ThemePicker.swift */; };
 		B4BB51A4C62614C6FF507DAAE5172096 /* Dictionary+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FCC3062F8AEC5ED0DB1F16C632DE8 /* Dictionary+Handy.swift */; };
 		B52177FF72FDAC3EDB7195DE98F5501E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B117979D2872C1B43D02ED5AC7063 /* QuartzCore.framework */; };
+		B5A5248D29091DE200E0765F /* UIApplication+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A5248C29091DE200E0765F /* UIApplication+Handy.swift */; };
 		B62D0B8FE7C3A3B195F02EB504FDB039 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
 		B78E287AF45C125B59F27B32F7271E54 /* ThemeBlurEffectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AEA71D9AE96A57E84BDE7B62F56284 /* ThemeBlurEffectPicker.swift */; };
 		BA077213F20DB5DF2EBDD5CE62A8E10C /* ThemeStringAttributesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A2D99521A65D244DBC65550DA6079 /* ThemeStringAttributesPicker.swift */; };
@@ -340,6 +341,7 @@
 		B3F6BF0E3AA34249D13601C54CEFCC41 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		B4824223725ACCDED849280E7A580B8D /* Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Handy-Info.plist"; sourceTree = "<group>"; };
 		B4EB4CA78F7612CEE3CF18C7ADFBFE50 /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
+		B5A5248C29091DE200E0765F /* UIApplication+Handy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Handy.swift"; sourceTree = "<group>"; };
 		B5C5E06C364A47421E4499088644D142 /* Pods-Handy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Handy_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B7000A4C2612DB4E9873E47CF1276C66 /* Array+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Handy.swift"; sourceTree = "<group>"; };
 		B869119B10AE43DCEFC7AA3E1FDBA0A9 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -747,6 +749,7 @@
 				29168EB52ECA3BA00DDAAC8F27EB1394 /* UIImage+Handy.swift */,
 				78E2E6793B7A082AF174F2F0E2F908F6 /* UIView+Handy.swift */,
 				3C628A3D775EBD346A9B652311EC4A4D /* UIViewController+Handy.swift */,
+				B5A5248C29091DE200E0765F /* UIApplication+Handy.swift */,
 			);
 			name = Extensions;
 			path = Handy/Classes/Extensions;
@@ -1253,6 +1256,7 @@
 				0F5448AEDB55E7C14230AD7345B5E785 /* ThemeAnyPicker.swift in Sources */,
 				418AEA0D4A97A08A112731A5F0BE5032 /* ThemeAttributedStringPicker.swift in Sources */,
 				137D2D8D91A88BA1BD3002298F04700F /* ThemeBarStylePicker.swift in Sources */,
+				B5A5248D29091DE200E0765F /* UIApplication+Handy.swift in Sources */,
 				B78E287AF45C125B59F27B32F7271E54 /* ThemeBlurEffectPicker.swift in Sources */,
 				9843C46461E397685881B18B1D46AFCE /* ThemeCGColorPicker.swift in Sources */,
 				3700269A05139EE9C8A0491B249BBAA4 /* ThemeCGFloatPicker.swift in Sources */,

@@ -17,6 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UIApplication.runOnce()
         ThemeManager.setTheme(jsonName: "Night", path: .mainBundle)
+        
+        
+        
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.theme.barTintColor = "Global.barTintColor"
+        navigationBar.theme.tintColor = "Global.tintColor"
+        navigationBar.theme.titleTextAttributes = ThemeStringAttributesPicker(keyPath: "Global.barTextColor") { value -> [NSAttributedString.Key : AnyObject]? in
+            guard let rgba = value as? String else {
+                return nil
+            }
+            
+            let color = UIColor.handy.color(rgba: rgba)
+            let shadow = NSShadow(); shadow.shadowOffset = CGSize.zero
+            let titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: color,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+                NSAttributedString.Key.shadow: shadow
+            ]
+            
+            return titleTextAttributes
+        }
         // Override point for customization after application launch.
         return true
     }

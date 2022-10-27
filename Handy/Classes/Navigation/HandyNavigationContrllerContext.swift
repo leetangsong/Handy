@@ -57,6 +57,7 @@ class HandyNavigationContrllerContext: NSObject {
                 
             }else if navi.handy.navigationStyle == .custom, "_UINavigationBarContentView" == NSStringFromClass(type(of: view)) {
                 view.isHidden = true
+                
                 continue
             }
         }
@@ -65,7 +66,15 @@ class HandyNavigationContrllerContext: NSObject {
         fakerBarUpdateFrame()
     }
     
-    
+//    func findButtonLabel(view: UIView?)-> UIView?{
+//        for
+//        if let view = view, NSStringFromClass(type(of: view)) == "UIButtonLabel"{
+//            return view
+//        }else{
+//            findButtonLabel(view: view.)
+//            return nil
+//        }
+//    }
     func navigationController(willShow viewController: UIViewController, animated: Bool) {
         
         guard let navi = navigationController, navi.handy.navigationStyle != .none, !(viewController is UINavigationController) else { return }

@@ -7,34 +7,20 @@
 //
 
 import UIKit
-//import TSHandyKit
-
+import Handy
 class BViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-//        ts_title = "B"
-//        ts_naviBackgroundColor = UIColor.red.withAlphaComponent(0.5)
-        // Do any additional setup after loading the view.
+        handy.title = "不跟主题"
+        handy.naviBackgroundColor = UIColor.handy.color(hex6: 0xFF7E79)
         let button = UIButton.init(frame: CGRect.init(x: 200, y: 300, width: 100, height: 100))
         view.addSubview(button)
         button.backgroundColor = .red
         button.setTitle("上一页", for: .normal)
         button.addTarget(self, action: #selector(lastPage), for: .touchUpInside)
-//        ts_transitionViews = ["button": button]
-        
-//        let layout = UICollectionViewFlowLayout()
-//        layout.itemSize = CGSize.init(width: 50, height: 50)
-//        layout.scrollDirection = .horizontal
-//        layout.minimumLineSpacing = 10
-//        layout.minimumInteritemSpacing = 10
-//        let collection = UICollectionView.init(frame: view.bounds, collectionViewLayout: layout)
-//        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-//        collection.backgroundColor = .white
-//        collection.delegate = self
-//        collection.dataSource = self
-//        view.addSubview(collection)
+
        
     }
    

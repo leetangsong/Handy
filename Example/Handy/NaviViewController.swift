@@ -16,6 +16,9 @@ class NaviViewController: UIViewController {
     @IBOutlet weak var barAlphaLabel: UILabel!
     
 
+    override var prefersStatusBarHidden: Bool{
+        return handy.statusBarHidden
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 11, *) {
@@ -28,6 +31,7 @@ class NaviViewController: UIViewController {
         handy.naviTitleColor = .red
         scrollView.contentInset = UIEdgeInsets.init(top: HandyApp.naviBarHeight, left: 0, bottom: HandyApp.safeAreaBottom, right: 0)
         handy.title = "\((navigationController?.viewControllers.count ?? 0))"
+        
     }
    
    

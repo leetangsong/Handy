@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
         handy.title = "首页"
         handy.naviTitleColor = .white
-        handy.naviBackgroundColor = .blue
+//        handy.naviBackgroundColor = .blue
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -67,8 +67,6 @@ class TableViewController: UITableViewController {
             guard let demoVC = storyboard?.instantiateViewController(withIdentifier: "ThemeNavi") else { return }
             demoVC.modalPresentationStyle = .fullScreen
             self.present(demoVC, animated: true)
-        }else{
-            NotificationCenter.default.post(name: Notification.Name(rawValue: ThemeUpdateNotification), object: nil)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }

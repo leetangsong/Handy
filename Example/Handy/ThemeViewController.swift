@@ -22,15 +22,24 @@ class ThemeViewController: UIViewController {
         themeLabel.theme.font = "Global.textFont"
         themeLabel.theme.textColor = "Global.textColor"
 
-        theme.naviBackgroundColor = "Global.barTintColor"
-        theme.naviTitleColor = "Global.barTextColor"
+//        theme.naviBackgroundColor = "Global.barTintColor"
+//        theme.naviTitleColor = "Global.barTextColor"
         theme.naviBarStyle = "NaviBarStyle"
+//        theme.naviTintColor = "Global.tintColor"
+        
         themeButton.theme.setTitleColor("ChangeTheme.buttonTitleColorNormal", forState: .normal)
         themeButton.theme.setTitleColor("ChangeTheme.buttonTitleColorHighlighted", forState: .highlighted)
         themeButton.theme.backgroundColor = "ChangeTheme.buttonBackgroundColor"
+        
+        
+        handy.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "next", style: .done, target: self, action: #selector(nextPage))
+        
         // Do any additional setup after loading the view.
     }
-    
+    @objc func nextPage(){
+        navigationController?.pushViewController(AViewController(), animated: true)
+    }
+   
     @IBAction func selectTheme(_ sender: UIButton) {
         if sender.tag == 2{
             guard MyThemes.isBlueThemeExist() else {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import TSHandyKit
+import Handy
 class AViewController: UIViewController {
 
 //    var transitioningStyle: TSTransitioningStyle = .default
@@ -15,23 +15,14 @@ class AViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-//        ts_title = "A"
-//        ts_naviBackgroundColor = UIColor.blue.withAlphaComponent(0.5)
-        // Do any additional setup after loading the view.
         
-        let button = UIButton.init(frame: CGRect.init(x: 20, y: 150, width: 80, height: 50))
-        view.addSubview(button)
-        button.backgroundColor = .red
-        button.setTitle("下一页", for: .normal)
-        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
+        handy.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "next", style: .done, target: self, action: #selector(nextPage))
         
 //        ts_transitionViews = ["button": button]
     }
     @objc func nextPage(){
-        let vc = BViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(BViewController(), animated: true)
     }
-
     /*
     // MARK: - Navigation
 

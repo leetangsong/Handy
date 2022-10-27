@@ -123,6 +123,15 @@ extension HandyClassExtension where Base == UIColor{
         }
 
     }
+    
+    public static func color(rgba: String, defaultColor: UIColor = UIColor.clear) -> UIColor{
+        guard let color = try? color(rgba_throws: rgba) else {
+            return defaultColor
+        }
+        return color
+        
+    }
+    
 
     //两色渐变
     public static func colorGradient(with size: CGSize, cornerRadius: CGFloat = 0, direction: HandyGradientDirection = .level, startcolor: UIColor, endColor: UIColor , startPoint: CGPoint? = nil, endPoint: CGPoint? = nil)->UIColor?{

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Handy'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = '一些自定义的UI以及常用拓展.自定义导航栏'
   s.swift_version    = ['5.0']
 # This description is used to generate tags and improve search results.

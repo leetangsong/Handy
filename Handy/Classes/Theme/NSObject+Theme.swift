@@ -28,6 +28,7 @@ extension NSObject{
 
 
 extension NSObject: ThemeCompatible{}
+
 extension ThemeExtension where Base: NSObject{
     typealias ThemePickers = [String: ThemePicker]
     
@@ -84,6 +85,9 @@ extension NSObject {
                         navBar.setNeedsLayout()
                     }
                 }
+                if let vc = UIViewController.handy.current(){
+                    vc.handy.setNeedsNavigationBarUpdate()
+                }
             }
         }
     }
@@ -126,10 +130,20 @@ extension NSObject {
             return
         }
         let sel = Selector(selector)
-
-        guard responds(to: sel)           else { return }
         guard let value = picker?.value() else { return }
-        
+        guard responds(to: sel) else {
+            let clsString = NSStringFromClass(type(of: self))
+            if clsString == "_UIAppearance" {
+                if self.description.contains("UINavigationBar"){
+                    setNavigationAppearance(selector: selector, value: value)
+                }else if clsString.contains("UITabBar"){
+                    setTabBarAppearance(selector: selector, value: value)
+                }else if clsString.contains("UIToolBar"){
+                    setToolBarAppearance(selector: selector, value: value)
+                }
+            }
+            return
+        }
         if let statePicker = picker as? ThemeStatePicker {
             let setState = unsafeBitCast(method(for: sel), to: setValueForStateIMP.self)
             statePicker.values.forEach {
@@ -142,29 +156,29 @@ extension NSObject {
         }
         
         else if let statusBarStylePicker = picker as? ThemeStatusBarStylePicker {
-            #if os(iOS)
+#if os(iOS)
             let setStatusBarStyle = unsafeBitCast(method(for: sel), to: setStatusBarStyleValueIMP.self)
             setStatusBarStyle(self, sel, value as! UIStatusBarStyle, statusBarStylePicker.animated)
-            #endif
+#endif
         }
-            
+        
         else if picker is ThemeBarStylePicker {
-            #if os(iOS)
+#if os(iOS)
             let setBarStyle = unsafeBitCast(method(for: sel), to: setBarStyleValueIMP.self)
             setBarStyle(self, sel, value as! UIBarStyle)
-            #endif
+#endif
         }
         
         else if picker is ThemeKeyboardAppearancePicker {
             let setKeyboard = unsafeBitCast(method(for: sel), to: setKeyboardValueIMP.self)
             setKeyboard(self, sel, value as! UIKeyboardAppearance)
         }
-            
+        
         else if picker is ThemeActivityIndicatorViewStylePicker {
             let setActivityStyle = unsafeBitCast(method(for: sel), to: setActivityStyleValueIMP.self)
             setActivityStyle(self, sel, value as! UIActivityIndicatorView.Style)
         }
-            
+        
         else if picker is ThemeScrollViewIndicatorStylePicker {
             let setIndicatorStyle = unsafeBitCast(method(for: sel), to: setScrollStyleValueIMP.self)
             setIndicatorStyle(self, sel, value as! UIScrollView.IndicatorStyle)
@@ -181,6 +195,64 @@ extension NSObject {
         }
         
         else { perform(sel, with: value) }
+    }
+    func setNavigationAppearance(selector: String, value: Any) {
+        let obj = UINavigationBar.appearance()
+        if selector == "setBarTintColor:"{
+            obj.barTintColor = value as? UIColor
+        }else if selector == "setTintColor:"{
+            obj.tintColor = value as? UIColor
+        }else if selector == "setBarStyle:"{
+            obj.barStyle = value as! UIBarStyle
+        }else if selector == "setTitleTextAttributes:"{
+            obj.titleTextAttributes = value as? [NSAttributedString.Key : Any]
+        }else if selector == "setLargeTitleTextAttributes:"{
+            obj.largeTitleTextAttributes = value as? [NSAttributedString.Key : Any]
+        }else if selector == "setStandardAppearance:"{
+            if #available(iOS 13.0, *) {
+                obj.standardAppearance = value as! UINavigationBarAppearance
+            }
+        }else if selector == "setCompactAppearance:"{
+            if #available(iOS 13.0, *) {
+                obj.compactAppearance = value as? UINavigationBarAppearance
+            }
+        }else if selector == "setScrollEdgeAppearance:"{
+            if #available(iOS 13.0, *) {
+                obj.scrollEdgeAppearance = value as? UINavigationBarAppearance
+            }
+        }
+    }
+    
+    func setTabBarAppearance(selector: String, value: Any) {
+        let obj = UITabBar.appearance()
+        if selector == "setBarTintColor:"{
+            obj.barTintColor = value as? UIColor
+        }else if selector == "setBarStyle:"{
+            obj.barStyle = value as! UIBarStyle
+        }else if selector == "setTintColor:"{
+            obj.tintColor = value as? UIColor
+        }else if selector == "setUnselectedItemTintColor:"{
+            obj.unselectedItemTintColor = value as? UIColor
+        }else if selector == "setStandardAppearance:"{
+            if #available(iOS 13.0, *) {
+                obj.standardAppearance = value as! UITabBarAppearance
+            }
+        }else if selector == "setScrollEdgeAppearance:"{
+            if #available(iOS 15.0, *) {
+                obj.scrollEdgeAppearance = value as? UITabBarAppearance
+            }
+        }
+    }
+    
+    func setToolBarAppearance(selector: String, value: Any) {
+        let obj = UIToolbar.appearance()
+        if selector == "setBarTintColor:"{
+            obj.barTintColor = value as? UIColor
+        }else if selector == "setTintColor:"{
+            obj.tintColor = value as? UIColor
+        }else if selector == "setBarStyle:"{
+            obj.barStyle = value as! UIBarStyle
+        }
     }
 }
 

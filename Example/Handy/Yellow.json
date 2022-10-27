@@ -14,7 +14,8 @@
     "textColor": "#000",
     "backgroundColor": "#FFF",
     "barTintColor": "#F4C600",
-    "barTextColor": "#000"
+    "barTextColor": "#000",
+    "tintColor": "#000",
   }
 
 }
