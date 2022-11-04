@@ -6,7 +6,9 @@
 //
 
 import UIKit
-extension UIViewController: HandyClassCompatible{}
+
+
+
 extension HandyClassExtension where Base: UIViewController{
     class func current(baseVC: UIViewController? = UIApplication.shared.currentWindow?.rootViewController) -> UIViewController?{
         if let nav = baseVC as? UINavigationController{

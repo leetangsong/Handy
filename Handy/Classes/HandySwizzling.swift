@@ -7,18 +7,33 @@
 
 import UIKit
 
-public protocol  HandySwizzling: AnyObject {
+public protocol HandySwizzling: AnyObject{
     static func awake()
+    static func addSwizzlingMethod(cls: AnyClass, sel: Selector)
 }
-extension HandySwizzling where Self: NSObject{
-    public static func awake(){
-        swizzling()
-        otherSwizzling()
+
+var HandySwizzlingMethods: [String] = []
+ 
+public extension HandySwizzling{
+    static func addSwizzlingMethod(cls: AnyClass, sel: Selector){
+        let str = NSStringFromClass(cls) + "&" + NSStringFromSelector(sel)
+        assert(!HandySwizzlingMethods.contains(str), "\(NSStringFromClass(cls))已实现过该方法")
+        HandySwizzlingMethods.append(str)
+    }
+}
+class HandySwizzles: NSObject, HandySwizzling{
+    static func awake() {
+        addSwizzlingMethod(cls: UIViewController.self, sel: #selector(UIViewController.viewControllerSwizzling))
+        addSwizzlingMethod(cls: UIViewController.self, sel: #selector(UIViewController.viewControllerThemeSwizzling))
+        addSwizzlingMethod(cls: UINavigationController.self, sel: #selector(UINavigationController.navigationSwizzling))
+        addSwizzlingMethod(cls: UIControl.self, sel: #selector(UIControl.controlSwizzling))
     }
 }
 extension NSObject{
-    @objc public class func swizzling(){}
-    @objc public class func otherSwizzling(){}
+    
+    public class func addSwizzling(originMethod: Selector, swizzledMethod: Selector){
+        swizzlingForClass(self, originalSelector: originMethod, swizzledSelector: swizzledMethod)
+    }
     public static func swizzlingForClass(_ forClass: AnyClass, originalSelector: Selector, swizzledSelector: Selector) {
         let originalMethod = class_getInstanceMethod(forClass, originalSelector)
         let swizzledMethod = class_getInstanceMethod(forClass, swizzledSelector)
@@ -45,36 +60,25 @@ class NothingToSeeHere {
     }
 }
 
+
 extension UIApplication {
-    fileprivate struct AssociatedKeys {
-        static var swizzlingClasses = "swizzlingClasses"
-    }
+   
     public static func runOnce() {
-        for cls in handy.swizzlingClasses{
-            cls.awake()
+        NothingToSeeHere.harmlessFunction()
+        for string in HandySwizzlingMethods{
+            let array = string.components(separatedBy: "&")
+            guard array.count>1 , let cls = NSClassFromString(array[0]) as? NSObjectProtocol else{
+                return
+            }
+            let sel = Selector(array[1])
+            
+            if cls.responds(to: sel){
+                cls.perform(sel)
+            }
         }
-//        NothingToSeeHere.harmlessFunction()
     }
     
 }
+extension NSObject: HandyClassCompatible{}
 
-extension UIApplication: HandyClassCompatible{}
-extension HandyClassExtension where Base: UIApplication{
-    static var swizzlingClasses: [HandySwizzling.Type]{
-        get {
-            if let classes = objc_getAssociatedObject(base, &base.AssociatedKeys.swizzlingClasses) as? [HandySwizzling.Type]{
-                return classes
-            }
-            let classes: [HandySwizzling.Type] = [UIViewController.self, UINavigationController.self, UIButton.self, UIControl.self, UIView.self, UITabBarController.self, UITableView.self, UIScrollView.self, UICollectionView.self]
-            self.swizzlingClasses = classes
-            return classes
-        }
-        set {
-            objc_setAssociatedObject(base, &base.AssociatedKeys.swizzlingClasses, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-}
-
-extension UIViewController: HandySwizzling{}
-extension UIView:HandySwizzling{}
 

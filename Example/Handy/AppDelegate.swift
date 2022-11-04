@@ -16,9 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UIApplication.runOnce()
-        ThemeManager.setTheme(jsonName: "Night", path: .mainBundle)
         
-        
+        if #available(iOS 13.0, *) {
+            ThemeManager.setTheme(jsonName: "Red"  , path: .mainBundle)
+            ThemeManager.followSystemThemeAction = { style in
+                ThemeManager.setTheme(jsonName: style == .linght ? "Red" : "Night" , path: .mainBundle)
+            }
+        }else{
+            ThemeManager.setTheme(jsonName: "Red", path: .mainBundle)
+        }
         
         let navigationBar = UINavigationBar.appearance()
         navigationBar.theme.barTintColor = "Global.barTintColor"
@@ -38,6 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             return titleTextAttributes
         }
+        
+        
+//        window = UIWindow.init(frame: UIScreen.main.bounds)
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+//        
+//        let vc = storyboard.instantiateViewController(withIdentifier: "mainVC")
+//        
+//        window?.rootViewController = UINavigationController.init(rootViewController: vc)
+//        window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
@@ -63,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
 
 }
 

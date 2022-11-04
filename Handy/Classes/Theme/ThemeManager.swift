@@ -57,15 +57,54 @@ public enum ThemePath {
     }
 }
 
+
+@available(iOS 13.0, *)
+@objc public enum  ThemeSystemStyle: Int{
+    case linght = 0
+    case dark
+}
+
 @objc public final class ThemeManager: NSObject {
-    public static var animationDuration = 0.3
+    public static var animationDuration: CGFloat = 0.3
+    ///是否跟随系统主题变化
+    @available(iOS 13.0, *)
+    public static var isFollowSystemTheme: Bool = false{
+        didSet{
+            assert(followSystemThemeAction != nil, "未设 置followSystemThemeAction")
+            followSystemThemeAction?(systemThemeStyle)
+        }
+    }
+    @available(iOS 13.0, *)
+    public static var followSystemThemeAction: ((_ style: ThemeSystemStyle) -> Void)?
+    
+    ///是否是系统主题按钮改变
+    static var fromSystemChange: Bool = false
+    
+    static var themePickers: [ThemePickerHelper] = []
     
     @objc public fileprivate(set) static var currentTheme: NSDictionary?
     
     @objc public fileprivate(set) static var currentThemeIndex: Int = 0
     
     public fileprivate(set) static var currentThemePath: ThemePath?
+        
     
+    private static var themeChangeLock: NSLock = NSLock()
+    fileprivate static var themeSystemChangeLock: NSLock = NSLock()
+    
+    
+    @available(iOS 13.0, *)
+    public static var systemThemeStyle: ThemeSystemStyle{
+        return  getSystemStyle(from: _userInterfaceStyle)
+    }
+    @available(iOS 13.0, *)
+    private static var _userInterfaceStyle: UIUserInterfaceStyle?{
+        didSet{
+            if _userInterfaceStyle != oldValue{
+                followSystemThemeAction?(systemThemeStyle)
+            }
+        }
+    }
     public class func setTheme(plistName: String, path: ThemePath) {
         guard let plistPath = path.plistPath(name: plistName) else {
             print("SwiftTheme WARNING: Can't find plist '\(plistName)' at: \(path)")
@@ -96,6 +135,41 @@ public enum ThemePath {
     class func setTheme(dict: NSDictionary, path: ThemePath) {
         currentTheme = dict
         currentThemePath = path
-        NotificationCenter.default.post(name: Notification.Name(rawValue: ThemeUpdateNotification), object: nil)
+        themeChangeLock.lock()
+        for helper in themePickers{
+            helper.pickerHelper()
+        }
+        themeChangeLock.unlock()
+    }
+    
+    @available(iOS 13.0, *)
+    class func systemThemeChange(_ userInterfaceStyle: UIUserInterfaceStyle?){
+        themeSystemChangeLock.lock()
+        fromSystemChange = true
+        _userInterfaceStyle = userInterfaceStyle
+        fromSystemChange = false
+        themeSystemChangeLock.unlock()
+    }
+    
+    @available(iOS 13.0, *)
+    private static func getSystemStyle(from userInterfaceStyle: UIUserInterfaceStyle?)-> ThemeSystemStyle {
+        if let style = userInterfaceStyle{
+            if style == .dark{
+                return .linght
+            }else{
+                return .dark
+            }
+        }else {
+            let style = UIViewController().traitCollection.userInterfaceStyle
+            if style == .dark{
+                return .dark
+            }else{
+                return .linght
+            }
+        }
     }
 }
+
+
+
+

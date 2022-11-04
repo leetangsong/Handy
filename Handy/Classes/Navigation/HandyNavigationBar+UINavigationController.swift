@@ -66,9 +66,6 @@ var tsPopMiddleBeginTime: CFTimeInterval = CACurrentMediaTime()
 
 
 extension UINavigationController{
-    
-    
-    
     fileprivate var tsPopProgress: CGFloat{
         var progress = (CACurrentMediaTime() - tsPopBeginTime) / tsPopDuration
         progress = min(1, progress)
@@ -95,8 +92,7 @@ extension UINavigationController{
         let progress = tsPushProgress
         handy.navigationContext.updateNavigationBar(fromVC: fromVC, toVC: toVC, progress: progress)
     }
-    public override class func swizzling() {
-        super.swizzling()
+    @objc static func navigationSwizzling() {
         let originalMethods = [
             #selector(UINavigationController.pushViewController(_:animated:)),
             #selector(UINavigationController.popViewController(animated:)),
@@ -272,7 +268,10 @@ extension UINavigationController: UIGestureRecognizerDelegate{
         if children.count == 1{
             return false
         }
-        
+        let velocityX = pan.velocity(in: nil).x
+        if velocityX <= 0{
+            return false
+        }
         let locationX = pan.location(in: nil).x
         
         if locationX>=80 && topViewController?.handy.isEnableFullScreenPopGesture == false{

@@ -30,6 +30,7 @@ extension HandyTypealiasValueExtension where Base == Array<T>, T: Equatable{
                 remove(object, isAll: isAll)
             }
         }
+        
     }
 }
 

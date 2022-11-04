@@ -405,6 +405,10 @@ extension ThemeExtension where Base: UIVisualEffectView
         set { setThemePicker(base, "setEffect:", newValue) }
     }
 }
+
+
+
+
 @available(iOS 13.0, *)
 extension ThemeExtension where Base: UINavigationBarAppearance
 {
@@ -552,4 +556,5 @@ private func makeStatePicker(
 ) -> ThemePicker? {
     return ThemePicker.makeStatePicker(object, selector, picker, state)
 }
+
 

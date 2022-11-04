@@ -36,9 +36,10 @@ extension HandyExtension where Base: UIControl{
         }
     }
 }
+
+
 extension UIControl {
- 
-    public override class func swizzling() {
+    @objc static func controlSwizzling() {
         let originalMethod = #selector(UIControl.sendAction(_:to:for:))
         let swizzledMethod = #selector(UIControl.handy_sendAction(_:to:for:))
         swizzlingForClass(UIControl.self, originalSelector: originalMethod, swizzledSelector: swizzledMethod)

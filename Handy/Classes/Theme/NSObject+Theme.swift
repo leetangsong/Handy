@@ -19,10 +19,20 @@ fileprivate typealias setBarStyleValueIMP       = @convention(c) (NSObject, Sele
 fileprivate typealias setStatusBarStyleValueIMP = @convention(c) (NSObject, Selector, UIStatusBarStyle, Bool) -> Void
 #endif
 
+
+class ThemePickerHelper: NSObject{
+    var pickerHelper: () -> Void
+    
+    init(pickerHelper: @escaping () -> Void) {
+        self.pickerHelper = pickerHelper
+    }
+}
+
+
 extension NSObject{
     fileprivate struct AssociatedKeys {
+        static var deallocHelperExecutor = "deallocHelperExecutor"
         static var themePickers = "themePickers"
-        static var hasAddPickerNotification = "hasAddPickerNotification"
     }
 }
 
@@ -31,6 +41,17 @@ extension NSObject: ThemeCompatible{}
 
 extension ThemeExtension where Base: NSObject{
     typealias ThemePickers = [String: ThemePicker]
+    
+    
+    var deallocHelperExecutor: ThemeDeallocBlockExecutor?{
+        get {
+            return objc_getAssociatedObject(base, &NSObject.AssociatedKeys.deallocHelperExecutor) as? ThemeDeallocBlockExecutor
+        }
+        set {
+            objc_setAssociatedObject(base, &NSObject.AssociatedKeys.deallocHelperExecutor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+  
     
     var themePickers: ThemePickers {
         get {
@@ -43,43 +64,31 @@ extension ThemeExtension where Base: NSObject{
         }
         set {
             objc_setAssociatedObject(base, &NSObject.AssociatedKeys.themePickers, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if newValue.isEmpty == false { base._setupThemeNotification() }
-            
+           
+        
+            if deallocHelperExecutor == nil{
+                
+                let pickerHelper = ThemePickerHelper.init(pickerHelper: {[weak base] in
+                    base?._updateTheme()
+                })
+                ThemeManager.themePickers.append(pickerHelper)
+                
+                deallocHelperExecutor = ThemeDeallocBlockExecutor.init(pickerHelper: pickerHelper)
+            }
         }
     }
-    
-    var hasAddPickerNotification: Bool {
-        get {
-            return objc_getAssociatedObject(base, &NSObject.AssociatedKeys.hasAddPickerNotification) as? Bool ?? false
-        }
-        set {
-            objc_setAssociatedObject(base, &NSObject.AssociatedKeys.hasAddPickerNotification, newValue, .OBJC_ASSOCIATION_ASSIGN)
-        }
-    }
-    
-    
-    
-    
 }
 
 
 extension NSObject {
     
-    fileprivate func _setupThemeNotification() {
-        
-        if theme.hasAddPickerNotification == false {
-            theme.hasAddPickerNotification = true
-            NotificationCenter.default.addObserver(self, selector: #selector(_updateTheme), name: NSNotification.Name(rawValue: ThemeUpdateNotification), object: nil)
-        }
-        
-    }
-    
-    @objc private func _updateTheme() {
+    @objc fileprivate func _updateTheme() {
         theme.themePickers.forEach { selector, picker in
             
-            UIView.animate(withDuration: ThemeManager.animationDuration) {
+            
+            // For iOS 13, force an update of the nav bar when the theme changes.
+            if ThemeManager.fromSystemChange{
                 self.performThemePicker(selector: selector, picker: picker)
-                // For iOS 13, force an update of the nav bar when the theme changes.
                 if #available(iOS 13.0, *) {
                     if let navBar = self as? UINavigationBar {
                         navBar.setNeedsLayout()
@@ -88,7 +97,23 @@ extension NSObject {
                 if let vc = UIViewController.handy.current(){
                     vc.handy.setNeedsNavigationBarUpdate()
                 }
+            }else{
+                UIView.animate(withDuration: ThemeManager.animationDuration) {
+                    self.performThemePicker(selector: selector, picker: picker)
+                    if #available(iOS 13.0, *) {
+                        if let navBar = self as? UINavigationBar {
+                            navBar.setNeedsLayout()
+                        }
+                    }
+                    if let vc = UIViewController.handy.current(){
+                        vc.handy.setNeedsNavigationBarUpdate()
+                    }
+                }
+                
             }
+            
+            
+            
         }
     }
     

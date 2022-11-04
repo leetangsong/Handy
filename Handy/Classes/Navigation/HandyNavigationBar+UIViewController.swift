@@ -33,7 +33,6 @@ extension UIViewController{
         static var statusBarStyle = "statusBarStyle"
         static var statusBarHidden = "statusBarHidden"
         static var isTranslucent = "isTranslucent"
-        static var tsConfig = "tsConfig"
     }
     
     
@@ -57,8 +56,7 @@ extension UIViewController{
 
 extension UIViewController{
     
-    
-    public override class func swizzling() {
+      @objc static func viewControllerSwizzling() {
         let originalMethods = [
             #selector(UIViewController.viewWillAppear(_:)),
             #selector(UIViewController.viewWillDisappear(_:)),
@@ -74,9 +72,6 @@ extension UIViewController{
             swizzlingForClass(UIViewController.self, originalSelector: originalMethod, swizzledSelector: swizzledMethods[i])
         }
     }
-   
-
-    
     @objc private func handy_viewWillAppear(_ animated: Bool) {
         handy_viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(handy._naviBarHidden, animated: animated)
@@ -92,32 +87,12 @@ extension UIViewController{
         navigationController?.setNavigationBarHidden(handy._naviBarHidden, animated: animated)
     }
 }
-class HandyViewControllerConfig: NSObject {
-//  var modalAnimation: HeroDefaultAnimationType = .auto
-//  var navigationAnimation: HeroDefaultAnimationType = .auto
-//  var tabBarAnimation: HeroDefaultAnimationType = .auto
-
-  var storedSnapshot: UIView?
-  weak var previousNavigationDelegate: UINavigationControllerDelegate?
-  weak var previousTabBarDelegate: UITabBarControllerDelegate?
-}
-
 
 extension UIViewController: HandyCompatible{}
 
 extension HandyExtension where Base: UIViewController {
     
-    var config: HandyViewControllerConfig {
-      get {
-        if let config = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.tsConfig) as? HandyViewControllerConfig {
-          return config
-        }
-        let config = HandyViewControllerConfig()
-        self.config = config
-        return config
-      }
-      set { objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.tsConfig, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
-    }
+    
     
     public var statusBarStyle: HandyStatusBarStyle {
         get {

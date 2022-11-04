@@ -9,8 +9,6 @@
 import UIKit
 
 extension UIImage: HandyCompatible{}
-extension UIImage: HandyClassCompatible{}
-
 
 extension HandyExtension where Base == UIImage {
     /// 根据设定最大值压缩图片返回二进制

@@ -215,12 +215,12 @@ public final class Constraint {
 
     // MARK: Public
 
-    @available(*, deprecated, renamed:"activate()")
+    @available(*, deprecated, message:"Use activate().")
     public func install() {
         self.activate()
     }
 
-    @available(*, deprecated, renamed:"deactivate()")
+    @available(*, deprecated, message:"Use deactivate().")
     public func uninstall() {
         self.deactivate()
     }
@@ -266,13 +266,13 @@ public final class Constraint {
         return self
     }
 
-    @available(*, deprecated, renamed:"update(offset:)")
+    @available(*, deprecated, message:"Use update(offset: ConstraintOffsetTarget) instead.")
     public func updateOffset(amount: ConstraintOffsetTarget) -> Void { self.update(offset: amount) }
 
-    @available(*, deprecated, renamed:"update(inset:)")
+    @available(*, deprecated, message:"Use update(inset: ConstraintInsetTarget) instead.")
     public func updateInsets(amount: ConstraintInsetTarget) -> Void { self.update(inset: amount) }
 
-    @available(*, deprecated, renamed:"update(priority:)")
+    @available(*, deprecated, message:"Use update(priority: ConstraintPriorityTarget) instead.")
     public func updatePriority(amount: ConstraintPriorityTarget) -> Void { self.update(priority: amount) }
 
     @available(*, deprecated, message:"Use update(priority: ConstraintPriorityTarget) instead.")

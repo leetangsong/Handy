@@ -10,6 +10,8 @@ import UIKit
 import Handy
 class ThemeViewController: UIViewController {
 
+    @IBOutlet weak var systemSwitch: UISwitch!
+    
     @IBOutlet weak var themeButton: UIButton!
     @IBOutlet weak var themeImageView: UIImageView!
     @IBOutlet weak var themeLabel: UILabel!
@@ -33,14 +35,26 @@ class ThemeViewController: UIViewController {
         
         
         handy.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "next", style: .done, target: self, action: #selector(nextPage))
-        
+        if #available(iOS 13.0, *) {
+            systemSwitch.isOn = ThemeManager.isFollowSystemTheme
+        }
         // Do any additional setup after loading the view.
     }
     @objc func nextPage(){
         navigationController?.pushViewController(AViewController(), animated: true)
     }
    
+    @IBAction func followSystem(_ sender: UISwitch) {
+        if #available(iOS 13.0, *) {
+            ThemeManager.isFollowSystemTheme = sender.isOn
+        }
+    }
     @IBAction func selectTheme(_ sender: UIButton) {
+        
+        if #available(iOS 13.0, *), ThemeManager.isFollowSystemTheme {
+            return
+        }
+        
         if sender.tag == 2{
             guard MyThemes.isBlueThemeExist() else {
 
@@ -75,6 +89,9 @@ class ThemeViewController: UIViewController {
         
     }
     @IBAction func changTheme(_ sender: Any) {
+        if #available(iOS 13.0, *), ThemeManager.isFollowSystemTheme {
+            return
+        }
         MyThemes.switchToNext()
     }
     

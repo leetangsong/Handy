@@ -92,7 +92,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKi-dS-Giy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="556"/>
+            <point key="canvasLocation" x="-121" y="558"/>
         </scene>
         <!--Theme View Controller-->
         <scene sceneID="YP8-gz-P43">
@@ -107,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfF-0d-r64">
-                                <rect key="frame" x="147" y="410" width="82" height="35"/>
+                                <rect key="frame" x="142" y="454" width="82" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="dismiss"/>
@@ -176,7 +176,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHE-UW-5Hw">
-                                <rect key="frame" x="125" y="322" width="135" height="64"/>
+                                <rect key="frame" x="120" y="366" width="135" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -185,11 +185,26 @@
                                     <action selector="changTheme:" destination="LvY-Nq-Qn3" eventType="touchUpInside" id="P0u-BL-ZVW"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IQA-sl-Yes">
+                                <rect key="frame" x="37" y="281" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="followSystem:" destination="LvY-Nq-Qn3" eventType="valueChanged" id="v22-Qt-XUg"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="是否跟随系统变化" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tR1-fR-2o4">
+                                <rect key="frame" x="102" y="286" width="139" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="9HD-KP-848"/>
                     <connections>
+                        <outlet property="systemSwitch" destination="IQA-sl-Yes" id="aTd-vU-5jn"/>
                         <outlet property="themeButton" destination="dHE-UW-5Hw" id="Nla-WW-xQ7"/>
                         <outlet property="themeImageView" destination="1Yz-qn-Vct" id="VxL-XF-nNb"/>
                         <outlet property="themeLabel" destination="pa9-LK-Zcc" id="Uvt-k5-Dwo"/>
@@ -851,7 +866,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b73-pZ-Fq3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3812" y="608.54572713643188"/>
+            <point key="canvasLocation" x="4118" y="236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VuZ-2T-ph5">
