@@ -8,8 +8,6 @@
 import UIKit
 
 extension Bundle: HandyCompatible{}
-extension Bundle: HandyClassCompatible{ }
-
 
 extension HandyExtension where Base == Bundle{}
 extension HandyClassExtension where Base == Bundle{

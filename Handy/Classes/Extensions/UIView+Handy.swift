@@ -10,8 +10,6 @@ import UIKit
 
 
 extension UIView: HandyCompatible{}
-extension UIView: HandyClassCompatible{ }
-
 extension HandyExtension where Base: UIView {
     
     public var width: CGFloat{

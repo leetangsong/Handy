@@ -19,8 +19,6 @@ extension UIColor: HandyCompatible{
         return handy.hexString(true)
     }
 }
-extension UIColor: HandyClassCompatible{ }
-
 
 extension HandyExtension where Base == UIColor{
     public func hexString(_ includeAlpha: Bool) -> String {
