@@ -100,6 +100,7 @@ extension UINavigationController{
             #selector(UINavigationController.popToViewController(_:animated:)),
             Selector.init(("_updateInteractiveTransition:")),
             #selector(UINavigationController.setNavigationBarHidden(_:animated:)),
+            #selector(UINavigationController.viewDidLayoutSubviews),
         ]
         let swizzledMethods = [
             #selector(UINavigationController.handy_pushViewController(_:animated:)),
@@ -107,7 +108,8 @@ extension UINavigationController{
             #selector(UINavigationController.handy_popToRootViewController(animated:)),
             #selector(UINavigationController.handy_popToViewController(_:animated:)),
             #selector(UINavigationController.handy_updateInteractiveTransition(_:)),
-            #selector(UINavigationController.handy_setNavigationBarHidden(_:animated:))
+            #selector(UINavigationController.handy_setNavigationBarHidden(_:animated:)),
+            #selector(UINavigationController.handy_viewDidLayoutSubviews),
         ]
 
         for (i, originalMethod) in originalMethods.enumerated() {
@@ -125,8 +127,8 @@ extension UINavigationController{
         }
     }
     
-    open override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    @objc private func handy_viewDidLayoutSubviews() {
+        handy_viewDidLayoutSubviews()
         handy.navigationContext.navigationBarUpdateFrame()
     }
     
