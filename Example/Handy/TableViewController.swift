@@ -8,6 +8,7 @@
 
 import UIKit
 import Handy
+import ObjectiveC
 class TableViewController: UITableViewController {
 
      override func viewDidLoad() {
@@ -22,7 +23,12 @@ class TableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
         handy.title = "首页"
         handy.naviTitleColor = .white
-//        handy.naviBackgroundColor = .blue
+        handy.naviBackgroundColor = .blue
+         DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+             UIView.animate(withDuration: 1) {
+                 self.handy.naviBackgroundColor = .red
+             }
+         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,7 +43,7 @@ class TableViewController: UITableViewController {
             return .default
         }
     }
-    var titles: [String] = ["导航栏控制","主题","转场push","转场present","自定义相册浏览器 带编辑图片","相册控件","日历控件"]
+    var titles: [String] = ["导航栏","主题"]
    
     // MARK: - Table view data source
 

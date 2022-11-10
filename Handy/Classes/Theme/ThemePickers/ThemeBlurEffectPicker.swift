@@ -1,6 +1,6 @@
 //
 //  ThemeBlurEffectPicker.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by Kevin on 10/2/19.
 //

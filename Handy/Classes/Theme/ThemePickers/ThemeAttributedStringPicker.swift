@@ -1,6 +1,6 @@
 //
 //  ThemeAttributedStringPicker.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by Gesen on 2020/8/26.
 //  Copyright © 2020 Gesen. All rights reserved.

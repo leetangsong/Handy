@@ -1,6 +1,6 @@
 //
 //  UITextField+PlaceholderAttributes.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by kcramer on 3/6/18.
 //  Copyright © 2018. All rights reserved.

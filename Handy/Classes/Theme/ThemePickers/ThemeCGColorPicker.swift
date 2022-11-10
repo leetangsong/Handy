@@ -1,6 +1,6 @@
 //
 //  ThemeCGColorPicker.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by Gesen on 2017/1/28.
 //  Copyright © 2017年 Gesen. All rights reserved.

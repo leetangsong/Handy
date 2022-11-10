@@ -1,6 +1,6 @@
 //
 //  UIRefreshControl+TitleAttributes.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by kcramer on 4/1/18.
 //  Copyright © 2018 Gesen. All rights reserved.

@@ -24,9 +24,7 @@
 		B5F4805F28E57B4800A843FC /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805928E57B4700A843FC /* AViewController.swift */; };
 		B5F4806028E57B4800A843FC /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805A28E57B4700A843FC /* NaviViewController.swift */; };
 		B5F4806128E57B4800A843FC /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805B28E57B4800A843FC /* BViewController.swift */; };
-		B5F4806228E57B4800A843FC /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805C28E57B4800A843FC /* CViewController.swift */; };
 		B5F4806328E57B4800A843FC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805D28E57B4800A843FC /* TableViewController.swift */; };
-		B5F4806428E57B4800A843FC /* TransitionPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F4805E28E57B4800A843FC /* TransitionPushViewController.swift */; };
 		F53CB73DF947405B3BF6A01B /* Pods_Handy_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA505E39D5F94E946744B1B /* Pods_Handy_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,9 +67,7 @@
 		B5F4805928E57B4700A843FC /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
 		B5F4805A28E57B4700A843FC /* NaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
 		B5F4805B28E57B4800A843FC /* BViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
-		B5F4805C28E57B4800A843FC /* CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
 		B5F4805D28E57B4800A843FC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		B5F4805E28E57B4800A843FC /* TransitionPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionPushViewController.swift; sourceTree = "<group>"; };
 		F2ED84B085CD19BAFCE81589 /* Pods-Handy_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy_Tests.release.xcconfig"; path = "Target Support Files/Pods-Handy_Tests/Pods-Handy_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,10 +139,8 @@
 				B5F4805D28E57B4800A843FC /* TableViewController.swift */,
 				B5F4805928E57B4700A843FC /* AViewController.swift */,
 				B5F4805B28E57B4800A843FC /* BViewController.swift */,
-				B5F4805C28E57B4800A843FC /* CViewController.swift */,
 				B5F4805A28E57B4700A843FC /* NaviViewController.swift */,
 				B5A52476290785D000E0765F /* ThemeViewController.swift */,
-				B5F4805E28E57B4800A843FC /* TransitionPushViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				B5A5247F2907944000E0765F /* MyThemes.swift */,
 				B5A524782907897200E0765F /* Json */,
@@ -395,11 +389,9 @@
 				B5F4806028E57B4800A843FC /* NaviViewController.swift in Sources */,
 				B5F4806328E57B4800A843FC /* TableViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				B5F4806428E57B4800A843FC /* TransitionPushViewController.swift in Sources */,
 				B5F4805F28E57B4800A843FC /* AViewController.swift in Sources */,
 				B5F4806128E57B4800A843FC /* BViewController.swift in Sources */,
 				B5A524802907944100E0765F /* MyThemes.swift in Sources */,
-				B5F4806228E57B4800A843FC /* CViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

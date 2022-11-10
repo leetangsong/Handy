@@ -107,11 +107,11 @@ public enum ThemePath {
     }
     public class func setTheme(plistName: String, path: ThemePath) {
         guard let plistPath = path.plistPath(name: plistName) else {
-            print("SwiftTheme WARNING: Can't find plist '\(plistName)' at: \(path)")
+            print("Handy WARNING: Can't find plist '\(plistName)' at: \(path)")
             return
         }
         guard let plistDict = NSDictionary(contentsOfFile: plistPath) else {
-            print("SwiftTheme WARNING: Can't read plist '\(plistName)' at: \(plistPath)")
+            print("Handy WARNING: Can't read plist '\(plistName)' at: \(plistPath)")
             return
         }
         self.setTheme(dict: plistDict, path: path)
@@ -119,14 +119,14 @@ public enum ThemePath {
     
     public class func setTheme(jsonName: String, path: ThemePath) {
         guard let jsonPath = path.jsonPath(name: jsonName) else {
-            print("SwiftTheme WARNING: Can't find json '\(jsonName)' at: \(path)")
+            print("Handy WARNING: Can't find json '\(jsonName)' at: \(path)")
             return
         }
         guard
             let data = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)),
             let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed),
             let jsonDict = json as? NSDictionary else {
-            print("SwiftTheme WARNING: Can't read json '\(jsonName)' at: \(jsonPath)")
+            print("Handy WARNING: Can't read json '\(jsonName)' at: \(jsonPath)")
             return
         }
         self.setTheme(dict: jsonDict, path: path)

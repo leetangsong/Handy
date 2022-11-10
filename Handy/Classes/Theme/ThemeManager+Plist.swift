@@ -1,6 +1,6 @@
 //
 //  ThemeManager+Plist.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by Gesen on 16/9/18.
 //  Copyright © 2016年 Gesen. All rights reserved.
@@ -16,7 +16,7 @@ import UIKit
     
     public class func string(for keyPath: String) -> String? {
         guard let string = currentTheme?.value(forKeyPath: keyPath) as? String else {
-            print("SwiftTheme WARNING: Not found string key path: \(keyPath)")
+            print("Handy WARNING: Not found string key path: \(keyPath)")
             return nil
         }
         return string
@@ -24,7 +24,7 @@ import UIKit
     
     public class func number(for keyPath: String) -> NSNumber? {
         guard let number = currentTheme?.value(forKeyPath: keyPath) as? NSNumber else {
-            print("SwiftTheme WARNING: Not found number key path: \(keyPath)")
+            print("Handy WARNING: Not found number key path: \(keyPath)")
             return nil
         }
         return number
@@ -32,7 +32,7 @@ import UIKit
     
     public class func dictionary(for keyPath: String) -> NSDictionary? {
         guard let dict = currentTheme?.value(forKeyPath: keyPath) as? NSDictionary else {
-            print("SwiftTheme WARNING: Not found dictionary key path: \(keyPath)")
+            print("Handy WARNING: Not found dictionary key path: \(keyPath)")
             return nil
         }
         return dict
@@ -41,7 +41,7 @@ import UIKit
     public class func color(for keyPath: String) -> UIColor? {
         guard let rgba = string(for: keyPath) else { return nil }
         guard let color = try? UIColor.handy.color(rgba_throws: rgba) else {
-            print("SwiftTheme WARNING: Not convert rgba \(rgba) at key path: \(keyPath)")
+            print("Handy WARNING: Not convert rgba \(rgba) at key path: \(keyPath)")
             return nil
         }
         return color
@@ -51,13 +51,13 @@ import UIKit
         guard let imageName = string(for: keyPath) else { return nil }
         if let filePath = currentThemePath?.URL?.appendingPathComponent(imageName).path {
             guard let image = UIImage(contentsOfFile: filePath) else {
-                print("SwiftTheme WARNING: Not found image at file path: \(filePath)")
+                print("Handy WARNING: Not found image at file path: \(filePath)")
                 return nil
             }
             return image
         } else {
             guard let image = UIImage(named: imageName) else {
-                print("SwiftTheme WARNING: Not found image name at main bundle: \(imageName)")
+                print("Handy WARNING: Not found image name at main bundle: \(imageName)")
                 return nil
             }
             return image

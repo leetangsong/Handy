@@ -1,6 +1,6 @@
 //
 //  NSObject+Theme.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by Gesen on 16/1/22.
 //  Copyright © 2016年 Gesen. All rights reserved.
@@ -173,7 +173,7 @@ extension NSObject {
             let setState = unsafeBitCast(method(for: sel), to: setValueForStateIMP.self)
             statePicker.values.forEach {
                 guard let value = $1.value() else {
-                    print("SwiftTheme WARNING: Missing value for ThemeStatePicker! Selector: \(String(describing: sel))")
+                    print("Handy WARNING: Missing value for ThemeStatePicker! Selector: \(String(describing: sel))")
                     return
                 }
                 setState(self, sel, value as AnyObject, UIControl.State(rawValue: $0))

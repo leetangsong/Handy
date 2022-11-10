@@ -1,6 +1,6 @@
 //
 //  ThemeScrollViewIndicatorStylePicker.swift
-//  SwiftTheme
+//  Handy
 //
 //  Created by Jonathan Valldejuli on 12/23/18.
 //  Copyright © 2018 Gesen. All rights reserved.
