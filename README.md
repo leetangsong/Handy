@@ -141,5 +141,7 @@ if #available(iOS 13.0, *) {
 ```
 最后 
 导航栏 借鉴了 [WRNavigationBar](https://github.com/wangrui460/WRNavigationBar)
+
 主题切换借鉴了[SwiftTheme](https://github.com/wxxsw/SwiftTheme)
+
 可以去看原版 一起学习
