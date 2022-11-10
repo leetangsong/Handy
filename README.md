@@ -37,6 +37,7 @@ extension UIViewController{
 切记 方法的实现需要加`@objc`关键字，  `viewControllerSwizzling`方法名可任意取，在该方法里面添加交换方法代码
 
 3.新创建一个继承自`NSObject`的类， 实现`HandySwizzling`协议并实现 `awake`方法
+
 `awake`方法里面包含  需要交换方法的类所实现的方法函数
 ```
 class HandySwizzles: NSObject, HandySwizzling{
