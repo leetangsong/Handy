@@ -54,7 +54,7 @@ class HandySwizzles: NSObject, HandySwizzling{
 ##2.导航栏的平滑切换
 |  系统样式(system) | 微信样式(wx)  |单独样式(custom)| 
 | :----: | :----: | :----: |
-|![](https://upload-images.jianshu.io/upload_images/18888681-bfddaac4295714c8.gif?imageView2/0/w/400)| ![](https://upload-images.jianshu.io/upload_images/18888681-6a7258c48b468251.gif?imageView2/0/w/400)| ![](https://upload-images.jianshu.io/upload_images/18888681-272d8f259baf320b.gif?imageView2/0/w/400)|
+|![](https://upload-images.jianshu.io/upload_images/18888681-bfddaac4295714c8.gif?imageView2/0/w/400)| ![](https://github.com/leetangsong/Handy/blob/main/wx.gif)| ![](https://upload-images.jianshu.io/upload_images/18888681-272d8f259baf320b.gif?imageView2/0/w/400)|
 | `handy. navigationStyle  = .system` |  `handy. navigationStyle  = .wx` |  `handy. navigationStyle  = .custom`  |
 
 
