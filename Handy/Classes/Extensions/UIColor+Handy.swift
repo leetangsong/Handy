@@ -10,7 +10,7 @@ import UIKit
 public enum UIColorInputError : Error {
     case missingHashMarkAsPrefix,
     unableToScanHexValue,
-    mismatchedHexStringLength
+    mismatchedHexStringLength, mismatchedRGBStringLength
 }
 
 
@@ -98,6 +98,19 @@ extension HandyClassExtension where Base == UIColor{
             hexString = hexString.replacingOccurrences(of: "0x", with: "")
         }else if hexString.hasPrefix("#") {
             hexString = hexString.replacingOccurrences(of: "#", with: "")
+        }else if hexString.contains(","){
+            let array = hexString.components(separatedBy: ",")
+            if array.count < 3{
+                throw UIColorInputError.mismatchedRGBStringLength
+            }
+            let alpha = array.count == 4 ? Float(array.last!)! : 1
+            if let red = Float(array[0]), let green = Float(array[1]), let blue = Float(array[2]){
+                return UIColor.init(red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: CGFloat(alpha))
+            }else{
+                throw UIColorInputError.mismatchedRGBStringLength
+            }
+            
+            
         }
         if hexString.count == rgba_throws.count{
             throw UIColorInputError.missingHashMarkAsPrefix
