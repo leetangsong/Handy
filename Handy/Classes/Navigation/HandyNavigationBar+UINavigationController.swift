@@ -426,7 +426,9 @@ extension HandyExtension where Base: UINavigationController{
     }
     
     func updateNavigationBarTint(for viewController: UIViewController) {
-        
+        if viewController != base.topViewController{
+            return
+        }
         let navigationBar = navigationBar
         var titleTextAttributes = navigationBar.titleTextAttributes ?? [:]
         titleTextAttributes[.foregroundColor] = viewController.handy.naviTitleColor
@@ -438,7 +440,9 @@ extension HandyExtension where Base: UINavigationController{
     
     
     func updateNavigationBarBackground(for viewController: UIViewController) {
-        
+        if viewController != base.topViewController{
+            return
+        }
         var bar: HandyNavigationBar?
         if navigationStyle == .none{
             base.navigationBar.barTintColor = viewController.handy.naviBackgroundColor
@@ -456,7 +460,9 @@ extension HandyExtension where Base: UINavigationController{
     }
     
     func updateNavigationBarShadow(for viewController: UIViewController) {
-        
+        if viewController != base.topViewController{
+            return
+        }
         var bar: HandyNavigationBar?
         
         if navigationStyle == .none{
