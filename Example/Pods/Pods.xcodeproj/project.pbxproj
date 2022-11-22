@@ -11,246 +11,251 @@
 		02AD91C5250ED7D91B06BEAC91A5E507 /* mz_os.h in Headers */ = {isa = PBXBuildFile; fileRef = BF64D720E43B4155A88B66B910B99CE6 /* mz_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		02E07C3453D504C1FC23451BD4213928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
 		059332136CAAB8014F2099D6AC105162 /* mz_strm_split.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B0C8174501B7C62A30CF3A1E10DD620 /* mz_strm_split.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		05C0AA37B0368EEF21540C9EDAE847B7 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2792E11914474D7B5DCF2D81DA59E53 /* ConstraintLayoutGuideDSL.swift */; };
-		08B492BA2888A2A4E651F4DD757C3F37 /* ThemeImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946DCBDD0D82E7BD7F9ACE9BFB55D1A4 /* ThemeImagePicker.swift */; };
-		08DF227E5183D2113535ABFFE65365F5 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E127B2DC79F793F78C38218384F6F0D /* ConstraintInsets.swift */; };
+		072C48B921EF0195C1C1E1F233E994F3 /* UIRefreshControl+TitleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591CA8FAA8E213D14B29A11982447AE /* UIRefreshControl+TitleAttributes.swift */; };
+		088CEA7628196F0DD2EC9BD2035E14EC /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2792E11914474D7B5DCF2D81DA59E53 /* ConstraintLayoutGuideDSL.swift */; };
+		090D01362F91C97BA897B124D51B4D29 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7D3EB4D078DC983841E27F78FB617 /* ThemeManager.swift */; };
 		0AA33EBB857A5205F87C09CCB99EAC74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
 		0AE196DA421B10CE8EADF7027554CD5B /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = CFC2D19E44B98079F63006E2E45A283B /* mz_strm_split.c */; };
-		0B6A6787D9003C4671606886563D1804 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
+		0B6EA4EE10098ECB69A431F5CD1A2CA3 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98F3553BCC8AF74A2F2A4FBB77B85B /* ConstraintDSL.swift */; };
+		0B85ECFBFEA048E2B8252DF498E32468 /* ThemeKeyboardAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB3FEB7A661D37A4591908EDD30B7 /* ThemeKeyboardAppearancePicker.swift */; };
 		0C524450F5579F35CF05958F488670A4 /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C4D74D4032FBD54C6FB8E85991125 /* mz_zip_rw.c */; };
-		0C95588D5D8AC04136FF232DF15F7598 /* Handy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13C103150B9626774ABF1A03C28FF0 /* Handy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0CB113BC3C198B271C742E676F9C0C1A /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF1C2157900AF1BD53B085D98B83E1 /* ConstraintOffsetTarget.swift */; };
 		0D87C4665F8AD43731710EBBD8CCFCF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3191A578CCA4537F7E2335942F761629 /* Security.framework */; };
-		0EC65C75C0D76A8F4CCE01D089785D3D /* ThemeManager+Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619E5D59476B04E2B3DB4B27CEAEA82 /* ThemeManager+Plist.swift */; };
+		0E9F6BE06A53C106C926DA8F06385A86 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E26F9E1BB9D1418FC1C6B249E55EB9F /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF3774AC45C05C24674C6F390E4B571 /* mz_strm_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 133C6CBEF2885F39BB5FB0AF022EF8BA /* mz_strm_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		11C4E96C3BB8CE4B7F3C6B32245FAEA9 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACD550BC02ED871AB22D190B830E46 /* ConstraintItem.swift */; };
+		1070EEFAB4106D5A66D7E52FB5C9A1D7 /* ThemeActivityIndicatorViewStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA1839EB2247914CEC3A151AC3602B5 /* ThemeActivityIndicatorViewStylePicker.swift */; };
+		1084F8C6767280218BF26513413CCE40 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE906FC32CC5E371AEB42F635648EBA /* ConstraintInsetTarget.swift */; };
 		138D5C92E017FCFC4671E77B7449EED9 /* mz_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5252996C4189B77A934F6DF7171E7 /* mz_compat.c */; };
-		157B64C8ED86E3F7F83EAFAB89E4C01C /* UIViewController+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7752101F64E59D0CB7106B9D1158223C /* UIViewController+Handy.swift */; };
-		1837FA1DA1738417B3E8FA8B433FBC8C /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E26F9E1BB9D1418FC1C6B249E55EB9F /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19C4581A829080EB3AFB43C8E0885440 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D6E11D43BC4759751E9ACEAE2B24D /* Typealiases.swift */; };
+		158EBD12C13448DB72BDE3C18D501A2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
+		17E0D497FA713BDAD7D56A1A9FEF665B /* icon_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0FC719CA5A8E03EE3874C48AA23FD0 /* icon_back@3x.png */; };
+		19A65C5220757B2880053BEECBE1C59B /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D592DE9B2D6B84880F448FF57256C /* ConstraintLayoutGuide.swift */; };
 		19FA9B07CD47A1A2A8299E63070210D2 /* mz_strm_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 6ED731B906231D08128AB6C6D14DEB1E /* mz_strm_mem.c */; };
-		1A4BD0FBE5EF9D78765E62366C0D7FCB /* UIWindow+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A86F35ACE5E678C35B6D3E70195A12 /* UIWindow+Theme.swift */; };
 		1BC5207ED5AA2B6956BB9CD10C71C1AA /* mz_strm_pkcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C5BBD810E72F328F95FC57AAB3E4FB /* mz_strm_pkcrypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1C789E086190CB49AD3473DD4B26450B /* mz.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BE36E9233D3AB7A2A6313C7EFAB5E2F /* mz.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1DF66CE16DA6EA434F59122687AF00FB /* ThemeStatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB2E1F75352212993DFA899BBC8D3C /* ThemeStatePicker.swift */; };
-		21F8EA82054DC6972CE182C66E83F370 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DCA714E2E491D452DD5AABF24AC6ED /* SnapKit-dummy.m */; };
-		229FECD276C9B2605145CAF9CF4E2BAB /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD36CFA2DCB5A9FBCFB3887F79CF106 /* ConstraintView.swift */; };
-		2475AC54486B06A0B8530B4168C4651D /* UIButton+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF583FBA56D1BDC8A1AAC3E2871BF6 /* UIButton+Handy.swift */; };
-		25570E552E232C382C5030D294EE7D54 /* HandyNavigationBar+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6306004D67AFBBB9151EB81ED22A48A /* HandyNavigationBar+UIViewController.swift */; };
+		1DB9AB589F9ECFBA44999110C06956C9 /* ThemeScrollViewIndicatorStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4300355E7F81315AE5E55077B75CE0E9 /* ThemeScrollViewIndicatorStylePicker.swift */; };
+		1ED1670476C6757F2B2B7265D73DAB2B /* UIControl+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01728464620071D81A12C931A6555430 /* UIControl+Handy.swift */; };
+		246476A7EF6CEA225D476AD28307298D /* Handy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D86849ECD28365D1014C4182E5D1F5 /* Handy-dummy.m */; };
 		255CB9700C81C0AACEF38F42E802272B /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A37A32F7E8F9B0B38879A315D2A961 /* mz_strm_wzaes.c */; };
-		2629C4FBA201B9F2F9BAAFA500E000C8 /* HandySwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0771E7480278E9ED3ECAFD5B53AE5C84 /* HandySwizzling.swift */; };
-		27943237E3A9F6CDC6F2988C963088F6 /* ThemeStringAttributesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91701EBAA18B594C3D337A1FFA682816 /* ThemeStringAttributesPicker.swift */; };
-		2969B9D8167A74149A1DF2583A2760D6 /* UITextField+PlaceholderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7236F07D673B81DE1D0886DA964157 /* UITextField+PlaceholderAttributes.swift */; };
+		2AB970DD1EB3A985CCD79CE2D7099F53 /* ThemeCGFloatPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B4E2774ACCBC8FFCE72A03D5FA09E0 /* ThemeCGFloatPicker.swift */; };
+		2AD88DE6A142F56C6659EBB5C73EF8A8 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921E261EA1949CB974F544BEFACFFBB /* ConstraintPriorityTarget.swift */; };
 		30D23C352773401AE1389972956969C4 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3382B37E0088D07D79942A62486407 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35B89272AFD5DCC96EA8DC0F580057B3 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448603B9130EFF52CB18A097977CC43 /* ConstraintRelation.swift */; };
-		3727B7743E936DC8E452E49935163562 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE906FC32CC5E371AEB42F635648EBA /* ConstraintInsetTarget.swift */; };
-		37A9315C4FE383C24B0EBCB18BCAF71C /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6F6BAB6EA5D52D493E7EB7A5421298 /* HandyApp.swift */; };
+		3103141334C4640084FAB9FE529B04C8 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD36CFA2DCB5A9FBCFB3887F79CF106 /* ConstraintView.swift */; };
+		335F655AD61283B418DEDA717AF6A13E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E9B0B3ACE46FCFD79562481382156 /* ConstraintAttributes.swift */; };
+		33E7756DA63A59DD96A47284F9EDAE8F /* NSObject+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DF5986AE30A7C5D05A3C035053B0B3 /* NSObject+Theme.swift */; };
+		341F61000B718334E84F1B72D598FE9D /* UILabel+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F39CCE4575E0BB213FF4FB0405110 /* UILabel+TextAttributes.swift */; };
+		34DD47908AD01AE9F4F4710FD78F4ECE /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACD2B3FE7765121E9F1243B1E9F767F /* ConstraintMultiplierTarget.swift */; };
+		3500706CF1A1DEDEDB0985BC70292869 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B252735293DE3C257133C336152D34 /* ConstraintMakerFinalizable.swift */; };
 		38B9E9F82A988CAA21601B733C1E92B7 /* mz_strm_pkcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 41D9405473BC15BFF70C79145A27CA15 /* mz_strm_pkcrypt.c */; };
-		3B5879C83CF3C785D7B730842AA31139 /* ThemeDeallocBlockExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F85BE04636ABC23DD81861C1CC81F42 /* ThemeDeallocBlockExecutor.swift */; };
-		3BD395B2EDD9B7FA64F721C12A5D9D86 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821676AD09F68EB169934CC574FE1C7D /* ConstraintView+Extensions.swift */; };
-		4262E03294F583DE55041BE81A315297 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D592DE9B2D6B84880F448FF57256C /* ConstraintLayoutGuide.swift */; };
-		42D9FEAE79C4CCBD5B18031D4AABC4D1 /* HandyNavigationBar+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91F390A33E304E31ECBDCBCE707CE2 /* HandyNavigationBar+UIScrollView.swift */; };
-		46158787D0C9A551853C733E7AE97E2E /* HandyCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055E69EF01DD60CC4AF5D8B2C3EA75D /* HandyCompatible.swift */; };
-		49222B6A577B442329DEAA1715C713B9 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AE6403EB0258A2C99E83C1C6ADBD2 /* ConstraintMaker.swift */; };
-		4B75BD79ED35B081E63E2ED07A17C6AA /* UILabel+TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F07C6157AA996D1435AC816E82C52 /* UILabel+TextAttributes.swift */; };
-		4D2B620F1D3BEB81820316E9F0AA5078 /* String+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5A38915D013621B4853942052E3BD /* String+Handy.swift */; };
-		4DCD47B07C2A5BE79494CABA2913AC59 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F785941D1F687EC8669A14FE4B6DD50 /* ConstraintRelatableTarget.swift */; };
-		514C06E90EC18752226D1D7A567A35E4 /* ThemeStatusBarStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D02E67E4031E22D4684261D763B3FEF /* ThemeStatusBarStylePicker.swift */; };
-		524F91887CE26F1847A6AFFAF8CB7A63 /* HandyNavigationContrllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D40A7870673DAA0DEAA19959C595FC1 /* HandyNavigationContrllerContext.swift */; };
+		39955901694EFB89AD80DCDD9259AF65 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CFA895F3627606787535F88D106D33 /* ConstraintLayoutSupportDSL.swift */; };
+		3EA07C975D42EBBD9721968F01AD2444 /* ThemeStringAttributesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7D973FA0FEDAF94A7F20340148B44 /* ThemeStringAttributesPicker.swift */; };
+		3EC19A8183B5AB475F1745817FF77B10 /* ThemeAnyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126C473E5FDAD09A38C04FF0EF3E424A /* ThemeAnyPicker.swift */; };
+		3F4C630F507644E34DCDA8DD8D769431 /* HandyNavigationContrllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C62EC0FC1D9745D347C99A1649BB63 /* HandyNavigationContrllerContext.swift */; };
+		4AF8F97BE24ECFA9B890D59CC9A247FB /* Handy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A433D209F03869FC5B6C11C46CE35E0 /* Handy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B392089DF96922EC9A9C84803FF8D81 /* UIButton+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAAA138550AC7AD9F74DE04DF69D52E /* UIButton+Handy.swift */; };
+		51BF1B42690F2ABB903B634679F3910D /* Array+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006FF9760680BDF98EC8D97AEF405C0 /* Array+Handy.swift */; };
+		51DF4F98F216E5ABF8818473B9210A4F /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C9158D8BDFF42247A9EA302238F6F /* ConstraintConfig.swift */; };
 		534EDA976CDBE519C377D315BA3FD183 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF69D501A9C11ED1BCC3C2D44AF2F22 /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5533AB689AD5A160CB681A5387A93EF2 /* ThemeScrollViewIndicatorStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C453CF16C7F10C9125E95F9C7EFF2 /* ThemeScrollViewIndicatorStylePicker.swift */; };
-		58A1F88A87389D3291120F75CA7A7E62 /* Bundle+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF75ED0132159E2B4A8D1B187B77BA8 /* Bundle+Handy.swift */; };
+		53A1C0CB4560F62410E2B26CD1DD3BC6 /* HandyNavigationSwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB29F9FC6A2840132ACFDA0A842A09A4 /* HandyNavigationSwizzling.swift */; };
+		5487EFE8E8FC28242C2DE80E36827E59 /* UIColor+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B87FDAFBDC9EE740627ADBA7F6BDFB3 /* UIColor+Handy.swift */; };
+		567F0FD5CFECDDA81B4E424223046C49 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03A62B5558F5CD8ACA0D7E0A1294B0 /* ConstraintMakerPriortizable.swift */; };
 		58C91B4AB36E6B16421106CA634C58EF /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 621967E0D1C44B8D82928B9D260C900F /* MBProgressHUD-dummy.m */; };
+		5B5B6CCCFDEF9D4F3D3C712702F2063C /* ThemeManager+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16320BFE50C8976560412D688F871FF5 /* ThemeManager+Index.swift */; };
 		5BAC1EF86D0E57E44E404B2796993561 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5893CE5447F9E9218AD893EC3FD03C /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E283C61AF63115DD8A2CB3D32B980A4 /* ThemeBlurEffectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88837F6E41B14BAEB94F106B7F3AB95 /* ThemeBlurEffectPicker.swift */; };
-		5EECD4E879B78D70CC9965A311598F77 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 276393170F3DCD07C310FAAC832D5F18 /* icon_back@2x.png */; };
+		5CBC13A0E7BE91EEE9521AF217CA32A3 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0153DD32E6DFAE86D5B7B30C75FF3339 /* ConstraintLayoutSupport.swift */; };
+		5EBC58FE6B0D9B1F9C202707C533EE1A /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D4396BFF0F0E8AD3092FEF5D9383C /* Debugging.swift */; };
+		5F2942DDD450FEC3F0B2BF310EFF48AC /* UIWindow+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD84C93F1CA9685FD5C132684898A3 /* UIWindow+Theme.swift */; };
 		5F800E52E1FE0F1A5F624C09F5BF2FD6 /* mz_zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D61F982315F19F502702463C73230A0 /* mz_zip.c */; };
-		64D7DFE46A5DF4632F788852C92E8344 /* ThemeColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB45C6C6AC7105D4002E8FE38CFFE94 /* ThemeColorPicker.swift */; };
-		66E5AE19084F9210D53E04D55093EB1A /* UIImage+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84FE2E2A2C60A61804A7D6E405FE042 /* UIImage+Handy.swift */; };
+		5F880B41BE83E9E9D893FB38AF53FE2C /* HandySwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9CE1DBA96B18F03495EB7FC3A48E28 /* HandySwizzling.swift */; };
+		60AC6EF92B0CBCC34D89A52808CB5B36 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D1EAA44A2B78A3002BC99B50FFA59C /* LayoutConstraint.swift */; };
+		65621F2FA457E39CD975BC31A30A416F /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448603B9130EFF52CB18A097977CC43 /* ConstraintRelation.swift */; };
+		65A55E3568B1DE9793BC1A5B0078AF7A /* UIView+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34303ED39C052A95421F7A3646A78053 /* UIView+Handy.swift */; };
 		67E941CADB3CDDEEDF8CE4EE4A4A05BB /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = A545D8E26417C73CD80C5A5CC1FCDC99 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6803F208B0E33C037340C34C01E7C867 /* ThemeBarStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97E56298DDC729836B103F6DFA778D0 /* ThemeBarStylePicker.swift */; };
+		6820821F27A6AF54D4FA596A0587822D /* ThemeDeallocBlockExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FD3D757A2E9B89B81AC2A14CB61DC /* ThemeDeallocBlockExecutor.swift */; };
 		6A2F1BB630686511FD5D8D0FC9829C38 /* Pods-Handy_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD4B6B6B9168A3EBF6026A04455EA34 /* Pods-Handy_Tests-dummy.m */; };
-		6C6DA980C39F08B2D97D883DA9FADAA3 /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE5B20779907E4B8C2EE3EFF4C1A66 /* ConstraintDirectionalInsetTarget.swift */; };
-		6C8AF01FB3C5B2332CA729B6BFEAFEF4 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACD2B3FE7765121E9F1243B1E9F767F /* ConstraintMultiplierTarget.swift */; };
-		70B6B2A4D991059B8A34C2C2C133E1AC /* ThemeDictionaryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DC357D2C40F86FE7E33F26735C89E8 /* ThemeDictionaryPicker.swift */; };
-		74C27F7FFAF71BE108867867721FBC17 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921E261EA1949CB974F544BEFACFFBB /* ConstraintPriorityTarget.swift */; };
-		750B53C9F175632DEEEE1FCA0249C795 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0153DD32E6DFAE86D5B7B30C75FF3339 /* ConstraintLayoutSupport.swift */; };
-		7662D6C6A38C124DAD9868FC43165B29 /* ThemeAttributedStringPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC766E245CF4AE6C45F6EEF6C9FE7A /* ThemeAttributedStringPicker.swift */; };
-		771BCBD591EF2E151295A3C3ABF5C8C8 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03A62B5558F5CD8ACA0D7E0A1294B0 /* ConstraintMakerPriortizable.swift */; };
-		78AFE772DA38A2E7D4B3F04EB2838533 /* UIControl+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A808C49C822646C38ECF1C95F959CE /* UIControl+Handy.swift */; };
-		78D7620F7EEE56956C0E02074600493E /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61729759E28355FC18755E1D2DD230 /* ConstraintConstantTarget.swift */; };
-		7B9A7AADE4E5332D9A4095E235274104 /* UIRefreshControl+TitleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B6A8CA5D3B80AC009FED4B25751F0 /* UIRefreshControl+TitleAttributes.swift */; };
-		7BFE4CA955403B0AFC1B55A7CDE9E353 /* ThemeVisualEffectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC9EC36B8F1C98D1C1A2ECB781BD27 /* ThemeVisualEffectPicker.swift */; };
+		6B7D9CA2843264E339609FC6E4E7588A /* UIApplication+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9B53F271D9A38B839E4E27A5AB1632 /* UIApplication+Handy.swift */; };
+		70EC0AF6DC929628C6304FBA29EC30B2 /* Bundle+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D26915C796BE5B22E3DC63C58240D0 /* Bundle+Handy.swift */; };
+		759D754B7C57E804C08D04BA6DA203CC /* Handy-Handy in Resources */ = {isa = PBXBuildFile; fileRef = F3606AFF34CE7DFB2F1AED9A0CDD8326 /* Handy-Handy */; };
+		7AF88F4DEED1A1428C4921E3B71EF8DB /* NSAttributedString+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987D39DE4912697977BE52F1134763B4 /* NSAttributedString+Merge.swift */; };
+		7C8DCC2DD6AB21CCC94ADE76D1F67FEF /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D8BC7991F0C2E14AD1D6A48644D0F /* ConstraintViewDSL.swift */; };
+		7DB1C9CDA0F653E7C04456D89498631C /* HandyNavigationBar+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9357CFBB2AF5DC1491694D8CED0E73 /* HandyNavigationBar+UIScrollView.swift */; };
 		7DB2C0596405DB863CF2B2A489AE2636 /* mz_zip.h in Headers */ = {isa = PBXBuildFile; fileRef = C686D022A0BFBEE9021537D41FEE02D6 /* mz_zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7DF6632965C2D3AC6761C7A936412A6E /* HandyNavigationBar+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500A7D786D11BE9FFB2A0B2E75902DA /* HandyNavigationBar+UIViewController.swift */; };
+		7E2435B5B8E72200839B7BD572DEDCC3 /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE5B20779907E4B8C2EE3EFF4C1A66 /* ConstraintDirectionalInsetTarget.swift */; };
+		7F4FA98E39B9ED9F4F0D77C5AB39FBD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
 		7F58BE8838D03B2D5B30E68952FF1E4D /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CEEF2D444F88732FDA0BA99D905758C /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		806AE90FB64A153E22EB4B7DB13D914E /* ThemeBarStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CEB7522366ECA6171F6A48DCE837A0 /* ThemeBarStylePicker.swift */; };
+		807AB2C9107F86409B3C46A885534D24 /* HandyNavigationBar+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C8924BD20DA268327BE2D1288F607 /* HandyNavigationBar+UINavigationController.swift */; };
+		8094FA2A3F293AC1138C24199D0D74A4 /* UIKit+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECB548DB3F79925B394B3BE2E2BD2C /* UIKit+Theme.swift */; };
+		82CECC8CC1F959D1C4C0DCB90C587BEC /* ThemeBlurEffectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A620ECA58DCB8A3321B9BF797F2629C /* ThemeBlurEffectPicker.swift */; };
 		833C3F37946516475914B1426581F54F /* Pods-Handy_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7049A97B3B237D4B5ADA0170C09D433A /* Pods-Handy_Example-dummy.m */; };
-		85EF5A8DD1FF390BCBA8FE333335F6C2 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D4396BFF0F0E8AD3092FEF5D9383C /* Debugging.swift */; };
-		87C4A4CFBB13F197D7E0BA85E10E3571 /* icon_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B81D779BB78E7EA4A0B0C68C3065B /* icon_back@3x.png */; };
-		88109B404BBF3BCDDA62B785BF2A46F6 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4781F0A1D54EBC32DB4504FA32545 /* ConstraintPriority.swift */; };
+		864E255AA2972C8AD6E7295899B6FA86 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C2D5E516CCB13A83359004998C69 /* ConstraintDirectionalInsets.swift */; };
+		86D9C72684027A42CCCB9194E3AB8357 /* UIImage+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D615B5D3834E87BE0F846293032AF8 /* UIImage+Handy.swift */; };
+		872169E29C27BDC6E982908D76BCC65F /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821676AD09F68EB169934CC574FE1C7D /* ConstraintView+Extensions.swift */; };
 		89AECD9F4931EA70C032C83AB105F415 /* mz_os.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AF4E7BE7352B1A758BDFA08EAB4E380 /* mz_os.c */; };
+		8A6F70F897CCAA4868D7A175EDF9DBA1 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A51D918DD2E6A58B74B69E04F2A4FC /* ConstraintDescription.swift */; };
 		8AB091199F99F1C2E9E67030DAC50F6E /* mz_strm_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = BBDF8A39ACB991F5E41CB2E947D98BDD /* mz_strm_mem.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8B90342ECD79A425E708077C8D3D63FC /* Date+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF62DAF9BA4F90E06E96FB61D11B33C0 /* Date+Handy.swift */; };
 		8C4FBC2492C6DDE369B02AEE117ED2BF /* mz_strm.c in Sources */ = {isa = PBXBuildFile; fileRef = C323E4BD2E63D392196EF26F2C5523CB /* mz_strm.c */; };
-		902DFC66AFFEA40F7C7BBCA1E740EA0F /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D8BC7991F0C2E14AD1D6A48644D0F /* ConstraintViewDSL.swift */; };
+		8CB84CCE8F81F52435B4EEE275E04065 /* UIViewController+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671527DA0175F980818B30E74757E92C /* UIViewController+Handy.swift */; };
+		8D5285ED9452F39488C827214143F9C5 /* ThemeStatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778238586C3370FA66A6D6B3043826AE /* ThemeStatePicker.swift */; };
+		8D87A7CBAB8C36637625111C72648359 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DCA714E2E491D452DD5AABF24AC6ED /* SnapKit-dummy.m */; };
+		8FC15E2BFF076CD4821BDF4BE88F5663 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF8B189EA86123F3FEC168A770876C /* ConstraintMakerRelatable.swift */; };
 		90DF670DC21B9EFD8DFEFC5081073963 /* mz_strm_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = B5113D41BEFE69832EA460521FF8A9BB /* mz_strm_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		95079785B08A6362E521D00B4534BD94 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B252735293DE3C257133C336152D34 /* ConstraintMakerFinalizable.swift */; };
-		95C6539A6D3A27FB893633131443CBE7 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D1EAA44A2B78A3002BC99B50FFA59C /* LayoutConstraint.swift */; };
-		98006E6C402109A3D42622AF2187DC98 /* UIViewController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AB7E93F7A6F4AFA36921ABCE93AE5 /* UIViewController+Theme.swift */; };
-		9AA8BBADA5AA2F30A280F9D52EA0B1BB /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9C2D5E516CCB13A83359004998C69 /* ConstraintDirectionalInsets.swift */; };
+		9212E046B5243CFF6CAEFB9D21D26449 /* ThemeNavigationBarAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76FD820397079825F9953CE340F6EA6 /* ThemeNavigationBarAppearancePicker.swift */; };
 		9D420997871F24FEB04C2A77D881E6C9 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF9E9C2390CF069346BCC1FBF0B2464 /* SSZipArchive-dummy.m */; };
-		9FB9DA7D75371BEBE1788D5EC3F34DD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
-		A02854ED6C4844F55367EDD68B565952 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18C56E0CEA1E3C1585EBA54C65775E /* ConstraintMakerExtendable.swift */; };
-		A14F406B974EB043E235D2DB0507FA9D /* UIApplication+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6983799ED75FA6E6A46D8B646FAFB /* UIApplication+Handy.swift */; };
-		A160419F2430CF93150F47DBA72B1F4E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E9B0B3ACE46FCFD79562481382156 /* ConstraintAttributes.swift */; };
-		A393D6DF107D27BCCBDCBA770841470D /* NSObject+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94E2101CDFAD8FDED8051EE2AA7A045 /* NSObject+Handy.swift */; };
-		A3B31AFBDA4B230E0E9D8369DB02792B /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4B85D49C6642B1D1D34803F941073 /* LayoutConstraintItem.swift */; };
+		A004600E08209249D10CBAFF5AC987A4 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF1C2157900AF1BD53B085D98B83E1 /* ConstraintOffsetTarget.swift */; };
+		A1B4C9F02DDA6751A15647ED26FBBBAF /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ACD550BC02ED871AB22D190B830E46 /* ConstraintItem.swift */; };
+		A1BE8FCA39325C7CF71880FE70688D59 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61729759E28355FC18755E1D2DD230 /* ConstraintConstantTarget.swift */; };
+		A1F640DB4AEB1D4B0306FDDD0B659E60 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F785941D1F687EC8669A14FE4B6DD50 /* ConstraintRelatableTarget.swift */; };
+		A478919203F6BF43F59398DAF1E9F738 /* Timer+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C10763D8282F35B64927F2D152FE0 /* Timer+Handy.swift */; };
 		A4F447FA7122B13300BD80CE080444F7 /* mz_strm.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A601DC821CFF9A5938549E95365BD50 /* mz_strm.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A6263A78151FB3936351F707357B736D /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD0FD0C2403A7A029D83CD0CB634C9 /* Constraint.swift */; };
+		A7256E0833D7DD33D377E3C601AECFD5 /* HandyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7230E554F435B00B2092998FB64CC58B /* HandyApp.swift */; };
 		A87F265168F263F2BB4361361BF616DF /* mz_crypt_apple.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A6FA86A422AFA663EE0213D81424094 /* mz_crypt_apple.c */; };
 		AAB0384853C90088036B7501CA8ACFE0 /* mz_crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DB8135B4A43D1BA9EED5DC7D866E5B /* mz_crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AD10986C45327510C8CC5AA3F9D0FD79 /* ThemeFontPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B57CA02B7E68D1A553AB71979115A /* ThemeFontPicker.swift */; };
-		AD34AAA134A610A5A06EBA7474381487 /* ThemeAnyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34C64A88681B1CA520E3FBB18DEE41 /* ThemeAnyPicker.swift */; };
-		AE1AFA56D31C348BCAF8EDCB57721AA2 /* Handy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 132123FAAE32645FB7AF69B5C0CBD49E /* Handy-dummy.m */; };
 		AF04A99DC636369E0923DE54AD7D3BDD /* Pods-Handy_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E9177FE5AE3A0E7D9667C0C8D30D30 /* Pods-Handy_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF3F1052957097323997B016D0157478 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4B85D49C6642B1D1D34803F941073 /* LayoutConstraintItem.swift */; };
 		AF48F21F13058D4DA35F3BE185FE03D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
 		AFAC1D4EBD53A048346210536741DF13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2395BCBFC943CBF1CB18469F79622EEF /* CoreGraphics.framework */; };
-		B0ECAAAE4702BD0189BC26D25B717A9F /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98F3553BCC8AF74A2F2A4FBB77B85B /* ConstraintDSL.swift */; };
-		B43EFF56CC06B1AF5CD6BA6571BE975D /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A51D918DD2E6A58B74B69E04F2A4FC /* ConstraintDescription.swift */; };
-		B4E3E00CD8E9BAA54A6D7158F8BE2B73 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0698960A9F400C71722EB6B171526F /* UILayoutSupport+Extensions.swift */; };
+		B38A71EF38C8165A645F86DACA11779A /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18C56E0CEA1E3C1585EBA54C65775E /* ConstraintMakerExtendable.swift */; };
 		B52177FF72FDAC3EDB7195DE98F5501E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B117979D2872C1B43D02ED5AC7063 /* QuartzCore.framework */; };
+		B5E536E719249C2984AA45E33648170A /* UIViewController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D680AE086133916FECCE5F96F383B3 /* UIViewController+Theme.swift */; };
 		B62D0B8FE7C3A3B195F02EB504FDB039 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */; };
-		B747EDED321DCC429119D3793805F443 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0092FE3D3CC35F6C75601AB4941141C /* ConstraintLayoutGuide+Extensions.swift */; };
-		B75EB4587FBCC4CBB2B91892B9C639AD /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C9158D8BDFF42247A9EA302238F6F /* ConstraintConfig.swift */; };
-		B871B9F05F38C6E86277A0567145983A /* ThemeCGFloatPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4E279E371BFAB77758ABDF8C1AF63B /* ThemeCGFloatPicker.swift */; };
-		B980D909A8848F428D0373FE2BC064BA /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B00A81D96C27205F2F2C21E4C6C0B8C /* ThemeManager.swift */; };
-		BA6166761BB06EB010338C0A024CC0AE /* HandyNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2143FECF6EA0D8B1CF5A0161BB945EC0 /* HandyNavigationBar.swift */; };
+		B7DD5807074AE5252B459CB99B52AFF9 /* ThemeCGColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF88103E4028EBADE918CC7171535D /* ThemeCGColorPicker.swift */; };
+		BA52E29600851E685753EB9CF1DCCC1F /* ThemeImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454C9FE87E9C63EB0A233DFE264B0B4 /* ThemeImagePicker.swift */; };
 		BB4782EE1267513C3BA8E6D226D245E5 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A7318CDDB905744E165BF145CEDBA4 /* SSZipArchive.m */; };
-		BD431E2305CB463A4A922C017768BD00 /* Timer+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6150F5A1650DBD3447B0CE310FA348A /* Timer+Handy.swift */; };
-		BDB6A1741767F23EBAE60D51891DE63E /* ThemeTabBarAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B184B5E4A74E086DE9BE7B72DBF6CE /* ThemeTabBarAppearancePicker.swift */; };
+		BC4A6B750DF233A3812D68911530C770 /* ThemeStatusBarStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8DAF795594B8083B49502BFA30095 /* ThemeStatusBarStylePicker.swift */; };
 		BDCCA4A9A781026F988E16D64945E358 /* mz_strm_zlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F267637E501DD4DAA57D8E5E19EAC74 /* mz_strm_zlib.c */; };
+		BE5613CE95C455D2FF261991AE2DA381 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0092FE3D3CC35F6C75601AB4941141C /* ConstraintLayoutGuide+Extensions.swift */; };
 		BEF4CC97D88ADCD73B93AA179F7E1802 /* mz_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 498E4B73DE61716B976D86A183A329DA /* mz_compat.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C009CA4510AD8220282F276D0F567DC4 /* ThemeKeyboardAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7922EA441B24CB5B7F9BE74FC72FC7 /* ThemeKeyboardAppearancePicker.swift */; };
-		C0A7A22F8144CEBDAC7C51932AF8ECF4 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B98F70B4ACADEDFF51DB03C88E551 /* ThemePicker.swift */; };
-		C2BCCA3C2E53434488286F5F2A4A2F73 /* ThemeCGColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5387F7094117839F4E230FF409AF57 /* ThemeCGColorPicker.swift */; };
+		BF7EFEB0B27F89A8880A95B840A67288 /* ThemeColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54050E19E2AF52D1271DDFD6188C467A /* ThemeColorPicker.swift */; };
 		C30DB8F46569FBD4D1C7D7DA0E4B67EC /* mz_zip_rw.h in Headers */ = {isa = PBXBuildFile; fileRef = F3CA3E01A7F0CE553EE061D3DA726065 /* mz_zip_rw.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C3D352F8B703F950FD32936D16968D12 /* mz_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 97D39F89FD492D4827F94D1F9F0186A6 /* mz_crypt.c */; };
-		C496111392EFDDA13E6EBBD1668FC77A /* Dictionary+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597C518FA96E3A92E8BE5E1A08D2B4A4 /* Dictionary+Handy.swift */; };
-		C5367C494F954806299BE38C35558579 /* Array+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C07ABB3E934C6B642E98FE905F3CF /* Array+Handy.swift */; };
-		C6CFCF006813F5F20E52E5F386B4213D /* HandyNavigationBar+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF70F138902D65BE4C5B5DF9FCE64E /* HandyNavigationBar+UINavigationController.swift */; };
+		C411AA9F818EFB8B6DDA2AC215CA6912 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D6E11D43BC4759751E9ACEAE2B24D /* Typealiases.swift */; };
+		C43AD6FA1125A53A4873274EF2FD3C90 /* ThemeSwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543044E29BEE03514EB77B4F7B8167C /* ThemeSwizzling.swift */; };
+		C5C55A52D0EBCAAAE22DE47B613C815B /* HandyNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB969D8C84816023832CC8A3B9B3EE38 /* HandyNavigationBar.swift */; };
+		C701C30E7734A30B95A6E5B0436E1690 /* Dictionary+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07346B4876AB45F09FC291553AE1475 /* Dictionary+Handy.swift */; };
+		C7460215CD13BA5996F898E1B3C975EA /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486AE6403EB0258A2C99E83C1C6ADBD2 /* ConstraintMaker.swift */; };
 		D3340EC887ADD4CCC83BF67712BC883A /* mz_strm_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A828DBFCA385C84059573A29A66E284 /* mz_strm_buf.c */; };
-		D99C44C2B1E33569CA9576782EB469EC /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CFA895F3627606787535F88D106D33 /* ConstraintLayoutSupportDSL.swift */; };
+		D63725486BC16A2ADA382DFAC80E7929 /* ThemeTabBarAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC39BFA1245DF408EC97CEBAFC34B9B /* ThemeTabBarAppearancePicker.swift */; };
+		D92DFBF84EE3FEDB66C79E4539A45A5A /* Date+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456615C9E92E2B22F417109EA98E7ED5 /* Date+Handy.swift */; };
 		D9EED6FDF393033C942E5B2149E99B2F /* mz_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6196C89B972B28C7500EA8F4DE2F19DF /* mz_os_posix.c */; };
-		DA2A839BAAB5FA5DB0079AAC07D85493 /* NSObject+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2673F60016E188A228EC214E9CDEF7 /* NSObject+Theme.swift */; };
 		DC27ED389E83D6E17ED333961440A217 /* Pods-Handy_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C5E06C364A47421E4499088644D142 /* Pods-Handy_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF3A2E6DF04EC6123F668BBEA3481D07 /* UIView+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1337B59D9417E986F1AB40576251D /* UIView+Handy.swift */; };
-		E7E130F74DF3A1F8514EC646CB2BC4F3 /* UIKit+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC06ED8644AC60A192653F65D3AE19F /* UIKit+Theme.swift */; };
-		ED943D0A21305EF36D9766278DEE12E5 /* ThemeActivityIndicatorViewStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47634E2A15057F29E7169FC3A83BC14 /* ThemeActivityIndicatorViewStylePicker.swift */; };
+		E0FF4EC826D2239353C0B013D5F1F750 /* ThemeManager+Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83181D3E28C06F95455D3CE5255B75DA /* ThemeManager+Plist.swift */; };
+		E122608FD780E2BDA9B927AE90A23C75 /* ThemeVisualEffectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90C53895A2531AE2E12D6519B4E433 /* ThemeVisualEffectPicker.swift */; };
+		E74728F38073DD69BD53DC2A2D2F71FE /* UITextField+PlaceholderAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBF43DA9335A7BCE0BD9FC1A9D0CDA /* UITextField+PlaceholderAttributes.swift */; };
+		E7C9877A2D8ECE33BC569DF17712BBF1 /* HandyCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6352267216F1CCBF86F89912B3ACF7E9 /* HandyCompatible.swift */; };
+		E851438D0F8313EE9A8BA11CF5356A26 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4781F0A1D54EBC32DB4504FA32545 /* ConstraintPriority.swift */; };
+		ECE8409F78D16CDCCB0FCB9AD8CA7E2C /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E72CF79BB624D2798662BDE16A7D3 /* ConstraintMakerEditable.swift */; };
 		EE424ECE443C88A654B2CC271E9F4874 /* mz_strm_wzaes.h in Headers */ = {isa = PBXBuildFile; fileRef = 55AC7ED14609B8DB43BF478B7794A80B /* mz_strm_wzaes.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EF137E1DC9A720922AE5E1102458252C /* ThemeManager+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73ECB91EE285B59C9122FF48F6BA69 /* ThemeManager+Index.swift */; };
 		EF9C00E340B33BA67D9CEF5A2262D15E /* mz_strm_zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 7176CBACA779703A74656BB83969597D /* mz_strm_zlib.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EFE936E5DBC6AEE0B47D92500218702C /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 05EF2477998501FDE26CB79E04AD80CA /* ZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F54A3E01A398CDF313EC671169460F36 /* ThemeNavigationBarAppearancePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDB23AAF9FFF010B3CF16E57017AEC /* ThemeNavigationBarAppearancePicker.swift */; };
-		F9BBB1BE22B4F09EEE757040C01D4743 /* Handy-Handy in Resources */ = {isa = PBXBuildFile; fileRef = F3606AFF34CE7DFB2F1AED9A0CDD8326 /* Handy-Handy */; };
-		FA17E12FE24B721CAF61EE3B8ED27678 /* NSAttributedString+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8A0781BE97A920F7C7BBBE171324A /* NSAttributedString+Merge.swift */; };
-		FBEFA4813358F2CE0D8E26A918C047BB /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF8B189EA86123F3FEC168A770876C /* ConstraintMakerRelatable.swift */; };
-		FD9646B9E4558EE7553D83C2CE754ECB /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E72CF79BB624D2798662BDE16A7D3 /* ConstraintMakerEditable.swift */; };
-		FDE1EEC0FE72527BD205FB202359FBD3 /* UIColor+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B80C77407DA55A94BA5BE8DAF2E26 /* UIColor+Handy.swift */; };
+		F24BF14956EA8D61475C4B2129593C82 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD0FD0C2403A7A029D83CD0CB634C9 /* Constraint.swift */; };
+		F24F4962FB2DF9D8171EF08BA679D34C /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E127B2DC79F793F78C38218384F6F0D /* ConstraintInsets.swift */; };
+		F2BE2BF29EBFBA0732E06475085B350D /* NSObject+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4868FE3AF7644CA0B234E7BCD22775 /* NSObject+Handy.swift */; };
+		F48E7931D7A9AF8B1F26CB419DC04A2F /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0698960A9F400C71722EB6B171526F /* UILayoutSupport+Extensions.swift */; };
+		F49F3FF5E8BC35EFCFC7795868B9743A /* ThemeDictionaryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37895A86966560A11DA769636CA206B4 /* ThemeDictionaryPicker.swift */; };
+		F741B66BD0C8C2B2A7CF45CBA876CF89 /* String+Handy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D684E96C9C250FBE7DAA230E0A460BBC /* String+Handy.swift */; };
+		F771D0D5E52608A621E60099D00EF0E4 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9B502684A9EC161F34A971B6654537 /* icon_back@2x.png */; };
+		F7BFAD98C084B8DA036A74F69A12F8E0 /* ThemeFontPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EB5D0658F8E0BB64EAABDE538B04A /* ThemeFontPicker.swift */; };
+		F810A6D6267F9240E84FDEE70CBD60DB /* ThemeAttributedStringPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D07FDFEABAD80FADC971C0D84665C1A /* ThemeAttributedStringPicker.swift */; };
+		FA54B87A55DBBF5A5C568168D628659E /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8408A6121F062A759F976C085726D8 /* ThemePicker.swift */; };
 		FE8BF7C7018EF47E97426B7D135691A3 /* mz_strm_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6673FCC9FD273BD32A3846EC9210291B /* mz_strm_os_posix.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		175718943C296800333B533DF942F241 /* PBXContainerItemProxy */ = {
+		325A3D2A46D10FB1613FEF575BF5F7A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BAAB311461ED9377754EE240EB92609C;
 			remoteInfo = "Handy-Handy";
 		};
-		34C31283352CBB7EAED7736DF0EDD9F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
-			remoteInfo = SSZipArchive;
-		};
-		7354E3C09E6F8A9E2CAC49B683FEEFD0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
-		};
-		88A2B9381769D36B67488BB1977C6A7A /* PBXContainerItemProxy */ = {
+		42FDC6F770641C807DFE490167056D4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6423DB9BFD07878085F8B68D214D7213;
 			remoteInfo = "Pods-Handy_Example";
 		};
-		ADF5C6EC6FA93C5C18C763458B08E5D1 /* PBXContainerItemProxy */ = {
+		4833AA96032C2840B399BEC06A78992A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F591A36DFE90A9D32F9E027F1A1EF0B2;
 			remoteInfo = Handy;
 		};
-		C2CF269011B5C2D4C3E9D20148B4CDB4 /* PBXContainerItemProxy */ = {
+		746C0614E18BA911152748A59AC6D257 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
-			remoteInfo = MBProgressHUD;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
 		};
-		D9CABEAE96D38D5440266BECD586B494 /* PBXContainerItemProxy */ = {
+		A7F11F9F24F79146F7D2E4E3E5E50782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
 			remoteInfo = SnapKit;
 		};
+		D036086D7ADF42BD9C9FC34B7C9AB52B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
+			remoteInfo = SnapKit;
+		};
+		EA4EC316A70E62536B9253F5F6892EFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
+			remoteInfo = MBProgressHUD;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00CFA895F3627606787535F88D106D33 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		0153DD32E6DFAE86D5B7B30C75FF3339 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		01728464620071D81A12C931A6555430 /* UIControl+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIControl+Handy.swift"; sourceTree = "<group>"; };
+		019C10763D8282F35B64927F2D152FE0 /* Timer+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Timer+Handy.swift"; sourceTree = "<group>"; };
 		044C08889060C29BECE361C75D9E59B1 /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
 		05EF2477998501FDE26CB79E04AD80CA /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/include/ZipArchive.h; sourceTree = "<group>"; };
-		0771E7480278E9ED3ECAFD5B53AE5C84 /* HandySwizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandySwizzling.swift; path = Handy/Classes/Core/HandySwizzling.swift; sourceTree = "<group>"; };
 		0A601DC821CFF9A5938549E95365BD50 /* mz_strm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm.h; path = SSZipArchive/minizip/mz_strm.h; sourceTree = "<group>"; };
 		0A828DBFCA385C84059573A29A66E284 /* mz_strm_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_buf.c; path = SSZipArchive/minizip/mz_strm_buf.c; sourceTree = "<group>"; };
 		0B61729759E28355FC18755E1D2DD230 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		0C98F3553BCC8AF74A2F2A4FBB77B85B /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
+		0D7C8924BD20DA268327BE2D1288F607 /* HandyNavigationBar+UINavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HandyNavigationBar+UINavigationController.swift"; path = "Handy/Classes/Navigation/HandyNavigationBar+UINavigationController.swift"; sourceTree = "<group>"; };
+		0E9B53F271D9A38B839E4E27A5AB1632 /* UIApplication+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIApplication+Handy.swift"; sourceTree = "<group>"; };
+		0F9CE1DBA96B18F03495EB7FC3A48E28 /* HandySwizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandySwizzling.swift; path = Handy/Classes/Core/HandySwizzling.swift; sourceTree = "<group>"; };
 		103CF2D7E41C873C02474FFB13239C63 /* Pods-Handy_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Handy_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1055E69EF01DD60CC4AF5D8B2C3EA75D /* HandyCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyCompatible.swift; path = Handy/Classes/Core/HandyCompatible.swift; sourceTree = "<group>"; };
 		11A707D38EF6E3947B73BCE4543B35B1 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
-		132123FAAE32645FB7AF69B5C0CBD49E /* Handy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Handy-dummy.m"; sourceTree = "<group>"; };
+		126C473E5FDAD09A38C04FF0EF3E424A /* ThemeAnyPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeAnyPicker.swift; sourceTree = "<group>"; };
 		133C6CBEF2885F39BB5FB0AF022EF8BA /* mz_strm_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_os.h; path = SSZipArchive/minizip/mz_strm_os.h; sourceTree = "<group>"; };
-		14CEB7522366ECA6171F6A48DCE837A0 /* ThemeBarStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeBarStylePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeBarStylePicker.swift; sourceTree = "<group>"; };
-		15A86F35ACE5E678C35B6D3E70195A12 /* UIWindow+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+Theme.swift"; path = "Handy/Classes/Theme/UIWindow+Theme.swift"; sourceTree = "<group>"; };
-		1D02E67E4031E22D4684261D763B3FEF /* ThemeStatusBarStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeStatusBarStylePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeStatusBarStylePicker.swift; sourceTree = "<group>"; };
+		16320BFE50C8976560412D688F871FF5 /* ThemeManager+Index.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ThemeManager+Index.swift"; path = "Handy/Classes/Theme/ThemeManager+Index.swift"; sourceTree = "<group>"; };
 		1D97968A75E4EE7C7F267914FB98A35B /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		1DDC79A3BFB603D46EFC6167FB658368 /* SSZipArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.release.xcconfig; sourceTree = "<group>"; };
+		1EC8DAF795594B8083B49502BFA30095 /* ThemeStatusBarStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeStatusBarStylePicker.swift; sourceTree = "<group>"; };
 		1F267637E501DD4DAA57D8E5E19EAC74 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
 		1FD0C87E1CF59D51058142932BECE82F /* Pods-Handy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1FD9C2D5E516CCB13A83359004998C69 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		206153D182A0535E39644D38FA549EFC /* Pods-Handy_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Handy_Example-frameworks.sh"; sourceTree = "<group>"; };
-		2143FECF6EA0D8B1CF5A0161BB945EC0 /* HandyNavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyNavigationBar.swift; path = Handy/Classes/Navigation/HandyNavigationBar.swift; sourceTree = "<group>"; };
 		22148ACC2B1C4D87DFFE9CD4DF56E706 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
 		2395BCBFC943CBF1CB18469F79622EEF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		276393170F3DCD07C310FAAC832D5F18 /* icon_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_back@2x.png"; path = "Handy/Assets/icon_back@2x.png"; sourceTree = "<group>"; };
 		27830FA720AE07E4B5899C6FA8CAB5A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2B0C8174501B7C62A30CF3A1E10DD620 /* mz_strm_split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_split.h; path = SSZipArchive/minizip/mz_strm_split.h; sourceTree = "<group>"; };
 		2BE36E9233D3AB7A2A6313C7EFAB5E2F /* mz.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz.h; path = SSZipArchive/minizip/mz.h; sourceTree = "<group>"; };
+		2C7FD3D757A2E9B89B81AC2A14CB61DC /* ThemeDeallocBlockExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeDeallocBlockExecutor.swift; path = Handy/Classes/Theme/ThemeDeallocBlockExecutor.swift; sourceTree = "<group>"; };
+		2FAAA138550AC7AD9F74DE04DF69D52E /* UIButton+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Handy.swift"; sourceTree = "<group>"; };
 		304D6E11D43BC4759751E9ACEAE2B24D /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		30CE5B20779907E4B8C2EE3EFF4C1A66 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		3191A578CCA4537F7E2335942F761629 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		32C5BBD810E72F328F95FC57AAB3E4FB /* mz_strm_pkcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_pkcrypt.h; path = SSZipArchive/minizip/mz_strm_pkcrypt.h; sourceTree = "<group>"; };
-		33DC9EC36B8F1C98D1C1A2ECB781BD27 /* ThemeVisualEffectPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeVisualEffectPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeVisualEffectPicker.swift; sourceTree = "<group>"; };
+		34303ED39C052A95421F7A3646A78053 /* UIView+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Handy.swift"; sourceTree = "<group>"; };
 		35913C0150EC8183CEE04F7F6EDDD861 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		369D8BC7991F0C2E14AD1D6A48644D0F /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		37895A86966560A11DA769636CA206B4 /* ThemeDictionaryPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeDictionaryPicker.swift; sourceTree = "<group>"; };
+		3A433D209F03869FC5B6C11C46CE35E0 /* Handy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-umbrella.h"; sourceTree = "<group>"; };
 		3A6FA86A422AFA663EE0213D81424094 /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
 		3B18C56E0CEA1E3C1585EBA54C65775E /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		3D40A7870673DAA0DEAA19959C595FC1 /* HandyNavigationContrllerContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyNavigationContrllerContext.swift; path = Handy/Classes/Navigation/HandyNavigationContrllerContext.swift; sourceTree = "<group>"; };
 		3D61F982315F19F502702463C73230A0 /* mz_zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip.c; path = SSZipArchive/minizip/mz_zip.c; sourceTree = "<group>"; };
 		3DE5252996C4189B77A934F6DF7171E7 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
 		3E127B2DC79F793F78C38218384F6F0D /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
@@ -258,154 +263,154 @@
 		3F7482279D94929AC87A8E5E6109AAF8 /* Pods-Handy_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		41D9405473BC15BFF70C79145A27CA15 /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
 		424D592DE9B2D6B84880F448FF57256C /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		4300355E7F81315AE5E55077B75CE0E9 /* ThemeScrollViewIndicatorStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeScrollViewIndicatorStylePicker.swift; sourceTree = "<group>"; };
 		43E67F02FA215CF30E7A3822A8FB3030 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		456615C9E92E2B22F417109EA98E7ED5 /* Date+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Handy.swift"; sourceTree = "<group>"; };
 		45989787B6813A51DA8FAE79AEEC0679 /* Pods-Handy_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Handy_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		45DCA714E2E491D452DD5AABF24AC6ED /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
-		4619E5D59476B04E2B3DB4B27CEAEA82 /* ThemeManager+Plist.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ThemeManager+Plist.swift"; path = "Handy/Classes/Theme/ThemeManager+Plist.swift"; sourceTree = "<group>"; };
 		4771939F38ED9D0A484F0C62E1817421 /* Pods-Handy_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Handy_Tests"; path = Pods_Handy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		486AE6403EB0258A2C99E83C1C6ADBD2 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		4876DBAC8EE252DC802B9D1988E8440B /* Pods-Handy_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Handy_Example.modulemap"; sourceTree = "<group>"; };
 		48A37A32F7E8F9B0B38879A315D2A961 /* mz_strm_wzaes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_wzaes.c; path = SSZipArchive/minizip/mz_strm_wzaes.c; sourceTree = "<group>"; };
 		48A7318CDDB905744E165BF145CEDBA4 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		498E4B73DE61716B976D86A183A329DA /* mz_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_compat.h; path = SSZipArchive/minizip/mz_compat.h; sourceTree = "<group>"; };
+		4A620ECA58DCB8A3321B9BF797F2629C /* ThemeBlurEffectPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeBlurEffectPicker.swift; sourceTree = "<group>"; };
+		4BC39BFA1245DF408EC97CEBAFC34B9B /* ThemeTabBarAppearancePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeTabBarAppearancePicker.swift; sourceTree = "<group>"; };
 		4CEEF2D444F88732FDA0BA99D905758C /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
+		4F4224038988292C0A30F0380A87D475 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		4F5893CE5447F9E9218AD893EC3FD03C /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		4F785941D1F687EC8669A14FE4B6DD50 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		50BD84C93F1CA9685FD5C132684898A3 /* UIWindow+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+Theme.swift"; path = "Handy/Classes/Theme/UIWindow+Theme.swift"; sourceTree = "<group>"; };
+		54050E19E2AF52D1271DDFD6188C467A /* ThemeColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeColorPicker.swift; sourceTree = "<group>"; };
+		54BDC9A3563FA26B935F44F9DCF34E00 /* Handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.debug.xcconfig; sourceTree = "<group>"; };
 		550D4396BFF0F0E8AD3092FEF5D9383C /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		55AC7ED14609B8DB43BF478B7794A80B /* mz_strm_wzaes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_wzaes.h; path = SSZipArchive/minizip/mz_strm_wzaes.h; sourceTree = "<group>"; };
-		597C518FA96E3A92E8BE5E1A08D2B4A4 /* Dictionary+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Handy.swift"; path = "Handy/Classes/Core/Extensions/Dictionary+Handy.swift"; sourceTree = "<group>"; };
+		584EB5D0658F8E0BB64EAABDE538B04A /* ThemeFontPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeFontPicker.swift; sourceTree = "<group>"; };
+		59D615B5D3834E87BE0F846293032AF8 /* UIImage+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+Handy.swift"; sourceTree = "<group>"; };
 		59E0EA83F7ABD5D86B66DD971F6883E8 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
-		5A3F07C6157AA996D1435AC816E82C52 /* UILabel+TextAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+TextAttributes.swift"; path = "Handy/Classes/Theme/ThemeAttributes/UILabel+TextAttributes.swift"; sourceTree = "<group>"; };
-		5D5B81D779BB78E7EA4A0B0C68C3065B /* icon_back@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_back@3x.png"; path = "Handy/Assets/icon_back@3x.png"; sourceTree = "<group>"; };
+		5AA1839EB2247914CEC3A151AC3602B5 /* ThemeActivityIndicatorViewStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeActivityIndicatorViewStylePicker.swift; sourceTree = "<group>"; };
+		5D8CB3FEB7A661D37A4591908EDD30B7 /* ThemeKeyboardAppearancePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeKeyboardAppearancePicker.swift; sourceTree = "<group>"; };
+		60D86849ECD28365D1014C4182E5D1F5 /* Handy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Handy-dummy.m"; sourceTree = "<group>"; };
 		6196C89B972B28C7500EA8F4DE2F19DF /* mz_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os_posix.c; path = SSZipArchive/minizip/mz_os_posix.c; sourceTree = "<group>"; };
 		61B252735293DE3C257133C336152D34 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		621967E0D1C44B8D82928B9D260C900F /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		6352267216F1CCBF86F89912B3ACF7E9 /* HandyCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyCompatible.swift; path = Handy/Classes/Core/HandyCompatible.swift; sourceTree = "<group>"; };
 		64BF1C2157900AF1BD53B085D98B83E1 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
 		64C4B85D49C6642B1D1D34803F941073 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		6673FCC9FD273BD32A3846EC9210291B /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
+		671527DA0175F980818B30E74757E92C /* UIViewController+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Handy.swift"; sourceTree = "<group>"; };
+		67D680AE086133916FECCE5F96F383B3 /* UIViewController+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Theme.swift"; path = "Handy/Classes/Theme/UIViewController+Theme.swift"; sourceTree = "<group>"; };
+		67D7D3EB4D078DC983841E27F78FB617 /* ThemeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeManager.swift; path = Handy/Classes/Theme/ThemeManager.swift; sourceTree = "<group>"; };
 		69A51D918DD2E6A58B74B69E04F2A4FC /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
 		6A3382B37E0088D07D79942A62486407 /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
-		6B00A81D96C27205F2F2C21E4C6C0B8C /* ThemeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeManager.swift; path = Handy/Classes/Theme/ThemeManager.swift; sourceTree = "<group>"; };
+		6AD338654661E2D0A4C665CE33B9F6D7 /* Handy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Handy.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6B87FDAFBDC9EE740627ADBA7F6BDFB3 /* UIColor+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Handy.swift"; sourceTree = "<group>"; };
 		6BE00936123228C28F6ED8B548F3A163 /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
-		6C5387F7094117839F4E230FF409AF57 /* ThemeCGColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeCGColorPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeCGColorPicker.swift; sourceTree = "<group>"; };
-		6CF6983799ED75FA6E6A46D8B646FAFB /* UIApplication+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Handy.swift"; path = "Handy/Classes/Core/Extensions/UIApplication+Handy.swift"; sourceTree = "<group>"; };
+		6C4868FE3AF7644CA0B234E7BCD22775 /* NSObject+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSObject+Handy.swift"; sourceTree = "<group>"; };
 		6ED731B906231D08128AB6C6D14DEB1E /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
+		7006FF9760680BDF98EC8D97AEF405C0 /* Array+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Handy.swift"; sourceTree = "<group>"; };
 		7049A97B3B237D4B5ADA0170C09D433A /* Pods-Handy_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Handy_Example-dummy.m"; sourceTree = "<group>"; };
-		70BC766E245CF4AE6C45F6EEF6C9FE7A /* ThemeAttributedStringPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeAttributedStringPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeAttributedStringPicker.swift; sourceTree = "<group>"; };
 		7176CBACA779703A74656BB83969597D /* mz_strm_zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_zlib.h; path = SSZipArchive/minizip/mz_strm_zlib.h; sourceTree = "<group>"; };
 		722114B242CC38B627E6C27A429F1BC9 /* Pods-Handy_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Handy_Example"; path = Pods_Handy_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7230E554F435B00B2092998FB64CC58B /* HandyApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyApp.swift; path = Handy/Classes/Core/HandyApp.swift; sourceTree = "<group>"; };
+		73ECB548DB3F79925B394B3BE2E2BD2C /* UIKit+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Theme.swift"; path = "Handy/Classes/Theme/UIKit+Theme.swift"; sourceTree = "<group>"; };
 		7448603B9130EFF52CB18A097977CC43 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
-		74F8A0781BE97A920F7C7BBBE171324A /* NSAttributedString+Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+Merge.swift"; path = "Handy/Classes/Theme/ThemeAttributes/NSAttributedString+Merge.swift"; sourceTree = "<group>"; };
-		7752101F64E59D0CB7106B9D1158223C /* UIViewController+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Handy.swift"; path = "Handy/Classes/Core/Extensions/UIViewController+Handy.swift"; sourceTree = "<group>"; };
-		77D1337B59D9417E986F1AB40576251D /* UIView+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Handy.swift"; path = "Handy/Classes/Core/Extensions/UIView+Handy.swift"; sourceTree = "<group>"; };
+		74DF5986AE30A7C5D05A3C035053B0B3 /* NSObject+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Theme.swift"; path = "Handy/Classes/Theme/NSObject+Theme.swift"; sourceTree = "<group>"; };
+		75C62EC0FC1D9745D347C99A1649BB63 /* HandyNavigationContrllerContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyNavigationContrllerContext.swift; path = Handy/Classes/Navigation/HandyNavigationContrllerContext.swift; sourceTree = "<group>"; };
+		76850C627FCAF88ABA8CDC8878E86DEC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		778238586C3370FA66A6D6B3043826AE /* ThemeStatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeStatePicker.swift; sourceTree = "<group>"; };
 		7921E261EA1949CB974F544BEFACFFBB /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		7A7236F07D673B81DE1D0886DA964157 /* UITextField+PlaceholderAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+PlaceholderAttributes.swift"; path = "Handy/Classes/Theme/ThemeAttributes/UITextField+PlaceholderAttributes.swift"; sourceTree = "<group>"; };
 		7C03A62B5558F5CD8ACA0D7E0A1294B0 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		7D13C103150B9626774ABF1A03C28FF0 /* Handy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-umbrella.h"; sourceTree = "<group>"; };
-		7D838BFDB2687C68A99ED5F74EAF3FF0 /* ResourceBundle-Handy-Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Handy-Handy-Info.plist"; sourceTree = "<group>"; };
 		7E7C4D74D4032FBD54C6FB8E85991125 /* mz_zip_rw.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip_rw.c; path = SSZipArchive/minizip/mz_zip_rw.c; sourceTree = "<group>"; };
 		801C9158D8BDFF42247A9EA302238F6F /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		804D330F58A15280A1C95534C1E06941 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		80B184B5E4A74E086DE9BE7B72DBF6CE /* ThemeTabBarAppearancePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeTabBarAppearancePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeTabBarAppearancePicker.swift; sourceTree = "<group>"; };
 		821676AD09F68EB169934CC574FE1C7D /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		88BF70F138902D65BE4C5B5DF9FCE64E /* HandyNavigationBar+UINavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HandyNavigationBar+UINavigationController.swift"; path = "Handy/Classes/Navigation/HandyNavigationBar+UINavigationController.swift"; sourceTree = "<group>"; };
+		83181D3E28C06F95455D3CE5255B75DA /* ThemeManager+Plist.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ThemeManager+Plist.swift"; path = "Handy/Classes/Theme/ThemeManager+Plist.swift"; sourceTree = "<group>"; };
+		8363F7909F66527C2D1CBE105437F20E /* Handy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Handy.modulemap; sourceTree = "<group>"; };
+		8500A7D786D11BE9FFB2A0B2E75902DA /* HandyNavigationBar+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HandyNavigationBar+UIViewController.swift"; path = "Handy/Classes/Navigation/HandyNavigationBar+UIViewController.swift"; sourceTree = "<group>"; };
+		87D26915C796BE5B22E3DC63C58240D0 /* Bundle+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+Handy.swift"; sourceTree = "<group>"; };
 		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DDB2E1F75352212993DFA899BBC8D3C /* ThemeStatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeStatePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeStatePicker.swift; sourceTree = "<group>"; };
+		8CB142FA86211BF5F58A1F7810F080F9 /* Handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.release.xcconfig; sourceTree = "<group>"; };
+		8D9357CFBB2AF5DC1491694D8CED0E73 /* HandyNavigationBar+UIScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HandyNavigationBar+UIScrollView.swift"; path = "Handy/Classes/Navigation/HandyNavigationBar+UIScrollView.swift"; sourceTree = "<group>"; };
+		8D9B502684A9EC161F34A971B6654537 /* icon_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_back@2x.png"; path = "Handy/Assets/icon_back@2x.png"; sourceTree = "<group>"; };
 		8E26F9E1BB9D1418FC1C6B249E55EB9F /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		8F85BE04636ABC23DD81861C1CC81F42 /* ThemeDeallocBlockExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeDeallocBlockExecutor.swift; path = Handy/Classes/Theme/ThemeDeallocBlockExecutor.swift; sourceTree = "<group>"; };
 		90D50A7DBF66A84FB9C9387D54D38AEE /* Pods-Handy_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Example-Info.plist"; sourceTree = "<group>"; };
 		90E9177FE5AE3A0E7D9667C0C8D30D30 /* Pods-Handy_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Handy_Example-umbrella.h"; sourceTree = "<group>"; };
-		91701EBAA18B594C3D337A1FFA682816 /* ThemeStringAttributesPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeStringAttributesPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeStringAttributesPicker.swift; sourceTree = "<group>"; };
 		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		936B6A8CA5D3B80AC009FED4B25751F0 /* UIRefreshControl+TitleAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRefreshControl+TitleAttributes.swift"; path = "Handy/Classes/Theme/ThemeAttributes/UIRefreshControl+TitleAttributes.swift"; sourceTree = "<group>"; };
-		946DCBDD0D82E7BD7F9ACE9BFB55D1A4 /* ThemeImagePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeImagePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeImagePicker.swift; sourceTree = "<group>"; };
 		951E9B0B3ACE46FCFD79562481382156 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D39F89FD492D4827F94D1F9F0186A6 /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
+		987D39DE4912697977BE52F1134763B4 /* NSAttributedString+Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Merge.swift"; sourceTree = "<group>"; };
 		99D1EAA44A2B78A3002BC99B50FFA59C /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		9AF4E7BE7352B1A758BDFA08EAB4E380 /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
 		9BEF8B189EA86123F3FEC168A770876C /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		9C57D60B344BCC4EFAE672FE67F825E0 /* Handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.debug.xcconfig; sourceTree = "<group>"; };
-		9CB45C6C6AC7105D4002E8FE38CFFE94 /* ThemeColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeColorPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeColorPicker.swift; sourceTree = "<group>"; };
-		9CF0A83FB8E573912DD4E42EACFD4CF4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9C3F39CCE4575E0BB213FF4FB0405110 /* UILabel+TextAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+TextAttributes.swift"; sourceTree = "<group>"; };
+		9D07FDFEABAD80FADC971C0D84665C1A /* ThemeAttributedStringPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeAttributedStringPicker.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0DC357D2C40F86FE7E33F26735C89E8 /* ThemeDictionaryPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeDictionaryPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeDictionaryPicker.swift; sourceTree = "<group>"; };
-		A16B98F70B4ACADEDFF51DB03C88E551 /* ThemePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemePicker.swift; path = Handy/Classes/Theme/ThemePicker.swift; sourceTree = "<group>"; };
+		9E0FC719CA5A8E03EE3874C48AA23FD0 /* icon_back@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icon_back@3x.png"; path = "Handy/Assets/icon_back@3x.png"; sourceTree = "<group>"; };
+		A0422523C22E41F967A47B0D4E9CCBCD /* Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Handy-Info.plist"; sourceTree = "<group>"; };
 		A21E5EE44491E3B2495D11077D641878 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		A545D8E26417C73CD80C5A5CC1FCDC99 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A6B4E2774ACCBC8FFCE72A03D5FA09E0 /* ThemeCGFloatPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeCGFloatPicker.swift; sourceTree = "<group>"; };
 		A83BC87F974530479597F6143A90A1FB /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
-		A8DF583FBA56D1BDC8A1AAC3E2871BF6 /* UIButton+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Handy.swift"; path = "Handy/Classes/Core/Extensions/UIButton+Handy.swift"; sourceTree = "<group>"; };
+		A8A7D973FA0FEDAF94A7F20340148B44 /* ThemeStringAttributesPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeStringAttributesPicker.swift; sourceTree = "<group>"; };
 		A9E6F24969C5B378ECA19175229CEAE0 /* Pods-Handy_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AA2673F60016E188A228EC214E9CDEF7 /* NSObject+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Theme.swift"; path = "Handy/Classes/Theme/NSObject+Theme.swift"; sourceTree = "<group>"; };
-		AB18E180B683FFA1010D085B448A87C5 /* Handy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Handy.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AC5B57CA02B7E68D1A553AB71979115A /* ThemeFontPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeFontPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeFontPicker.swift; sourceTree = "<group>"; };
-		ADC06ED8644AC60A192653F65D3AE19F /* UIKit+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Theme.swift"; path = "Handy/Classes/Theme/UIKit+Theme.swift"; sourceTree = "<group>"; };
+		AF8408A6121F062A759F976C085726D8 /* ThemePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemePicker.swift; path = Handy/Classes/Theme/ThemePicker.swift; sourceTree = "<group>"; };
 		B1AD0FD0C2403A7A029D83CD0CB634C9 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
 		B25870995608D6677A946A11360D5A1F /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		B2792E11914474D7B5DCF2D81DA59E53 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		B47634E2A15057F29E7169FC3A83BC14 /* ThemeActivityIndicatorViewStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeActivityIndicatorViewStylePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeActivityIndicatorViewStylePicker.swift; sourceTree = "<group>"; };
 		B5113D41BEFE69832EA460521FF8A9BB /* mz_strm_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_buf.h; path = SSZipArchive/minizip/mz_strm_buf.h; sourceTree = "<group>"; };
 		B5C5E06C364A47421E4499088644D142 /* Pods-Handy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Handy_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B8AADE8BDC0B8325923E87523DD38889 /* Handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Handy.release.xcconfig; sourceTree = "<group>"; };
-		BB7922EA441B24CB5B7F9BE74FC72FC7 /* ThemeKeyboardAppearancePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeKeyboardAppearancePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeKeyboardAppearancePicker.swift; sourceTree = "<group>"; };
+		BB29F9FC6A2840132ACFDA0A842A09A4 /* HandyNavigationSwizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyNavigationSwizzling.swift; path = Handy/Classes/Navigation/HandyNavigationSwizzling.swift; sourceTree = "<group>"; };
 		BBDF8A39ACB991F5E41CB2E947D98BDD /* mz_strm_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_mem.h; path = SSZipArchive/minizip/mz_strm_mem.h; sourceTree = "<group>"; };
-		BDBF9F6829344805044C8B3544CBCE68 /* Handy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Handy.modulemap; sourceTree = "<group>"; };
+		BC90C53895A2531AE2E12D6519B4E433 /* ThemeVisualEffectPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeVisualEffectPicker.swift; sourceTree = "<group>"; };
 		BF64D720E43B4155A88B66B910B99CE6 /* mz_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_os.h; path = SSZipArchive/minizip/mz_os.h; sourceTree = "<group>"; };
-		BF9AB7E93F7A6F4AFA36921ABCE93AE5 /* UIViewController+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Theme.swift"; path = "Handy/Classes/Theme/UIViewController+Theme.swift"; sourceTree = "<group>"; };
 		C0092FE3D3CC35F6C75601AB4941141C /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		C1E4781F0A1D54EBC32DB4504FA32545 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
 		C323E4BD2E63D392196EF26F2C5523CB /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
+		C591CA8FAA8E213D14B29A11982447AE /* UIRefreshControl+TitleAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TitleAttributes.swift"; sourceTree = "<group>"; };
 		C686D022A0BFBEE9021537D41FEE02D6 /* mz_zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip.h; path = SSZipArchive/minizip/mz_zip.h; sourceTree = "<group>"; };
-		C81C07ABB3E934C6B642E98FE905F3CF /* Array+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Handy.swift"; path = "Handy/Classes/Core/Extensions/Array+Handy.swift"; sourceTree = "<group>"; };
-		C84FE2E2A2C60A61804A7D6E405FE042 /* UIImage+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Handy.swift"; path = "Handy/Classes/Core/Extensions/UIImage+Handy.swift"; sourceTree = "<group>"; };
-		C9A120126054B9986A5708D21AC59C5D /* Handy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-prefix.pch"; sourceTree = "<group>"; };
+		C97E56298DDC729836B103F6DFA778D0 /* ThemeBarStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeBarStylePicker.swift; sourceTree = "<group>"; };
+		C9CF88103E4028EBADE918CC7171535D /* ThemeCGColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeCGColorPicker.swift; sourceTree = "<group>"; };
+		CA3302AFDA0A341B77EBA5606C209291 /* ResourceBundle-Handy-Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Handy-Handy-Info.plist"; sourceTree = "<group>"; };
 		CACD2B3FE7765121E9F1243B1E9F767F /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		CC1C1CB1A8F430091DA1C81736A5B6CE /* MBProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
 		CE0698960A9F400C71722EB6B171526F /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		CF62DAF9BA4F90E06E96FB61D11B33C0 /* Date+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Handy.swift"; path = "Handy/Classes/Core/Extensions/Date+Handy.swift"; sourceTree = "<group>"; };
 		CFC2D19E44B98079F63006E2E45A283B /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
-		D24C453CF16C7F10C9125E95F9C7EFF2 /* ThemeScrollViewIndicatorStylePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeScrollViewIndicatorStylePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeScrollViewIndicatorStylePicker.swift; sourceTree = "<group>"; };
+		D2D7C833483911256EA43AF1C898BC7F /* Handy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Handy-prefix.pch"; sourceTree = "<group>"; };
 		D2DB8135B4A43D1BA9EED5DC7D866E5B /* mz_crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_crypt.h; path = SSZipArchive/minizip/mz_crypt.h; sourceTree = "<group>"; };
-		D38553090822C15D7874B25A80BDE2D1 /* Handy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Handy-Info.plist"; sourceTree = "<group>"; };
-		D6306004D67AFBBB9151EB81ED22A48A /* HandyNavigationBar+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HandyNavigationBar+UIViewController.swift"; path = "Handy/Classes/Navigation/HandyNavigationBar+UIViewController.swift"; sourceTree = "<group>"; };
+		D543044E29BEE03514EB77B4F7B8167C /* ThemeSwizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeSwizzling.swift; path = Handy/Classes/Theme/ThemeSwizzling.swift; sourceTree = "<group>"; };
+		D5DBF43DA9335A7BCE0BD9FC1A9D0CDA /* UITextField+PlaceholderAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextField+PlaceholderAttributes.swift"; sourceTree = "<group>"; };
+		D684E96C9C250FBE7DAA230E0A460BBC /* String+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Handy.swift"; sourceTree = "<group>"; };
 		D6ACD550BC02ED871AB22D190B830E46 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		D88837F6E41B14BAEB94F106B7F3AB95 /* ThemeBlurEffectPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeBlurEffectPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeBlurEffectPicker.swift; sourceTree = "<group>"; };
-		D94E2101CDFAD8FDED8051EE2AA7A045 /* NSObject+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Handy.swift"; path = "Handy/Classes/Core/Extensions/NSObject+Handy.swift"; sourceTree = "<group>"; };
 		D9B48873C8B9E93CFED7C1098F76C6B8 /* Pods-Handy_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Handy_Tests.modulemap"; sourceTree = "<group>"; };
-		DA73ECB91EE285B59C9122FF48F6BA69 /* ThemeManager+Index.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ThemeManager+Index.swift"; path = "Handy/Classes/Theme/ThemeManager+Index.swift"; sourceTree = "<group>"; };
-		DCEDB23AAF9FFF010B3CF16E57017AEC /* ThemeNavigationBarAppearancePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeNavigationBarAppearancePicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeNavigationBarAppearancePicker.swift; sourceTree = "<group>"; };
+		DB969D8C84816023832CC8A3B9B3EE38 /* HandyNavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyNavigationBar.swift; path = Handy/Classes/Navigation/HandyNavigationBar.swift; sourceTree = "<group>"; };
 		DD0B117979D2872C1B43D02ED5AC7063 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		DDF75ED0132159E2B4A8D1B187B77BA8 /* Bundle+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Handy.swift"; path = "Handy/Classes/Core/Extensions/Bundle+Handy.swift"; sourceTree = "<group>"; };
 		DF9C6C674D31C8D9BC5085487FA49AA7 /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
 		DFF69D501A9C11ED1BCC3C2D44AF2F22 /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
 		E167BD364B0C144F1996DE70AE53ADE1 /* Pods-Handy_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E454C9FE87E9C63EB0A233DFE264B0B4 /* ThemeImagePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeImagePicker.swift; sourceTree = "<group>"; };
 		E634B1B962A8B3BD16886BDCDCD6123A /* Pods-Handy_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E6D799D7693780D51944B9B0043E74DD /* Handy */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Handy; path = Handy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E77E77A2FF6E207025F0A9B9861A86F1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		E9A808C49C822646C38ECF1C95F959CE /* UIControl+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControl+Handy.swift"; path = "Handy/Classes/Core/Extensions/UIControl+Handy.swift"; sourceTree = "<group>"; };
+		E76FD820397079825F9953CE340F6EA6 /* ThemeNavigationBarAppearancePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThemeNavigationBarAppearancePicker.swift; sourceTree = "<group>"; };
 		EAD36CFA2DCB5A9FBCFB3887F79CF106 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		EC4E279E371BFAB77758ABDF8C1AF63B /* ThemeCGFloatPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeCGFloatPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeCGFloatPicker.swift; sourceTree = "<group>"; };
 		EDD4B6B6B9168A3EBF6026A04455EA34 /* Pods-Handy_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Handy_Tests-dummy.m"; sourceTree = "<group>"; };
-		EE6F6BAB6EA5D52D493E7EB7A5421298 /* HandyApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandyApp.swift; path = Handy/Classes/Core/HandyApp.swift; sourceTree = "<group>"; };
+		F07346B4876AB45F09FC291553AE1475 /* Dictionary+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Handy.swift"; sourceTree = "<group>"; };
 		F18E72CF79BB624D2798662BDE16A7D3 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		F27B80C77407DA55A94BA5BE8DAF2E26 /* UIColor+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Handy.swift"; path = "Handy/Classes/Core/Extensions/UIColor+Handy.swift"; sourceTree = "<group>"; };
 		F33073C90F0577A45B9FE0C324BB3CEA /* Pods-Handy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Handy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3606AFF34CE7DFB2F1AED9A0CDD8326 /* Handy-Handy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Handy-Handy"; path = Handy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3608BE9FED30D3A616440EE8AFCCAA6 /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
 		F3CA3E01A7F0CE553EE061D3DA726065 /* mz_zip_rw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip_rw.h; path = SSZipArchive/minizip/mz_zip_rw.h; sourceTree = "<group>"; };
-		F6150F5A1650DBD3447B0CE310FA348A /* Timer+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Timer+Handy.swift"; path = "Handy/Classes/Core/Extensions/Timer+Handy.swift"; sourceTree = "<group>"; };
 		F855F687276255F9004CF5BCB76C93EC /* Pods-Handy_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Handy_Tests-Info.plist"; sourceTree = "<group>"; };
-		FA91F390A33E304E31ECBDCBCE707CE2 /* HandyNavigationBar+UIScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HandyNavigationBar+UIScrollView.swift"; path = "Handy/Classes/Navigation/HandyNavigationBar+UIScrollView.swift"; sourceTree = "<group>"; };
-		FDC5A38915D013621B4853942052E3BD /* String+Handy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Handy.swift"; path = "Handy/Classes/Core/Extensions/String+Handy.swift"; sourceTree = "<group>"; };
-		FF34C64A88681B1CA520E3FBB18DEE41 /* ThemeAnyPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeAnyPicker.swift; path = Handy/Classes/Theme/ThemePickers/ThemeAnyPicker.swift; sourceTree = "<group>"; };
 		FFF9E9C2390CF069346BCC1FBF0B2464 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14CB3FFE3E7549E3E89802F13D4A53F4 /* Frameworks */ = {
+		0613FE0771BCDF0FBBD1D6A3C96CB32A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4FA98E39B9ED9F4F0D77C5AB39FBD0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +430,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D680281571F17EDBCBA57228D39C0D67 /* Frameworks */ = {
+		B1EE84BD6D8DF18A288158B7C3278BFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B6A6787D9003C4671606886563D1804 /* Foundation.framework in Frameworks */,
+				158EBD12C13448DB72BDE3C18D501A2A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2986DD0D72AEFC27990896F08ABA7FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,14 +464,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E88A145C5387A6DF1252940BC205018A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FB9DA7D75371BEBE1788D5EC3F34DD8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -476,17 +480,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MBProgressHUD";
-			sourceTree = "<group>";
-		};
-		123986EE0A2F496D59F5EB8354551569 /* ThemeAttributes */ = {
-			isa = PBXGroup;
-			children = (
-				74F8A0781BE97A920F7C7BBBE171324A /* NSAttributedString+Merge.swift */,
-				5A3F07C6157AA996D1435AC816E82C52 /* UILabel+TextAttributes.swift */,
-				936B6A8CA5D3B80AC009FED4B25751F0 /* UIRefreshControl+TitleAttributes.swift */,
-				7A7236F07D673B81DE1D0886DA964157 /* UITextField+PlaceholderAttributes.swift */,
-			);
-			name = ThemeAttributes;
 			sourceTree = "<group>";
 		};
 		17CD05054F5947147878B94AB14C07F3 /* Products */ = {
@@ -506,30 +499,22 @@
 		2119F9A5AF0161B1EE03B42B0728D5E2 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C17881457F2FED9305A9416CEF057F11 /* Handy */,
+				C2380104DE263395F01F6CE29B5F7786 /* Handy */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		253159FA65F1433EEF6D898D93FD6944 /* Extensions */ = {
+		25C527229D49688B01D347C324E2FA40 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				C81C07ABB3E934C6B642E98FE905F3CF /* Array+Handy.swift */,
-				DDF75ED0132159E2B4A8D1B187B77BA8 /* Bundle+Handy.swift */,
-				CF62DAF9BA4F90E06E96FB61D11B33C0 /* Date+Handy.swift */,
-				597C518FA96E3A92E8BE5E1A08D2B4A4 /* Dictionary+Handy.swift */,
-				D94E2101CDFAD8FDED8051EE2AA7A045 /* NSObject+Handy.swift */,
-				FDC5A38915D013621B4853942052E3BD /* String+Handy.swift */,
-				F6150F5A1650DBD3447B0CE310FA348A /* Timer+Handy.swift */,
-				6CF6983799ED75FA6E6A46D8B646FAFB /* UIApplication+Handy.swift */,
-				A8DF583FBA56D1BDC8A1AAC3E2871BF6 /* UIButton+Handy.swift */,
-				F27B80C77407DA55A94BA5BE8DAF2E26 /* UIColor+Handy.swift */,
-				E9A808C49C822646C38ECF1C95F959CE /* UIControl+Handy.swift */,
-				C84FE2E2A2C60A61804A7D6E405FE042 /* UIImage+Handy.swift */,
-				77D1337B59D9417E986F1AB40576251D /* UIView+Handy.swift */,
-				7752101F64E59D0CB7106B9D1158223C /* UIViewController+Handy.swift */,
+				DB969D8C84816023832CC8A3B9B3EE38 /* HandyNavigationBar.swift */,
+				0D7C8924BD20DA268327BE2D1288F607 /* HandyNavigationBar+UINavigationController.swift */,
+				8D9357CFBB2AF5DC1491694D8CED0E73 /* HandyNavigationBar+UIScrollView.swift */,
+				8500A7D786D11BE9FFB2A0B2E75902DA /* HandyNavigationBar+UIViewController.swift */,
+				75C62EC0FC1D9745D347C99A1649BB63 /* HandyNavigationContrllerContext.swift */,
+				BB29F9FC6A2840132ACFDA0A842A09A4 /* HandyNavigationSwizzling.swift */,
 			);
-			name = Extensions;
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 		26D813B36DE72761EACDC7573AA21D0F /* Pods-Handy_Tests */ = {
@@ -548,32 +533,6 @@
 			path = "Target Support Files/Pods-Handy_Tests";
 			sourceTree = "<group>";
 		};
-		271563B853DA0E6D3BCF082E7E443F67 /* ThemePickers */ = {
-			isa = PBXGroup;
-			children = (
-				B47634E2A15057F29E7169FC3A83BC14 /* ThemeActivityIndicatorViewStylePicker.swift */,
-				FF34C64A88681B1CA520E3FBB18DEE41 /* ThemeAnyPicker.swift */,
-				70BC766E245CF4AE6C45F6EEF6C9FE7A /* ThemeAttributedStringPicker.swift */,
-				14CEB7522366ECA6171F6A48DCE837A0 /* ThemeBarStylePicker.swift */,
-				D88837F6E41B14BAEB94F106B7F3AB95 /* ThemeBlurEffectPicker.swift */,
-				6C5387F7094117839F4E230FF409AF57 /* ThemeCGColorPicker.swift */,
-				EC4E279E371BFAB77758ABDF8C1AF63B /* ThemeCGFloatPicker.swift */,
-				9CB45C6C6AC7105D4002E8FE38CFFE94 /* ThemeColorPicker.swift */,
-				A0DC357D2C40F86FE7E33F26735C89E8 /* ThemeDictionaryPicker.swift */,
-				AC5B57CA02B7E68D1A553AB71979115A /* ThemeFontPicker.swift */,
-				946DCBDD0D82E7BD7F9ACE9BFB55D1A4 /* ThemeImagePicker.swift */,
-				BB7922EA441B24CB5B7F9BE74FC72FC7 /* ThemeKeyboardAppearancePicker.swift */,
-				DCEDB23AAF9FFF010B3CF16E57017AEC /* ThemeNavigationBarAppearancePicker.swift */,
-				D24C453CF16C7F10C9125E95F9C7EFF2 /* ThemeScrollViewIndicatorStylePicker.swift */,
-				8DDB2E1F75352212993DFA899BBC8D3C /* ThemeStatePicker.swift */,
-				1D02E67E4031E22D4684261D763B3FEF /* ThemeStatusBarStylePicker.swift */,
-				91701EBAA18B594C3D337A1FFA682816 /* ThemeStringAttributesPicker.swift */,
-				80B184B5E4A74E086DE9BE7B72DBF6CE /* ThemeTabBarAppearancePicker.swift */,
-				33DC9EC36B8F1C98D1C1A2ECB781BD27 /* ThemeVisualEffectPicker.swift */,
-			);
-			name = ThemePickers;
-			sourceTree = "<group>";
-		};
 		2AC979E01EE704BEDBA73187B1E4A669 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,34 +541,6 @@
 				DBE0969F028C077A607979F232CD78F3 /* SSZipArchive */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		30327085D693912BEA5A6AC3D3560601 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				2143FECF6EA0D8B1CF5A0161BB945EC0 /* HandyNavigationBar.swift */,
-				88BF70F138902D65BE4C5B5DF9FCE64E /* HandyNavigationBar+UINavigationController.swift */,
-				FA91F390A33E304E31ECBDCBCE707CE2 /* HandyNavigationBar+UIScrollView.swift */,
-				D6306004D67AFBBB9151EB81ED22A48A /* HandyNavigationBar+UIViewController.swift */,
-				3D40A7870673DAA0DEAA19959C595FC1 /* HandyNavigationContrllerContext.swift */,
-			);
-			name = Navigation;
-			sourceTree = "<group>";
-		};
-		30363DB611CF379A4055162003B3C275 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BDBF9F6829344805044C8B3544CBCE68 /* Handy.modulemap */,
-				132123FAAE32645FB7AF69B5C0CBD49E /* Handy-dummy.m */,
-				D38553090822C15D7874B25A80BDE2D1 /* Handy-Info.plist */,
-				C9A120126054B9986A5708D21AC59C5D /* Handy-prefix.pch */,
-				7D13C103150B9626774ABF1A03C28FF0 /* Handy-umbrella.h */,
-				9C57D60B344BCC4EFAE672FE67F825E0 /* Handy.debug.xcconfig */,
-				B8AADE8BDC0B8325923E87523DD38889 /* Handy.release.xcconfig */,
-				7D838BFDB2687C68A99ED5F74EAF3FF0 /* ResourceBundle-Handy-Handy-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Handy";
 			sourceTree = "<group>";
 		};
 		303F429F3F792266C87DC96832F89A74 /* Support Files */ = {
@@ -627,6 +558,25 @@
 			path = "../Target Support Files/SSZipArchive";
 			sourceTree = "<group>";
 		};
+		336F16BAD1598E1D1D2FD4E1A6708159 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				74DF5986AE30A7C5D05A3C035053B0B3 /* NSObject+Theme.swift */,
+				2C7FD3D757A2E9B89B81AC2A14CB61DC /* ThemeDeallocBlockExecutor.swift */,
+				67D7D3EB4D078DC983841E27F78FB617 /* ThemeManager.swift */,
+				16320BFE50C8976560412D688F871FF5 /* ThemeManager+Index.swift */,
+				83181D3E28C06F95455D3CE5255B75DA /* ThemeManager+Plist.swift */,
+				AF8408A6121F062A759F976C085726D8 /* ThemePicker.swift */,
+				D543044E29BEE03514EB77B4F7B8167C /* ThemeSwizzling.swift */,
+				73ECB548DB3F79925B394B3BE2E2BD2C /* UIKit+Theme.swift */,
+				67D680AE086133916FECCE5F96F383B3 /* UIViewController+Theme.swift */,
+				50BD84C93F1CA9685FD5C132684898A3 /* UIWindow+Theme.swift */,
+				619F7116E8EB1404BCBBF1B5AB74E9D5 /* ThemeAttributes */,
+				66BDCC3BA2C6EFF5380738273CB2EADC /* ThemePickers */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
 		4557AE55BE2666C641ECA8A47F186AB5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -634,6 +584,22 @@
 				26D813B36DE72761EACDC7573AA21D0F /* Pods-Handy_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4B106CF8F191F6259281C70AC035F2D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8363F7909F66527C2D1CBE105437F20E /* Handy.modulemap */,
+				60D86849ECD28365D1014C4182E5D1F5 /* Handy-dummy.m */,
+				A0422523C22E41F967A47B0D4E9CCBCD /* Handy-Info.plist */,
+				D2D7C833483911256EA43AF1C898BC7F /* Handy-prefix.pch */,
+				3A433D209F03869FC5B6C11C46CE35E0 /* Handy-umbrella.h */,
+				54BDC9A3563FA26B935F44F9DCF34E00 /* Handy.debug.xcconfig */,
+				8CB142FA86211BF5F58A1F7810F080F9 /* Handy.release.xcconfig */,
+				CA3302AFDA0A341B77EBA5606C209291 /* ResourceBundle-Handy-Handy-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Handy";
 			sourceTree = "<group>";
 		};
 		4F6E57BD14C6461F809CBDB7F40C526F /* Support Files */ = {
@@ -651,14 +617,65 @@
 			path = "../Target Support Files/SnapKit";
 			sourceTree = "<group>";
 		};
-		70DD62963F3812767F75A09E3AD19791 /* Pod */ = {
+		516F24E72439B7A309AA58DB1213CF2A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AB18E180B683FFA1010D085B448A87C5 /* Handy.podspec */,
-				E77E77A2FF6E207025F0A9B9861A86F1 /* LICENSE */,
-				9CF0A83FB8E573912DD4E42EACFD4CF4 /* README.md */,
+				7006FF9760680BDF98EC8D97AEF405C0 /* Array+Handy.swift */,
+				87D26915C796BE5B22E3DC63C58240D0 /* Bundle+Handy.swift */,
+				456615C9E92E2B22F417109EA98E7ED5 /* Date+Handy.swift */,
+				F07346B4876AB45F09FC291553AE1475 /* Dictionary+Handy.swift */,
+				6C4868FE3AF7644CA0B234E7BCD22775 /* NSObject+Handy.swift */,
+				D684E96C9C250FBE7DAA230E0A460BBC /* String+Handy.swift */,
+				019C10763D8282F35B64927F2D152FE0 /* Timer+Handy.swift */,
+				0E9B53F271D9A38B839E4E27A5AB1632 /* UIApplication+Handy.swift */,
+				2FAAA138550AC7AD9F74DE04DF69D52E /* UIButton+Handy.swift */,
+				6B87FDAFBDC9EE740627ADBA7F6BDFB3 /* UIColor+Handy.swift */,
+				01728464620071D81A12C931A6555430 /* UIControl+Handy.swift */,
+				59D615B5D3834E87BE0F846293032AF8 /* UIImage+Handy.swift */,
+				34303ED39C052A95421F7A3646A78053 /* UIView+Handy.swift */,
+				671527DA0175F980818B30E74757E92C /* UIViewController+Handy.swift */,
 			);
-			name = Pod;
+			name = Extensions;
+			path = Handy/Classes/Core/Extensions;
+			sourceTree = "<group>";
+		};
+		619F7116E8EB1404BCBBF1B5AB74E9D5 /* ThemeAttributes */ = {
+			isa = PBXGroup;
+			children = (
+				987D39DE4912697977BE52F1134763B4 /* NSAttributedString+Merge.swift */,
+				9C3F39CCE4575E0BB213FF4FB0405110 /* UILabel+TextAttributes.swift */,
+				C591CA8FAA8E213D14B29A11982447AE /* UIRefreshControl+TitleAttributes.swift */,
+				D5DBF43DA9335A7BCE0BD9FC1A9D0CDA /* UITextField+PlaceholderAttributes.swift */,
+			);
+			name = ThemeAttributes;
+			path = Handy/Classes/Theme/ThemeAttributes;
+			sourceTree = "<group>";
+		};
+		66BDCC3BA2C6EFF5380738273CB2EADC /* ThemePickers */ = {
+			isa = PBXGroup;
+			children = (
+				5AA1839EB2247914CEC3A151AC3602B5 /* ThemeActivityIndicatorViewStylePicker.swift */,
+				126C473E5FDAD09A38C04FF0EF3E424A /* ThemeAnyPicker.swift */,
+				9D07FDFEABAD80FADC971C0D84665C1A /* ThemeAttributedStringPicker.swift */,
+				C97E56298DDC729836B103F6DFA778D0 /* ThemeBarStylePicker.swift */,
+				4A620ECA58DCB8A3321B9BF797F2629C /* ThemeBlurEffectPicker.swift */,
+				C9CF88103E4028EBADE918CC7171535D /* ThemeCGColorPicker.swift */,
+				A6B4E2774ACCBC8FFCE72A03D5FA09E0 /* ThemeCGFloatPicker.swift */,
+				54050E19E2AF52D1271DDFD6188C467A /* ThemeColorPicker.swift */,
+				37895A86966560A11DA769636CA206B4 /* ThemeDictionaryPicker.swift */,
+				584EB5D0658F8E0BB64EAABDE538B04A /* ThemeFontPicker.swift */,
+				E454C9FE87E9C63EB0A233DFE264B0B4 /* ThemeImagePicker.swift */,
+				5D8CB3FEB7A661D37A4591908EDD30B7 /* ThemeKeyboardAppearancePicker.swift */,
+				E76FD820397079825F9953CE340F6EA6 /* ThemeNavigationBarAppearancePicker.swift */,
+				4300355E7F81315AE5E55077B75CE0E9 /* ThemeScrollViewIndicatorStylePicker.swift */,
+				778238586C3370FA66A6D6B3043826AE /* ThemeStatePicker.swift */,
+				1EC8DAF795594B8083B49502BFA30095 /* ThemeStatusBarStylePicker.swift */,
+				A8A7D973FA0FEDAF94A7F20340148B44 /* ThemeStringAttributesPicker.swift */,
+				4BC39BFA1245DF408EC97CEBAFC34B9B /* ThemeTabBarAppearancePicker.swift */,
+				BC90C53895A2531AE2E12D6519B4E433 /* ThemeVisualEffectPicker.swift */,
+			);
+			name = ThemePickers;
+			path = Handy/Classes/Theme/ThemePickers;
 			sourceTree = "<group>";
 		};
 		7160CB0A02F5F30EA03E648C440C6223 /* MBProgressHUD */ = {
@@ -745,22 +762,15 @@
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
-		8F8C2BE416B4E34A2A314A856B3F5304 /* Theme */ = {
+		A1E72F332F0584452827D86CA5B44617 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				AA2673F60016E188A228EC214E9CDEF7 /* NSObject+Theme.swift */,
-				8F85BE04636ABC23DD81861C1CC81F42 /* ThemeDeallocBlockExecutor.swift */,
-				6B00A81D96C27205F2F2C21E4C6C0B8C /* ThemeManager.swift */,
-				DA73ECB91EE285B59C9122FF48F6BA69 /* ThemeManager+Index.swift */,
-				4619E5D59476B04E2B3DB4B27CEAEA82 /* ThemeManager+Plist.swift */,
-				A16B98F70B4ACADEDFF51DB03C88E551 /* ThemePicker.swift */,
-				ADC06ED8644AC60A192653F65D3AE19F /* UIKit+Theme.swift */,
-				BF9AB7E93F7A6F4AFA36921ABCE93AE5 /* UIViewController+Theme.swift */,
-				15A86F35ACE5E678C35B6D3E70195A12 /* UIWindow+Theme.swift */,
-				123986EE0A2F496D59F5EB8354551569 /* ThemeAttributes */,
-				271563B853DA0E6D3BCF082E7E443F67 /* ThemePickers */,
+				7230E554F435B00B2092998FB64CC58B /* HandyApp.swift */,
+				6352267216F1CCBF86F89912B3ACF7E9 /* HandyCompatible.swift */,
+				0F9CE1DBA96B18F03495EB7FC3A48E28 /* HandySwizzling.swift */,
+				516F24E72439B7A309AA58DB1213CF2A /* Extensions */,
 			);
-			name = Theme;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
@@ -771,19 +781,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C17881457F2FED9305A9416CEF057F11 /* Handy */ = {
+		C2380104DE263395F01F6CE29B5F7786 /* Handy */ = {
 			isa = PBXGroup;
 			children = (
-				276393170F3DCD07C310FAAC832D5F18 /* icon_back@2x.png */,
-				5D5B81D779BB78E7EA4A0B0C68C3065B /* icon_back@3x.png */,
-				FD80EBE51FEE0DA71E6C69D303F580CF /* Core */,
-				30327085D693912BEA5A6AC3D3560601 /* Navigation */,
-				70DD62963F3812767F75A09E3AD19791 /* Pod */,
-				30363DB611CF379A4055162003B3C275 /* Support Files */,
-				8F8C2BE416B4E34A2A314A856B3F5304 /* Theme */,
+				8D9B502684A9EC161F34A971B6654537 /* icon_back@2x.png */,
+				9E0FC719CA5A8E03EE3874C48AA23FD0 /* icon_back@3x.png */,
+				A1E72F332F0584452827D86CA5B44617 /* Core */,
+				25C527229D49688B01D347C324E2FA40 /* Navigation */,
+				C6B0E9426380CF026B028E393CC3C737 /* Pod */,
+				4B106CF8F191F6259281C70AC035F2D5 /* Support Files */,
+				336F16BAD1598E1D1D2FD4E1A6708159 /* Theme */,
 			);
 			name = Handy;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		C6B0E9426380CF026B028E393CC3C737 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6AD338654661E2D0A4C665CE33B9F6D7 /* Handy.podspec */,
+				76850C627FCAF88ABA8CDC8878E86DEC /* LICENSE */,
+				4F4224038988292C0A30F0380A87D475 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -840,34 +860,23 @@
 			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
-		FD80EBE51FEE0DA71E6C69D303F580CF /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				EE6F6BAB6EA5D52D493E7EB7A5421298 /* HandyApp.swift */,
-				1055E69EF01DD60CC4AF5D8B2C3EA75D /* HandyCompatible.swift */,
-				0771E7480278E9ED3ECAFD5B53AE5C84 /* HandySwizzling.swift */,
-				253159FA65F1433EEF6D898D93FD6944 /* Extensions */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4510037B601FF6AC8AC9D177F9DEE10F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C95588D5D8AC04136FF232DF15F7598 /* Handy-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5D82C29ACD851E6EA219B34A73C961F5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				67E941CADB3CDDEEDF8CE4EE4A4A05BB /* MBProgressHUD.h in Headers */,
 				5BAC1EF86D0E57E44E404B2796993561 /* MBProgressHUD-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		730F5E735340AC223635BFA178C9B9C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF8F97BE24ECFA9B890D59CC9A247FB /* Handy-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,11 +913,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6A149D3B73C0BB892815CDF4D482FEC /* Headers */ = {
+		EEF0E0B728024162EDBD079C7581BB9F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1837FA1DA1738417B3E8FA8B433FBC8C /* SnapKit-umbrella.h in Headers */,
+				0E9F6BE06A53C106C926DA8F06385A86 /* SnapKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -925,12 +934,12 @@
 /* Begin PBXNativeTarget section */
 		19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F0D3D40E54D5DFA0DA7DAD4BE5E7DF6 /* Build configuration list for PBXNativeTarget "SnapKit" */;
+			buildConfigurationList = 6EB43DEC9471E19ABB89C9CA6CC58265 /* Build configuration list for PBXNativeTarget "SnapKit" */;
 			buildPhases = (
-				C6A149D3B73C0BB892815CDF4D482FEC /* Headers */,
-				37F04F629E3F7CE76072136043DD9CF0 /* Sources */,
-				D680281571F17EDBCBA57228D39C0D67 /* Frameworks */,
-				2365B50006BDFB99C8FA89D47F36C4EB /* Resources */,
+				EEF0E0B728024162EDBD079C7581BB9F /* Headers */,
+				46368E6F2024C47C576CCD79E182C447 /* Sources */,
+				B1EE84BD6D8DF18A288158B7C3278BFB /* Frameworks */,
+				DA8F7746472076792F48BBE2E8070310 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -953,10 +962,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				27719E15EF6DE878B582A28639EE8A92 /* PBXTargetDependency */,
-				3328B142F7438872FE4B18EEF43CC5C5 /* PBXTargetDependency */,
-				17BDA10AC2DB8DAC3816D85088986E4A /* PBXTargetDependency */,
-				81A1C70E0D4604FB4BA65C54966D33DF /* PBXTargetDependency */,
+				7CE2E7639649CD33090556B835303B1E /* PBXTargetDependency */,
+				50028BCE4365CBCEF30C5E5653E78A9B /* PBXTargetDependency */,
+				0D7D34A9850F620671309C5EC4047C61 /* PBXTargetDependency */,
+				72CA9564C57ECCA9B06F2E0BCBB049E8 /* PBXTargetDependency */,
 			);
 			name = "Pods-Handy_Example";
 			productName = Pods_Handy_Example;
@@ -993,7 +1002,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				08C131FAED63744D69B953BAFBED97EB /* PBXTargetDependency */,
+				CB35D776B1807994E1321F347E216D95 /* PBXTargetDependency */,
 			);
 			name = "Pods-Handy_Tests";
 			productName = Pods_Handy_Tests;
@@ -1002,11 +1011,11 @@
 		};
 		BAAB311461ED9377754EE240EB92609C /* Handy-Handy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4C48DD3461F3EBAA5CD0D1FA4529CC8 /* Build configuration list for PBXNativeTarget "Handy-Handy" */;
+			buildConfigurationList = 2A6847BAD130805DA76D55D8690136F2 /* Build configuration list for PBXNativeTarget "Handy-Handy" */;
 			buildPhases = (
-				C0E845452A875ABAF0BBD7EA94A12B7D /* Sources */,
-				14CB3FFE3E7549E3E89802F13D4A53F4 /* Frameworks */,
-				32AB24766A7DBD5B89A44F810D29BA40 /* Resources */,
+				3F2F8B4ACB3003A57A15D71EAE810C60 /* Sources */,
+				D2986DD0D72AEFC27990896F08ABA7FB /* Frameworks */,
+				D7A16162589C2F153D1EF7A0D50BD190 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1019,18 +1028,18 @@
 		};
 		F591A36DFE90A9D32F9E027F1A1EF0B2 /* Handy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E66B04DF41E30E35F05CE6300E3AF5A0 /* Build configuration list for PBXNativeTarget "Handy" */;
+			buildConfigurationList = 29C61C31644D60C24518A569A425AE78 /* Build configuration list for PBXNativeTarget "Handy" */;
 			buildPhases = (
-				4510037B601FF6AC8AC9D177F9DEE10F /* Headers */,
-				FC4EF73F806EADDF1BE99B27EDD0B823 /* Sources */,
-				E88A145C5387A6DF1252940BC205018A /* Frameworks */,
-				65617202057C4A3B1F3EB45C242EDE36 /* Resources */,
+				730F5E735340AC223635BFA178C9B9C7 /* Headers */,
+				A86FB0CDD23CBC350F3E9FEF268FBE5A /* Sources */,
+				0613FE0771BCDF0FBBD1D6A3C96CB32A /* Frameworks */,
+				68E552520828E1B98F50121B93743DF5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E8175D8ED432CEF85E795F28B02B91E /* PBXTargetDependency */,
-				76332475494015EA3B1177A1C8D48943 /* PBXTargetDependency */,
+				10A21713CD31C47BB4404A8C4F538EC5 /* PBXTargetDependency */,
+				643C45D76708C54318D615D13DAF2F7D /* PBXTargetDependency */,
 			);
 			name = Handy;
 			productName = Handy;
@@ -1089,30 +1098,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2365B50006BDFB99C8FA89D47F36C4EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32AB24766A7DBD5B89A44F810D29BA40 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EECD4E879B78D70CC9965A311598F77 /* icon_back@2x.png in Resources */,
-				87C4A4CFBB13F197D7E0BA85E10E3571 /* icon_back@3x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65617202057C4A3B1F3EB45C242EDE36 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9BBB1BE22B4F09EEE757040C01D4743 /* Handy-Handy in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6615EC16C729F86E11403924283F01DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1124,6 +1109,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68E552520828E1B98F50121B93743DF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				759D754B7C57E804C08D04BA6DA203CC /* Handy-Handy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,6 +1134,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7A16162589C2F153D1EF7A0D50BD190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F771D0D5E52608A621E60099D00EF0E4 /* icon_back@2x.png in Resources */,
+				17E0D497FA713BDAD7D56A1A9FEF665B /* icon_back@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA8F7746472076792F48BBE2E8070310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1152,47 +1161,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37F04F629E3F7CE76072136043DD9CF0 /* Sources */ = {
+		3F2F8B4ACB3003A57A15D71EAE810C60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6263A78151FB3936351F707357B736D /* Constraint.swift in Sources */,
-				A160419F2430CF93150F47DBA72B1F4E /* ConstraintAttributes.swift in Sources */,
-				B75EB4587FBCC4CBB2B91892B9C639AD /* ConstraintConfig.swift in Sources */,
-				78D7620F7EEE56956C0E02074600493E /* ConstraintConstantTarget.swift in Sources */,
-				B43EFF56CC06B1AF5CD6BA6571BE975D /* ConstraintDescription.swift in Sources */,
-				9AA8BBADA5AA2F30A280F9D52EA0B1BB /* ConstraintDirectionalInsets.swift in Sources */,
-				6C6DA980C39F08B2D97D883DA9FADAA3 /* ConstraintDirectionalInsetTarget.swift in Sources */,
-				B0ECAAAE4702BD0189BC26D25B717A9F /* ConstraintDSL.swift in Sources */,
-				08DF227E5183D2113535ABFFE65365F5 /* ConstraintInsets.swift in Sources */,
-				3727B7743E936DC8E452E49935163562 /* ConstraintInsetTarget.swift in Sources */,
-				11C4E96C3BB8CE4B7F3C6B32245FAEA9 /* ConstraintItem.swift in Sources */,
-				4262E03294F583DE55041BE81A315297 /* ConstraintLayoutGuide.swift in Sources */,
-				B747EDED321DCC429119D3793805F443 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				05C0AA37B0368EEF21540C9EDAE847B7 /* ConstraintLayoutGuideDSL.swift in Sources */,
-				750B53C9F175632DEEEE1FCA0249C795 /* ConstraintLayoutSupport.swift in Sources */,
-				D99C44C2B1E33569CA9576782EB469EC /* ConstraintLayoutSupportDSL.swift in Sources */,
-				49222B6A577B442329DEAA1715C713B9 /* ConstraintMaker.swift in Sources */,
-				FD9646B9E4558EE7553D83C2CE754ECB /* ConstraintMakerEditable.swift in Sources */,
-				A02854ED6C4844F55367EDD68B565952 /* ConstraintMakerExtendable.swift in Sources */,
-				95079785B08A6362E521D00B4534BD94 /* ConstraintMakerFinalizable.swift in Sources */,
-				771BCBD591EF2E151295A3C3ABF5C8C8 /* ConstraintMakerPriortizable.swift in Sources */,
-				FBEFA4813358F2CE0D8E26A918C047BB /* ConstraintMakerRelatable.swift in Sources */,
-				6C8AF01FB3C5B2332CA729B6BFEAFEF4 /* ConstraintMultiplierTarget.swift in Sources */,
-				0CB113BC3C198B271C742E676F9C0C1A /* ConstraintOffsetTarget.swift in Sources */,
-				88109B404BBF3BCDDA62B785BF2A46F6 /* ConstraintPriority.swift in Sources */,
-				74C27F7FFAF71BE108867867721FBC17 /* ConstraintPriorityTarget.swift in Sources */,
-				4DCD47B07C2A5BE79494CABA2913AC59 /* ConstraintRelatableTarget.swift in Sources */,
-				35B89272AFD5DCC96EA8DC0F580057B3 /* ConstraintRelation.swift in Sources */,
-				229FECD276C9B2605145CAF9CF4E2BAB /* ConstraintView.swift in Sources */,
-				3BD395B2EDD9B7FA64F721C12A5D9D86 /* ConstraintView+Extensions.swift in Sources */,
-				902DFC66AFFEA40F7C7BBCA1E740EA0F /* ConstraintViewDSL.swift in Sources */,
-				85EF5A8DD1FF390BCBA8FE333335F6C2 /* Debugging.swift in Sources */,
-				95C6539A6D3A27FB893633131443CBE7 /* LayoutConstraint.swift in Sources */,
-				A3B31AFBDA4B230E0E9D8369DB02792B /* LayoutConstraintItem.swift in Sources */,
-				21F8EA82054DC6972CE182C66E83F370 /* SnapKit-dummy.m in Sources */,
-				19C4581A829080EB3AFB43C8E0885440 /* Typealiases.swift in Sources */,
-				B4E3E00CD8E9BAA54A6D7158F8BE2B73 /* UILayoutSupport+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46368E6F2024C47C576CCD79E182C447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24BF14956EA8D61475C4B2129593C82 /* Constraint.swift in Sources */,
+				335F655AD61283B418DEDA717AF6A13E /* ConstraintAttributes.swift in Sources */,
+				51DF4F98F216E5ABF8818473B9210A4F /* ConstraintConfig.swift in Sources */,
+				A1BE8FCA39325C7CF71880FE70688D59 /* ConstraintConstantTarget.swift in Sources */,
+				8A6F70F897CCAA4868D7A175EDF9DBA1 /* ConstraintDescription.swift in Sources */,
+				864E255AA2972C8AD6E7295899B6FA86 /* ConstraintDirectionalInsets.swift in Sources */,
+				7E2435B5B8E72200839B7BD572DEDCC3 /* ConstraintDirectionalInsetTarget.swift in Sources */,
+				0B6EA4EE10098ECB69A431F5CD1A2CA3 /* ConstraintDSL.swift in Sources */,
+				F24F4962FB2DF9D8171EF08BA679D34C /* ConstraintInsets.swift in Sources */,
+				1084F8C6767280218BF26513413CCE40 /* ConstraintInsetTarget.swift in Sources */,
+				A1B4C9F02DDA6751A15647ED26FBBBAF /* ConstraintItem.swift in Sources */,
+				19A65C5220757B2880053BEECBE1C59B /* ConstraintLayoutGuide.swift in Sources */,
+				BE5613CE95C455D2FF261991AE2DA381 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				088CEA7628196F0DD2EC9BD2035E14EC /* ConstraintLayoutGuideDSL.swift in Sources */,
+				5CBC13A0E7BE91EEE9521AF217CA32A3 /* ConstraintLayoutSupport.swift in Sources */,
+				39955901694EFB89AD80DCDD9259AF65 /* ConstraintLayoutSupportDSL.swift in Sources */,
+				C7460215CD13BA5996F898E1B3C975EA /* ConstraintMaker.swift in Sources */,
+				ECE8409F78D16CDCCB0FCB9AD8CA7E2C /* ConstraintMakerEditable.swift in Sources */,
+				B38A71EF38C8165A645F86DACA11779A /* ConstraintMakerExtendable.swift in Sources */,
+				3500706CF1A1DEDEDB0985BC70292869 /* ConstraintMakerFinalizable.swift in Sources */,
+				567F0FD5CFECDDA81B4E424223046C49 /* ConstraintMakerPriortizable.swift in Sources */,
+				8FC15E2BFF076CD4821BDF4BE88F5663 /* ConstraintMakerRelatable.swift in Sources */,
+				34DD47908AD01AE9F4F4710FD78F4ECE /* ConstraintMultiplierTarget.swift in Sources */,
+				A004600E08209249D10CBAFF5AC987A4 /* ConstraintOffsetTarget.swift in Sources */,
+				E851438D0F8313EE9A8BA11CF5356A26 /* ConstraintPriority.swift in Sources */,
+				2AD88DE6A142F56C6659EBB5C73EF8A8 /* ConstraintPriorityTarget.swift in Sources */,
+				A1F640DB4AEB1D4B0306FDDD0B659E60 /* ConstraintRelatableTarget.swift in Sources */,
+				65621F2FA457E39CD975BC31A30A416F /* ConstraintRelation.swift in Sources */,
+				3103141334C4640084FAB9FE529B04C8 /* ConstraintView.swift in Sources */,
+				872169E29C27BDC6E982908D76BCC65F /* ConstraintView+Extensions.swift in Sources */,
+				7C8DCC2DD6AB21CCC94ADE76D1F67FEF /* ConstraintViewDSL.swift in Sources */,
+				5EBC58FE6B0D9B1F9C202707C533EE1A /* Debugging.swift in Sources */,
+				60AC6EF92B0CBCC34D89A52808CB5B36 /* LayoutConstraint.swift in Sources */,
+				AF3F1052957097323997B016D0157478 /* LayoutConstraintItem.swift in Sources */,
+				8D87A7CBAB8C36637625111C72648359 /* SnapKit-dummy.m in Sources */,
+				C411AA9F818EFB8B6DDA2AC215CA6912 /* Typealiases.swift in Sources */,
+				F48E7931D7A9AF8B1F26CB419DC04A2F /* UILayoutSupport+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,126 +1253,121 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0E845452A875ABAF0BBD7EA94A12B7D /* Sources */ = {
+		A86FB0CDD23CBC350F3E9FEF268FBE5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC4EF73F806EADDF1BE99B27EDD0B823 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5367C494F954806299BE38C35558579 /* Array+Handy.swift in Sources */,
-				58A1F88A87389D3291120F75CA7A7E62 /* Bundle+Handy.swift in Sources */,
-				8B90342ECD79A425E708077C8D3D63FC /* Date+Handy.swift in Sources */,
-				C496111392EFDDA13E6EBBD1668FC77A /* Dictionary+Handy.swift in Sources */,
-				AE1AFA56D31C348BCAF8EDCB57721AA2 /* Handy-dummy.m in Sources */,
-				37A9315C4FE383C24B0EBCB18BCAF71C /* HandyApp.swift in Sources */,
-				46158787D0C9A551853C733E7AE97E2E /* HandyCompatible.swift in Sources */,
-				BA6166761BB06EB010338C0A024CC0AE /* HandyNavigationBar.swift in Sources */,
-				C6CFCF006813F5F20E52E5F386B4213D /* HandyNavigationBar+UINavigationController.swift in Sources */,
-				42D9FEAE79C4CCBD5B18031D4AABC4D1 /* HandyNavigationBar+UIScrollView.swift in Sources */,
-				25570E552E232C382C5030D294EE7D54 /* HandyNavigationBar+UIViewController.swift in Sources */,
-				524F91887CE26F1847A6AFFAF8CB7A63 /* HandyNavigationContrllerContext.swift in Sources */,
-				2629C4FBA201B9F2F9BAAFA500E000C8 /* HandySwizzling.swift in Sources */,
-				FA17E12FE24B721CAF61EE3B8ED27678 /* NSAttributedString+Merge.swift in Sources */,
-				A393D6DF107D27BCCBDCBA770841470D /* NSObject+Handy.swift in Sources */,
-				DA2A839BAAB5FA5DB0079AAC07D85493 /* NSObject+Theme.swift in Sources */,
-				4D2B620F1D3BEB81820316E9F0AA5078 /* String+Handy.swift in Sources */,
-				ED943D0A21305EF36D9766278DEE12E5 /* ThemeActivityIndicatorViewStylePicker.swift in Sources */,
-				AD34AAA134A610A5A06EBA7474381487 /* ThemeAnyPicker.swift in Sources */,
-				7662D6C6A38C124DAD9868FC43165B29 /* ThemeAttributedStringPicker.swift in Sources */,
-				806AE90FB64A153E22EB4B7DB13D914E /* ThemeBarStylePicker.swift in Sources */,
-				5E283C61AF63115DD8A2CB3D32B980A4 /* ThemeBlurEffectPicker.swift in Sources */,
-				C2BCCA3C2E53434488286F5F2A4A2F73 /* ThemeCGColorPicker.swift in Sources */,
-				B871B9F05F38C6E86277A0567145983A /* ThemeCGFloatPicker.swift in Sources */,
-				64D7DFE46A5DF4632F788852C92E8344 /* ThemeColorPicker.swift in Sources */,
-				3B5879C83CF3C785D7B730842AA31139 /* ThemeDeallocBlockExecutor.swift in Sources */,
-				70B6B2A4D991059B8A34C2C2C133E1AC /* ThemeDictionaryPicker.swift in Sources */,
-				AD10986C45327510C8CC5AA3F9D0FD79 /* ThemeFontPicker.swift in Sources */,
-				08B492BA2888A2A4E651F4DD757C3F37 /* ThemeImagePicker.swift in Sources */,
-				C009CA4510AD8220282F276D0F567DC4 /* ThemeKeyboardAppearancePicker.swift in Sources */,
-				B980D909A8848F428D0373FE2BC064BA /* ThemeManager.swift in Sources */,
-				EF137E1DC9A720922AE5E1102458252C /* ThemeManager+Index.swift in Sources */,
-				0EC65C75C0D76A8F4CCE01D089785D3D /* ThemeManager+Plist.swift in Sources */,
-				F54A3E01A398CDF313EC671169460F36 /* ThemeNavigationBarAppearancePicker.swift in Sources */,
-				C0A7A22F8144CEBDAC7C51932AF8ECF4 /* ThemePicker.swift in Sources */,
-				5533AB689AD5A160CB681A5387A93EF2 /* ThemeScrollViewIndicatorStylePicker.swift in Sources */,
-				1DF66CE16DA6EA434F59122687AF00FB /* ThemeStatePicker.swift in Sources */,
-				514C06E90EC18752226D1D7A567A35E4 /* ThemeStatusBarStylePicker.swift in Sources */,
-				27943237E3A9F6CDC6F2988C963088F6 /* ThemeStringAttributesPicker.swift in Sources */,
-				BDB6A1741767F23EBAE60D51891DE63E /* ThemeTabBarAppearancePicker.swift in Sources */,
-				7BFE4CA955403B0AFC1B55A7CDE9E353 /* ThemeVisualEffectPicker.swift in Sources */,
-				BD431E2305CB463A4A922C017768BD00 /* Timer+Handy.swift in Sources */,
-				A14F406B974EB043E235D2DB0507FA9D /* UIApplication+Handy.swift in Sources */,
-				2475AC54486B06A0B8530B4168C4651D /* UIButton+Handy.swift in Sources */,
-				FDE1EEC0FE72527BD205FB202359FBD3 /* UIColor+Handy.swift in Sources */,
-				78AFE772DA38A2E7D4B3F04EB2838533 /* UIControl+Handy.swift in Sources */,
-				66E5AE19084F9210D53E04D55093EB1A /* UIImage+Handy.swift in Sources */,
-				E7E130F74DF3A1F8514EC646CB2BC4F3 /* UIKit+Theme.swift in Sources */,
-				4B75BD79ED35B081E63E2ED07A17C6AA /* UILabel+TextAttributes.swift in Sources */,
-				7B9A7AADE4E5332D9A4095E235274104 /* UIRefreshControl+TitleAttributes.swift in Sources */,
-				2969B9D8167A74149A1DF2583A2760D6 /* UITextField+PlaceholderAttributes.swift in Sources */,
-				DF3A2E6DF04EC6123F668BBEA3481D07 /* UIView+Handy.swift in Sources */,
-				157B64C8ED86E3F7F83EAFAB89E4C01C /* UIViewController+Handy.swift in Sources */,
-				98006E6C402109A3D42622AF2187DC98 /* UIViewController+Theme.swift in Sources */,
-				1A4BD0FBE5EF9D78765E62366C0D7FCB /* UIWindow+Theme.swift in Sources */,
+				51BF1B42690F2ABB903B634679F3910D /* Array+Handy.swift in Sources */,
+				70EC0AF6DC929628C6304FBA29EC30B2 /* Bundle+Handy.swift in Sources */,
+				D92DFBF84EE3FEDB66C79E4539A45A5A /* Date+Handy.swift in Sources */,
+				C701C30E7734A30B95A6E5B0436E1690 /* Dictionary+Handy.swift in Sources */,
+				246476A7EF6CEA225D476AD28307298D /* Handy-dummy.m in Sources */,
+				A7256E0833D7DD33D377E3C601AECFD5 /* HandyApp.swift in Sources */,
+				E7C9877A2D8ECE33BC569DF17712BBF1 /* HandyCompatible.swift in Sources */,
+				C5C55A52D0EBCAAAE22DE47B613C815B /* HandyNavigationBar.swift in Sources */,
+				807AB2C9107F86409B3C46A885534D24 /* HandyNavigationBar+UINavigationController.swift in Sources */,
+				7DB1C9CDA0F653E7C04456D89498631C /* HandyNavigationBar+UIScrollView.swift in Sources */,
+				7DF6632965C2D3AC6761C7A936412A6E /* HandyNavigationBar+UIViewController.swift in Sources */,
+				3F4C630F507644E34DCDA8DD8D769431 /* HandyNavigationContrllerContext.swift in Sources */,
+				53A1C0CB4560F62410E2B26CD1DD3BC6 /* HandyNavigationSwizzling.swift in Sources */,
+				5F880B41BE83E9E9D893FB38AF53FE2C /* HandySwizzling.swift in Sources */,
+				7AF88F4DEED1A1428C4921E3B71EF8DB /* NSAttributedString+Merge.swift in Sources */,
+				F2BE2BF29EBFBA0732E06475085B350D /* NSObject+Handy.swift in Sources */,
+				33E7756DA63A59DD96A47284F9EDAE8F /* NSObject+Theme.swift in Sources */,
+				F741B66BD0C8C2B2A7CF45CBA876CF89 /* String+Handy.swift in Sources */,
+				1070EEFAB4106D5A66D7E52FB5C9A1D7 /* ThemeActivityIndicatorViewStylePicker.swift in Sources */,
+				3EC19A8183B5AB475F1745817FF77B10 /* ThemeAnyPicker.swift in Sources */,
+				F810A6D6267F9240E84FDEE70CBD60DB /* ThemeAttributedStringPicker.swift in Sources */,
+				6803F208B0E33C037340C34C01E7C867 /* ThemeBarStylePicker.swift in Sources */,
+				82CECC8CC1F959D1C4C0DCB90C587BEC /* ThemeBlurEffectPicker.swift in Sources */,
+				B7DD5807074AE5252B459CB99B52AFF9 /* ThemeCGColorPicker.swift in Sources */,
+				2AB970DD1EB3A985CCD79CE2D7099F53 /* ThemeCGFloatPicker.swift in Sources */,
+				BF7EFEB0B27F89A8880A95B840A67288 /* ThemeColorPicker.swift in Sources */,
+				6820821F27A6AF54D4FA596A0587822D /* ThemeDeallocBlockExecutor.swift in Sources */,
+				F49F3FF5E8BC35EFCFC7795868B9743A /* ThemeDictionaryPicker.swift in Sources */,
+				F7BFAD98C084B8DA036A74F69A12F8E0 /* ThemeFontPicker.swift in Sources */,
+				BA52E29600851E685753EB9CF1DCCC1F /* ThemeImagePicker.swift in Sources */,
+				0B85ECFBFEA048E2B8252DF498E32468 /* ThemeKeyboardAppearancePicker.swift in Sources */,
+				090D01362F91C97BA897B124D51B4D29 /* ThemeManager.swift in Sources */,
+				5B5B6CCCFDEF9D4F3D3C712702F2063C /* ThemeManager+Index.swift in Sources */,
+				E0FF4EC826D2239353C0B013D5F1F750 /* ThemeManager+Plist.swift in Sources */,
+				9212E046B5243CFF6CAEFB9D21D26449 /* ThemeNavigationBarAppearancePicker.swift in Sources */,
+				FA54B87A55DBBF5A5C568168D628659E /* ThemePicker.swift in Sources */,
+				1DB9AB589F9ECFBA44999110C06956C9 /* ThemeScrollViewIndicatorStylePicker.swift in Sources */,
+				8D5285ED9452F39488C827214143F9C5 /* ThemeStatePicker.swift in Sources */,
+				BC4A6B750DF233A3812D68911530C770 /* ThemeStatusBarStylePicker.swift in Sources */,
+				3EA07C975D42EBBD9721968F01AD2444 /* ThemeStringAttributesPicker.swift in Sources */,
+				C43AD6FA1125A53A4873274EF2FD3C90 /* ThemeSwizzling.swift in Sources */,
+				D63725486BC16A2ADA382DFAC80E7929 /* ThemeTabBarAppearancePicker.swift in Sources */,
+				E122608FD780E2BDA9B927AE90A23C75 /* ThemeVisualEffectPicker.swift in Sources */,
+				A478919203F6BF43F59398DAF1E9F738 /* Timer+Handy.swift in Sources */,
+				6B7D9CA2843264E339609FC6E4E7588A /* UIApplication+Handy.swift in Sources */,
+				4B392089DF96922EC9A9C84803FF8D81 /* UIButton+Handy.swift in Sources */,
+				5487EFE8E8FC28242C2DE80E36827E59 /* UIColor+Handy.swift in Sources */,
+				1ED1670476C6757F2B2B7265D73DAB2B /* UIControl+Handy.swift in Sources */,
+				86D9C72684027A42CCCB9194E3AB8357 /* UIImage+Handy.swift in Sources */,
+				8094FA2A3F293AC1138C24199D0D74A4 /* UIKit+Theme.swift in Sources */,
+				341F61000B718334E84F1B72D598FE9D /* UILabel+TextAttributes.swift in Sources */,
+				072C48B921EF0195C1C1E1F233E994F3 /* UIRefreshControl+TitleAttributes.swift in Sources */,
+				E74728F38073DD69BD53DC2A2D2F71FE /* UITextField+PlaceholderAttributes.swift in Sources */,
+				65A55E3568B1DE9793BC1A5B0078AF7A /* UIView+Handy.swift in Sources */,
+				8CB84CCE8F81F52435B4EEE275E04065 /* UIViewController+Handy.swift in Sources */,
+				B5E536E719249C2984AA45E33648170A /* UIViewController+Theme.swift in Sources */,
+				5F2942DDD450FEC3F0B2BF310EFF48AC /* UIWindow+Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		08C131FAED63744D69B953BAFBED97EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Handy_Example";
-			target = 6423DB9BFD07878085F8B68D214D7213 /* Pods-Handy_Example */;
-			targetProxy = 88A2B9381769D36B67488BB1977C6A7A /* PBXContainerItemProxy */;
-		};
-		17BDA10AC2DB8DAC3816D85088986E4A /* PBXTargetDependency */ = {
+		0D7D34A9850F620671309C5EC4047C61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SSZipArchive;
 			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
-			targetProxy = 34C31283352CBB7EAED7736DF0EDD9F2 /* PBXContainerItemProxy */;
+			targetProxy = 746C0614E18BA911152748A59AC6D257 /* PBXContainerItemProxy */;
 		};
-		1E8175D8ED432CEF85E795F28B02B91E /* PBXTargetDependency */ = {
+		10A21713CD31C47BB4404A8C4F538EC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Handy-Handy";
 			target = BAAB311461ED9377754EE240EB92609C /* Handy-Handy */;
-			targetProxy = 175718943C296800333B533DF942F241 /* PBXContainerItemProxy */;
+			targetProxy = 325A3D2A46D10FB1613FEF575BF5F7A7 /* PBXContainerItemProxy */;
 		};
-		27719E15EF6DE878B582A28639EE8A92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Handy;
-			target = F591A36DFE90A9D32F9E027F1A1EF0B2 /* Handy */;
-			targetProxy = ADF5C6EC6FA93C5C18C763458B08E5D1 /* PBXContainerItemProxy */;
-		};
-		3328B142F7438872FE4B18EEF43CC5C5 /* PBXTargetDependency */ = {
+		50028BCE4365CBCEF30C5E5653E78A9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = C2CF269011B5C2D4C3E9D20148B4CDB4 /* PBXContainerItemProxy */;
+			targetProxy = EA4EC316A70E62536B9253F5F6892EFD /* PBXContainerItemProxy */;
 		};
-		76332475494015EA3B1177A1C8D48943 /* PBXTargetDependency */ = {
+		643C45D76708C54318D615D13DAF2F7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
 			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = D9CABEAE96D38D5440266BECD586B494 /* PBXContainerItemProxy */;
+			targetProxy = A7F11F9F24F79146F7D2E4E3E5E50782 /* PBXContainerItemProxy */;
 		};
-		81A1C70E0D4604FB4BA65C54966D33DF /* PBXTargetDependency */ = {
+		72CA9564C57ECCA9B06F2E0BCBB049E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
 			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 7354E3C09E6F8A9E2CAC49B683FEEFD0 /* PBXContainerItemProxy */;
+			targetProxy = D036086D7ADF42BD9C9FC34B7C9AB52B /* PBXContainerItemProxy */;
+		};
+		7CE2E7639649CD33090556B835303B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Handy;
+			target = F591A36DFE90A9D32F9E027F1A1EF0B2 /* Handy */;
+			targetProxy = 4833AA96032C2840B399BEC06A78992A /* PBXContainerItemProxy */;
+		};
+		CB35D776B1807994E1321F347E216D95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Handy_Example";
+			target = 6423DB9BFD07878085F8B68D214D7213 /* Pods-Handy_Example */;
+			targetProxy = 42FDC6F770641C807DFE490167056D4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A0BB1ADA431DBC588DEDB351BABD59B /* Release */ = {
+		02DD3F11EC8878D548966AD042426CD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8AADE8BDC0B8325923E87523DD38889 /* Handy.release.xcconfig */;
+			baseConfigurationReference = 54BDC9A3563FA26B935F44F9DCF34E00 /* Handy.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Handy";
 				IBSC_MODULE = Handy;
@@ -1368,7 +1379,39 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
+		};
+		09E2BAD4F8AD1DF8E14BC1951173D07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59E0EA83F7ABD5D86B66DD971F6883E8 /* SnapKit.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
+				PRODUCT_MODULE_NAME = SnapKit;
+				PRODUCT_NAME = SnapKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		13880D5F93EDFCE7E273B05B660F6D54 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1401,9 +1444,9 @@
 			};
 			name = Debug;
 		};
-		39E6C956159BD8010ABABB08D29AD5D4 /* Release */ = {
+		3BA96469FC90A32C59240678F9785080 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8AADE8BDC0B8325923E87523DD38889 /* Handy.release.xcconfig */;
+			baseConfigurationReference = 8CB142FA86211BF5F58A1F7810F080F9 /* Handy.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1431,6 +1474,22 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		476AD1ADEAA418D0EC946E4E4B01DC32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CB142FA86211BF5F58A1F7810F080F9 /* Handy.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Handy";
+				IBSC_MODULE = Handy;
+				INFOPLIST_FILE = "Target Support Files/Handy/ResourceBundle-Handy-Handy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = Handy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -1464,6 +1523,39 @@
 			};
 			name = Debug;
 		};
+		71278F0396D8486982943942C69DB7BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D97968A75E4EE7C7F267914FB98A35B /* SnapKit.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
+				PRODUCT_MODULE_NAME = SnapKit;
+				PRODUCT_NAME = SnapKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7AA4EE6F2129DA1FE8358A68CCDE3B96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FD0C87E1CF59D51058142932BECE82F /* Pods-Handy_Example.debug.xcconfig */;
@@ -1492,38 +1584,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		88A3572C04266B953BB1D0072C227599 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59E0EA83F7ABD5D86B66DD971F6883E8 /* SnapKit.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				PRODUCT_MODULE_NAME = SnapKit;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1625,39 +1685,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		AC90D410FCF825C9E77798B4769A7E08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D97968A75E4EE7C7F267914FB98A35B /* SnapKit.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				PRODUCT_MODULE_NAME = SnapKit;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1795,9 +1822,9 @@
 			};
 			name = Release;
 		};
-		D73045A03E482156B75AB58376BD6A2E /* Debug */ = {
+		D314F028F77E350DCE08CE9F54470658 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C57D60B344BCC4EFAE672FE67F825E0 /* Handy.debug.xcconfig */;
+			baseConfigurationReference = 54BDC9A3563FA26B935F44F9DCF34E00 /* Handy.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1824,22 +1851,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E0453EC61AE69FE442AA105C4414321A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C57D60B344BCC4EFAE672FE67F825E0 /* Handy.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Handy";
-				IBSC_MODULE = Handy;
-				INFOPLIST_FILE = "Target Support Files/Handy/ResourceBundle-Handy-Handy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = Handy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1918,11 +1929,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F0D3D40E54D5DFA0DA7DAD4BE5E7DF6 /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
+		29C61C31644D60C24518A569A425AE78 /* Build configuration list for PBXNativeTarget "Handy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				88A3572C04266B953BB1D0072C227599 /* Debug */,
-				AC90D410FCF825C9E77798B4769A7E08 /* Release */,
+				D314F028F77E350DCE08CE9F54470658 /* Debug */,
+				3BA96469FC90A32C59240678F9785080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A6847BAD130805DA76D55D8690136F2 /* Build configuration list for PBXNativeTarget "Handy-Handy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02DD3F11EC8878D548966AD042426CD5 /* Debug */,
+				476AD1ADEAA418D0EC946E4E4B01DC32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1945,6 +1965,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6EB43DEC9471E19ABB89C9CA6CC58265 /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E2BAD4F8AD1DF8E14BC1951173D07D /* Debug */,
+				71278F0396D8486982943942C69DB7BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A7BD2681E97C00DCC2EF91B0EBA76110 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1959,24 +1988,6 @@
 			buildConfigurations = (
 				9C9468649F5FA49928667AE3F84A08CC /* Debug */,
 				CD2C7968F87CBC0DDF37C01C898432B9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E66B04DF41E30E35F05CE6300E3AF5A0 /* Build configuration list for PBXNativeTarget "Handy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D73045A03E482156B75AB58376BD6A2E /* Debug */,
-				39E6C956159BD8010ABABB08D29AD5D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4C48DD3461F3EBAA5CD0D1FA4529CC8 /* Build configuration list for PBXNativeTarget "Handy-Handy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E0453EC61AE69FE442AA105C4414321A /* Debug */,
-				0A0BB1ADA431DBC588DEDB351BABD59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

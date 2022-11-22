@@ -37,31 +37,28 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "Handy/Classes/Core/*",
-      "subspecs": [
-        {
-          "name": "Extensions",
-          "source_files": "Handy/Classes/Core/Extensions/*"
-        }
-      ]
+      "source_files": "Handy/Classes/Core/**/*"
     },
     {
       "name": "Navigation",
-      "source_files": "Handy/Classes/Navigation/*"
+      "source_files": "Handy/Classes/Navigation/**/*",
+      "dependencies": {
+        "Handy/Core": [
+
+        ]
+      }
     },
     {
       "name": "Theme",
-      "source_files": "Handy/Classes/Theme/*",
-      "subspecs": [
-        {
-          "name": "ThemePickers",
-          "source_files": "Handy/Classes/Theme/ThemePickers/*"
-        },
-        {
-          "name": "ThemeAttributes",
-          "source_files": "Handy/Classes/Theme/ThemeAttributes/*"
-        }
-      ]
+      "source_files": "Handy/Classes/Theme/**/*",
+      "dependencies": {
+        "Handy/Navigation": [
+
+        ],
+        "Handy/Core": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.0"

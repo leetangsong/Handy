@@ -23,9 +23,6 @@ public extension HandySwizzling{
 }
 class HandySwizzles: NSObject, HandySwizzling{
     static func awake() {
-        addSwizzlingMethod(cls: UIViewController.self, sel: #selector(UIViewController.viewControllerSwizzling))
-        addSwizzlingMethod(cls: UIViewController.self, sel: #selector(UIViewController.viewControllerThemeSwizzling))
-        addSwizzlingMethod(cls: UINavigationController.self, sel: #selector(UINavigationController.navigationSwizzling))
         addSwizzlingMethod(cls: UIControl.self, sel: #selector(UIControl.controlSwizzling))
     }
 }
