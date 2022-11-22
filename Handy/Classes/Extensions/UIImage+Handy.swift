@@ -113,6 +113,14 @@ extension HandyClassExtension where Base == UIImage {
         if let path = bundle?.path(forResource: _name, ofType: ".png") {
             image = UIImage.init(contentsOfFile: path)
         }
+        
+        if image == nil, let path = bundle?.path(forResource: "\(name)@2x", ofType: ".png")  {
+            image = UIImage.init(contentsOfFile: path)
+        }
+        if image == nil, let path = bundle?.path(forResource: "\(name)", ofType: ".png")  {
+            image = UIImage.init(contentsOfFile: path)
+        }
+        
         if image == nil {
             image = UIImage.init(named: name)
         }
