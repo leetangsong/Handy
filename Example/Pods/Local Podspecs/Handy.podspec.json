@@ -1,11 +1,11 @@
 {
   "name": "Handy",
-  "version": "0.3.2",
-  "summary": "一些自定义的UI以及常用拓展.自定义导航栏",
+  "version": "1.0.3",
+  "summary": "导航栏, 主题切换 ,自定义的UI以及常用拓展",
   "swift_versions": [
     "5.0"
   ],
-  "description": "一些自定义的UI以及常用拓展.自定义导航栏",
+  "description": "自定义导航栏(那内含微信样式)，主题切换（可设置跟随系统）以及一些自定义的UI以及常用拓展",
   "homepage": "https://github.com/leetangsong/Handy",
   "license": {
     "type": "MIT",
@@ -16,12 +16,12 @@
   },
   "source": {
     "git": "https://github.com/leetangsong/Handy.git",
-    "tag": "0.3.2"
+    "tag": "1.0.3"
   },
   "platforms": {
     "ios": "11.0"
   },
-  "source_files": "Handy/Classes/**/*",
+  "source_files": "Handy/Classes/*",
   "resource_bundles": {
     "Handy": [
       "Handy/Assets/*"
@@ -35,5 +35,33 @@
 
     ]
   },
+  "subspecs": [
+    {
+      "name": "Tools",
+      "source_files": "Handy/Classes/Tools/*"
+    },
+    {
+      "name": "Navigation",
+      "source_files": "Handy/Classes/Navigation/*"
+    },
+    {
+      "name": "Extensions",
+      "source_files": "Handy/Classes/Extensions/*"
+    },
+    {
+      "name": "Theme",
+      "source_files": "Handy/Classes/Theme/*",
+      "subspecs": [
+        {
+          "name": "ThemePickers",
+          "source_files": "Handy/Classes/Theme/ThemePickers/*"
+        },
+        {
+          "name": "ThemeAttributes",
+          "source_files": "Handy/Classes/Theme/ThemeAttributes/*"
+        }
+      ]
+    }
+  ],
   "swift_version": "5.0"
 }
