@@ -1,6 +1,6 @@
 {
   "name": "Handy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "summary": "导航栏, 主题切换 ,自定义的UI以及常用拓展",
   "swift_versions": [
     "5.0"
@@ -16,12 +16,11 @@
   },
   "source": {
     "git": "https://github.com/leetangsong/Handy.git",
-    "tag": "1.0.3"
+    "tag": "1.0.4"
   },
   "platforms": {
     "ios": "11.0"
   },
-  "source_files": "Handy/Classes/*",
   "resource_bundles": {
     "Handy": [
       "Handy/Assets/*"
@@ -37,16 +36,18 @@
   },
   "subspecs": [
     {
-      "name": "Tools",
-      "source_files": "Handy/Classes/Tools/*"
+      "name": "Core",
+      "source_files": "Handy/Classes/Core/*",
+      "subspecs": [
+        {
+          "name": "Extensions",
+          "source_files": "Handy/Classes/Core/Extensions/*"
+        }
+      ]
     },
     {
       "name": "Navigation",
       "source_files": "Handy/Classes/Navigation/*"
-    },
-    {
-      "name": "Extensions",
-      "source_files": "Handy/Classes/Extensions/*"
     },
     {
       "name": "Theme",

@@ -1,23 +1,23 @@
 PODS:
-  - Handy (1.0.3):
-    - Handy/Extensions (= 1.0.3)
-    - Handy/Navigation (= 1.0.3)
-    - Handy/Theme (= 1.0.3)
-    - Handy/Tools (= 1.0.3)
+  - Handy (1.0.4):
+    - Handy/Core (= 1.0.4)
+    - Handy/Navigation (= 1.0.4)
+    - Handy/Theme (= 1.0.4)
     - SnapKit
-  - Handy/Extensions (1.0.3):
+  - Handy/Core (1.0.4):
+    - Handy/Core/Extensions (= 1.0.4)
     - SnapKit
-  - Handy/Navigation (1.0.3):
+  - Handy/Core/Extensions (1.0.4):
     - SnapKit
-  - Handy/Theme (1.0.3):
-    - Handy/Theme/ThemeAttributes (= 1.0.3)
-    - Handy/Theme/ThemePickers (= 1.0.3)
+  - Handy/Navigation (1.0.4):
     - SnapKit
-  - Handy/Theme/ThemeAttributes (1.0.3):
+  - Handy/Theme (1.0.4):
+    - Handy/Theme/ThemeAttributes (= 1.0.4)
+    - Handy/Theme/ThemePickers (= 1.0.4)
     - SnapKit
-  - Handy/Theme/ThemePickers (1.0.3):
+  - Handy/Theme/ThemeAttributes (1.0.4):
     - SnapKit
-  - Handy/Tools (1.0.3):
+  - Handy/Theme/ThemePickers (1.0.4):
     - SnapKit
   - MBProgressHUD (1.2.0)
   - SnapKit (5.0.1)
@@ -39,7 +39,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Handy: 2e2a1187b61eb3fc553a3b36d39c74a44ec6bdae
+  Handy: 8532907e5cbf0a465296718bdc36262919bf30bc
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
