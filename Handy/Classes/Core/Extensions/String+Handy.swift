@@ -12,21 +12,94 @@ extension String: HandyClassCompatibleValue{}
 
 public extension HandyExtension where Base == String{
    
-    func size(_ font: UIFont, _ constrainedToSize: CGSize) -> CGSize{
-        var resultSize = CGSize.zero
-        if base.count<=0 {
-            return resultSize
+    var md5: String {
+        guard let data = base.data(using: .utf8) else {
+            return base
         }
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineBreakMode = NSLineBreakMode.byWordWrapping
-        
-        let attr = NSAttributedString.init(string: base, attributes: [.font: font])
-        resultSize = attr.boundingRect(with: constrainedToSize, options: [.usesLineFragmentOrigin,.usesFontLeading], context: nil).size
 
-        return resultSize
+        let message = data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) in
+            return [UInt8](bytes)
+        }
+
+        let MD5Calculator = MD5(message)
+        let MD5Data = MD5Calculator.calculate()
+
+        var MD5String = String()
+        for c in MD5Data {
+            MD5String += String(format: "%02x", c)
+        }
+        return MD5String
     }
-
+    
+    var color: UIColor {
+        UIColor.handy.color(rgba: base)
+    }
+    
+    func size(ofAttributes attributes: [NSAttributedString.Key: Any], maxWidth: CGFloat, maxHeight: CGFloat) -> CGSize {
+        let constraintRect = CGSize(width: maxWidth, height: maxHeight)
+        let boundingBox = base.boundingRect(
+            with: constraintRect,
+            options: .usesLineFragmentOrigin,
+            attributes: attributes,
+            context: nil
+        )
+        return boundingBox.size
+    }
+    
+    /// 字符串宽度
+    /// - Parameters:
+    ///   - size: 字体大小
+    ///   - maxHeight: 最大高度
+    /// - Returns: 字符串宽度
+    func width(ofSize size: CGFloat, maxHeight: CGFloat) -> CGFloat {
+        width(ofFont: UIFont.systemFont(ofSize: size),
+              maxHeight: maxHeight)
+    }
+    
+    /// 字符串宽度
+    /// - Parameters:
+    ///   - font: 字体
+    ///   - maxHeight: 最大高度
+    /// - Returns: 字符串宽度
+    func width(ofFont font: UIFont, maxHeight: CGFloat) -> CGFloat {
+        size(ofAttributes: [NSAttributedString.Key.font: font],
+             maxWidth: CGFloat(MAXFLOAT),
+             maxHeight: maxHeight).width
+    }
+    
+    /// 字符串高度
+    /// - Parameters:
+    ///   - size: 字体大小
+    ///   - maxWidth: 最大宽度
+    /// - Returns: 高度
+    func height(ofSize size: CGFloat, maxWidth: CGFloat) -> CGFloat {
+        height(ofFont: UIFont.systemFont(ofSize: size),
+               maxWidth: maxWidth)
+    }
+    
+    /// 字符串高度
+    /// - Parameters:
+    ///   - font: 字体
+    ///   - maxWidth: 最大宽度
+    /// - Returns: 高度
+    func height(ofFont font: UIFont, maxWidth: CGFloat) -> CGFloat {
+        size(ofAttributes: [NSAttributedString.Key.font: font],
+             maxWidth: maxWidth,
+             maxHeight: CGFloat(MAXFLOAT)).height
+    }
+    
+    
+    static func fileName(suffix: String) -> String {
+        var uuid = UUID().uuidString
+        uuid = uuid.replacingOccurrences(of: "-", with: "").lowercased()
+        var fileName = uuid
+        let nowDate = Date().timeIntervalSince1970
+        
+        fileName.append(String(format: "%d", arguments: [nowDate]))
+        fileName.append(String(format: "%d", arguments: [arc4random()%10000]))
+        return suffix.isEmpty ? fileName.handy.md5 : fileName.handy.md5 + "." + suffix
+    }
+    
     ///通过下标获取
     ///
     /// - Parameter r: [开始下标,结束下标]

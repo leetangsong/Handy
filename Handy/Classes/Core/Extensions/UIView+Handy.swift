@@ -152,7 +152,36 @@ public extension HandyExtension where Base: UIView {
         }
     }
     
+    var viewController: UIViewController? {
+        var next = base.superview
+        while next != nil {
+            let nextResponder = next?.next
+            if nextResponder is UINavigationController ||
+                nextResponder is UIViewController {
+                return nextResponder as? UIViewController
+            }
+            next = next?.superview
+        }
+        return nil
+    }
     
+    /// UIView转UIImage
+    /// - Returns: UIImage
+    func convertedToImage(rect: CGRect = .zero) -> UIImage? {
+        var size = base.bounds.size
+        var origin = base.bounds.origin
+        if !size.equalTo(rect.size) && !rect.isEmpty {
+            size = rect.size
+            origin = CGPoint(x: -rect.minX, y: -rect.minY)
+        }
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        base.drawHierarchy(in: CGRect(origin: origin, size: base.bounds.size), afterScreenUpdates: true)
+//        let context = UIGraphicsGetCurrentContext()
+//        layer.render(in: context!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }
 
 
