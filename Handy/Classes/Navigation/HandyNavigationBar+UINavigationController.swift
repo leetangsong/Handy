@@ -295,9 +295,9 @@ extension UINavigationController: UIGestureRecognizerDelegate{
 }
 
 
-extension HandyExtension where Base: UINavigationController{
+public extension HandyExtension where Base: UINavigationController{
     ///若设置 则替代系统默认的返回
-    public var barBackItem: UIBarButtonItem? {
+    var barBackItem: UIBarButtonItem? {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.barBackItem) as? UIBarButtonItem
         }
@@ -306,7 +306,7 @@ extension HandyExtension where Base: UINavigationController{
         }
     }
     
-    public var useSystemBackBarButtonItem: Bool {
+    var useSystemBackBarButtonItem: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.useSystemBackBarButtonItem) as? Bool ?? true
         }
@@ -315,7 +315,7 @@ extension HandyExtension where Base: UINavigationController{
         }
     }
     
-    public var interactivePopGestureRecognizer: UIPanGestureRecognizer? {
+    var interactivePopGestureRecognizer: UIPanGestureRecognizer? {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.interactivePopGestureRecognizer) as? UIPanGestureRecognizer
         }
@@ -324,7 +324,7 @@ extension HandyExtension where Base: UINavigationController{
         }
     }
     
-    public var navigationStyle: HandyNavigationStyle {
+    var navigationStyle: HandyNavigationStyle {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.navigationStyle) as? HandyNavigationStyle ?? .none
         }
@@ -388,7 +388,7 @@ extension HandyExtension where Base: UINavigationController{
             
         }
     }
-    public var navigationBar: UINavigationBar{
+    var navigationBar: UINavigationBar{
         guard let topVC = base.topViewController else {
             return base.navigationBar
         }
@@ -404,7 +404,7 @@ extension HandyExtension where Base: UINavigationController{
         }
     }
     
-    var navigationContext: HandyNavigationContrllerContext{
+    internal var navigationContext: HandyNavigationContrllerContext{
         get {
             if let context = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.navigationContext) as? HandyNavigationContrllerContext{
                 return context
@@ -418,14 +418,14 @@ extension HandyExtension where Base: UINavigationController{
         }
     }
     
-    func updateNavigationBar(for viewController: UIViewController) {
+    internal func updateNavigationBar(for viewController: UIViewController) {
         updateNavigationBarTint(for: viewController)
         updateNavigationBarBackground(for: viewController)
         updateNavigationBarShadow(for: viewController)
         
     }
     
-    func updateNavigationBarTint(for viewController: UIViewController) {
+    internal func updateNavigationBarTint(for viewController: UIViewController) {
         if viewController != base.topViewController{
             return
         }
@@ -439,7 +439,7 @@ extension HandyExtension where Base: UINavigationController{
     }
     
     
-    func updateNavigationBarBackground(for viewController: UIViewController) {
+    internal func updateNavigationBarBackground(for viewController: UIViewController) {
         if viewController != base.topViewController{
             return
         }
@@ -459,7 +459,7 @@ extension HandyExtension where Base: UINavigationController{
         
     }
     
-    func updateNavigationBarShadow(for viewController: UIViewController) {
+    internal func updateNavigationBarShadow(for viewController: UIViewController) {
         if viewController != base.topViewController{
             return
         }
@@ -475,13 +475,13 @@ extension HandyExtension where Base: UINavigationController{
         bar?.updateBarShadow(for: viewController)
     }
     
-    public func pushViewController(_ viewController: UIViewController, animated: Bool,  complete: ((_ finished: Bool)->Void)? = nil){
+    func pushViewController(_ viewController: UIViewController, animated: Bool,  complete: ((_ finished: Bool)->Void)? = nil){
         complete?(false)
         animationBlock = complete
         base.pushViewController(viewController, animated: animated)
     }
     
-    public func removeViewController(_ viewController: UIViewController, animated: Bool = false){
+    func removeViewController(_ viewController: UIViewController, animated: Bool = false){
         var controllers = base.viewControllers
         var controllerToRemove: UIViewController?
         for obj in controllers {

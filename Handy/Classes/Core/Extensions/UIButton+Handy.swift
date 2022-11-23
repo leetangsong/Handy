@@ -8,13 +8,13 @@
 
 import UIKit
 
-extension UIButton{
+public extension UIButton{
     
     fileprivate struct AssociatedKeys {
         static var enlargedInsets = "enlargedInsets"
     }
     
-    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let rect = handy.enlargedRect
         if rect.equalTo(self.bounds){
             return super.hitTest(point, with: event);
@@ -23,10 +23,10 @@ extension UIButton{
     }
 }
 
-extension HandyExtension where Base: UIButton{
+public extension HandyExtension where Base: UIButton{
     
     
-    public enum HandyButtonMode {
+    enum HandyButtonMode {
         case top,bottom,left,right
     }
    
@@ -47,12 +47,12 @@ extension HandyExtension where Base: UIButton{
     }
 
     ///扩大点击区域
-    public func enlarged(with insets: UIEdgeInsets){
+    func enlarged(with insets: UIEdgeInsets){
         enlargedInsets = insets
     }
 
     //改变图片与按钮的位置  
-    public func adjustButton(with model: HandyButtonMode, spacing: CGFloat){
+    func adjustButton(with model: HandyButtonMode, spacing: CGFloat){
         let imageWidth = base.currentImage?.size.width ?? 0
         let imageHeight = base.currentImage?.size.height ?? 0
         var size = CGSize.zero

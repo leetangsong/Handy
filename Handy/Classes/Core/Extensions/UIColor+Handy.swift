@@ -20,8 +20,8 @@ extension UIColor: HandyCompatible{
     }
 }
 
-extension HandyExtension where Base == UIColor{
-    public func hexString(_ includeAlpha: Bool) -> String {
+public extension HandyExtension where Base == UIColor{
+    func hexString(_ includeAlpha: Bool) -> String {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0
@@ -37,16 +37,16 @@ extension HandyExtension where Base == UIColor{
 }
 
 
-extension HandyClassExtension where Base == UIColor{
+public extension HandyClassExtension where Base == UIColor{
     
-    public enum HandyGradientDirection {
+    enum HandyGradientDirection {
         case level
         case vertical
         case upwardDiagonalLine
         case downDiagonalLine
     }
     /// #RGB
-    public static func color(hex3: UInt16, alpha: CGFloat = 1) -> UIColor {
+    static func color(hex3: UInt16, alpha: CGFloat = 1) -> UIColor {
         let divisor = CGFloat(15)
         let red     = CGFloat((hex3 & 0xF00) >> 8) / divisor
         let green   = CGFloat((hex3 & 0x0F0) >> 4) / divisor
@@ -56,7 +56,7 @@ extension HandyClassExtension where Base == UIColor{
     }
     
     /// 0xRGBA
-    public static func color(hex4: UInt16) -> UIColor {
+    static func color(hex4: UInt16) -> UIColor {
         let divisor = CGFloat(15)
         let red     = CGFloat((hex4 & 0xF000) >> 12) / divisor
         let green   = CGFloat((hex4 & 0x0F00) >>  8) / divisor
@@ -66,7 +66,7 @@ extension HandyClassExtension where Base == UIColor{
         return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     /// 0xRRGGBB
-    public static func color(hex6: UInt32, alpha: CGFloat = 1) -> UIColor {
+    static func color(hex6: UInt32, alpha: CGFloat = 1) -> UIColor {
         let divisor = CGFloat(255)
         let red     = CGFloat((hex6 & 0xFF0000) >> 16) / divisor
         let green   = CGFloat((hex6 & 0x00FF00) >>  8) / divisor
@@ -76,7 +76,7 @@ extension HandyClassExtension where Base == UIColor{
     }
     
     ///  #RRGGBBAA
-    public static func color(hex8: UInt32) -> UIColor {
+    static func color(hex8: UInt32) -> UIColor {
         let divisor = CGFloat(255)
         let red     = CGFloat((hex8 & 0xFF0000) >> 16) / divisor
         let green   = CGFloat((hex8 & 0x00FF00) >>  8) / divisor
@@ -88,7 +88,7 @@ extension HandyClassExtension where Base == UIColor{
     
     
     
-    public static func color(rgba_throws: String) throws -> UIColor{
+    static func color(rgba_throws: String) throws -> UIColor{
        
         var hexString = rgba_throws
         
@@ -99,6 +99,7 @@ extension HandyClassExtension where Base == UIColor{
         }else if hexString.hasPrefix("#") {
             hexString = hexString.replacingOccurrences(of: "#", with: "")
         }else if hexString.contains(","){
+            hexString = hexString.replacingOccurrences(of: " ", with: "")
             let array = hexString.components(separatedBy: ",")
             if array.count < 3{
                 throw UIColorInputError.mismatchedRGBStringLength
@@ -135,7 +136,7 @@ extension HandyClassExtension where Base == UIColor{
 
     }
     
-    public static func color(rgba: String, defaultColor: UIColor = UIColor.clear) -> UIColor{
+    static func color(rgba: String, defaultColor: UIColor = UIColor.clear) -> UIColor{
         guard let color = try? color(rgba_throws: rgba) else {
             return defaultColor
         }
@@ -145,7 +146,7 @@ extension HandyClassExtension where Base == UIColor{
     
 
     //两色渐变
-    public static func colorGradient(with size: CGSize, cornerRadius: CGFloat = 0, direction: HandyGradientDirection = .level, startcolor: UIColor, endColor: UIColor , startPoint: CGPoint? = nil, endPoint: CGPoint? = nil)->UIColor?{
+    static func colorGradient(with size: CGSize, cornerRadius: CGFloat = 0, direction: HandyGradientDirection = .level, startcolor: UIColor, endColor: UIColor , startPoint: CGPoint? = nil, endPoint: CGPoint? = nil)->UIColor?{
         if size == .zero {
             return nil
         }
@@ -187,7 +188,7 @@ extension HandyClassExtension where Base == UIColor{
     }
     
     //多色渐变
-    public static func moreColorGradient(with size: CGSize, cornerRadius: CGFloat = 0 ,startPoint: CGPoint,endPoint: CGPoint,locations: [NSNumber], colors: [AnyObject] )->UIColor?{
+    static func moreColorGradient(with size: CGSize, cornerRadius: CGFloat = 0 ,startPoint: CGPoint,endPoint: CGPoint,locations: [NSNumber], colors: [AnyObject] )->UIColor?{
         if size == .zero {
             return nil
         }
@@ -213,7 +214,7 @@ extension HandyClassExtension where Base == UIColor{
         return UIColor.init(patternImage: image)
     }
     ///两个颜色的平均值
-    public static  func average(fromColor: UIColor, toColor: UIColor, percent: CGFloat) -> UIColor {
+    static  func average(fromColor: UIColor, toColor: UIColor, percent: CGFloat) -> UIColor {
         var fromRed: CGFloat = 0
         var fromGreen: CGFloat = 0
         var fromBlue: CGFloat = 0

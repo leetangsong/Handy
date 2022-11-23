@@ -17,13 +17,13 @@ extension HandyExtension where Base == Timer{
 
 }
 
-extension HandyClassExtension where Base == Timer{
+public extension HandyClassExtension where Base == Timer{
     ///   创建dispatch timer
     ///
     /// - Parameters:
     ///   - interval: float类型不能小于0.001
     ///   - finishCallback: 回调
-    public static func createDispatchTimer(_ interval:Float,_ finishCallback:@escaping () -> Void){
+    static func createDispatchTimer(_ interval:Float,_ finishCallback:@escaping () -> Void){
         guard interval>=0.001 else {
             //未满足
             return
@@ -38,7 +38,7 @@ extension HandyClassExtension where Base == Timer{
     ///   - timeInterval: 间隔
     ///   - finishCallback: 回调
     ///   - repeats: 重复
-    public static func scheduledTimer(timeInterval: TimeInterval, repeats: Bool, callback:@escaping (Timer) -> Void) -> Timer {
+    static func scheduledTimer(timeInterval: TimeInterval, repeats: Bool, callback:@escaping (Timer) -> Void) -> Timer {
         
         if #available(iOS 10.0, *) {
             return Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: repeats, block: callback)

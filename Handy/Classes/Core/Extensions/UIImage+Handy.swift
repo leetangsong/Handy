@@ -10,11 +10,11 @@ import UIKit
 
 extension UIImage: HandyCompatible{}
 
-extension HandyExtension where Base == UIImage {
+public extension HandyExtension where Base: UIImage {
     /// 根据设定最大值压缩图片返回二进制
     ///
     /// - Parameter maxLength: 最大值
-    public func compress(maxLength: Int) -> Data?{
+    func compress(maxLength: Int) -> Data?{
         
         var compression: CGFloat = 1
         var data = base.jpegData(compressionQuality: compression)
@@ -39,7 +39,7 @@ extension HandyExtension where Base == UIImage {
         return data
     }
     
-    public func toNewWidth(_ newWidth: CGFloat) -> UIImage {
+    func toNewWidth(_ newWidth: CGFloat) -> UIImage {
         
         let imageWidth = base.size.width
         let imageHeight = base.size.height
@@ -61,9 +61,9 @@ extension HandyExtension where Base == UIImage {
 }
 
 
-extension HandyClassExtension where Base == UIImage {
+public extension HandyClassExtension where Base: UIImage {
     
-    public static func image(from view: UIView, size: CGSize) -> UIImage{
+    static func image(from view: UIView, size: CGSize) -> UIImage{
         UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()!
@@ -72,7 +72,7 @@ extension HandyClassExtension where Base == UIImage {
     }
     
     
-    public static func image(with size: CGSize, radius: CGFloat = 0, rectCornerType: UIRectCorner = .allCorners, alpha: CGFloat = 1, color: UIColor) -> UIImage{
+    static func image(with size: CGSize, radius: CGFloat = 0, rectCornerType: UIRectCorner = .allCorners, alpha: CGFloat = 1, color: UIColor) -> UIImage{
         let targetRect = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
@@ -93,12 +93,12 @@ extension HandyClassExtension where Base == UIImage {
         return finalImage
     }
     
-    public static func image(with color:UIColor) -> UIImage {
+    static func image(with color:UIColor) -> UIImage {
         return image(with: CGSize.init(width: 1, height: 1), color: color)
     }
     
     
-    public static func image(with name: String, from bundlePath: String?) -> UIImage?{
+    static func image(with name: String, from bundlePath: String?) -> UIImage?{
         if name.count == 0 {
             return nil
         }

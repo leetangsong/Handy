@@ -7,8 +7,8 @@
 
 import UIKit
 
-extension UIApplication{
-    public var currentWindow: UIWindow?{
+public extension UIApplication{
+    var currentWindow: UIWindow?{
         if #available(iOS 13.0, *){
             if let window = connectedScenes
                 .filter({  $0.activationState == .foregroundActive })

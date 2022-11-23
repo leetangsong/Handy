@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-public let ThemeUpdateNotification = "ThemeUpdateNotification"
-
 public protocol ThemeCompatible: AnyObject { }
 public class ThemeExtension<Base>: NSObject {
     public let base: Base
@@ -105,6 +102,18 @@ public enum ThemePath {
             }
         }
     }
+    
+    @objc class func setTheme(index: Int) {
+        currentThemeIndex = index
+        themeChangeLock.lock()
+        for helper in themePickers{
+            helper.pickerHelper()
+        }
+        themeChangeLock.unlock()
+    }
+    
+    
+    
     public class func setTheme(plistName: String, path: ThemePath) {
         guard let plistPath = path.plistPath(name: plistName) else {
             print("Handy WARNING: Can't find plist '\(plistName)' at: \(path)")

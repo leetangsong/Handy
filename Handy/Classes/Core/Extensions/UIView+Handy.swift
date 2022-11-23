@@ -10,9 +10,9 @@ import UIKit
 
 
 extension UIView: HandyCompatible{}
-extension HandyExtension where Base: UIView {
+public extension HandyExtension where Base: UIView {
     
-    public var width: CGFloat{
+    var width: CGFloat{
         get{
             return base.frame.size.width
         }
@@ -23,7 +23,7 @@ extension HandyExtension where Base: UIView {
         }
         
     }
-    public var height: CGFloat{
+    var height: CGFloat{
         get{
             return base.frame.size.height
         }
@@ -33,7 +33,7 @@ extension HandyExtension where Base: UIView {
             base.frame = frame
         }
     }
-    public var centerX: CGFloat{
+    var centerX: CGFloat{
         get{
             return base.center.x
         }
@@ -43,7 +43,7 @@ extension HandyExtension where Base: UIView {
             base.center = center
         }
     }
-    public var centerY: CGFloat{
+    var centerY: CGFloat{
         get{
             return base.center.y
         }
@@ -53,20 +53,20 @@ extension HandyExtension where Base: UIView {
             base.center = center
         }
     }
-    public var maxX: CGFloat{
+    var maxX: CGFloat{
         return base.frame.maxX
     }
-    public var maxY: CGFloat{
+    var maxY: CGFloat{
         return base.frame.maxY
     }
-    public var mimX: CGFloat{
+    var mimX: CGFloat{
         return base.frame.minX
     }
-    public var mimY: CGFloat{
+    var mimY: CGFloat{
         return base.frame.minY
     }
     
-    public var origin : CGPoint {
+    var origin : CGPoint {
         get{
             return  base.frame.origin
         }
@@ -77,7 +77,7 @@ extension HandyExtension where Base: UIView {
         }
     }
     
-    public var left : CGFloat {
+    var left : CGFloat {
         get{
             return  base.frame.origin.x
         }
@@ -88,7 +88,7 @@ extension HandyExtension where Base: UIView {
         }
     }
     
-    public var top : CGFloat {
+    var top : CGFloat {
         get{
             return  base.frame.origin.y
         }
@@ -98,7 +98,7 @@ extension HandyExtension where Base: UIView {
             base.frame = frame
         }
     }
-    public var size : CGSize {
+    var size : CGSize {
         get{
             return  base.frame.size
         }
@@ -109,7 +109,7 @@ extension HandyExtension where Base: UIView {
         }
     }
   
-    public var right: CGFloat{
+    var right: CGFloat{
         get{
             assert(base.superview != nil, "未添加到父视图上")
             return base.superview!.handy.width - base.handy.maxX
@@ -128,7 +128,7 @@ extension HandyExtension where Base: UIView {
     ///   - corners: 圆角位置
     ///   - radii: 圆角大小
     ///   - color: 边框颜色  nil 为无边框
-    public func cornerRadius(viewSize: CGSize? = nil, corners: UIRectCorner = .allCorners, radii: CGFloat ,color: UIColor? = nil){
+    func cornerRadius(viewSize: CGSize? = nil, corners: UIRectCorner = .allCorners, radii: CGFloat ,color: UIColor? = nil){
         let rect = viewSize != nil ? CGRect.init(x: 0, y: 0, width: viewSize!.width, height: viewSize!.height) : base.bounds
         let maskPath = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize.init(width: radii, height: radii))
         let maskLayer = CAShapeLayer()

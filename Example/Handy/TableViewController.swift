@@ -9,6 +9,9 @@
 import UIKit
 import Handy
 import ObjectiveC
+#if canImport(GDPerformanceView_Swift)
+import GDPerformanceView_Swift
+#endif
 class TableViewController: UITableViewController {
 
      override func viewDidLoad() {
@@ -35,7 +38,12 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        #if canImport(GDPerformanceView_Swift)
+        PerformanceMonitor.shared().start()
+        #endif
+    }
     override var preferredStatusBarStyle: UIStatusBarStyle{
         if #available(iOS 13.0, *) {
             return .darkContent

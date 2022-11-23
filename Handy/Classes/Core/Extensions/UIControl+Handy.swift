@@ -16,8 +16,8 @@ extension UIControl{
 }
 
 
-extension HandyExtension where Base: UIControl{
-    public var acceptEventInterval: TimeInterval? {
+public extension HandyExtension where Base: UIControl{
+    var acceptEventInterval: TimeInterval? {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.acceptEventInterval) as? TimeInterval
         }

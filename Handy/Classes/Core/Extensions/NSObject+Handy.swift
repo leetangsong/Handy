@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension NSObject {
+public extension NSObject {
   func safeRemoveObserver(_ observer: NSObject, forKeyPath keyPath: String) {
     switch self.observationInfo {
     case .some:

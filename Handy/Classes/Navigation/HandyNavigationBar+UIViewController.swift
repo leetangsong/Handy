@@ -90,11 +90,11 @@ extension UIViewController{
 
 extension UIViewController: HandyCompatible{}
 
-extension HandyExtension where Base: UIViewController {
+public extension HandyExtension where Base: UIViewController {
     
     
     
-    public var statusBarStyle: HandyStatusBarStyle {
+    var statusBarStyle: HandyStatusBarStyle {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.statusBarStyle) as? HandyStatusBarStyle ?? .default
         }
@@ -103,7 +103,7 @@ extension HandyExtension where Base: UIViewController {
             base.setNeedsStatusBarAppearanceUpdate()
         }
     }
-    public var statusBarHidden: Bool {
+    var statusBarHidden: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.statusBarHidden) as? Bool ?? false
         }
@@ -112,7 +112,7 @@ extension HandyExtension where Base: UIViewController {
         }
     }
     
-    public var naviBarHidden: Bool {
+    var naviBarHidden: Bool {
         get {
             return _naviBarHidden
         }
@@ -122,7 +122,7 @@ extension HandyExtension where Base: UIViewController {
         }
     }
     
-    var _naviBarHidden: Bool {
+    internal var _naviBarHidden: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.naviBarHidden) as? Bool ?? false
         }
@@ -131,7 +131,7 @@ extension HandyExtension where Base: UIViewController {
         }
     }
     
-    public var naviIsTranslucent: Bool {
+    var naviIsTranslucent: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.isTranslucent) as? Bool ?? true
         }
@@ -141,7 +141,7 @@ extension HandyExtension where Base: UIViewController {
         }
     }
     
-    public var naviBarStyle: UIBarStyle {
+    var naviBarStyle: UIBarStyle {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.barStyle) as? UIBarStyle ?? UINavigationBar.appearance().barStyle
         }
@@ -152,7 +152,7 @@ extension HandyExtension where Base: UIViewController {
     }
     
     /// 导航栏前景色（item的文字图标颜色），默认黑色
-    public var naviTintColor: UIColor {
+    var naviTintColor: UIColor {
         get {
             if let tintColor = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.tintColor) as? UIColor {
                 return tintColor
@@ -169,7 +169,7 @@ extension HandyExtension where Base: UIViewController {
     }
     
     /// 导航栏标题文字颜色，默认黑色
-    public var naviTitleColor: UIColor {
+    var naviTitleColor: UIColor {
         get {
             if let titleColor = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.titleColor) as? UIColor {
                 return titleColor
@@ -186,7 +186,7 @@ extension HandyExtension where Base: UIViewController {
     }
     
     /// 导航栏标题文字字体，默认17号粗体
-    public var naviTitleFont: UIFont {
+    var naviTitleFont: UIFont {
         get {
             if let titleFont = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.titleFont) as? UIFont {
                 return titleFont
@@ -204,7 +204,7 @@ extension HandyExtension where Base: UIViewController {
     
     
     /// 导航栏背景色，默认白色
-    public var naviBackgroundColor: UIColor {
+    var naviBackgroundColor: UIColor {
         get {
             if let backgroundColor = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.backgroundColor) as? UIColor {
                 return backgroundColor
@@ -220,7 +220,7 @@ extension HandyExtension where Base: UIViewController {
         }
     }
     /// 导航栏背景图片
-    public var naviBackgroundImage: UIImage? {
+    var naviBackgroundImage: UIImage? {
     
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.backgroundImage) as? UIImage ?? UINavigationBar.appearance().backgroundImage(for: .default)
@@ -232,7 +232,7 @@ extension HandyExtension where Base: UIViewController {
     }
     
     /// 导航栏背景透明度，默认1
-    public var naviBarAlpha: CGFloat {
+    var naviBarAlpha: CGFloat {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.barAlpha) as? CGFloat ?? 1
         }
@@ -243,7 +243,7 @@ extension HandyExtension where Base: UIViewController {
     }
    
     /// 导航栏底部分割线是否隐藏，默认不隐藏
-    public var naviShadowHidden: Bool {
+    var naviShadowHidden: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.shadowHidden) as? Bool ?? false
         }
@@ -254,7 +254,7 @@ extension HandyExtension where Base: UIViewController {
     }
     
     /// 导航栏底部分割线颜色
-    public var naviShadowColor: UIColor {
+    var naviShadowColor: UIColor {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.shadowColor) as? UIColor ?? UIColor(white: 0, alpha: 0.3)
         }
@@ -265,7 +265,7 @@ extension HandyExtension where Base: UIViewController {
     }
     
     /// 是否开启手势返回，默认开启
-    public var isEnablePopGesture: Bool {
+    var isEnablePopGesture: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.enablePopGesture) as? Bool ?? true
         }
@@ -274,7 +274,7 @@ extension HandyExtension where Base: UIViewController {
         }
     }
     ///是否全屏幕侧滑  优先级 enablePopGesture > enableFullScreenPopGesture
-    public var isEnableFullScreenPopGesture: Bool {
+    var isEnableFullScreenPopGesture: Bool {
         get {
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.enableFullScreenPopGesture) as? Bool ?? true
         }
@@ -282,7 +282,7 @@ extension HandyExtension where Base: UIViewController {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.enableFullScreenPopGesture, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    public var navigationItem: UINavigationItem{
+    var navigationItem: UINavigationItem{
         if base.navigationController?.handy.navigationStyle == .custom , let item = customNaviBar?.item{
             return item
         }
@@ -290,7 +290,7 @@ extension HandyExtension where Base: UIViewController {
     }
 
 
-    public var title: String?{
+    var title: String?{
         set{
             base.title = newValue
             customNaviBar?.title = newValue
@@ -300,7 +300,7 @@ extension HandyExtension where Base: UIViewController {
     }
 
     /// 自定义导航栏
-    public var customNaviBar: HandyNavigationBar? {
+    var customNaviBar: HandyNavigationBar? {
         get {
             var bar = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.customNaviBar) as? HandyNavigationBar
             if base.navigationController?.handy.navigationStyle == .custom , bar == nil{
@@ -323,23 +323,23 @@ extension HandyExtension where Base: UIViewController {
     }
     
     // MARK: -  更新UI
-    public func setNeedsNavigationBarUpdate(){
+    func setNeedsNavigationBarUpdate(){
         base.navigationController?.handy.updateNavigationBar(for: base)
     }
 
-    public func setNeedsNavigationBarTintUpdate(){
+    func setNeedsNavigationBarTintUpdate(){
         base.navigationController?.handy.updateNavigationBarTint(for: base)
     }
 
-    public func setNeedsNavigationBarBackgroundUpdate(){
+    func setNeedsNavigationBarBackgroundUpdate(){
         base.navigationController?.handy.updateNavigationBarBackground(for: base)
     }
 
-    public func setNeedsNavigationBarShadowUpdate(){
+    func setNeedsNavigationBarShadowUpdate(){
         base.navigationController?.handy.updateNavigationBarShadow(for: base)
     }
 
-    public func setStatusBarHidden(_ hidden: Bool , animate: Bool = false){
+    func setStatusBarHidden(_ hidden: Bool , animate: Bool = false){
         base.handy.statusBarHidden = hidden
         UIView.animate(withDuration: animate ? 0.25:0) {
             self.base.setNeedsStatusBarAppearanceUpdate()

@@ -13,8 +13,8 @@ extension Array: HandyTypealiasCompatibleValue{
 }
 extension Array: HandyClassTypealiasCompatibleValue{}
 
-extension HandyTypealiasExtension where Base == Array<T>{
-    public subscript(index:Int) -> T?{
+public extension HandyTypealiasExtension where Base == Array<T>{
+    subscript(index:Int) -> T?{
         if index<base.count {
             return base[index]
         }
@@ -22,8 +22,8 @@ extension HandyTypealiasExtension where Base == Array<T>{
     }
 }
 
-extension HandyTypealiasValueExtension where Base == Array<T>, T: Equatable{
-    public func remove(_ object: T, isAll: Bool = false){
+public extension HandyTypealiasValueExtension where Base == Array<T>, T: Equatable{
+    func remove(_ object: T, isAll: Bool = false){
         if let index = base.pointee.firstIndex(of: object){
             base.pointee.remove(at: index)
             if isAll {
@@ -37,8 +37,8 @@ extension HandyTypealiasValueExtension where Base == Array<T>, T: Equatable{
 extension CGFloat: HandyClassCompatibleValue{}
 
 
-extension HandyClassExtension where Base == CGFloat{
-    public static func middleValue(from: CGFloat, to: CGFloat, percent: CGFloat) -> CGFloat{
+public extension HandyClassExtension where Base == CGFloat{
+    static func middleValue(from: CGFloat, to: CGFloat, percent: CGFloat) -> CGFloat{
         return from + (to - from)*percent
     }
 }

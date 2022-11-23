@@ -6,6 +6,7 @@ target 'Handy_Example' do
   pod 'Handy', :path => '../'
   pod 'SSZipArchive'
   pod 'MBProgressHUD'
+  pod 'GDPerformanceView-Swift'
   target 'Handy_Tests' do
     inherit! :search_paths
 
