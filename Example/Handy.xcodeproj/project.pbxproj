@@ -137,6 +137,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				B5F4805D28E57B4800A843FC /* TableViewController.swift */,
+				B5454F9E28F2B5700021B9F1 /* BaseNaviViewController.swift */,
 				B5F4805928E57B4700A843FC /* AViewController.swift */,
 				B5F4805B28E57B4800A843FC /* BViewController.swift */,
 				B5F4805A28E57B4700A843FC /* NaviViewController.swift */,
@@ -148,7 +149,6 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				B5454F9E28F2B5700021B9F1 /* BaseNaviViewController.swift */,
 			);
 			name = "Example for Handy";
 			path = Handy;
