@@ -481,7 +481,7 @@ class HandyNavigationContrllerContext: NSObject {
             if navi.handy.useSystemBackBarButtonItem{
                 if navi.handy.navigationStyle == .custom  {
                     let path = Bundle.init(for: HandyNavigationBar.self).path(forResource: "Handy", ofType: "bundle")
-                    let item = HandyBarButtonItem.init(image: UIImage.handy.image(with: "icon_back", from: path), style: .done, target: self, action: #selector(onBack(_:)))
+                    let item = HandyBarButtonItem.init(image: UIImage.handy.image(for: "icon_back", from: path), style: .done, target: self, action: #selector(onBack(_:)))
                     viewController.handy.navigationItem.leftBarButtonItem = item
                 }else{
                     viewController.navigationItem.leftBarButtonItem = navi.handy.barBackItem

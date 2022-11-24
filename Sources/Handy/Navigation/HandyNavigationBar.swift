@@ -75,7 +75,7 @@ public class HandyNavigationBar: UINavigationBar {
     }
     
     func updateBarShadow(for viewController: UIViewController) {
-        shadowImage = viewController.handy.naviShadowHidden ? UIImage(): UIImage.handy.image(with: viewController.handy.naviShadowColor)
+        shadowImage = viewController.handy.naviShadowHidden ? UIImage(): UIImage.handy.image(for: viewController.handy.naviShadowColor)
     }
     
     func setupFakeView(){

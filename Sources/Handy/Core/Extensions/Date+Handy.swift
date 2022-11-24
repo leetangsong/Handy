@@ -98,7 +98,7 @@ public extension HandyExtension where Base == Date{
 
 
 public extension HandyClassExtension where Base == Date{
-    fileprivate static let calendar = Calendar.init(identifier: .gregorian)
+    fileprivate static var calendar = Calendar.init(identifier: .gregorian)
     fileprivate static let displayFormatter =  DateFormatter()
     /// 日期格式化
     ///

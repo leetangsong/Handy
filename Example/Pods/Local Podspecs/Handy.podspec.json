@@ -21,11 +21,6 @@
   "platforms": {
     "ios": "11.0"
   },
-  "resource_bundles": {
-    "Handy": [
-      "Handy/Assets/*"
-    ]
-  },
   "pod_target_xcconfig": {
     "CODE_SIGN_IDENTITY": ""
   },
@@ -37,20 +32,21 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "Handy/Classes/Core/**/*"
+      "source_files": "Sources/Handy/Core/**/*"
     },
     {
       "name": "Navigation",
-      "source_files": "Handy/Classes/Navigation/**/*",
+      "source_files": "Sources/Handy/Navigation/**/*",
       "dependencies": {
         "Handy/Core": [
 
         ]
-      }
+      },
+      "resources": "Sources/Handy/Resources/*.{bundle}"
     },
     {
       "name": "Theme",
-      "source_files": "Handy/Classes/Theme/**/*",
+      "source_files": "Sources/Handy/Theme/**/*",
       "dependencies": {
         "Handy/Navigation": [
 

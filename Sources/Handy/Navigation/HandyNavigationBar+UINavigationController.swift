@@ -466,7 +466,7 @@ public extension HandyExtension where Base: UINavigationController{
         var bar: HandyNavigationBar?
         
         if navigationStyle == .none{
-            base.navigationBar.shadowImage = viewController.handy.naviShadowHidden ? UIImage(): UIImage.handy.image(with: viewController.handy.naviShadowColor)
+            base.navigationBar.shadowImage = viewController.handy.naviShadowHidden ? UIImage(): UIImage.handy.image(for: viewController.handy.naviShadowColor)
         }else if navigationStyle == .custom {
             bar = viewController.handy.customNaviBar
         }else{

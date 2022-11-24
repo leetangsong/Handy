@@ -181,42 +181,12 @@ public extension HandyClassExtension where Base: UIImage {
 
     
     
-    class func image(with name: String, from bundlePath: String?) -> UIImage?{
-        if name.count == 0 {
-            return nil
-        }
-        if bundlePath == nil {
-            return UIImage.init(named: name)
-        }
-        let scale = Int(UIScreen.main.scale)
-        let _name = "\(name)\(scale>1 ? "@\(scale)x":"")"
-        let bundle = Bundle.init(path: bundlePath!)
-        
-        var image: UIImage?
-        if let path = bundle?.path(forResource: _name, ofType: ".png") {
-            image = UIImage.init(contentsOfFile: path)
-        }
-        
-        if image == nil, let path = bundle?.path(forResource: "\(name)@2x", ofType: ".png")  {
-            image = UIImage.init(contentsOfFile: path)
-        }
-        if image == nil, let path = bundle?.path(forResource: "\(name)", ofType: ".png")  {
-            image = UIImage.init(contentsOfFile: path)
-        }
-        
-        if image == nil {
-            image = UIImage.init(named: name)
-        }
-        return image
-    }
-    
-    
-    class func image(for named: String?, from path: String?) -> UIImage? {
+    class func image(for named: String?, from bundlePath: String?) -> UIImage?{
         if named == nil {
             return nil
         }
         var image: UIImage?
-        if var path = path {
+        if var path = bundlePath {
             path += "/" + named!
             image = base.init(named: path)
         }
@@ -225,5 +195,6 @@ public extension HandyClassExtension where Base: UIImage {
         }
         return image
     }
+    
     
 }
