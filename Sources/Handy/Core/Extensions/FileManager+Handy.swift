@@ -60,4 +60,32 @@ extension HandyClassExtension where Base: FileManager{
     }
     
     
+    /// 获取文件大小
+    /// - Parameter path: 文件路径
+    /// - Returns: 文件大小
+    static func fileSize(atPath path: String) -> Int {
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: path) {
+            let fileSize = try? fileManager.attributesOfItem(atPath: path)[.size]
+            if let size = fileSize as? Int {
+                return size
+            }
+        }
+        return 0
+    }
+    
+    /// 获取文件夹里的所有文件大小
+    /// - Parameter path: 文件夹路径
+    /// - Returns: 文件夹大小
+    static func folderSize(atPath path: String) -> Int {
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: path) { return 0 }
+        let childFiles = fileManager.subpaths(atPath: path)
+        var folderSize = 0
+        childFiles?.forEach({ (fileName) in
+            let fileAbsolutePath = path + "/" + fileName
+            folderSize += fileSize(atPath: fileAbsolutePath)
+        })
+        return folderSize
+    }
 }
