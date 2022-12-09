@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension HandyClassExtension where Base: FileManager{
+public extension HandyClassExtension where Base: FileManager{
     
     static var documentPath: String {
         NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last ?? ""
