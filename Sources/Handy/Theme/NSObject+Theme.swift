@@ -20,10 +20,10 @@ fileprivate typealias setStatusBarStyleValueIMP = @convention(c) (NSObject, Sele
 #endif
 
 
-class ThemePickerHelper: NSObject{
-    var pickerHelper: () -> Void
+public class ThemePickerHelper: NSObject{
+    public var pickerHelper: () -> Void
     
-    init(pickerHelper: @escaping () -> Void) {
+    public init(pickerHelper: @escaping () -> Void) {
         self.pickerHelper = pickerHelper
     }
 }

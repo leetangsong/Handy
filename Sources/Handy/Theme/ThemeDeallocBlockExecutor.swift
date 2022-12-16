@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class ThemeDeallocBlockExecutor{
     var pickerHelper: ThemePickerHelper?
     init(pickerHelper: ThemePickerHelper?) {

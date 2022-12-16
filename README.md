@@ -135,7 +135,7 @@ ThemeManager.setTheme(plistName: "Red", path: .mainBundle)
 if #available(iOS 13.0, *) {
       ThemeManager.setTheme(jsonName: "Red"  , path: .mainBundle)
       ThemeManager.followSystemThemeAction = { style in
-          ThemeManager.setTheme(jsonName: style == .linght ? "Red" : "Night" , path: .mainBundle)
+          ThemeManager.setTheme(jsonName: style == .light ? "Red" : "Night" , path: .mainBundle)
       }
       ThemeManager.isFollowSystemTheme = true
  }

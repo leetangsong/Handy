@@ -57,7 +57,7 @@ public enum ThemePath {
 
 @available(iOS 13.0, *)
 @objc public enum  ThemeSystemStyle: Int{
-    case linght = 0
+    case light = 0
     case dark
 }
 
@@ -164,7 +164,7 @@ public enum ThemePath {
     private static func getSystemStyle(from userInterfaceStyle: UIUserInterfaceStyle?)-> ThemeSystemStyle {
         if let style = userInterfaceStyle{
             if style == .dark{
-                return .linght
+                return .light
             }else{
                 return .dark
             }
@@ -173,7 +173,7 @@ public enum ThemePath {
             if style == .dark{
                 return .dark
             }else{
-                return .linght
+                return .light
             }
         }
     }
