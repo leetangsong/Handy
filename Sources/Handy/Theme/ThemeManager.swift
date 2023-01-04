@@ -95,7 +95,7 @@ public enum ThemePath {
         return  getSystemStyle(from: _userInterfaceStyle)
     }
     @available(iOS 13.0, *)
-    private static var _userInterfaceStyle: UIUserInterfaceStyle?{
+    private static var _userInterfaceStyle: UIUserInterfaceStyle = UITraitCollection.current.userInterfaceStyle{
         didSet{
             if _userInterfaceStyle != oldValue{
                 followSystemThemeAction?(systemThemeStyle)
@@ -152,29 +152,20 @@ public enum ThemePath {
     }
     
     @available(iOS 13.0, *)
-    class func systemThemeChange(_ userInterfaceStyle: UIUserInterfaceStyle?){
+    class func systemThemeChange(){
         themeSystemChangeLock.lock()
         fromSystemChange = true
-        _userInterfaceStyle = userInterfaceStyle
+        _userInterfaceStyle = UITraitCollection.current.userInterfaceStyle
         fromSystemChange = false
         themeSystemChangeLock.unlock()
     }
     
     @available(iOS 13.0, *)
     private static func getSystemStyle(from userInterfaceStyle: UIUserInterfaceStyle?)-> ThemeSystemStyle {
-        if let style = userInterfaceStyle{
-            if style == .dark{
-                return .light
-            }else{
-                return .dark
-            }
-        }else {
-            let style = UIViewController().traitCollection.userInterfaceStyle
-            if style == .dark{
-                return .dark
-            }else{
-                return .light
-            }
+        if userInterfaceStyle == .dark{
+            return .dark
+        }else{
+            return .light
         }
     }
 }

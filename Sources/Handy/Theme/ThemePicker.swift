@@ -7,7 +7,7 @@
 
 import UIKit
 
-@objc public class ThemePicker: NSObject, NSCopying {
+@objc open class ThemePicker: NSObject, NSCopying {
     
     public typealias ValueType = () -> Any?
     

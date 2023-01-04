@@ -24,13 +24,8 @@ extension UIViewController{
         handy_traitCollectionDidChange(previousTraitCollection)
         if #available(iOS 13.0, *){
             if !ThemeManager.isFollowSystemTheme{ return }
-            let state = UIApplication.shared.applicationState
-            if state == .background{
-                ThemeManager.systemThemeChange(previousTraitCollection?.userInterfaceStyle)
-            }else{
-                if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection){
-                    ThemeManager.systemThemeChange(previousTraitCollection?.userInterfaceStyle)
-                }
+            if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection){
+                ThemeManager.systemThemeChange()
             }
         }
         

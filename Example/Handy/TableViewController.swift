@@ -79,7 +79,7 @@ class TableViewController: UITableViewController {
             self.present(demoVC, animated: true)
         }else if indexPath.row == 1{
             guard let demoVC = storyboard?.instantiateViewController(withIdentifier: "ThemeNavi") else { return }
-            demoVC.modalPresentationStyle = .fullScreen
+//            demoVC.modalPresentationStyle = .fullScreen
             self.present(demoVC, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)
