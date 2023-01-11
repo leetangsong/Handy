@@ -27,6 +27,18 @@ extension UINavigationController{
         static var navigationContext = "navigationContext"
         static var animationBlock = "animationBlock"
         static var interactivePopGestureRecognizer = "interactivePopGestureRecognizer"
+        
+        static var appearanceBarStyle = "appearanceBarStyle"
+        static var appearanceBarBackgroundColor = "appearanceBarBackgroundColor"
+        static var appearanceBarBackgroundImage = "appearanceBarBackgroundImage"
+        static var appearanceBarTintColor = "appearanceBarTintColor"
+        static var appearanceBarTitleColor = "appearanceBarTitleColor"
+        static var appearanceBarTitleFont = "appearanceBarTitleFont"
+        static var appearanceBarShadowHidden = "appearanceBarShadowHidden"
+        static var appearanceBarShadowColor = "appearanceBarShadowColor"
+        static var appearanceBarIsTranslucent = "appearanceBarIsTranslucent"
+        static var appearanceStatusBarStyle = "appearanceStatusBarStyle"
+
     }
     
     open override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -66,6 +78,8 @@ var tsPopMiddleBeginTime: CFTimeInterval = CACurrentMediaTime()
 
 
 extension UINavigationController{
+   
+    
     fileprivate var tsPopProgress: CGFloat{
         var progress = (CACurrentMediaTime() - tsPopBeginTime) / tsPopDuration
         progress = min(1, progress)
@@ -125,6 +139,7 @@ extension UINavigationController{
             view.addGestureRecognizer(handy.interactivePopGestureRecognizer!)
             interactivePopGestureRecognizer?.isEnabled = false
         }
+        
     }
     
     @objc private func handy_viewDidLayoutSubviews() {
@@ -296,6 +311,119 @@ extension UINavigationController: UIGestureRecognizerDelegate{
 
 
 public extension HandyExtension where Base: UINavigationController{
+    
+    var appearanceBarIsTranslucent: Bool? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarIsTranslucent) as? Bool ?? true
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarIsTranslucent, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarBackgroundUpdate()
+        }
+    }
+    
+    var appearanceBarStyle: UIBarStyle? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarStyle) as? UIBarStyle ?? .default
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarStyle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarTintUpdate()
+        }
+        
+    }
+    
+    var appearanceStatusBarStyle: HandyStatusBarStyle? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceStatusBarStyle) as? HandyStatusBarStyle
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceStatusBarStyle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.setNeedsStatusBarAppearanceUpdate()
+        }
+        
+    }
+    
+    /// 导航栏前景色（item的文字图标颜色），默认黑色
+    var appearanceBarTintColor: UIColor? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarTintColor) as? UIColor
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarTintUpdate()
+        }
+    }
+    
+    /// 导航栏标题文字颜色，默认黑色
+    var appearanceBarTitleColor: UIColor? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarTitleColor) as? UIColor
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarTitleColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarTintUpdate()
+        }
+    }
+    
+    /// 导航栏标题文字字体，默认17号粗体
+    var appearanceBarTitleFont: UIFont? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarTitleFont) as? UIFont
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarTitleFont, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarTintUpdate()
+        }
+    }
+    
+    
+    /// 导航栏背景色
+    var appearanceBarBackgroundColor: UIColor? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarBackgroundColor) as? UIColor
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarBackgroundColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarBackgroundUpdate()
+        }
+    }
+    /// 导航栏背景图片
+    var appearanceBarBackgroundImage: UIImage? {
+    
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarBackgroundImage) as? UIImage
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarBackgroundImage, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarBackgroundUpdate()
+        }
+    }
+   
+    /// 导航栏底部分割线是否隐藏，默认不隐藏
+    var appearanceBarShadowHidden: Bool? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarShadowHidden) as? Bool
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarShadowHidden, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarShadowUpdate()
+        }
+    }
+    
+    /// 导航栏底部分割线颜色
+    var appearanceBarShadowColor: UIColor? {
+        get {
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarShadowColor) as? UIColor
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.appearanceBarShadowColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            base.topViewController?.handy.setNeedsNavigationBarShadowUpdate()
+        }
+    }
+    
+    
+    
     ///若设置 则替代系统默认的返回
     var barBackItem: UIBarButtonItem? {
         get {
@@ -432,7 +560,7 @@ public extension HandyExtension where Base: UINavigationController{
         let navigationBar = navigationBar
         var titleTextAttributes = navigationBar.titleTextAttributes ?? [:]
         titleTextAttributes[.foregroundColor] = viewController.handy.naviTitleColor
-        titleTextAttributes[.font] = viewController.handy.naviTitleFont
+        titleTextAttributes[.font] = viewController.handy.naviTitleFont 
         base.navigationBar.barStyle = viewController.handy.naviBarStyle
         navigationBar.titleTextAttributes = titleTextAttributes
         navigationBar.tintColor = viewController.handy.naviTintColor
@@ -445,7 +573,11 @@ public extension HandyExtension where Base: UINavigationController{
         }
         var bar: HandyNavigationBar?
         if navigationStyle == .none{
-            base.navigationBar.barTintColor = viewController.handy.naviBackgroundColor
+            var color: UIColor? = viewController.handy.naviBackgroundColor
+            if color == .clear{
+                color = nil
+            }
+            base.navigationBar.barTintColor = color
             base.navigationBar.setBackgroundImage(viewController.handy.naviBackgroundImage, for: .default)
             base.navigationBar.handy.backgroundAlpha = viewController.handy.naviBarAlpha
         }else if navigationStyle == .custom {

@@ -56,19 +56,34 @@ public class HandyNavigationBar: UINavigationBar {
     }
     
     func updateBarBackground(for viewController: UIViewController) {
-        barTintColor = viewController.handy.naviBackgroundColor
+        var color: UIColor? = viewController.handy.naviBackgroundColor
+        if color == .clear{
+            color = nil
+        }
+        
+        barTintColor = color
         isTranslucent = viewController.handy.naviIsTranslucent
+        
         if viewController.handy.naviBackgroundImage != nil {
             isTranslucent = false
             barTintColor = nil
         }
         backImageView.image = viewController.handy.naviBackgroundImage
         if !isTranslucent {
-            backgroundView.backgroundColor = viewController.handy.naviBackgroundColor
+            if #available(iOS 13.0, *) {
+                color = color ?? UIColor.init(dynamicProvider: { trait in
+                    if trait.userInterfaceStyle == .dark{
+                        return UIColor.black
+                    }else{
+                        return UIColor.white
+                    }
+                })
+            }
+            backgroundView.backgroundColor = color
         }else{
-            backgroundView.backgroundColor = .clear
+            backgroundView.backgroundColor = nil
         }
-        
+       
         backImageView.alpha = 1
         handy.backgroundAlpha = viewController.handy.naviBarAlpha
         

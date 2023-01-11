@@ -118,8 +118,42 @@ extension NSObject {
     }
     
     func performThemePicker(selector: String, picker: ThemePicker?) {
-        
-        if let vc = self as? UIViewController, let value = picker?.value() {
+        if let navi = self as? UINavigationController, let value = picker?.value() {
+            if let _ = picker as? ThemeStatusBarStylePicker{
+                let style = value as! UIStatusBarStyle
+                navi.handy.appearanceStatusBarStyle = ThemeStatusBarStylePicker.getHandyStyle(style: style)
+            }
+            
+            if let _ = picker as? ThemeBarStylePicker{
+                let style = value as! UIBarStyle
+                navi.handy.appearanceBarStyle = style
+            }
+            if let _ = picker as? ThemeColorPicker{
+                let color = value as! UIColor
+                if selector == "appearanceBarTintColor"{
+                    navi.handy.appearanceBarTintColor = color
+                }else if selector == "appearanceBarTitleColor"{
+                    navi.handy.appearanceBarTitleColor = color
+                }else if selector == "appearanceBarBackgroundColor"{
+                    navi.handy.appearanceBarBackgroundColor = color
+                }else if selector == "appearanceBarShadowColor"{
+                    navi.handy.appearanceBarShadowColor = color
+                }
+            }else if let _ = picker as? ThemeFontPicker{
+                let font = value as! UIFont
+                if selector == "appearanceBarTitleFont"{
+                    navi.handy.appearanceBarTitleFont = font
+                }
+            }else if let _ = picker as? ThemeImagePicker{
+                let image = value as? UIImage
+                if selector == "appearanceBarTitleFont"{
+                    navi.handy.appearanceBarBackgroundImage = image
+                }
+            }
+            
+            return
+            
+        }else if let vc = self as? UIViewController, let value = picker?.value() {
             if let _ = picker as? ThemeStatusBarStylePicker{
                 let style = value as! UIStatusBarStyle
                 vc.handy.statusBarStyle = ThemeStatusBarStylePicker.getHandyStyle(style: style)

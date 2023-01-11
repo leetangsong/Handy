@@ -451,8 +451,8 @@ extension ThemeExtension where Base: UIBarAppearance
 }
 
 
-extension ThemeExtension where Base: UIViewController{
-    public var statusBarStyle: ThemeStatusBarStylePicker? {
+public extension ThemeExtension where Base: UIViewController{
+    var statusBarStyle: ThemeStatusBarStylePicker? {
         get {
             return getThemePicker(base, "statusBarStyle") as? ThemeStatusBarStylePicker
         }
@@ -462,7 +462,7 @@ extension ThemeExtension where Base: UIViewController{
     }
    
     
-    public var naviBarStyle: ThemeBarStylePicker? {
+    var naviBarStyle: ThemeBarStylePicker? {
         get {
             return getThemePicker(base, "naviBarStyle") as? ThemeBarStylePicker
         }
@@ -471,7 +471,7 @@ extension ThemeExtension where Base: UIViewController{
         }
     }
 
-    public var naviTintColor: ThemeColorPicker? {
+    var naviTintColor: ThemeColorPicker? {
         get {
             return getThemePicker(base, "naviTintColor") as? ThemeColorPicker
         }
@@ -479,7 +479,7 @@ extension ThemeExtension where Base: UIViewController{
             setThemePicker(base, "naviTintColor", newValue)
         }
     }
-    public var naviTitleColor: ThemeColorPicker? {
+    var naviTitleColor: ThemeColorPicker? {
         get {
             return getThemePicker(base, "naviTitleColor") as? ThemeColorPicker
         }
@@ -487,8 +487,8 @@ extension ThemeExtension where Base: UIViewController{
             setThemePicker(base, "naviTitleColor", newValue)
         }
     }
-//
-    public var naviTitleFont: ThemeFontPicker? {
+
+    var naviTitleFont: ThemeFontPicker? {
         get {
             return getThemePicker(base, "naviTitleFont") as? ThemeFontPicker
         }
@@ -496,10 +496,9 @@ extension ThemeExtension where Base: UIViewController{
             setThemePicker(base, "naviTitleFont", newValue)
         }
     }
-//
-//
-//    /// 导航栏背景色，默认白色
-    public var naviBackgroundColor: ThemeColorPicker? {
+
+    /// 导航栏背景色，默认白色
+    var naviBackgroundColor: ThemeColorPicker? {
         get {
             return getThemePicker(base, "naviBackgroundColor") as? ThemeColorPicker
         }
@@ -507,8 +506,8 @@ extension ThemeExtension where Base: UIViewController{
             setThemePicker(base, "naviBackgroundColor", newValue)
         }
     }
-//    /// 导航栏背景图片
-    public var naviBackgroundImage: ThemeImagePicker? {
+    /// 导航栏背景图片
+    var naviBackgroundImage: ThemeImagePicker? {
         get {
             return getThemePicker(base, "naviBackgroundImage") as? ThemeImagePicker
         }
@@ -516,9 +515,8 @@ extension ThemeExtension where Base: UIViewController{
             setThemePicker(base, "naviBackgroundImage", newValue)
         }
     }
-//
-//    /// 导航栏底部分割线颜色
-    public var naviShadowColor: ThemeColorPicker? {
+    /// 导航栏底部分割线颜色
+    var naviShadowColor: ThemeColorPicker? {
         get {
             return getThemePicker(base, "naviShadowColor") as? ThemeColorPicker
         }
@@ -526,10 +524,82 @@ extension ThemeExtension where Base: UIViewController{
             setThemePicker(base, "naviShadowColor", newValue)
         }
     }
-    
-    
 }
+public extension ThemeExtension where Base: UINavigationController{
 
+    var appearanceStatusBarStyle: ThemeStatusBarStylePicker? {
+        get {
+            return getThemePicker(base, "appearanceStatusBarStyle") as? ThemeStatusBarStylePicker
+        }
+        set {
+            setThemePicker(base, "appearanceStatusBarStyle", newValue)
+        }
+    }
+   
+    
+    var appearanceBarStyle: ThemeBarStylePicker? {
+        get {
+            return getThemePicker(base, "appearanceBarStyle") as? ThemeBarStylePicker
+        }
+        set {
+            setThemePicker(base, "appearanceBarStyle", newValue)
+        }
+    }
+
+    var appearanceBarTintColor: ThemeColorPicker? {
+        get {
+            return getThemePicker(base, "appearanceBarTintColor") as? ThemeColorPicker
+        }
+        set {
+            setThemePicker(base, "appearanceBarTintColor", newValue)
+        }
+    }
+    var appearanceBarTitleColor: ThemeColorPicker? {
+        get {
+            return getThemePicker(base, "appearanceBarTitleColor") as? ThemeColorPicker
+        }
+        set {
+            setThemePicker(base, "appearanceBarTitleColor", newValue)
+        }
+    }
+
+    var appearanceBarTitleFont: ThemeFontPicker? {
+        get {
+            return getThemePicker(base, "appearanceBarTitleFont") as? ThemeFontPicker
+        }
+        set {
+            setThemePicker(base, "appearanceBarTitleFont", newValue)
+        }
+    }
+
+    /// 导航栏背景色，默认白色
+    var appearanceBarBackgroundColor: ThemeColorPicker? {
+        get {
+            return getThemePicker(base, "appearanceBarBackgroundColor") as? ThemeColorPicker
+        }
+        set {
+            setThemePicker(base, "appearanceBarBackgroundColor", newValue)
+        }
+    }
+    /// 导航栏背景图片
+    var appearanceBarBackgroundImage: ThemeImagePicker? {
+        get {
+            return getThemePicker(base, "appearanceBarBackgroundImage") as? ThemeImagePicker
+        }
+        set {
+            setThemePicker(base, "appearanceBarBackgroundImage", newValue)
+        }
+    }
+    /// 导航栏底部分割线颜色
+    var appearanceBarShadowColor: ThemeColorPicker? {
+        get {
+            return getThemePicker(base, "appearanceBarShadowColor") as? ThemeColorPicker
+        }
+        set {
+            setThemePicker(base, "appearanceBarShadowColor", newValue)
+        }
+    }
+}
 #endif
 
 

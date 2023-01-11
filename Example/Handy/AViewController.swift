@@ -15,7 +15,7 @@ class AViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        theme.naviBackgroundColor = "Global.tintColor"
         handy.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "next", style: .done, target: self, action: #selector(nextPage))
         
 //        ts_transitionViews = ["button": button]

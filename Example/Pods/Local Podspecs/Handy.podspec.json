@@ -1,6 +1,6 @@
 {
   "name": "Handy",
-  "version": "1.0.4",
+  "version": "1.0.9",
   "summary": "导航栏, 主题切换 ,自定义的UI以及常用拓展",
   "swift_versions": [
     "5.0"
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/leetangsong/Handy.git",
-    "tag": "1.0.4"
+    "tag": "1.0.9"
   },
   "platforms": {
     "ios": "11.0"

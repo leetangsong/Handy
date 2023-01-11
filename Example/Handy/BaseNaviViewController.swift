@@ -13,6 +13,9 @@ class BaseNaviViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         handy.navigationStyle = .system
+        handy.appearanceBarBackgroundColor = UIColor.handy.color(hex6: 0xFF7E79)
+        handy.appearanceBarTintColor = .red
+        handy.appearanceBarTitleColor = .red
         // Do any additional setup after loading the view.
     }
     open override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -22,7 +25,9 @@ class BaseNaviViewController: UINavigationController {
     open override var prefersStatusBarHidden: Bool{
         return topViewController?.handy.statusBarHidden ?? false
     }
-
+    deinit {
+        print("销毁\(self)")
+    }
     /*
     // MARK: - Navigation
 

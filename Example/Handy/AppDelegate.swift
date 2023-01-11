@@ -26,24 +26,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ThemeManager.setTheme(jsonName: "Red", path: .mainBundle)
         }
         
-        let navigationBar = UINavigationBar.appearance()
-        navigationBar.theme.barTintColor = "Global.barTintColor"
-        navigationBar.theme.tintColor = "Global.tintColor"
-        navigationBar.theme.titleTextAttributes = ThemeStringAttributesPicker(keyPath: "Global.barTextColor") { value -> [NSAttributedString.Key : AnyObject]? in
-            guard let rgba = value as? String else {
-                return nil
-            }
-            
-            let color = UIColor.handy.color(rgba: rgba)
-            let shadow = NSShadow(); shadow.shadowOffset = CGSize.zero
-            let titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor: color,
-                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
-                NSAttributedString.Key.shadow: shadow
-            ]
-            
-            return titleTextAttributes
-        }
+//        let navigationBar = UINavigationBar.appearance()
+//        navigationBar.theme.barTintColor = "Global.barTintColor"
+//        navigationBar.theme.tintColor = "Global.tintColor"
+//        navigationBar.theme.titleTextAttributes = ThemeStringAttributesPicker(keyPath: "Global.barTextColor") { value -> [NSAttributedString.Key : AnyObject]? in
+//            guard let rgba = value as? String else {
+//                return nil
+//            }
+//            
+//            let color = UIColor.handy.color(rgba: rgba)
+//            let shadow = NSShadow(); shadow.shadowOffset = CGSize.zero
+//            let titleTextAttributes = [
+//                NSAttributedString.Key.foregroundColor: color,
+//                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+//                NSAttributedString.Key.shadow: shadow
+//            ]
+//            
+//            return titleTextAttributes
+//        }
         
         
 //        window = UIWindow.init(frame: UIScreen.main.bounds)

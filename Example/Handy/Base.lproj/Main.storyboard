@@ -868,10 +868,10 @@
             </objects>
             <point key="canvasLocation" x="4343" y="495"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Theme Navigation Controller-->
         <scene sceneID="VuZ-2T-ph5">
             <objects>
-                <navigationController storyboardIdentifier="ThemeNavi" automaticallyAdjustsScrollViewInsets="NO" id="WTw-gl-XUS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ThemeNavi" automaticallyAdjustsScrollViewInsets="NO" id="WTw-gl-XUS" customClass="ThemeNavigationController" customModule="Handy_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s1h-cN-3J1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

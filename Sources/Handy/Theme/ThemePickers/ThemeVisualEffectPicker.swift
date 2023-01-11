@@ -39,7 +39,7 @@ import UIKit
         self.init(keyPath: value)
     }
     
-    class func getEffect(stringEffect: String) -> UIVisualEffect {
+    public class func getEffect(stringEffect: String) -> UIVisualEffect {
         switch stringEffect.replacingOccurrences(of: "_", with: "").lowercased() {
         case "dark":
             return UIBlurEffect(style: .dark)

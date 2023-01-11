@@ -137,7 +137,7 @@ class HandyNavigationContrllerContext: NSObject {
         if alphaObserver == nil{
             alphaObserver = fakeSuperView.observe(\UIView.backgroundColor, options: [.old, .new]) { _, change in
                 if change.newValue != change.oldValue {
-                    fakeSuperView.backgroundColor = .clear
+                    fakeSuperView.backgroundColor = nil
                 }
             }
         }
@@ -178,7 +178,7 @@ class HandyNavigationContrllerContext: NSObject {
         }
         navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navi.navigationBar.shadowImage = UIImage()
-        navi.navigationBar.barTintColor = UIColor.clear
+        navi.navigationBar.barTintColor = nil
         setupFakeSubviews()
     }
     
@@ -200,7 +200,7 @@ class HandyNavigationContrllerContext: NSObject {
             navi.view.insertSubview(fakeBar, belowSubview: navi.navigationBar)
         }
         fakeBar.setNeedsLayout()
-        self.fakeSuperView?.backgroundColor = .clear
+        self.fakeSuperView?.backgroundColor = nil
 
         coordinator.notifyWhenInteractionChanges { context in
             if navi.handy.navigationStyle != .custom {
@@ -247,9 +247,9 @@ class HandyNavigationContrllerContext: NSObject {
     
     func showTempFakeBar(fromVC: UIViewController, toVC: UIViewController, ignoreTintColor : Bool = false) {
         guard let navi = navigationController, navi.handy.navigationStyle != .none else { return }
-        
+        fromVC.handy.navigationController = navi
+        toVC.handy.navigationController = navi
         UIView.setAnimationsEnabled(false)
-        
         if navi.handy.navigationStyle == .system {
             if toVC.handy.naviBarHidden {
                 navi.handy.updateNavigationBar(for: fromVC)
@@ -266,12 +266,25 @@ class HandyNavigationContrllerContext: NSObject {
                 fakeBar.backImageView.image = fromVC.handy.naviBackgroundImage
             }
             if !toVC.handy.naviBarHidden && !fromVC.handy.naviBarHidden {
+                var color: UIColor? = fromVC.handy.naviBackgroundColor
+                if color == .clear{
+                    color = nil
+                }
                 if fakeBar.isTranslucent {
-                    fakeBar.backgroundView.backgroundColor = .clear
-                    fakeBar.barTintColor = fromVC.handy.naviBackgroundColor
+                    fakeBar.backgroundView.backgroundColor = nil
+                    fakeBar.barTintColor = color
                 }else{
-                    fakeBar.barTintColor = .clear
-                    fakeBar.backgroundView.backgroundColor = fromVC.handy.naviBackgroundColor
+                    if #available(iOS 13.0, *) {
+                        color = color ?? UIColor.init(dynamicProvider: { trait in
+                            if trait.userInterfaceStyle == .dark{
+                                return UIColor.black
+                            }else{
+                                return UIColor.white
+                            }
+                        })
+                    }
+                    fakeBar.barTintColor = nil
+                    fakeBar.backgroundView.backgroundColor = color
                 }
             }
         }else{
@@ -336,7 +349,8 @@ class HandyNavigationContrllerContext: NSObject {
     
     func updateNavigationBar(fromVC: UIViewController, toVC: UIViewController, progress: CGFloat, stratProgress: CGFloat? = nil){
         guard let navi = navigationController, navi.handy.navigationStyle != .none else { return }
-        
+        fromVC.handy.navigationController = navi
+        toVC.handy.navigationController = navi
         var titleTextAttributes = fakeBar.titleTextAttributes ?? [:]
         var foregroundFromColor = fromVC.handy.naviTitleColor
         var tintFromColor = fromVC.handy.naviTintColor
@@ -361,9 +375,11 @@ class HandyNavigationContrllerContext: NSObject {
                 fakeBar.backImageView.image = fromVC.handy.naviBackgroundImage
                 fakeBar.backImageView.alpha = CGFloat.handy.middleValue(from: bgAlphaFrom, to: 0, percent: progress)
             }
-            
-            let color = UIColor.handy.average(fromColor: barTintFromColor, toColor: toVC.handy.naviBackgroundColor, percent: progress)
-            
+            let toColor = toVC.handy.naviBackgroundColor
+            var color: UIColor? = UIColor.handy.average(fromColor: barTintFromColor, toColor: toColor , percent: progress)
+            if toColor == .clear && barTintFromColor == .clear{
+                color = nil
+            }
             fakeBar.isTranslucent = toVC.handy.naviIsTranslucent
             if toVC.handy.naviBarHidden {
                 fakeBar.isTranslucent = fromVC.handy.naviIsTranslucent
@@ -373,10 +389,19 @@ class HandyNavigationContrllerContext: NSObject {
             
             if !toVC.handy.naviBarHidden && !fromVC.handy.naviBarHidden {
                 if fakeBar.isTranslucent {
-                    fakeBar.backgroundView.backgroundColor = .clear
+                    fakeBar.backgroundView.backgroundColor = nil
                     fakeBar.barTintColor = color
                 }else{
-                    fakeBar.barTintColor = .clear
+                    if #available(iOS 13.0, *) {
+                        color = color ?? UIColor.init(dynamicProvider: { trait in
+                            if trait.userInterfaceStyle == .dark{
+                                return UIColor.black
+                            }else{
+                                return UIColor.white
+                            }
+                        })
+                    }
+                    fakeBar.barTintColor = nil
                     fakeBar.backgroundView.backgroundColor = color
                 }
             }

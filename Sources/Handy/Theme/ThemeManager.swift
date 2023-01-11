@@ -77,7 +77,7 @@ public enum ThemePath {
     ///是否是系统主题按钮改变
     static var fromSystemChange: Bool = false
     
-    static var themePickers: [ThemePickerHelper] = []
+    public static var themePickers: [ThemePickerHelper] = []
     
     @objc public fileprivate(set) static var currentTheme: NSDictionary?
     
@@ -103,7 +103,13 @@ public enum ThemePath {
         }
     }
     
-    @objc class func setTheme(index: Int) {
+    public class func changeTheme(){
+        themeChangeLock.lock()
+        for helper in themePickers{
+            helper.pickerHelper()
+        }
+    }
+    public class func setTheme(index: Int) {
         currentThemeIndex = index
         themeChangeLock.lock()
         for helper in themePickers{

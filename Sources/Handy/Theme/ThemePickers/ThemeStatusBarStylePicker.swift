@@ -45,7 +45,7 @@ final class ThemeStatusBarStylePicker: ThemePicker {}
         self.init(keyPath: value)
     }
     
-    class func getStyle(stringStyle: String) -> UIStatusBarStyle {
+    public class func getStyle(stringStyle: String) -> UIStatusBarStyle {
         switch stringStyle.lowercased() {
         case "default"      : return .default
         case "lightcontent" : return .lightContent
@@ -54,7 +54,7 @@ final class ThemeStatusBarStylePicker: ThemePicker {}
         }
     }
     
-    class func getHandyStyle(style: UIStatusBarStyle) -> HandyStatusBarStyle {
+    public class func getHandyStyle(style: UIStatusBarStyle) -> HandyStatusBarStyle {
         switch style {
         case .default      : return .default
         case .lightContent : return .lightContent

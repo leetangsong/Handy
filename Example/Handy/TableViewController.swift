@@ -26,12 +26,15 @@ class TableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
         handy.title = "首页"
         handy.naviTitleColor = .white
-        handy.naviBackgroundColor = .blue
-         DispatchQueue.main.asyncAfter(deadline: .now()+5) {
-             UIView.animate(withDuration: 1) {
-                 self.handy.naviBackgroundColor = .red
-             }
-         }
+         
+         
+         
+//        handy.naviBackgroundColor = .blue
+//         DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+//             UIView.animate(withDuration: 1) {
+//                 self.handy.naviBackgroundColor = .red
+//             }
+//         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -51,7 +54,7 @@ class TableViewController: UITableViewController {
             return .default
         }
     }
-    var titles: [String] = ["导航栏","主题"]
+    var titles: [String] = ["导航栏(fullScreen)","导航栏", "主题(fullScreen)", "主题"]
    
     // MARK: - Table view data source
 
@@ -77,9 +80,15 @@ class TableViewController: UITableViewController {
             guard let demoVC = storyboard?.instantiateViewController(withIdentifier: "navigationConfige") else { return }
             demoVC.modalPresentationStyle = .fullScreen
             self.present(demoVC, animated: true)
-        }else if indexPath.row == 1{
+        }else if indexPath.row == 1 {
+            guard let demoVC = storyboard?.instantiateViewController(withIdentifier: "navigationConfige") else { return }
+            self.present(demoVC, animated: true)
+        }else if indexPath.row == 2{
             guard let demoVC = storyboard?.instantiateViewController(withIdentifier: "ThemeNavi") else { return }
-//            demoVC.modalPresentationStyle = .fullScreen
+            demoVC.modalPresentationStyle = .fullScreen
+            self.present(demoVC, animated: true)
+        }else if indexPath.row == 3{
+            guard let demoVC = storyboard?.instantiateViewController(withIdentifier: "ThemeNavi") else { return }
             self.present(demoVC, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)

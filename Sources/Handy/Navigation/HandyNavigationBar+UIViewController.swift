@@ -33,6 +33,7 @@ extension UIViewController{
         static var statusBarStyle = "statusBarStyle"
         static var statusBarHidden = "statusBarHidden"
         static var isTranslucent = "isTranslucent"
+        static var navigationController = "navigationController"
     }
     
     
@@ -92,11 +93,16 @@ extension UIViewController: HandyCompatible{}
 
 public extension HandyExtension where Base: UIViewController {
     
-    
-    
     var statusBarStyle: HandyStatusBarStyle {
         get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.statusBarStyle) as? HandyStatusBarStyle ?? .default
+            
+            if let style = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.statusBarStyle) as? HandyStatusBarStyle{
+                return style
+            }
+            if let style = navigationController?.handy.appearanceStatusBarStyle{
+                return style
+            }
+            return .default
         }
         set {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.statusBarStyle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -133,7 +139,15 @@ public extension HandyExtension where Base: UIViewController {
     
     var naviIsTranslucent: Bool {
         get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.isTranslucent) as? Bool ?? true
+            
+            if let isTranslucent = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.isTranslucent) as? Bool {
+                return isTranslucent
+            }
+            if let isTranslucent = navigationController?.handy.appearanceBarIsTranslucent{
+                return isTranslucent
+            }
+            return true
+            
         }
         set {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.isTranslucent, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -143,7 +157,14 @@ public extension HandyExtension where Base: UIViewController {
     
     var naviBarStyle: UIBarStyle {
         get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.barStyle) as? UIBarStyle ?? UINavigationBar.appearance().barStyle
+            
+            if let barStyle = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.barStyle) as? UIBarStyle {
+                return barStyle
+            }
+            if let barStyle = navigationController?.handy.appearanceBarStyle{
+                return barStyle
+            }
+            return .default
         }
         set {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.barStyle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -157,6 +178,11 @@ public extension HandyExtension where Base: UIViewController {
             if let tintColor = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.tintColor) as? UIColor {
                 return tintColor
             }
+            
+            if let tintColor = navigationController?.handy.appearanceBarTintColor{
+                return tintColor
+            }
+            
             if let tintColor = UINavigationBar.appearance().tintColor {
                 return tintColor
             }
@@ -174,6 +200,11 @@ public extension HandyExtension where Base: UIViewController {
             if let titleColor = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.titleColor) as? UIColor {
                 return titleColor
             }
+            
+            if let titleColor = navigationController?.handy.appearanceBarTitleColor{
+                return titleColor
+            }
+            
             if let titleColor = UINavigationBar.appearance().titleTextAttributes?[NSAttributedString.Key.foregroundColor] as? UIColor {
                 return titleColor
             }
@@ -191,6 +222,11 @@ public extension HandyExtension where Base: UIViewController {
             if let titleFont = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.titleFont) as? UIFont {
                 return titleFont
             }
+            
+            if let titleFont = navigationController?.handy.appearanceBarTitleFont{
+                return titleFont
+            }
+            
             if let titleFont = UINavigationBar.appearance().titleTextAttributes?[NSAttributedString.Key.font] as? UIFont {
                 return titleFont
             }
@@ -203,16 +239,21 @@ public extension HandyExtension where Base: UIViewController {
     }
     
     
-    /// 导航栏背景色，默认白色
+    /// 导航栏背景色
     var naviBackgroundColor: UIColor {
         get {
             if let backgroundColor = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.backgroundColor) as? UIColor {
                 return backgroundColor
             }
+            
+            if let backgroundColor = navigationController?.handy.appearanceBarBackgroundColor{
+                return backgroundColor
+            }
+            
             if let backgroundColor = UINavigationBar.appearance().barTintColor {
                 return backgroundColor
             }
-            return .white
+            return .clear
         }
         set {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.backgroundColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -223,11 +264,59 @@ public extension HandyExtension where Base: UIViewController {
     var naviBackgroundImage: UIImage? {
     
         get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.backgroundImage) as? UIImage ?? UINavigationBar.appearance().backgroundImage(for: .default)
+            
+            if let backgroundImage = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.backgroundImage) as? UIImage {
+                return backgroundImage
+            }
+            
+            if let backgroundImage = navigationController?.handy.appearanceBarBackgroundImage{
+                return backgroundImage
+            }
+            
+            if let backgroundImage = UINavigationBar.appearance().backgroundImage(for: .default) {
+                return backgroundImage
+            }
+            return nil
         }
         set {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.backgroundImage, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             setNeedsNavigationBarBackgroundUpdate()
+        }
+    }
+   
+    /// 导航栏底部分割线是否隐藏，默认不隐藏
+    var naviShadowHidden: Bool {
+        get {
+            if let shadowHidden = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.shadowHidden) as? Bool {
+                return shadowHidden
+            }
+            
+            if let shadowHidden = navigationController?.handy.appearanceBarShadowHidden{
+                return shadowHidden
+            }
+            return false
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.shadowHidden, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            setNeedsNavigationBarShadowUpdate()
+        }
+    }
+    
+    /// 导航栏底部分割线颜色
+    var naviShadowColor: UIColor {
+        get {
+            if let shadowColor = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.shadowColor) as? UIColor {
+                return shadowColor
+            }
+            
+            if let shadowColor = navigationController?.handy.appearanceBarShadowColor{
+                return shadowColor
+            }
+            return UIColor(white: 0, alpha: 0.3)
+        }
+        set {
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.shadowColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            setNeedsNavigationBarShadowUpdate()
         }
     }
     
@@ -239,28 +328,6 @@ public extension HandyExtension where Base: UIViewController {
         set {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.barAlpha, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             setNeedsNavigationBarBackgroundUpdate()
-        }
-    }
-   
-    /// 导航栏底部分割线是否隐藏，默认不隐藏
-    var naviShadowHidden: Bool {
-        get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.shadowHidden) as? Bool ?? false
-        }
-        set {
-            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.shadowHidden, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            setNeedsNavigationBarShadowUpdate()
-        }
-    }
-    
-    /// 导航栏底部分割线颜色
-    var naviShadowColor: UIColor {
-        get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.shadowColor) as? UIColor ?? UIColor(white: 0, alpha: 0.3)
-        }
-        set {
-            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.shadowColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            setNeedsNavigationBarShadowUpdate()
         }
     }
     
@@ -321,7 +388,15 @@ public extension HandyExtension where Base: UIViewController {
             objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.customNaviBar, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
+    internal var navigationController: UINavigationController? {
+        get {
+            return base.getWeakHost(HandyNavigationWeakHost.self)?.navigationController ?? base.navigationController
+        }
+        set {
+            base.getWeakHost(HandyNavigationWeakHost.self)?.navigationController = newValue
+        }
+    }
+   
     // MARK: -  更新UI
     func setNeedsNavigationBarUpdate(){
         base.navigationController?.handy.updateNavigationBar(for: base)

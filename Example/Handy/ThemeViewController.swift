@@ -8,6 +8,17 @@
 
 import UIKit
 import Handy
+
+
+class ThemeNavigationController: UINavigationController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        theme.appearanceBarBackgroundColor = "Global.barTintColor"
+        theme.appearanceBarTintColor = "Global.tintColor"
+        theme.appearanceBarTitleColor = "Global.barTextColor"
+    }
+}
+
 class ThemeViewController: UIViewController {
 
     @IBOutlet weak var systemSwitch: UISwitch!

@@ -44,7 +44,7 @@ final class ThemeBarStylePicker: ThemePicker {}
         self.init(keyPath: value)
     }
     
-    class func getStyle(stringStyle: String) -> UIBarStyle {
+    public class func getStyle(stringStyle: String) -> UIBarStyle {
         switch stringStyle.lowercased() {
         case "default"  : return .default
         case "black"    : return .black
