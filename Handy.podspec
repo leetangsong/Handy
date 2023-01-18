@@ -37,6 +37,11 @@ Pod::Spec.new do |s|
       theme.dependency 'Handy/Core'
   end
   
+  s.subspec 'Language' do |language|
+      language.source_files   = "Sources/Handy/Language/**/*"
+      language.dependency 'Handy/Core'
+  end
+  
   s.pod_target_xcconfig = {
     'CODE_SIGN_IDENTITY' => ''
   }

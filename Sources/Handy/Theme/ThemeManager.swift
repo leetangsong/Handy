@@ -108,6 +108,7 @@ public enum ThemePath {
         for helper in themePickers{
             helper.pickerHelper()
         }
+        themeChangeLock.unlock()
     }
     public class func setTheme(index: Int) {
         currentThemeIndex = index

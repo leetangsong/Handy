@@ -8,7 +8,8 @@
 
 import UIKit
 
-@objc extension ThemeManager {
+
+@objc extension ThemeManager  {
     
     public class func value(for keyPath: String) -> Any? {
         return currentTheme?.value(forKeyPath: keyPath)
@@ -69,7 +70,7 @@ import UIKit
         return font(from: fontstr)
     }
     
-    internal class func font(from string: String) -> UIFont {
+    public class func font(from string: String) -> UIFont {
         let elements = string.components(separatedBy: ",")
         if elements.count == 2 {
             return UIFont(name: elements[0], size: CGFloat(Float(elements[1])!))!

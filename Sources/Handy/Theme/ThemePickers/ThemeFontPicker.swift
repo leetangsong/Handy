@@ -10,6 +10,10 @@ import UIKit
 
 @objc public final class ThemeFontPicker: ThemePicker {
     
+    public convenience init(keyPath: String) {
+        self.init(v: { ThemeManager.font(for: keyPath)})
+    }
+    
     public convenience init(keyPath: String, map: @escaping (Any?) -> UIFont?) {
         self.init(v: { map(ThemeManager.value(for: keyPath)) })
     }
