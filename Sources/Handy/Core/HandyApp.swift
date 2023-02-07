@@ -74,7 +74,7 @@ public struct HandyApp{
     //app名字
     public static let infoDict = Bundle.main.localizedInfoDictionary ?? Bundle.main.infoDictionary
     public static let appName = (infoDict?["CFBundleDisplayName"] ?? infoDict?["CFBundleName"]) as! String
-    
+    public static let nameSpace = (Bundle.main.infoDictionary!["CFBundleExecutable"] as? String) ?? ""
     public static var modelName: String{
         var systemInfo = utsname()
         uname(&systemInfo)

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol Localizable{
+    var lproj: String{get}
+    var bundle: Bundle {get set}
+}

@@ -55,6 +55,15 @@
 
         ]
       }
+    },
+    {
+      "name": "Language",
+      "source_files": "Sources/Handy/Language/**/*",
+      "dependencies": {
+        "Handy/Core": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.0"

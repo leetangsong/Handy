@@ -2,10 +2,14 @@ PODS:
   - GDPerformanceView-Swift (2.1.1)
   - Handy (1.0.9):
     - Handy/Core (= 1.0.9)
+    - Handy/Language (= 1.0.9)
     - Handy/Navigation (= 1.0.9)
     - Handy/Theme (= 1.0.9)
     - SnapKit
   - Handy/Core (1.0.9):
+    - SnapKit
+  - Handy/Language (1.0.9):
+    - Handy/Core
     - SnapKit
   - Handy/Navigation (1.0.9):
     - Handy/Core
@@ -37,7 +41,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GDPerformanceView-Swift: 22d964fe40b19e3d914dba2586237d064de8fd77
-  Handy: 5e6cb84327f54ac8ddb299fa4cdf6fae71794fc3
+  Handy: f073385ba6fd9df8d6989820df17820353d67adb
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
