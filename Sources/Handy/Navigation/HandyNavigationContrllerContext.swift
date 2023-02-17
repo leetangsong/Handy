@@ -21,11 +21,15 @@ class HandyNavigationContrllerContext: NSObject {
     lazy var toFakeBar: HandyNavigationBar = FakeNavigationBar()
     var fakeBarBeginFrame: CGRect = .zero
     var alphaObserver: NSKeyValueObservation?
+    var imageViewAlphaObserver: NSKeyValueObservation?
     var naviFrameObserver: NSKeyValueObservation?
     var fakeSuperView: UIView?
     weak var navigationController: UINavigationController?
     init(navigationController: UINavigationController){
         self.navigationController = navigationController
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.barTintColor = nil
     }
     
     func navigationBarUpdateFrame(){
@@ -48,7 +52,7 @@ class HandyNavigationContrllerContext: NSObject {
                 }
                 for subView in view.subviews {
                     if !(subView is HandyNavigationBar) {
-                        subView.alpha = 0
+                        subView.backgroundColor = .clear
                     }
                 }
                 if let top = navi.topViewController, !top.prefersStatusBarHidden, !top.handy.naviBarHidden, view.handy.top<0, navi.navigationBar.handy.top == 0{
@@ -76,7 +80,9 @@ class HandyNavigationContrllerContext: NSObject {
 //        }
 //    }
     func navigationController(willShow viewController: UIViewController, animated: Bool) {
-        
+        if viewController.presentedViewController != nil{
+            return
+        }
         guard let navi = navigationController, navi.handy.navigationStyle != .none, !(viewController is UINavigationController) else { return }
         viewController.setNeedsStatusBarAppearanceUpdate()
         fakeBarBeginFrame = fakeBar.frame
@@ -135,13 +141,28 @@ class HandyNavigationContrllerContext: NSObject {
             return
         }
         if alphaObserver == nil{
+            fakeSuperView.layer.removeAnimation(forKey: "backgroundColor")
             alphaObserver = fakeSuperView.observe(\UIView.backgroundColor, options: [.old, .new]) { _, change in
-                if change.newValue != change.oldValue {
-                    fakeSuperView.backgroundColor = nil
+                if change.newValue != .clear {
+                    fakeSuperView.backgroundColor = .clear
                 }
             }
         }
-
+        if imageViewAlphaObserver == nil{
+            for subView in fakeSuperView.subviews{
+                if subView is UIImageView,
+                    subView.frame.size.height == fakeSuperView.frame.self.height {
+                    subView.layer.removeAnimation(forKey: "backgroundColor")
+                    imageViewAlphaObserver = subView.observe(\UIView.backgroundColor, options: [.old, .new]){ [weak self, weak navi] obj, change in
+                        if change.newValue != .clear{
+                            subView.backgroundColor = .clear
+                        }
+                    }
+                    break
+                }
+            }
+        }
+        
         if naviFrameObserver == nil{
             naviFrameObserver = fakeSuperView.observe(\UIView.frame, options: [.old, .new]){ [weak self, weak navi] obj, change in
                 if let navi = navi ,let _new = change.newValue, let _old = change.oldValue, _new.equalTo(_old){
@@ -160,6 +181,7 @@ class HandyNavigationContrllerContext: NSObject {
         
         if fakeBar.superview == nil {
             fakeSuperView.insertSubview(fakeBar, at: 0)
+            fakeSuperView.bringSubviewToFront(fakeBar)
             navi.view.setNeedsLayout()
             let originY = navi.navigationBar.frame.origin.y
             if (originY >= 0){
@@ -176,9 +198,6 @@ class HandyNavigationContrllerContext: NSObject {
         if navi.handy.navigationStyle == .custom , let top = navi.topViewController {
             fakeBar = top.handy.customNaviBar!
         }
-        navi.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navi.navigationBar.shadowImage = UIImage()
-        navi.navigationBar.barTintColor = nil
         setupFakeSubviews()
     }
     
@@ -541,8 +560,10 @@ class HandyNavigationContrllerContext: NSObject {
     deinit {
         alphaObserver?.invalidate()
         naviFrameObserver?.invalidate()
+        imageViewAlphaObserver?.invalidate()
         naviFrameObserver = nil
         alphaObserver = nil
+        imageViewAlphaObserver = nil
     }
 }
 

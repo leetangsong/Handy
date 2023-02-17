@@ -8,6 +8,10 @@
 import UIKit
 
 public struct HandyApp{
+    
+    public static var scaleWidth: CGFloat{
+        return UIScreen.main.bounds.size.width/375
+    }
     public static var screenWidth: CGFloat{
         return UIScreen.main.bounds.size.width
     }

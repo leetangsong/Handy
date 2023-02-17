@@ -7,11 +7,19 @@
 
 
 import UIKit
+#if canImport(IQKeyboardManager)
+import IQKeyboardManager
+#endif
 
+#if canImport(RxCocoa)
+import RxCocoa
+#endif
 public extension UIButton{
     
     fileprivate struct AssociatedKeys {
         static var enlargedInsets = "enlargedInsets"
+        static var touchEndEditing = "touchEndEditing"
+        
     }
     
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
@@ -37,6 +45,7 @@ public extension HandyExtension where Base: UIButton{
         return CGRect.init(x: base.bounds.origin.x - enlarged.left, y: base.bounds.origin.y - enlarged.top, width: base.bounds.size.width + enlarged.left + enlarged.right, height: base.bounds.size.height + enlarged.top + enlarged.bottom)
     }
     
+    
     fileprivate var enlargedInsets: UIEdgeInsets?{
         get{
             return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.enlargedInsets) as? UIEdgeInsets
@@ -51,6 +60,30 @@ public extension HandyExtension where Base: UIButton{
         enlargedInsets = insets
     }
 
+    /// 点击是否 隐藏 输入键盘
+    var touchEndEditing: Bool?{
+        get{
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.touchEndEditing) as? Bool
+        }
+        set{
+            if self.touchEndEditing == nil{
+#if canImport(RxCocoa)
+                _ = self.rx.controlEvent(.touchUpInside).subscribe(onNext: { [weak self]_ in
+                    if self?.touchEndEditing == true{
+#if canImport(IQKeyboardManager)
+                        IQKeyboardManager.shared().resignFirstResponder()
+#endif
+                    }
+                })
+#else
+                viewController?.view.endEditing(true)
+#endif
+                
+            }
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.touchEndEditing, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
     //改变图片与按钮的位置  
     func adjustButton(with model: HandyButtonMode, spacing: CGFloat){
         let imageWidth = base.currentImage?.size.width ?? 0
