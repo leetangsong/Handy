@@ -141,9 +141,9 @@ class HandyNavigationContrllerContext: NSObject {
             return
         }
         if alphaObserver == nil{
-            fakeSuperView.layer.removeAnimation(forKey: "backgroundColor")
+//            fakeSuperView.layer.removeAnimation(forKey: "backgroundColor")
             alphaObserver = fakeSuperView.observe(\UIView.backgroundColor, options: [.old, .new]) { _, change in
-                if change.newValue != .clear {
+                if change.newValue != change.oldValue {
                     fakeSuperView.backgroundColor = .clear
                 }
             }
@@ -152,8 +152,9 @@ class HandyNavigationContrllerContext: NSObject {
             for subView in fakeSuperView.subviews{
                 if subView is UIImageView,
                     subView.frame.size.height == fakeSuperView.frame.self.height {
-                    subView.layer.removeAnimation(forKey: "backgroundColor")
-                    imageViewAlphaObserver = subView.observe(\UIView.backgroundColor, options: [.old, .new]){ [weak self, weak navi] obj, change in
+//                    subView.layer.removeAnimation(forKey: "backgroundColor")
+                    imageViewAlphaObserver = subView.observe(\UIView.backgroundColor, options: [.old, .new]){  obj, change in
+                        subView.alpha = 0
                         if change.newValue != .clear{
                             subView.backgroundColor = .clear
                         }
@@ -337,7 +338,7 @@ class HandyNavigationContrllerContext: NSObject {
             fromFakeBar.layer.shadowOpacity = fromVC.view.layer.shadowOpacity
             
             
-            if toVC.view.superview == nil || (fromVC.view.superview != nil && NSStringFromClass(type(of: fromVC.view.superview!)) == "_UIParallaxDimmingView" || NSStringFromClass(type(of: toVC.view.superview!)) == "_UIParallaxDimmingView")  {
+            if toVC.view.superview == nil || (fromVC.view.superview != nil && NSStringFromClass(type(of: fromVC.view.superview!)) == "_UIParal"+"laxDimmingView" || NSStringFromClass(type(of: toVC.view.superview!)) == "_UIParal"+"laxDimmingView")  {
                 ///适配ios 11  系统默认转场状态
                 toVC.view.addSubview(toFakeBar)
                 fromVC.view.addSubview(fromFakeBar)
