@@ -27,7 +27,7 @@ extension UINavigationController{
         static var navigationContext = "navigationContext"
         static var animationBlock = "animationBlock"
         static var interactivePopGestureRecognizer = "interactivePopGestureRecognizer"
-        
+        static var fullscreenPopGestureRecognizerDelegate = "fullscreenPopGestureRecognizerDelegate"
         static var appearanceBarStyle = "appearanceBarStyle"
         static var appearanceBarBackgroundColor = "appearanceBarBackgroundColor"
         static var appearanceBarBackgroundImage = "appearanceBarBackgroundImage"
@@ -131,17 +131,6 @@ extension UINavigationController{
         }
     }
     
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        if let target = interactivePopGestureRecognizer?.delegate{
-            handy.interactivePopGestureRecognizer = UIPanGestureRecognizer.init(target: target, action: Selector(("handleNavigationTransition:")))
-            handy.interactivePopGestureRecognizer?.delegate = self
-            view.addGestureRecognizer(handy.interactivePopGestureRecognizer!)
-            interactivePopGestureRecognizer?.isEnabled = false
-        }
-        
-    }
-    
     @objc private func handy_viewDidLayoutSubviews() {
         handy_viewDidLayoutSubviews()
         handy.navigationContext.navigationBarUpdateFrame()
@@ -194,6 +183,23 @@ extension UINavigationController{
     }
     
     @objc private func handy_pushViewController(_ viewController: UIViewController, animated: Bool){
+        
+        if let gestureRecognizers = interactivePopGestureRecognizer?.view?.gestureRecognizers,
+           !gestureRecognizers.contains(handy.interactivePopGestureRecognizer)
+        {
+            interactivePopGestureRecognizer?.view?.addGestureRecognizer(handy.interactivePopGestureRecognizer)
+            
+            if let internalTargets = interactivePopGestureRecognizer?.value(forKey: "targets") as? [NSObject],
+               let internalTarget = internalTargets.first?.value(forKey: "target")
+            {
+                handy.interactivePopGestureRecognizer.addTarget(internalTarget, action: Selector(("handleNavigationTransition:")))
+                handy.interactivePopGestureRecognizer.delegate = handy.popGestureRecognizerDelegate
+                interactivePopGestureRecognizer?.isEnabled = false
+            }
+            
+        }
+        
+        
         
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
             var displayLink: CADisplayLink? = CADisplayLink.init(target: self, selector: #selector(pushNeedDisplay))
@@ -274,38 +280,6 @@ extension UINavigationController{
             vcArray = handy_popToViewController(viewController, animated: animated)
         }
         return vcArray
-    }
-}
-
-
-extension UINavigationController: UIGestureRecognizerDelegate{
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        
-        guard let pan = gestureRecognizer as? UIPanGestureRecognizer, pan == handy.interactivePopGestureRecognizer else { return true }
-        if children.count == 1{
-            return false
-        }
-        let velocityX = pan.velocity(in: nil).x
-        if velocityX <= 0{
-            return false
-        }
-        let locationX = pan.location(in: nil).x
-        
-        if locationX>=80 && topViewController?.handy.isEnableFullScreenPopGesture == false{
-            return false
-        }
-        
-        if let topViewController = topViewController {
-            return topViewController.handy.isEnablePopGesture
-        }
-        return true
-    }
-    
-    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        if touch.view is UISlider{
-            return false
-        }
-        return true
     }
 }
 
@@ -443,14 +417,26 @@ public extension HandyExtension where Base: UINavigationController{
         }
     }
     
-    var interactivePopGestureRecognizer: UIPanGestureRecognizer? {
-        get {
-            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.interactivePopGestureRecognizer) as? UIPanGestureRecognizer
+    var interactivePopGestureRecognizer: UIPanGestureRecognizer {
+        var pan = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.interactivePopGestureRecognizer) as? UIPanGestureRecognizer
+        if pan == nil{
+            pan = UIPanGestureRecognizer()
+            pan?.maximumNumberOfTouches = 1
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.interactivePopGestureRecognizer, pan!, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
-        set {
-            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.interactivePopGestureRecognizer, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
+        return pan!
     }
+    
+    fileprivate var popGestureRecognizerDelegate: HandyFullscreenPopGestureRecognizerDelegate {
+        var delegate = objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.fullscreenPopGestureRecognizerDelegate) as? HandyFullscreenPopGestureRecognizerDelegate
+        if delegate == nil{
+            delegate = HandyFullscreenPopGestureRecognizerDelegate()
+            delegate?.navigationController = base
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.fullscreenPopGestureRecognizerDelegate, delegate!, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        return delegate!
+    }
+    
     
     var navigationStyle: HandyNavigationStyle {
         get {
@@ -547,6 +533,9 @@ public extension HandyExtension where Base: UINavigationController{
     }
     
     internal func updateNavigationBar(for viewController: UIViewController) {
+        if navigationStyle == .none{
+            return
+        }
         updateNavigationBarTint(for: viewController)
         updateNavigationBarBackground(for: viewController)
         updateNavigationBarShadow(for: viewController)
@@ -560,7 +549,7 @@ public extension HandyExtension where Base: UINavigationController{
         let navigationBar = navigationBar
         var titleTextAttributes = navigationBar.titleTextAttributes ?? [:]
         titleTextAttributes[.foregroundColor] = viewController.handy.naviTitleColor
-        titleTextAttributes[.font] = viewController.handy.naviTitleFont 
+        titleTextAttributes[.font] = viewController.handy.naviTitleFont
         base.navigationBar.barStyle = viewController.handy.naviBarStyle
         navigationBar.titleTextAttributes = titleTextAttributes
         navigationBar.tintColor = viewController.handy.naviTintColor
@@ -631,3 +620,36 @@ public extension HandyExtension where Base: UINavigationController{
 }
 
 
+class HandyFullscreenPopGestureRecognizerDelegate: NSObject, UIGestureRecognizerDelegate{
+    weak var navigationController: UINavigationController?
+    
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        if (navigationController?.viewControllers.count ?? 0) <= 1{
+            return false
+        }
+        guard let topViewController = navigationController?.viewControllers.last else { return false }
+        if  !topViewController.handy.isEnablePopGesture {
+            return false
+        }
+        guard let view = gestureRecognizer.view else { return false}
+        
+        let locationX = gestureRecognizer.location(in: view).x
+        if locationX>=80 && !topViewController.handy.isEnableFullScreenPopGesture{
+            return false
+        }
+        if let  isTransitioning = navigationController?.value(forKey: "_isTransitioning") as? Bool, isTransitioning{
+            return false
+        }
+        
+        let translation = (gestureRecognizer as? UIPanGestureRecognizer)?.translation(in: view) ?? .zero
+        let isLeftToRight = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight
+        let multiplier: CGFloat = isLeftToRight ? 1 : -1
+        if (translation.x * multiplier) <= 0{
+            return false
+        }
+        
+        return true
+    }
+    
+}

@@ -24,8 +24,8 @@ class TableViewController: UITableViewController {
         if #available(iOS 11, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
-        
-        
+         navigationController?.handy.navigationStyle = .system
+
         tableView.contentInset = UIEdgeInsets.init(top: HandyApp.naviBarHeight, left: 0, bottom: 0, right: 0)
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
