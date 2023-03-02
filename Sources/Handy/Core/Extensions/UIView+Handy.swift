@@ -182,6 +182,36 @@ public extension HandyExtension where Base: UIView {
         UIGraphicsEndImageContext()
         return image
     }
+    
+    ///  绘制虚线 要提前知道frame 默认是水平方向
+    /// - Parameters:
+    ///   - color: 虚线颜色
+    ///   - location:  线的位置
+    ///   - lineWidth: 线的长度
+    ///   - length: 每个线段的长度
+    ///   - spacing: 间距
+    func drawDashLine(color: UIColor,
+                      location: (start: CGPoint, end: CGPoint)? = nil,
+                      lineWidth: CGFloat = 1,
+                      length: Int = 4,
+                      spacing: Int = 4) {
+        let _location = location ?? (.zero, CGPoint.init(x: base.bounds.size.width, y: 0))
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.bounds = base.bounds
+        shapeLayer.position = CGPoint(x: base.frame.width / 2, y: base.frame.height / 2)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+        shapeLayer.lineDashPhase = 0 //从哪个位置开始
+        //每一段虚线长度 和 每两段虚线之间的间隔
+        shapeLayer.lineDashPattern = [NSNumber(value: length), NSNumber(value: spacing)]
+        let path = CGMutablePath()
+        path.move(to: _location.start)
+        path.addLine(to: _location.end)
+        shapeLayer.path = path
+        base.layer.addSublayer(shapeLayer)
+    }
 }
 
 

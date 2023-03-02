@@ -14,12 +14,23 @@ import IQKeyboardManager
 #if canImport(RxCocoa)
 import RxCocoa
 #endif
+
+class HandyCoreSwizzling: NSObject, HandySwizzling{
+    static func awake() {
+        addSwizzlingMethod(cls: UIButton.self, sel: #selector(UIButton.handyButtonSwizzling))
+    }
+    
+}
+
+
+
 public extension UIButton{
     
     fileprivate struct AssociatedKeys {
         static var enlargedInsets = "enlargedInsets"
         static var touchEndEditing = "touchEndEditing"
-        
+        static var imagePosition = "imagePosition"
+        static var spacing = "spacing"
     }
     
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
@@ -29,21 +40,169 @@ public extension UIButton{
         }
         return rect.contains(point) ? self : nil;
     }
+    
+    @objc static func handyButtonSwizzling(){
+        let originalMethods = [
+            #selector(UIButton.layoutSubviews)
+        ]
+        let swizzledMethods = [
+            #selector(UIButton.handy_layoutSubviews)
+        ]
+
+        for (i, originalMethod) in originalMethods.enumerated() {
+            swizzlingForClass(UIButton.self, originalSelector: originalMethod, swizzledSelector: swizzledMethods[i])
+        }
+    }
+    
+    
+    @objc private func handy_layoutSubviews() {
+        handy_layoutSubviews()
+        guard let imagePosition = handy.imagePosition else { return }
+        
+        var imageFrame = CGRect.init(origin: .zero, size: currentImage?.size ?? .zero)
+        var labelFrame = CGRect.zero
+        
+        switch imagePosition {
+        case .top, .bottom:  //图片在上面
+            let maxHeight = bounds.size.height - imageFrame.size.height - (currentImage == nil ? 0 : handy.spacing)
+            var labelSize = getLabelSize(CGSize.init(width: bounds.size.width, height: maxHeight))
+            if labelSize.width >  bounds.size.width{
+                labelSize.width = bounds.size.width
+            }
+            
+            if labelSize.height > maxHeight{
+                labelSize.height = maxHeight
+            }
+            labelFrame.size = labelSize
+            var topFrame = imageFrame
+            var bottomFrame = labelFrame
+            if imagePosition == .bottom{
+                topFrame = labelFrame
+                bottomFrame = imageFrame
+            }
+                
+            var vMargin = (maxHeight - labelSize.height)/2
+            var x: CGFloat = 2
+            
+            if contentVerticalAlignment == .top{
+                vMargin = 0
+            }else if contentVerticalAlignment == .bottom{
+                vMargin *= 2
+            }
+            
+            if contentHorizontalAlignment == .left{
+                x = 0
+            }else if contentHorizontalAlignment == .right{
+                x = 1
+            }
+            topFrame.origin.y = vMargin
+            bottomFrame.origin.y = topFrame.maxY +  handy.spacing
+            
+            topFrame.origin.x = (bounds.size.width - topFrame.size.width)/x
+            bottomFrame.origin.x = (bounds.size.width - bottomFrame.size.width)/x
+            
+            if imagePosition == .top{
+                imageView?.frame = topFrame
+                titleLabel?.frame = bottomFrame
+            }else{
+                imageView?.frame = bottomFrame
+                titleLabel?.frame = topFrame
+            }
+            
+            break
+        case .right, .left:
+            let maxWidth = bounds.size.width - imageFrame.size.width - (currentImage == nil ? 0 : handy.spacing)
+            var labelSize = getLabelSize(CGSize.init(width: maxWidth, height: bounds.size.height))
+            if labelSize.width >  maxWidth{
+                labelSize.width = maxWidth
+            }
+            
+            if labelSize.height > bounds.size.height{
+                labelSize.height = bounds.size.height
+            }
+            labelFrame.size = labelSize
+            var leftFrame = imageFrame
+            var rightFrame = labelFrame
+            if imagePosition == .right{
+                leftFrame = labelFrame
+                rightFrame = imageFrame
+            }
+                
+            var xMargin = (maxWidth - labelSize.width)/2
+            var y: CGFloat = 2
+            
+            if contentHorizontalAlignment == .left{
+                xMargin = 0
+            }else if contentHorizontalAlignment == .right{
+                xMargin *= 2
+            }
+            
+            if contentVerticalAlignment == .top{
+                y = 0
+            }else if contentVerticalAlignment == .bottom{
+                y = 1
+            }
+            leftFrame.origin.x = xMargin
+            rightFrame.origin.x = leftFrame.maxX + handy.spacing
+            
+            leftFrame.origin.y = (bounds.size.height - leftFrame.size.height)/y
+            rightFrame.origin.y = (bounds.size.height - rightFrame.size.height)/y
+            
+            if imagePosition == .left{
+                imageView?.frame = leftFrame
+                titleLabel?.frame = rightFrame
+            }else{
+                imageView?.frame = rightFrame
+                titleLabel?.frame = leftFrame
+            }
+            break
+        }
+    }
+    
+    private func getLabelSize(_ size: CGSize) -> CGSize{
+        return titleLabel?.sizeThatFits(size) ?? .zero
+    }
+    
 }
+
+
+
 
 public extension HandyExtension where Base: UIButton{
     
     
-    enum HandyButtonMode {
+    enum HandyButtonImagePosition {
         case top,bottom,left,right
     }
    
+    fileprivate var imagePosition: HandyButtonImagePosition?{
+        get{
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.imagePosition) as? HandyButtonImagePosition
+        }
+        set{
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.imagePosition, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    fileprivate var spacing: CGFloat{
+        get{
+            return objc_getAssociatedObject(base, &type(of: base).AssociatedKeys.spacing) as? CGFloat ?? 0
+        }
+        set{
+            objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.spacing, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    
     fileprivate var enlargedRect: CGRect{
         guard let enlarged = enlargedInsets else {
             return base.bounds
         }
         return CGRect.init(x: base.bounds.origin.x - enlarged.left, y: base.bounds.origin.y - enlarged.top, width: base.bounds.size.width + enlarged.left + enlarged.right, height: base.bounds.size.height + enlarged.top + enlarged.bottom)
     }
+    
+    
+    
     
     
     fileprivate var enlargedInsets: UIEdgeInsets?{
@@ -84,59 +243,14 @@ public extension HandyExtension where Base: UIButton{
         }
     }
     
-    //改变图片与按钮的位置  
-    func adjustButton(with model: HandyButtonMode, spacing: CGFloat){
-        let imageWidth = base.currentImage?.size.width ?? 0
-        let imageHeight = base.currentImage?.size.height ?? 0
-        var size = CGSize.zero
-        if let font = base.titleLabel?.font{
-            size = NSString.init(string: base.currentTitle ?? "").size(withAttributes: [.font:font])
-        }
-        
-        if size.width > (base.titleLabel?.frame.width ?? 0) && (base.titleLabel?.handy.width ?? 0) > 0 {
-            size.width = base.titleLabel?.frame.width ?? 0
-        }
-        let labelWidth = size.width
-        let labelHeight = size.height
-        
-        let imageOffsetX = (imageWidth + labelWidth)/2 - imageWidth/2 //image中心移动的x距离
-        let imageOffsetY = imageHeight/2 + spacing/2 //image中心移动的y距离
-        let labelOffsetX = (imageWidth + labelWidth/2) - (imageWidth + labelWidth)/2 //label中心移动的x距离
-        let labelOffsetY = labelHeight/2 + spacing/2 //label中心移动的y距离
-        
-        let tempWidth = max(labelWidth, imageWidth)
-        let changedWidth = labelWidth + imageWidth - tempWidth
-        let tempHeight = max(labelHeight, imageHeight)
-        let changedHeight = labelHeight + imageHeight + spacing - tempHeight
-        
-        var imageEdgeInsets = UIEdgeInsets.zero
-        var titleEdgeInsets = UIEdgeInsets.zero
-        var contentEdgeInsets = UIEdgeInsets.zero
-        
-        switch model {
-            case .left:
-                imageEdgeInsets = UIEdgeInsets.init(top: 0, left: -spacing/2, bottom: 0, right: spacing/2)
-                titleEdgeInsets = UIEdgeInsets.init(top: 0, left: spacing/2, bottom: 0, right: -spacing/2)
-                contentEdgeInsets = UIEdgeInsets.init(top: 0, left: spacing/2, bottom: 0, right: spacing/2)
-                    
-            case .right:
-                imageEdgeInsets = UIEdgeInsets.init(top: 0, left: labelWidth + spacing/2, bottom: 0, right: -(labelWidth + spacing/2))
-                titleEdgeInsets = UIEdgeInsets.init(top: 0, left: -(imageWidth + spacing/2), bottom: 0, right: imageWidth + spacing/2)
-                contentEdgeInsets = UIEdgeInsets.init(top: 0, left: spacing/2, bottom: 0, right: spacing/2)
-                
-            case .top:
-                imageEdgeInsets = UIEdgeInsets.init(top: -imageOffsetY, left: imageOffsetX, bottom: imageOffsetY, right: -imageOffsetX)
-                titleEdgeInsets = UIEdgeInsets.init(top: labelOffsetY, left: -labelOffsetX, bottom: -labelOffsetY, right: labelOffsetX)
-                contentEdgeInsets = UIEdgeInsets.init(top: imageOffsetY, left: -changedWidth/2, bottom: changedHeight-imageOffsetY, right: -changedWidth/2)
-                
-            case .bottom:
-                imageEdgeInsets = UIEdgeInsets.init(top: imageOffsetY, left: imageOffsetX, bottom: -imageOffsetY, right: -imageOffsetX)
-                titleEdgeInsets = UIEdgeInsets.init(top: -labelOffsetY, left: -labelOffsetX, bottom: labelOffsetY, right: labelOffsetX)
-                contentEdgeInsets = UIEdgeInsets.init(top: changedHeight-imageOffsetY, left: -changedWidth/2, bottom: imageOffsetY, right: -changedWidth/2)
-        }
-        base.imageEdgeInsets = imageEdgeInsets
-        base.titleEdgeInsets = titleEdgeInsets
-        base.contentEdgeInsets = contentEdgeInsets
+    //改变图片与按钮的位置
+    func adjustButton(with imagePosition: HandyButtonImagePosition, spacing: CGFloat){
+        self.imagePosition = imagePosition
+        self.spacing = spacing
     }
+    
+}
+
+extension UIButton{
     
 }

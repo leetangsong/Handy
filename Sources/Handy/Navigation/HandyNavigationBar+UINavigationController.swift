@@ -10,12 +10,12 @@ public enum HandyNavigationStyle: Int {
     ///无样式
     case none = 0
     ///系统样式
-    case system = 1
+    case system
     ///类似微信效果
-    case wx = 2
-    ///自定义（每个控制器单独有一个navigationBar）
-    case custom = 3
-    
+    case wx
+    ///自定义（每个控制器单独有一个navigationBar， 视图在控制器上 注意视图层级）
+    case custom
+
 }
 
 extension UINavigationController{

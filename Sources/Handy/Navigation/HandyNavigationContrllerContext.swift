@@ -207,7 +207,7 @@ class HandyNavigationContrllerContext: NSObject {
               let toVC = coordinator.viewController(forKey: .to), !(fromVC is UINavigationController), !(toVC is UINavigationController) else {
                   return
               }
-        
+        fakeBar.removeFromSuperview()
         if toVC.handy.naviBarHidden{
             fromVC.view.addSubview(fakeBar)
             fakeBar.frame = fakerBarFrame(for: fromVC, originView: fakeBar)
@@ -215,7 +215,6 @@ class HandyNavigationContrllerContext: NSObject {
             toVC.view.addSubview(fakeBar)
             fakeBar.frame = fakerBarFrame(for: toVC, originView: fakeBar)
         }else{
-            fakeBar.removeFromSuperview()
             fakeBar.frame = navi.navigationBar.frame
             navi.view.insertSubview(fakeBar, belowSubview: navi.navigationBar)
         }
@@ -269,6 +268,8 @@ class HandyNavigationContrllerContext: NSObject {
         guard let navi = navigationController, navi.handy.navigationStyle != .none else { return }
         fromVC.handy.navigationController = navi
         toVC.handy.navigationController = navi
+        fromFakeBar.removeFromSuperview()
+        toFakeBar.removeFromSuperview()
         UIView.setAnimationsEnabled(false)
         if navi.handy.navigationStyle == .system {
             if toVC.handy.naviBarHidden {

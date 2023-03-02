@@ -11,18 +11,22 @@ import UIKit
 extension Array: HandyTypealiasCompatibleValue{
     public typealias ItemType = Element
 }
-extension Array: HandyClassTypealiasCompatibleValue{}
-
-public extension HandyTypealiasExtension where Base == Array<T>{
-    subscript(index:Int) -> T?{
-        if index<base.count {
-            return base[index]
-        }
-        return nil
-    }
-}
 
 public extension HandyTypealiasValueExtension where Base == Array<T>, T: Equatable{
+    
+    subscript(index:Int) -> T?{
+         get{
+            if index<base.pointee.count {
+                return base.pointee[index]
+            }
+            return nil
+         }set{
+            if index<base.pointee.count, let newValue = newValue {
+                base.pointee[index] = newValue
+            }
+        }
+    }
+    
     func remove(_ object: T, isAll: Bool = false){
         if let index = base.pointee.firstIndex(of: object){
             base.pointee.remove(at: index)

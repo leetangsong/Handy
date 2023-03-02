@@ -75,16 +75,23 @@ extension UIViewController{
     }
     @objc private func handy_viewWillAppear(_ animated: Bool) {
         handy_viewWillAppear(animated)
+        guard navigationController?.topViewController == self else { return }
         navigationController?.setNavigationBarHidden(handy._naviBarHidden, animated: animated)
         navigationController?.handy.navigationContext.navigationController(willShow: self, animated: animated)
         navigationController?.navigationBar.isTranslucent = handy.naviIsTranslucent
     }
     @objc private func handy_viewDidAppear(_ animated: Bool) {
         handy_viewDidAppear(animated)
+        guard navigationController?.topViewController == self else { return }
         navigationController?.handy.updateNavigationBar(for: self)
     }
     @objc private func handy_viewWillDisappear(_ animated: Bool) {
         handy_viewWillDisappear(animated)
+        //需要判断 是否属于 viewController 的 children
+        if let navi = navigationController,
+           !navi.viewControllers.contains(self), let parent = parent, !parent.isKind(of: UINavigationController.self){
+            return
+        }
         navigationController?.setNavigationBarHidden(handy._naviBarHidden, animated: animated)
     }
 }
