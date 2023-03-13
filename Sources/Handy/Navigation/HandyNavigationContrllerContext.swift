@@ -80,7 +80,8 @@ class HandyNavigationContrllerContext: NSObject {
 //        }
 //    }
     func navigationController(willShow viewController: UIViewController, animated: Bool) {
-        if viewController.presentedViewController != nil{
+        ///是从present过来的
+        if let presentedVC = viewController.presentedViewController, presentedVC.transitionCoordinator?.viewController(forKey: .from) == presentedVC {
             return
         }
         guard let navi = navigationController, navi.handy.navigationStyle != .none, !(viewController is UINavigationController) else { return }

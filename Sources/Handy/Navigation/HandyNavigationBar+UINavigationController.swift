@@ -222,7 +222,9 @@ extension UINavigationController{
     
     @objc private func handy_popViewController(animated: Bool) -> UIViewController? {
         var viewController: UIViewController?
-        
+        if !animated{
+            topViewController?.handy.customNaviBar?.removeFromSuperview()
+        }
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
             var displayLink: CADisplayLink? = CADisplayLink.init(target: self, selector: #selector(popNeedDisplay))
             displayLink?.add(to: RunLoop.main, forMode: .common)
@@ -243,7 +245,9 @@ extension UINavigationController{
     
     @objc private func handy_popToRootViewController(animated: Bool) -> [UIViewController]? {
         var vcArray: [UIViewController]?
-
+        if !animated{
+            topViewController?.handy.customNaviBar?.removeFromSuperview()
+        }
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
             var displayLink: CADisplayLink? = CADisplayLink.init(target: self, selector: #selector(popNeedDisplay))
             displayLink?.add(to: RunLoop.main, forMode: .common)
@@ -264,6 +268,9 @@ extension UINavigationController{
     
     @objc private func handy_popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         var vcArray: [UIViewController]?
+        if !animated{
+            topViewController?.handy.customNaviBar?.removeFromSuperview()
+        }
         if handy.navigationStyle != .custom, handy.navigationStyle != .none {
             var displayLink: CADisplayLink? = CADisplayLink.init(target: self, selector: #selector(popNeedDisplay))
             displayLink?.add(to: RunLoop.main, forMode: .common)
