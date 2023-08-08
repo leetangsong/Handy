@@ -27,7 +27,7 @@ class HandyNavigationContrllerContext: NSObject {
     weak var navigationController: UINavigationController?
     init(navigationController: UINavigationController){
         self.navigationController = navigationController
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.barTintColor = nil
     }

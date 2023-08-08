@@ -134,7 +134,7 @@ public class HandyNavigationBar: UINavigationBar {
         bsuperview.frame = viewFrame
         bsuperview.alpha = handy.backgroundAlpha
         for subView in bsuperview.subviews {
-            if backImageView != subView, subView is UIImageView  {
+            if backImageView != subView, subView is UIImageView, subView.frame.size.height > 1 {
                 subView.removeFromSuperview()
                 break
             }
