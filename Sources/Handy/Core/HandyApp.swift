@@ -134,6 +134,10 @@ public struct HandyApp{
         case "iPhone14,8" : return "iPhone 14 Plus"
         case "iPhone15,2" : return "iPhone 14 Pro"
         case "iPhone15,3" : return "iPhone 14 Pro Max"
+        case "iPhone15,4" : return "iPhone 15"
+        case "iPhone15,5" : return "iPhone 15 Plus"
+        case "iPhone16,1" : return "iPhone 15 Pro"
+        case "iPhone16,2" : return "iPhone 15 Pro Max"
             
             
             ///iPad
@@ -147,6 +151,7 @@ public struct HandyApp{
         case "iPad7,11","iPad7,12" : return "iPad 7"
         case "iPad11,6","iPad11,7" : return "iPad 8"
         case "iPad12,1","iPad12,2" : return "iPad 9"
+        case "iPad13,18","iPad13,19" : return "iPad 10"
             
             ///iPad Mini
         case "iPad2,5", "iPad2,6", "iPad2,7":  return "iPad Mini"
